@@ -30,7 +30,7 @@ def build_sdxl_img2img_input(
     negative_prompt: str,
     seed: int,
     image_url: str,
-    prompt_strength: float = 0.65,
+    prompt_strength: float = 0.85,
 ) -> dict:
     """Build SDXL input dict for img2img using a key card as style reference.
 

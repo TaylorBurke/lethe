@@ -28,7 +28,7 @@ console = Console()
 @click.option(
     "--cards",
     "card_subset",
-    type=click.Choice(["all", "major", "minor"], case_sensitive=False),
+    type=click.Choice(["all", "major", "minor", "sample"], case_sensitive=False),
     default="all",
     help="Which cards to generate.",
 )

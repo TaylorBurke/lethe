@@ -194,8 +194,21 @@ ALL_CARDS: list[Card] = MAJOR_ARCANA + MINOR_ARCANA
 # fmt: on
 
 
+def _sample_cards() -> list[Card]:
+    """Return a small representative sample: 5 major, 2 pips + king per suit."""
+    cards = MAJOR_ARCANA[:5]
+    for suit in ("Wands", "Cups", "Swords", "Pentacles"):
+        suit_cards = [c for c in MINOR_ARCANA if c.suit == suit]
+        # First two pips (Ace + 2) and the King
+        pips = [c for c in suit_cards if "King" not in c.name]
+        king = [c for c in suit_cards if "King" in c.name]
+        cards.extend(pips[:2])
+        cards.extend(king)
+    return cards
+
+
 def get_cards(subset: str = "all") -> list[Card]:
-    """Return cards based on subset filter: 'all', 'major', or 'minor'."""
+    """Return cards based on subset filter: 'all', 'major', 'minor', or 'sample'."""
     match subset:
         case "all":
             return ALL_CARDS
@@ -203,5 +216,7 @@ def get_cards(subset: str = "all") -> list[Card]:
             return MAJOR_ARCANA
         case "minor":
             return MINOR_ARCANA
+        case "sample":
+            return _sample_cards()
         case _:
-            raise ValueError(f"Unknown card subset: {subset!r}. Use 'all', 'major', or 'minor'.")
+            raise ValueError(f"Unknown card subset: {subset!r}. Use 'all', 'major', 'minor', or 'sample'.")
