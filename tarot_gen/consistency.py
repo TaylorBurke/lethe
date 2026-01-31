@@ -1,5 +1,7 @@
 """Style consistency logic for tarot deck generation."""
 
+from __future__ import annotations
+
 
 def get_seed(base_seed: int, index: int) -> int:
     """Derive a deterministic seed for card at given index.
@@ -12,9 +14,37 @@ def get_seed(base_seed: int, index: int) -> int:
 
 
 def build_style_prefix(style: str) -> str:
-    """Wrap the user's style string into a consistent prefix.
+    """Wrap the user's style string into a structured consistency prefix.
 
     The same prefix is prepended to every card prompt to maximize
     stylistic coherence across the deck.
     """
-    return f"consistent art style, {style}"
+    return (
+        f"unified tarot deck, consistent art style throughout, "
+        f"same color palette, same line weight, same rendering technique, {style}"
+    )
+
+
+def build_sdxl_img2img_input(
+    prompt: str,
+    negative_prompt: str,
+    seed: int,
+    image_url: str,
+    prompt_strength: float = 0.65,
+) -> dict:
+    """Build SDXL input dict for img2img using a key card as style reference.
+
+    ``image_url`` is the Replicate URL of the key card.  ``prompt_strength``
+    controls how much the new prompt overrides the reference (lower = closer
+    to the reference image's style).
+    """
+    return {
+        "prompt": prompt,
+        "negative_prompt": negative_prompt,
+        "seed": seed,
+        "width": 768,
+        "height": 1152,
+        "num_outputs": 1,
+        "image": image_url,
+        "prompt_strength": prompt_strength,
+    }

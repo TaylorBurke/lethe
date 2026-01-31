@@ -34,6 +34,12 @@ console = Console()
 )
 @click.option("--seed", type=int, default=42, help="Base seed for reproducibility.")
 @click.option("--parallel", type=int, default=1, help="Number of concurrent API calls.")
+@click.option(
+    "--key-card",
+    type=click.Path(exists=True, path_type=Path),
+    default=None,
+    help="Path to a reference image used as style key card (SDXL only).",
+)
 def main(
     style: str,
     model: str,
@@ -41,6 +47,7 @@ def main(
     card_subset: str,
     seed: int,
     parallel: int,
+    key_card: Path | None,
 ) -> None:
     """Generate a complete tarot deck with a consistent art style.
 
@@ -61,6 +68,7 @@ def main(
         output_dir=output,
         base_seed=seed,
         parallel=parallel,
+        key_card_path=str(key_card) if key_card else None,
     )
 
     console.print(f"\n[bold green]Done![/bold green] Generated {len(paths)} images in {output.resolve()}")

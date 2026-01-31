@@ -13,7 +13,7 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCo
 
 from tarot_gen.cards import Card
 from tarot_gen.prompts import build_prompt, build_negative_prompt
-from tarot_gen.consistency import get_seed, build_style_prefix
+from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2img_input
 
 MODELS = {
     "flux-schnell": "black-forest-labs/flux-schnell",
@@ -95,18 +95,30 @@ def _generate_one(
     model_id: str,
     seed: int,
     output_dir: Path,
+    key_card_url: str | None = None,
     max_retries: int = 5,
-) -> Path:
-    """Generate a single card image via Replicate, with retries."""
+) -> tuple[Path, str]:
+    """Generate a single card image via Replicate, with retries.
+
+    Returns a (local_path, output_url) tuple.
+    """
     prompt = build_prompt(card, style)
     negative = build_negative_prompt()
     dest = output_dir / card.filename
 
     is_flux = "flux" in model_id
+    is_sdxl = not is_flux
 
     for attempt in range(1, max_retries + 1):
         try:
-            if is_flux:
+            if is_sdxl and key_card_url:
+                input_data = build_sdxl_img2img_input(
+                    prompt=prompt,
+                    negative_prompt=negative,
+                    seed=seed,
+                    image_url=key_card_url,
+                )
+            elif is_flux:
                 input_data = {
                     "prompt": prompt,
                     "seed": seed,
@@ -125,7 +137,7 @@ def _generate_one(
 
             urls = _run_model(model_id, input_data)
             _download_image(urls[0], dest)
-            return dest
+            return dest, urls[0]
 
         except Exception as exc:
             if attempt == max_retries:
@@ -148,12 +160,41 @@ def generate_deck(
     output_dir: Path = Path("output"),
     base_seed: int = 42,
     parallel: int = 1,
+    key_card_path: str | None = None,
 ) -> list[Path]:
-    """Generate images for all cards in the list."""
+    """Generate images for all cards in the list.
+
+    For SDXL, the first card (The Fool) is generated as a key card whose
+    output URL is fed to all subsequent cards via img2img.  If
+    ``key_card_path`` is supplied, that image is used as the reference
+    instead of auto-generating one.
+    """
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
     style_prefix = build_style_prefix(style)
     results: list[Path] = []
+
+    is_sdxl = "flux" not in model_id
+    key_card_url: str | None = None
+
+    # Resolve the key card reference for SDXL
+    if is_sdxl:
+        if key_card_path:
+            key_card_url = key_card_path
+            console.print(f"[bold cyan]Using supplied key card:[/bold cyan] {key_card_path}")
+        elif cards:
+            # Generate The Fool (first card) as key card
+            first_card = cards[0]
+            seed = get_seed(base_seed, 0)
+            console.print(f"[bold cyan]Generating key card:[/bold cyan] {first_card.name}")
+            path, key_card_url = _generate_one(
+                first_card, style_prefix, model_id, seed, output_dir,
+            )
+            results.append(path)
+            console.print(f"[bold green]Key card ready:[/bold green] {first_card.name}")
+            cards = cards[1:]
+
+    remaining_start_index = len(results)
 
     with Progress(
         SpinnerColumn(),
@@ -166,21 +207,27 @@ def generate_deck(
 
         if parallel <= 1:
             for i, card in enumerate(cards):
-                seed = get_seed(base_seed, i)
-                path = _generate_one(card, style_prefix, model_id, seed, output_dir)
+                seed = get_seed(base_seed, remaining_start_index + i)
+                path, _ = _generate_one(
+                    card, style_prefix, model_id, seed, output_dir,
+                    key_card_url=key_card_url,
+                )
                 results.append(path)
                 progress.update(task, advance=1, description=f"Generated {card.name}")
         else:
             futures = {}
             with ThreadPoolExecutor(max_workers=parallel) as pool:
                 for i, card in enumerate(cards):
-                    seed = get_seed(base_seed, i)
-                    fut = pool.submit(_generate_one, card, style_prefix, model_id, seed, output_dir)
+                    seed = get_seed(base_seed, remaining_start_index + i)
+                    fut = pool.submit(
+                        _generate_one, card, style_prefix, model_id, seed, output_dir,
+                        key_card_url=key_card_url,
+                    )
                     futures[fut] = card
 
                 for fut in as_completed(futures):
                     card = futures[fut]
-                    path = fut.result()
+                    path, _ = fut.result()
                     results.append(path)
                     progress.update(task, advance=1, description=f"Generated {card.name}")
 
