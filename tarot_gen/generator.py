@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import base64
+import mimetypes
 import os
 import time
 from pathlib import Path
@@ -180,7 +182,11 @@ def generate_deck(
     # Resolve the key card reference for SDXL
     if is_sdxl:
         if key_card_path:
-            key_card_url = key_card_path
+            # Convert local file to a data URI so Replicate can consume it
+            p = Path(key_card_path)
+            mime = mimetypes.guess_type(p.name)[0] or "image/png"
+            encoded = base64.b64encode(p.read_bytes()).decode()
+            key_card_url = f"data:{mime};base64,{encoded}"
             console.print(f"[bold cyan]Using supplied key card:[/bold cyan] {key_card_path}")
         elif cards:
             # Generate The Fool (first card) as key card
