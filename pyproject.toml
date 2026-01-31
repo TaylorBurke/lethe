@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "tarot-gen"
+version = "0.1.0"
+description = "AI Tarot Deck Generator using Replicate API"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "click>=8.1.0",
+    "requests>=2.28.0",
+    "rich>=13.0.0",
+    "Pillow>=10.0.0",
+]
+
+[project.scripts]
+tarot-gen = "tarot_gen.cli:main"
