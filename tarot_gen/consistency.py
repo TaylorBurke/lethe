@@ -43,7 +43,7 @@ def build_sdxl_img2img_input(
         "negative_prompt": negative_prompt,
         "seed": seed,
         "width": 768,
-        "height": 1152,
+        "height": 1344,
         "num_outputs": 1,
         "image": image_url,
         "prompt_strength": prompt_strength,

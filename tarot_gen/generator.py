@@ -131,7 +131,7 @@ def _generate_one(
                     "negative_prompt": negative,
                     "seed": seed,
                     "width": 768,
-                    "height": 1152,
+                    "height": 1344,
                     "num_outputs": 1,
                 }
 
