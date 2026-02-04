@@ -40,6 +40,12 @@ console = Console()
     default=None,
     help="Path to a reference image used as style key card (SDXL only).",
 )
+@click.option(
+    "--cards-file",
+    type=click.Path(exists=True, path_type=Path),
+    default=None,
+    help="Path to a YAML file with custom card definitions.",
+)
 def main(
     style: str,
     model: str,
@@ -48,17 +54,20 @@ def main(
     seed: int,
     parallel: int,
     key_card: Path | None,
+    cards_file: Path | None,
 ) -> None:
     """Generate a complete tarot deck with a consistent art style.
 
     STYLE is the art style prompt, e.g. "dark gothic ink wash style".
     """
-    cards = get_cards(card_subset)
+    cards = get_cards(card_subset, cards_file=cards_file)
     console.print(f"[bold]Generating {len(cards)} tarot cards[/bold]")
     console.print(f"  Style:  {style}")
     console.print(f"  Model:  {model}")
     console.print(f"  Output: {output.resolve()}")
     console.print(f"  Seed:   {seed}")
+    if cards_file:
+        console.print(f"  Cards:  {cards_file.resolve()}")
     console.print()
 
     paths = generate_deck(

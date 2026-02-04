@@ -20,7 +20,7 @@ def build_style_prefix(style: str) -> str:
     stylistic coherence across the deck.
     """
     return (
-        f"unified tarot deck, consistent art style throughout, "
+        f"unified collection, consistent art style throughout, "
         f"same color palette, same line weight, same rendering technique, {style}"
     )
 
@@ -30,7 +30,7 @@ def build_sdxl_img2img_input(
     negative_prompt: str,
     seed: int,
     image_url: str,
-    prompt_strength: float = 0.85,
+    prompt_strength: float = 0.97,
 ) -> dict:
     """Build SDXL input dict for img2img using a key card as style reference.
 

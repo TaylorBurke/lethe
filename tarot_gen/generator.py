@@ -108,18 +108,23 @@ def _generate_one(
     negative = build_negative_prompt()
     dest = output_dir / card.filename
 
+    console.print(f"[dim]Prompt: {prompt}[/dim]")
+    console.print(f"[dim]Negative: {negative}[/dim]")
+
     is_flux = "flux" in model_id
     is_sdxl = not is_flux
 
     for attempt in range(1, max_retries + 1):
         try:
             if is_sdxl and key_card_url:
+                console.print(f"[bold magenta]Using img2img with prompt_strength from key card[/bold magenta]")
                 input_data = build_sdxl_img2img_input(
                     prompt=prompt,
                     negative_prompt=negative,
                     seed=seed,
                     image_url=key_card_url,
                 )
+                console.print(f"[dim]img2img input has 'image' key: {'image' in input_data}[/dim]")
             elif is_flux:
                 input_data = {
                     "prompt": prompt,

@@ -1,0 +1,381 @@
+# Tarot Card Definitions
+# Edit this file to customize card descriptions, symbols, and composition.
+# The 'composition' field controls framing and layout hints for the AI.
+
+major_arcana:
+  - name: The Fool
+    numeral: "00"
+    description: A young traveler at cliff's edge with a small dog, about to step into the unknown
+    key_symbols: [cliff, knapsack, white rose, small dog]
+    composition: full-body figure in profile facing right, standing at cliff edge, dog at feet, sky background
+
+  - name: The Magician
+    numeral: "01"
+    description: A figure at a table with arms raised, one pointing up and one down, tools of magic before them
+    key_symbols: [infinity symbol, wand, cup, sword, pentacle, table]
+    composition: centered full-body figure facing viewer, one arm raised to sky one pointing down, table with objects in foreground
+
+  - name: The High Priestess
+    numeral: "02"
+    description: A serene woman seated between two pillars, a crescent moon at her feet, holding a scroll
+    key_symbols: [two pillars, crescent moon, scroll, veil, pomegranates]
+    composition: centered seated figure facing viewer, symmetrical pillars on each side, frontal view
+
+  - name: The Empress
+    numeral: "03"
+    description: A regal woman on a throne amid lush nature, crowned with stars, holding a scepter
+    key_symbols: [crown of stars, wheat field, scepter, cushioned throne, flowing water]
+    composition: three-quarter view of seated figure on throne, natural landscape surrounding, slightly low angle to convey majesty
+
+  - name: The Emperor
+    numeral: "04"
+    description: An authoritative figure on a stone throne with ram heads, holding an ankh scepter
+    key_symbols: [stone throne, ram heads, ankh scepter, armor, mountains]
+    composition: frontal view of seated figure on throne, mountains in background, powerful centered composition
+
+  - name: The Hierophant
+    numeral: "05"
+    description: A robed religious figure seated between pillars, blessing two acolytes, holding a triple cross
+    key_symbols: [triple cross, two acolytes, pillars, raised hand, crown]
+    composition: centered seated figure with two smaller kneeling figures below, symmetrical pillars, formal frontal arrangement
+
+  - name: The Lovers
+    numeral: "06"
+    description: Two figures beneath an angel in the sky, a tree of knowledge and tree of life behind them
+    key_symbols: [angel, two figures, tree of knowledge, tree of life, sun]
+    composition: two standing figures in lower half facing each other, angel above in upper third, trees flanking, triangular composition
+
+  - name: The Chariot
+    numeral: "07"
+    description: A warrior in a chariot pulled by two sphinxes, one black and one white, under a starry canopy
+    key_symbols: [chariot, two sphinxes, starry canopy, armor, city behind]
+    composition: frontal view of figure in chariot, two sphinxes in foreground, city skyline behind, symmetrical arrangement
+
+  - name: Strength
+    numeral: "08"
+    description: A gentle figure calmly closing a lion's mouth, infinity symbol above their head
+    key_symbols: [lion, infinity symbol, garland of flowers, white robe]
+    composition: full-body figure bending toward lion, both figures in profile, gentle interaction as focal point
+
+  - name: The Hermit
+    numeral: "09"
+    description: A cloaked elder atop a mountain holding a lantern with a six-pointed star inside
+    key_symbols: [lantern, six-pointed star, staff, mountain peak, cloak]
+    composition: solitary full-body cloaked figure on rocky peak, lantern held high as light source, three-quarter view
+
+  - name: Wheel of Fortune
+    numeral: "10"
+    description: A great wheel with mystical symbols, figures rising and falling, sphinx atop
+    key_symbols: [wheel, sphinx, serpent, anubis, mystical symbols, clouds]
+    composition: large wheel centered in frame, sphinx at top, figures on sides ascending and descending, symmetrical radial design
+
+  - name: Justice
+    numeral: "11"
+    description: A seated figure holding a sword upright in one hand and balanced scales in the other
+    key_symbols: [sword, scales, throne, crown, purple veil]
+    composition: centered seated figure facing viewer, sword in right hand raised, scales in left hand, symmetrical formal pose
+
+  - name: The Hanged Man
+    numeral: "12"
+    description: A figure suspended upside-down from a living tree by one foot, serene expression, halo of light
+    key_symbols: [living tree, suspended figure, halo, crossed leg]
+    composition: inverted figure hanging from tree branch at top, head at lower center with halo, T-shaped tree framing
+
+  - name: Death
+    numeral: "13"
+    description: A skeleton in armor riding a white horse, carrying a black flag with a white rose
+    key_symbols: [skeleton, white horse, black flag, white rose, rising sun]
+    composition: mounted skeletal figure in profile moving left to right, flag held high, figures below, sunrise on horizon
+
+  - name: Temperance
+    numeral: "14"
+    description: A winged angel pouring water between two cups, one foot on land and one in water
+    key_symbols: [angel wings, two cups, flowing water, path to mountains, triangle]
+    composition: centered winged figure standing at water's edge, water pouring between cups as focal point, path leading to mountains behind
+
+  - name: The Devil
+    numeral: "15"
+    description: A horned figure on a pedestal with two chained figures below, inverted pentagram above
+    key_symbols: [horned figure, chains, two figures, inverted pentagram, pedestal]
+    composition: large horned figure in upper half on pedestal, two smaller chained figures below, symmetrical dark composition
+
+  - name: The Tower
+    numeral: "16"
+    description: A tall tower struck by lightning, crown blown off the top, figures falling from windows
+    key_symbols: [tower, lightning bolt, falling figures, crown, flames]
+    composition: tall tower dominating center, lightning striking from upper corner, figures falling on both sides, dramatic diagonal energy
+
+  - name: The Star
+    numeral: "17"
+    description: A nude figure kneeling by a pool pouring water onto land and into the pool, stars above
+    key_symbols: [large star, seven smaller stars, two vessels, pool, bird in tree]
+    composition: kneeling figure in lower half pouring water, large eight-pointed star above, smaller stars surrounding, serene night sky
+
+  - name: The Moon
+    numeral: "18"
+    description: A moon with a face between two towers, a dog and wolf howling, a crayfish emerging from water
+    key_symbols: [moon face, two towers, dog, wolf, crayfish, winding path]
+    composition: moon face in upper center, two towers flanking, dog and wolf in middle ground, crayfish emerging from pool at bottom, winding path through center
+
+  - name: The Sun
+    numeral: "19"
+    description: A joyful child on a white horse beneath a radiant sun, sunflowers behind a wall
+    key_symbols: [radiant sun, child, white horse, sunflowers, red banner]
+    composition: radiant sun with face in upper portion, child on horse in center, sunflowers along bottom wall, bright joyful atmosphere
+
+  - name: Judgement
+    numeral: "20"
+    description: An angel blowing a trumpet from the clouds, figures rising from coffins below
+    key_symbols: [angel, trumpet, rising figures, coffins, mountains, clouds]
+    composition: angel with trumpet in upper third among clouds, multiple figures rising from coffins below, mountains in background, vertical division of heaven and earth
+
+  - name: The World
+    numeral: "21"
+    description: A dancing figure inside a laurel wreath, four creatures in each corner
+    key_symbols: [laurel wreath, dancing figure, angel, eagle, bull, lion]
+    composition: central dancing figure within oval wreath, four creatures in corners (angel upper-left, eagle upper-right, lion lower-right, bull lower-left), symmetrical cosmic arrangement
+
+minor_arcana:
+  wands:
+    pips:
+      "1":
+        description: A hand emerging from a cloud holding a single budding wand
+        key_symbols: [hand, cloud, budding wand, leaves]
+        composition: disembodied hand emerging from cloud on left, holding single vertical wand, leaves sprouting, landscape below
+      "2":
+        description: A figure holding a globe looks out from a castle battlement, two wands mounted on the wall
+        key_symbols: [globe, castle, two wands, sea]
+        composition: figure in three-quarter view holding globe, two tall wands flanking, castle parapet, sea vista beyond
+      "3":
+        description: A figure on a cliff gazing at ships on the sea, three wands planted behind them
+        key_symbols: [cliff, ships, three wands, horizon]
+        composition: figure seen from behind looking out to sea, three wands planted nearby, ships on horizon, contemplative back-view pose
+      "4":
+        description: A celebration scene with four wands forming a canopy decorated with garlands
+        key_symbols: [four wands, garland, castle, celebrating figures]
+        composition: four wands creating canopy frame, two figures celebrating beneath, castle in background, festive arch composition
+      "5":
+        description: Five figures wielding wands in chaotic conflict on rough terrain
+        key_symbols: [five wands, five figures, struggle, rough ground]
+        composition: five figures in dynamic combat poses, wands crossing in center, chaotic diagonal arrangement, rough terrain
+      "6":
+        description: A rider on horseback wearing a laurel wreath, attendants carrying six wands
+        key_symbols: [horseback rider, laurel wreath, six wands, attendants]
+        composition: mounted victorious figure in center, attendants with wands on foot around, processional arrangement
+      "7":
+        description: A figure on a hill defending their position against six wands rising from below
+        key_symbols: [hilltop, defending figure, seven wands, uneven ground]
+        composition: single figure on elevated ground upper center, defending with one wand, six wands attacking from below, dramatic high-ground defense pose
+      "8":
+        description: Eight wands flying through the air over an open landscape at speed
+        key_symbols: [eight wands, open sky, landscape, river]
+        composition: eight wands in diagonal parallel flight across sky, open landscape with river below, dynamic motion lines implied
+      "9":
+        description: A wounded but vigilant figure leaning on a wand, eight wands arrayed behind them
+        key_symbols: [bandaged figure, nine wands, defensive stance]
+        composition: wounded figure in center leaning on wand, eight wands standing in row behind like fence, guarded defensive stance
+      "10":
+        description: A figure struggling under the weight of ten wands, walking toward a distant town
+        key_symbols: [ten wands, burdened figure, distant town, path]
+        composition: bent figure carrying bundle of ten wands, walking away from viewer toward town on horizon, burden emphasized
+
+    court:
+      Page:
+        description: A youthful figure in a desert landscape holding a wand and gazing at it with wonder
+        key_symbols: [wand, desert, tunic, salamanders]
+        composition: standing youthful figure in three-quarter view, holding wand upright and gazing at it, desert pyramids in background
+      Knight:
+        description: An armored rider on a rearing horse charging forward, brandishing a wand
+        key_symbols: [rearing horse, wand, armor, pyramids]
+        composition: dynamic mounted knight on rearing horse, wand raised high, charging toward right, pyramids in background, action pose
+      Queen:
+        description: A queen on a throne holding a wand and sunflower, a black cat at her feet
+        key_symbols: [throne, wand, sunflower, black cat, lions]
+        composition: seated queen facing slightly right, wand in one hand sunflower in other, black cat at feet, throne with lion carvings
+      King:
+        description: A king on a throne adorned with salamanders, holding a flowering wand
+        key_symbols: [throne, salamanders, flowering wand, crown, cape]
+        composition: seated king in three-quarter view, flowering wand held upright, salamander decorations on throne, commanding regal pose
+
+  cups:
+    pips:
+      "1":
+        description: A hand from a cloud holds an overflowing chalice, a dove descends toward it
+        key_symbols: [hand, cloud, overflowing cup, dove, lotus]
+        composition: disembodied hand from cloud holding ornate chalice, dove descending from above, water overflowing with lotus flowers
+      "2":
+        description: Two figures exchange cups beneath a winged lion head, a caduceus between them
+        key_symbols: [two figures, two cups, caduceus, winged lion]
+        composition: two figures facing each other in profile, each holding cup, caduceus rising between them, winged lion head above, symmetrical arrangement
+      "3":
+        description: Three maidens raise their cups in celebration in a garden of flowers and fruit
+        key_symbols: [three maidens, three cups, garden, fruit]
+        composition: three dancing figures in circle raising cups, garden setting with flowers and harvest, joyful celebratory grouping
+      "4":
+        description: A figure sits under a tree looking discontent, three cups on the ground, a hand offers a fourth
+        key_symbols: [tree, seated figure, four cups, hand from cloud]
+        composition: seated figure under tree looking away, three cups before them on ground, hand from cloud offering fourth cup from side, contemplative scene
+      "5":
+        description: A cloaked figure in grief before three spilled cups, two cups still standing behind
+        key_symbols: [cloaked figure, three spilled cups, two standing cups, bridge, river]
+        composition: cloaked figure in foreground head bowed, three overturned cups before them, two upright cups behind unseen, bridge and river in background
+      "6":
+        description: Children in a garden with six cups filled with flowers, a nostalgic village scene
+        key_symbols: [children, six cups, flowers, village, garden]
+        composition: two children in garden foreground, six cups arranged with flowers, quaint village buildings behind, warm nostalgic atmosphere
+      "7":
+        description: A silhouetted figure gazes at seven cups in the clouds, each holding a different vision
+        key_symbols: [silhouette, seven cups, clouds, visions, castle, jewels, snake]
+        composition: dark silhouette of figure in lower portion, seven cups floating in clouds above arranged in arc, each cup containing different vision, dreamlike vertical arrangement
+      "8":
+        description: A figure walks away from eight stacked cups toward mountains under a moon
+        key_symbols: [departing figure, eight cups, mountains, moon, river]
+        composition: cloaked figure walking away into distance, eight cups stacked in foreground with gap, crescent moon above, mountains ahead, journey composition
+      "9":
+        description: A content figure sits with arms crossed before nine golden cups arranged on a curved table
+        key_symbols: [seated figure, nine cups, curved table, satisfaction]
+        composition: satisfied seated figure in center, nine cups arranged in arc on shelf behind, arms crossed contentedly, frontal proud pose
+      "10":
+        description: A joyful family beneath a rainbow of ten cups, a cottage and garden in background
+        key_symbols: [family, ten cups, rainbow, cottage, garden]
+        composition: family group (two adults two children) in foreground, rainbow arc of ten cups above, cottage and garden behind, celebratory family scene
+
+    court:
+      Page:
+        description: A young figure in flowing robes gazes at a cup with a fish emerging from it
+        key_symbols: [cup, fish, flowing robes, sea]
+        composition: standing youthful figure in three-quarter view, holding cup and gazing at fish emerging, sea in background, contemplative wonder pose
+      Knight:
+        description: A knight on a calm horse holds a cup forward, a river flowing beneath them
+        key_symbols: [horse, cup, river, wings on helmet]
+        composition: mounted knight on steady horse, cup held forward carefully, river and landscape, peaceful forward movement
+      Queen:
+        description: A queen on an ornate throne at the water's edge, holding a elaborate chalice
+        key_symbols: [ornate throne, chalice, water, cherubs, pebbles]
+        composition: seated queen in three-quarter view, ornate chalice held and gazed upon, water and shore around throne, reflective serene pose
+      King:
+        description: A king on a throne amid turbulent seas, holding a cup and scepter
+        key_symbols: [throne, cup, scepter, turbulent sea, ship]
+        composition: seated king on throne with seas around, cup in one hand scepter in other, ship in background, commanding amid chaos pose
+
+  swords:
+    pips:
+      "1":
+        description: A hand from a cloud grips a gleaming sword, a crown and wreath at its tip
+        key_symbols: [hand, cloud, sword, crown, wreath, mountains]
+        composition: disembodied hand from cloud gripping vertical sword, crown and laurel at blade tip, mountains below, powerful upward thrust
+      "2":
+        description: A blindfolded figure sits balancing two crossed swords, a crescent moon over calm water
+        key_symbols: [blindfold, two swords, crescent moon, calm water]
+        composition: seated blindfolded figure centered, two swords crossed over chest, crescent moon above, calm sea behind, balanced meditative pose
+      "3":
+        description: A heart pierced by three swords under dark storm clouds, rain falling
+        key_symbols: [heart, three swords, storm clouds, rain]
+        composition: large red heart centered, three swords piercing through it, dark storm clouds above, rain falling, stark symbolic image
+      "4":
+        description: A figure lies in repose on a tomb, three swords on the wall and one beneath them
+        key_symbols: [tomb, resting figure, four swords, stained glass window]
+        composition: figure lying horizontally on tomb slab, three swords mounted on wall above, one sword beneath, stained glass window providing light, restful horizontal in vertical frame
+      "5":
+        description: A smirking figure picks up three swords while two defeated figures walk away, stormy sky
+        key_symbols: [victor, five swords, defeated figures, stormy sky, water]
+        composition: standing victor in foreground holding three swords, two figures retreating in background, two swords on ground, stormy dramatic sky
+      "6":
+        description: A ferryman guides a boat with a woman and child across water, six swords in the bow
+        key_symbols: [boat, ferryman, woman and child, six swords, calm water]
+        composition: boat moving right to left across water, ferryman standing and poling, woman and child seated, six swords standing in bow, journey across water
+      "7":
+        description: A figure sneaks away from a camp carrying five swords, two swords left planted
+        key_symbols: [sneaking figure, seven swords, camp, tents]
+        composition: figure tiptoeing away carrying five swords, looking back at camp with tents, two swords left behind planted, stealthy diagonal movement
+      "8":
+        description: A bound and blindfolded figure surrounded by eight swords stuck in muddy ground
+        key_symbols: [bound figure, blindfold, eight swords, muddy ground, castle]
+        composition: bound blindfolded figure in center, eight swords planted in circle around them, castle in background, trapped confined composition
+      "9":
+        description: A figure sits up in bed, head in hands in anguish, nine swords on the dark wall behind
+        key_symbols: [bed, anguished figure, nine swords, dark wall, quilt]
+        composition: figure sitting up in bed in foreground, head in hands, nine swords mounted horizontally on dark wall behind, nightmare scene
+      "10":
+        description: A figure lies face down with ten swords in their back, a dark sky with a hint of dawn
+        key_symbols: [fallen figure, ten swords, dark sky, dawn on horizon]
+        composition: figure lying face down in lower portion, ten swords in back, dark sky above with thin line of dawn on horizon, tragic finality
+
+    court:
+      Page:
+        description: A youthful figure strides over rough ground holding a sword aloft, windswept clouds
+        key_symbols: [sword, windswept clouds, rough ground, birds]
+        composition: standing youthful figure in dynamic stride, sword held up and ready, windswept clouds and birds, vigilant advancing pose
+      Knight:
+        description: A knight charges on a galloping horse brandishing a sword, butterflies in the wind
+        key_symbols: [galloping horse, sword, wind, butterflies, storm clouds]
+        composition: mounted knight on charging horse, sword raised high, wind and butterflies around, stormy sky, aggressive charge to right
+      Queen:
+        description: A queen on a stone throne holds a sword upright, her free hand raised, cloudy sky
+        key_symbols: [stone throne, sword, raised hand, clouds, bird]
+        composition: seated queen in profile facing right, sword held upright, one hand raised in gesture, cloudy sky behind, stern judicial pose
+      King:
+        description: A stern king on a throne holds a sword, trees bend in a strong wind behind him
+        key_symbols: [throne, sword, wind-bent trees, butterflies, storm clouds]
+        composition: seated king facing slightly left, sword held upright, wind-bent trees and storm behind, commanding authoritative pose
+
+  pentacles:
+    pips:
+      "1":
+        description: A hand from a cloud holds a golden pentacle over a lush garden with an archway
+        key_symbols: [hand, cloud, golden pentacle, garden, archway, lilies]
+        composition: disembodied hand from cloud holding large golden pentacle, lush garden with archway below, lilies blooming, abundant offering
+      "2":
+        description: A juggler dances holding two pentacles in a figure eight, ships on a wavy sea behind
+        key_symbols: [juggler, two pentacles, infinity loop, ships, waves]
+        composition: dancing figure in center juggling two pentacles in infinity pattern, wavy sea with ships behind, dynamic playful balance pose
+      "3":
+        description: A stonemason works on a cathedral arch, three pentacles in the design, monks observe
+        key_symbols: [stonemason, three pentacles, cathedral, monks, tools]
+        composition: stonemason working in center, three pentacles carved in arch above, two monks observing, cathedral interior, craftsmanship scene
+      "4":
+        description: A figure clutches a pentacle to their chest atop a pile, two under feet, one on crown
+        key_symbols: [figure, four pentacles, city background, miserly pose]
+        composition: standing figure clutching pentacle to chest, one under each foot, one balanced on crown, city skyline behind, possessive guarding pose
+      "5":
+        description: Two destitute figures trudge through snow past a lit church window with five pentacles
+        key_symbols: [two figures, snow, five pentacles, stained glass window, tattered clothes]
+        composition: two bent figures in foreground trudging through snow, lit stained glass window with five pentacles above and behind, cold and desperate scene
+      "6":
+        description: A wealthy merchant weighs pentacles on a scale, giving to kneeling figures
+        key_symbols: [merchant, six pentacles, scale, kneeling figures, generosity]
+        composition: standing merchant in center with scales, two kneeling figures receiving below, six pentacles distributed in scene, charitable giving arrangement
+      "7":
+        description: A farmer leans on a hoe gazing at a bush bearing seven pentacles, patient waiting
+        key_symbols: [farmer, hoe, seven pentacles, bush, patience]
+        composition: farmer figure leaning on hoe in foreground, gazing at bush with seven pentacles growing, patient contemplative stance
+      "8":
+        description: A craftsman carefully carves pentacles at a workbench, a town in the background
+        key_symbols: [craftsman, workbench, eight pentacles, tools, town]
+        composition: craftsman seated at workbench working, eight pentacles displayed (some finished some in progress), town visible through window, diligent focused work scene
+      "9":
+        description: A well-dressed figure in a luxurious garden with a falcon, surrounded by nine pentacles
+        key_symbols: [garden, falcon, nine pentacles, grapevines, manor]
+        composition: elegant figure standing in garden with falcon on hand, nine pentacles growing on vines around, manor house behind, wealthy abundance scene
+      "10":
+        description: A multigenerational family under an archway with ten pentacles, dogs at their feet
+        key_symbols: [family, ten pentacles, archway, dogs, estate]
+        composition: multigenerational family group under stone archway, ten pentacles arranged in tree of life pattern, dogs at feet, estate grounds, legacy and prosperity scene
+
+    court:
+      Page:
+        description: A studious youth holds up a pentacle, standing in a green field with young trees
+        key_symbols: [pentacle, green field, young trees, studious pose]
+        composition: standing youthful figure holding pentacle up and studying it, green field with young trees, curious studious examination pose
+      Knight:
+        description: A knight on a sturdy, still horse holds a pentacle, a plowed field stretches behind
+        key_symbols: [sturdy horse, pentacle, plowed field, patient stance]
+        composition: mounted knight on still standing horse, pentacle held and examined, plowed fields behind, patient methodical pose
+      Queen:
+        description: A queen sits on a throne in a flowering garden, cradling a pentacle, a rabbit nearby
+        key_symbols: [throne, pentacle, flowering garden, rabbit]
+        composition: seated queen in garden setting, pentacle cradled lovingly, rabbit at feet, flowers blooming around throne, nurturing abundance pose
+      King:
+        description: A prosperous king on a throne decorated with bull carvings, pentacle on lap, castle grounds
+        key_symbols: [throne, bull carvings, pentacle, castle, grapevines]
+        composition: seated king on bull-carved throne, pentacle resting on lap, castle and vineyard grounds behind, prosperous commanding pose

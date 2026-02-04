@@ -1,6 +1,9 @@
 """All 78 tarot card definitions."""
 
 from dataclasses import dataclass
+from pathlib import Path
+
+import yaml
 
 
 @dataclass(frozen=True)
@@ -11,6 +14,7 @@ class Card:
     suit: str | None  # None for major arcana
     description: str  # Scene/imagery description
     key_symbols: list[str]
+    composition: str = ""  # Framing/composition hint (e.g., "centered full-body figure")
 
     @property
     def slug(self) -> str:
@@ -207,16 +211,88 @@ def _sample_cards() -> list[Card]:
     return cards
 
 
-def get_cards(subset: str = "all") -> list[Card]:
-    """Return cards based on subset filter: 'all', 'major', 'minor', or 'sample'."""
+def _load_cards_from_yaml(yaml_path: Path) -> tuple[list[Card], list[Card]]:
+    """Load cards from a YAML file, returning (major_arcana, minor_arcana)."""
+    with open(yaml_path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    major = []
+    for card_data in data.get("major_arcana", []):
+        major.append(Card(
+            name=card_data["name"],
+            numeral=card_data["numeral"],
+            arcana_type="major",
+            suit=None,
+            description=card_data["description"],
+            key_symbols=card_data["key_symbols"],
+            composition=card_data.get("composition", ""),
+        ))
+
+    minor = []
+    for suit_name, suit_data in data.get("minor_arcana", {}).items():
+        suit_title = suit_name.title()  # "wands" -> "Wands"
+        # Load pips (1-10)
+        for num_str, pip_data in suit_data.get("pips", {}).items():
+            num = int(num_str)
+            name_prefix = "Ace" if num == 1 else str(num)
+            name = f"{name_prefix} of {suit_title}"
+            numeral = f"{suit_name[0].lower()}{num:02d}"
+            minor.append(Card(
+                name=name,
+                numeral=numeral,
+                arcana_type="minor",
+                suit=suit_title,
+                description=pip_data["description"],
+                key_symbols=pip_data["key_symbols"],
+                composition=pip_data.get("composition", ""),
+            ))
+        # Load court cards
+        for rank, court_data in suit_data.get("court", {}).items():
+            name = f"{rank} of {suit_title}"
+            numeral = f"{suit_name[0].lower()}{rank[:2].lower()}"
+            minor.append(Card(
+                name=name,
+                numeral=numeral,
+                arcana_type="minor",
+                suit=suit_title,
+                description=court_data["description"],
+                key_symbols=court_data["key_symbols"],
+                composition=court_data.get("composition", ""),
+            ))
+
+    return major, minor
+
+
+def get_cards(subset: str = "all", cards_file: Path | None = None) -> list[Card]:
+    """Return cards based on subset filter: 'all', 'major', 'minor', or 'sample'.
+
+    If cards_file is provided, loads card definitions from that YAML file.
+    Otherwise uses the built-in defaults.
+    """
+    if cards_file is not None:
+        major, minor = _load_cards_from_yaml(cards_file)
+        all_cards = major + minor
+    else:
+        major = MAJOR_ARCANA
+        minor = MINOR_ARCANA
+        all_cards = ALL_CARDS
+
     match subset:
         case "all":
-            return ALL_CARDS
+            return all_cards
         case "major":
-            return MAJOR_ARCANA
+            return major
         case "minor":
-            return MINOR_ARCANA
+            return minor
         case "sample":
-            return _sample_cards()
+            # Build sample from loaded cards
+            cards = major[:5]
+            for suit in ("Wands", "Cups", "Swords", "Pentacles"):
+                suit_cards = [c for c in minor if c.suit == suit]
+                pips = [c for c in suit_cards if "King" not in c.name]
+                king = [c for c in suit_cards if "King" in c.name]
+                cards.extend(pips[:2])
+                cards.extend(king)
+            return cards
         case _:
             raise ValueError(f"Unknown card subset: {subset!r}. Use 'all', 'major', 'minor', or 'sample'.")
