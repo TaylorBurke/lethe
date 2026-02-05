@@ -1,6 +1,8 @@
 """CLI entry point for tarot deck generator."""
 
+import shutil
 import sys
+from datetime import datetime
 from pathlib import Path
 
 import questionary
@@ -10,6 +12,7 @@ from tarot_gen.cards import get_cards
 from tarot_gen.generator import generate_deck, MODELS
 
 console = Console()
+LOGS_DIR = Path("output-logs")
 
 ASPECT_RATIOS = ["2:3", "3:2", "1:1", "16:9", "9:16", "4:5", "5:4", "21:9", "9:21"]
 CARD_SUBSETS = ["sample", "major", "minor", "all"]
@@ -121,6 +124,55 @@ def prompt_for_options() -> dict:
     }
 
 
+def archive_output(output: Path) -> Path | None:
+    """Move existing output contents to output-logs/<timestamp>/.
+
+    Returns the archive path if files were moved, None otherwise.
+    """
+    if not output.exists():
+        return None
+
+    # Check if there are any files to archive
+    files = list(output.iterdir())
+    if not files:
+        return None
+
+    # Create timestamped archive folder
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    archive_path = LOGS_DIR / timestamp
+    archive_path.mkdir(parents=True, exist_ok=True)
+
+    # Move all files from output to archive
+    for item in files:
+        shutil.move(str(item), str(archive_path / item.name))
+
+    return archive_path
+
+
+def save_prompt_file(output: Path, options: dict) -> Path:
+    """Save generation options to prompt.txt in the output folder."""
+    output.mkdir(parents=True, exist_ok=True)
+    prompt_path = output / "prompt.txt"
+
+    lines = [
+        f"Style: {options['style']}",
+        f"Model: {options['model']}",
+        f"Cards: {options['card_subset']}",
+        f"Aspect Ratio: {options['aspect_ratio']}",
+        f"Seed: {options['seed']}",
+        f"Parallel: {options['parallel']}",
+    ]
+    if options.get('key_card'):
+        lines.append(f"Key Card: {options['key_card']}")
+        lines.append(f"Prompt Strength: {options['prompt_strength']}")
+    if options.get('cards_file'):
+        lines.append(f"Cards File: {options['cards_file']}")
+    lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+    prompt_path.write_text("\n".join(lines))
+    return prompt_path
+
+
 def run_generation(
     style: str,
     model: str,
@@ -134,6 +186,27 @@ def run_generation(
     prompt_strength: float,
 ) -> None:
     """Execute the deck generation with the given options."""
+    # Archive existing output if present
+    archive_path = archive_output(output)
+    if archive_path:
+        console.print(f"[yellow]Archived previous output to:[/yellow] {archive_path}")
+
+    # Build options dict for saving
+    options = {
+        "style": style,
+        "model": model,
+        "card_subset": card_subset,
+        "aspect_ratio": aspect_ratio,
+        "seed": seed,
+        "parallel": parallel,
+        "key_card": key_card,
+        "prompt_strength": prompt_strength,
+        "cards_file": cards_file,
+    }
+
+    # Save prompt.txt before generation
+    save_prompt_file(output, options)
+
     cards = get_cards(card_subset, cards_file=cards_file)
     console.print()
     console.print(f"[bold]Generating {len(cards)} tarot cards[/bold]")
