@@ -9,7 +9,7 @@ import questionary
 from rich.console import Console
 
 from tarot_gen.cards import get_cards
-from tarot_gen.generator import generate_deck, MODELS
+from tarot_gen.generator import generate_deck, MODELS, STYLE_TRANSFER_MODES
 
 console = Console()
 LOGS_DIR = Path("output-logs")
@@ -78,10 +78,33 @@ def prompt_for_options() -> dict:
         sys.exit(0)
     parallel = int(parallel_str) if parallel_str.strip() else 1
 
-    # SDXL-specific options
+    # Model-specific options
     key_card = None
     prompt_strength = 0.47
-    if model == "sdxl":
+    style_transfer_mode = "high-quality"
+
+    if model == "style-transfer":
+        # Style-transfer requires a reference image
+        key_card_str = questionary.text(
+            "Style reference image path:",
+            instruction="(required for style-transfer)",
+        ).ask()
+        if key_card_str is None:
+            sys.exit(0)
+        if not key_card_str.strip():
+            console.print("[red]Style reference image is required for style-transfer model.[/red]")
+            sys.exit(1)
+        key_card = key_card_str.strip()
+
+        style_transfer_mode = questionary.select(
+            "Style transfer mode:",
+            choices=STYLE_TRANSFER_MODES,
+            default="high-quality",
+        ).ask()
+        if style_transfer_mode is None:
+            sys.exit(0)
+
+    elif model == "sdxl":
         key_card_str = questionary.text(
             "Key card image path:",
             instruction="(leave empty to auto-generate)",
@@ -119,6 +142,7 @@ def prompt_for_options() -> dict:
         "parallel": parallel,
         "key_card": Path(key_card) if key_card else None,
         "prompt_strength": prompt_strength,
+        "style_transfer_mode": style_transfer_mode,
         "cards_file": Path(cards_file) if cards_file else None,
     }
 
@@ -165,6 +189,8 @@ def save_prompt_file(output: Path, options: dict) -> Path:
         lines.append(f"Key Card: {options['key_card']}")
     if options.get('model') == 'sdxl':
         lines.append(f"Prompt Strength: {options['prompt_strength']}")
+    if options.get('model') == 'style-transfer':
+        lines.append(f"Style Transfer Mode: {options['style_transfer_mode']}")
     if options.get('cards_file'):
         lines.append(f"Cards File: {options['cards_file']}")
     lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -184,6 +210,7 @@ def run_generation(
     cards_file: Path | None,
     aspect_ratio: str,
     prompt_strength: float,
+    style_transfer_mode: str,
 ) -> None:
     """Execute the deck generation with the given options."""
     # Archive existing output if present
@@ -201,6 +228,7 @@ def run_generation(
         "parallel": parallel,
         "key_card": key_card,
         "prompt_strength": prompt_strength,
+        "style_transfer_mode": style_transfer_mode,
         "cards_file": cards_file,
     }
 
@@ -219,6 +247,8 @@ def run_generation(
         console.print(f"  Key card: {key_card}")
     if model == "sdxl":
         console.print(f"  Prompt strength: {prompt_strength}")
+    if model == "style-transfer":
+        console.print(f"  Style transfer mode: {style_transfer_mode}")
     if cards_file:
         console.print(f"  Cards file: {cards_file.resolve()}")
     console.print()
@@ -233,6 +263,7 @@ def run_generation(
         key_card_path=str(key_card) if key_card else None,
         aspect_ratio=aspect_ratio,
         prompt_strength=prompt_strength,
+        style_transfer_mode=style_transfer_mode,
     )
 
     console.print(f"\n[bold green]Done![/bold green] Generated {len(paths)} images in {output.resolve()}")

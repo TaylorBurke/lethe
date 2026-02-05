@@ -19,7 +19,10 @@ from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2i
 MODELS = {
     "flux-schnell": "black-forest-labs/flux-schnell",
     "sdxl": "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
+    "style-transfer": "fofr/style-transfer",
 }
+
+STYLE_TRANSFER_MODES = ["fast", "high-quality", "realistic", "cinematic", "animated"]
 
 # SDXL dimension mappings for each aspect ratio (width, height)
 SDXL_DIMENSIONS = {
@@ -112,6 +115,7 @@ def _generate_one(
     key_card_url: str | None = None,
     aspect_ratio: str = "2:3",
     prompt_strength: float = 0.47,
+    style_transfer_mode: str = "high-quality",
     max_retries: int = 5,
 ) -> tuple[Path, str]:
     """Generate a single card image via Replicate, with retries.
@@ -126,11 +130,26 @@ def _generate_one(
     console.print(f"[dim]Negative: {negative}[/dim]")
 
     is_flux = "flux" in model_id
-    is_sdxl = not is_flux
+    is_style_transfer = "style-transfer" in model_id
+    is_sdxl = not is_flux and not is_style_transfer
 
     for attempt in range(1, max_retries + 1):
         try:
-            if is_sdxl and key_card_url:
+            if is_style_transfer and key_card_url:
+                console.print(f"[bold magenta]Using style-transfer with mode={style_transfer_mode}[/bold magenta]")
+                width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+                input_data = {
+                    "prompt": prompt,
+                    "negative_prompt": negative,
+                    "style_image": key_card_url,
+                    "model": style_transfer_mode,
+                    "width": width,
+                    "height": height,
+                    "seed": seed,
+                    "number_of_images": 1,
+                    "output_format": "png",
+                }
+            elif is_sdxl and key_card_url:
                 console.print(f"[bold magenta]Using img2img with prompt_strength={prompt_strength} from key card[/bold magenta]")
                 width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
                 input_data = build_sdxl_img2img_input(
@@ -189,6 +208,7 @@ def generate_deck(
     key_card_path: str | None = None,
     aspect_ratio: str = "2:3",
     prompt_strength: float = 0.47,
+    style_transfer_mode: str = "high-quality",
 ) -> list[Path]:
     """Generate images for all cards in the list.
 
@@ -196,17 +216,34 @@ def generate_deck(
     output URL is fed to all subsequent cards via img2img.  If
     ``key_card_path`` is supplied, that image is used as the reference
     instead of auto-generating one.
+
+    For style-transfer, a key_card_path is required as the style reference.
     """
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
     style_prefix = build_style_prefix(style)
     results: list[Path] = []
 
-    is_sdxl = "flux" not in model_id
+    is_flux = "flux" in model_id
+    is_style_transfer = "style-transfer" in model_id
+    is_sdxl = not is_flux and not is_style_transfer
     key_card_url: str | None = None
 
+    # Style-transfer requires a reference image
+    if is_style_transfer:
+        if not key_card_path:
+            raise RuntimeError("style-transfer model requires a style reference image (--key-card)")
+        target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        p = Path(key_card_path)
+        console.print(f"[bold cyan]Resizing style reference to {target_width}x{target_height}...[/bold cyan]")
+        resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+        encoded = base64.b64encode(resized_bytes).decode()
+        key_card_url = f"data:image/png;base64,{encoded}"
+        console.print(f"[bold cyan]Using style reference:[/bold cyan] {key_card_path}")
+        console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
+
     # Resolve the key card reference for SDXL
-    if is_sdxl:
+    elif is_sdxl:
         target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         if key_card_path:
             # Resize key card to match target aspect ratio and convert to data URI
@@ -238,7 +275,7 @@ def generate_deck(
         MofNCompleteColumn(),
         console=console,
     ) as progress:
-        task = progress.add_task("Generating tarot deck", total=len(cards))
+        task = progress.add_task("Generating deck", total=len(cards))
 
         if parallel <= 1:
             for i, card in enumerate(cards):
@@ -248,6 +285,7 @@ def generate_deck(
                     key_card_url=key_card_url,
                     aspect_ratio=aspect_ratio,
                     prompt_strength=prompt_strength,
+                    style_transfer_mode=style_transfer_mode,
                 )
                 results.append(path)
                 progress.update(task, advance=1, description=f"Generated {card.name}")
@@ -261,6 +299,7 @@ def generate_deck(
                         key_card_url=key_card_url,
                         aspect_ratio=aspect_ratio,
                         prompt_strength=prompt_strength,
+                        style_transfer_mode=style_transfer_mode,
                     )
                     futures[fut] = card
 
