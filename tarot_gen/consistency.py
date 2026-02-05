@@ -19,15 +19,8 @@ def get_seed(base_seed: int, index: int) -> int:
 
 
 def build_style_prefix(style: str) -> str:
-    """Wrap the user's style string into a structured consistency prefix.
-
-    The same prefix is prepended to every card prompt to maximize
-    stylistic coherence across the deck.
-    """
-    return (
-        f"unified collection, consistent art style throughout, "
-        f"same color palette, same line weight, same rendering technique, {style}"
-    )
+    """Return the user's style string for use in prompts."""
+    return style
 
 
 def resize_image_to_aspect(
