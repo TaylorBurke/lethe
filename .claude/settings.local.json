@@ -4,7 +4,11 @@
       "Bash(pip install:*)",
       "Bash(python:*)",
       "Bash(set PYTHONPATH=.)",
-      "Bash(winget upgrade:*)"
+      "Bash(winget upgrade:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "WebSearch",
+      "WebFetch(domain:replicate.com)"
     ]
   }
 }

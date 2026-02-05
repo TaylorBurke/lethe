@@ -19,7 +19,7 @@ from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2i
 MODELS = {
     "flux-schnell": "black-forest-labs/flux-schnell",
     "sdxl": "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
-    "style-transfer": "fofr/style-transfer",
+    "style-transfer": "fofr/style-transfer:f1023890703bc0a5a3a2c21b5e498833be5f6ef6e70e9daf6b9b3a4fd8309cf0",
 }
 
 STYLE_TRANSFER_MODES = ["fast", "high-quality", "realistic", "cinematic", "animated"]
