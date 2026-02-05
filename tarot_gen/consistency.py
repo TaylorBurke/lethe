@@ -2,6 +2,11 @@
 
 from __future__ import annotations
 
+from io import BytesIO
+from pathlib import Path
+
+from PIL import Image
+
 
 def get_seed(base_seed: int, index: int) -> int:
     """Derive a deterministic seed for card at given index.
@@ -23,6 +28,47 @@ def build_style_prefix(style: str) -> str:
         f"unified collection, consistent art style throughout, "
         f"same color palette, same line weight, same rendering technique, {style}"
     )
+
+
+def resize_image_to_aspect(
+    image_path: Path,
+    target_width: int,
+    target_height: int,
+) -> bytes:
+    """Resize and crop an image to match the target aspect ratio.
+
+    Uses center crop to maintain the most important part of the image,
+    then resizes to the exact target dimensions.
+
+    Returns the resized image as PNG bytes.
+    """
+    with Image.open(image_path) as img:
+        # Convert to RGB if necessary (handles RGBA, palette, etc.)
+        if img.mode not in ("RGB", "L"):
+            img = img.convert("RGB")
+
+        orig_width, orig_height = img.size
+        target_ratio = target_width / target_height
+        orig_ratio = orig_width / orig_height
+
+        if orig_ratio > target_ratio:
+            # Image is wider than target - crop width
+            new_width = int(orig_height * target_ratio)
+            left = (orig_width - new_width) // 2
+            img = img.crop((left, 0, left + new_width, orig_height))
+        elif orig_ratio < target_ratio:
+            # Image is taller than target - crop height
+            new_height = int(orig_width / target_ratio)
+            top = (orig_height - new_height) // 2
+            img = img.crop((0, top, orig_width, top + new_height))
+
+        # Resize to exact target dimensions
+        img = img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+
+        # Save to bytes
+        buffer = BytesIO()
+        img.save(buffer, format="PNG")
+        return buffer.getvalue()
 
 
 def build_sdxl_img2img_input(

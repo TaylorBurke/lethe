@@ -91,15 +91,14 @@ def prompt_for_options() -> dict:
             sys.exit(0)
         key_card = key_card_str.strip() if key_card_str.strip() else None
 
-        if key_card:
-            ps_str = questionary.text(
-                "Prompt strength:",
-                instruction="(0.0-1.0, lower = closer to key card)",
-                default="0.47",
-            ).ask()
-            if ps_str is None:
-                sys.exit(0)
-            prompt_strength = float(ps_str) if ps_str.strip() else 0.47
+        ps_str = questionary.text(
+            "Prompt strength:",
+            instruction="(0.0-1.0, lower = closer to key card)",
+            default="0.47",
+        ).ask()
+        if ps_str is None:
+            sys.exit(0)
+        prompt_strength = float(ps_str) if ps_str.strip() else 0.47
 
     cards_file_str = questionary.text(
         "Custom cards YAML file:",
@@ -164,6 +163,7 @@ def save_prompt_file(output: Path, options: dict) -> Path:
     ]
     if options.get('key_card'):
         lines.append(f"Key Card: {options['key_card']}")
+    if options.get('model') == 'sdxl':
         lines.append(f"Prompt Strength: {options['prompt_strength']}")
     if options.get('cards_file'):
         lines.append(f"Cards File: {options['cards_file']}")
@@ -217,6 +217,7 @@ def run_generation(
     console.print(f"  Aspect: {aspect_ratio}")
     if key_card:
         console.print(f"  Key card: {key_card}")
+    if model == "sdxl":
         console.print(f"  Prompt strength: {prompt_strength}")
     if cards_file:
         console.print(f"  Cards file: {cards_file.resolve()}")

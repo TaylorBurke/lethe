@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import base64
-import mimetypes
 import os
 import time
 from pathlib import Path
@@ -15,7 +14,7 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCo
 
 from tarot_gen.cards import Card
 from tarot_gen.prompts import build_prompt, build_negative_prompt
-from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2img_input
+from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2img_input, resize_image_to_aspect
 
 MODELS = {
     "flux-schnell": "black-forest-labs/flux-schnell",
@@ -208,12 +207,14 @@ def generate_deck(
 
     # Resolve the key card reference for SDXL
     if is_sdxl:
+        target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         if key_card_path:
-            # Convert local file to a data URI so Replicate can consume it
+            # Resize key card to match target aspect ratio and convert to data URI
             p = Path(key_card_path)
-            mime = mimetypes.guess_type(p.name)[0] or "image/png"
-            encoded = base64.b64encode(p.read_bytes()).decode()
-            key_card_url = f"data:{mime};base64,{encoded}"
+            console.print(f"[bold cyan]Resizing key card to {target_width}x{target_height}...[/bold cyan]")
+            resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+            encoded = base64.b64encode(resized_bytes).decode()
+            key_card_url = f"data:image/png;base64,{encoded}"
             console.print(f"[bold cyan]Using supplied key card:[/bold cyan] {key_card_path}")
         elif cards:
             # Generate The Fool (first card) as key card
