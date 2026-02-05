@@ -34,35 +34,40 @@ export REPLICATE_API_TOKEN=r8_...
 
 ## Usage
 
+Simply run the command and follow the interactive prompts:
+
 ```bash
-# Generate sample cards (17 representative cards) for quick iteration
-python -m tarot_gen "watercolor botanical" --cards sample --seed 42
-
-# Generate 22 Major Arcana cards
-python -m tarot_gen "dark gothic ink wash style" --cards major
-
-# Generate full 78-card deck with SDXL, 4 concurrent API calls
-python -m tarot_gen "dark gothic ink wash style" --model sdxl --parallel 4 --output ./my-deck
-
-# Use custom card definitions from a YAML file
-python -m tarot_gen "art nouveau gold leaf" --cards-file ./my-cards.yaml --cards major
-
-# Use a custom reference image as the style key card (SDXL)
-python -m tarot_gen "art nouveau gold leaf" --model sdxl --key-card ./my-ref.png --cards major
+python -m tarot_gen
 ```
 
-### Options
+You'll be guided through each option:
+1. **Style prompt** - Describe your art style (e.g., "dark gothic ink wash style")
+2. **Model** - Use arrow keys to select `flux-schnell` or `sdxl`
+3. **Cards to generate** - Choose `sample` (17 cards), `major` (22), `minor` (56), or `all` (78)
+4. **Aspect ratio** - Select from common ratios (default: 2:3 portrait)
+5. **Output directory** - Where to save images (default: `output`)
+6. **Seed** - For reproducibility (default: 42)
+7. **Parallel API calls** - Concurrent requests (default: 1)
+8. **Key card** (SDXL only) - Reference image for style consistency
+9. **Prompt strength** (SDXL with key card) - How much prompt overrides reference (0.0-1.0)
+10. **Custom cards file** - Optional YAML with custom card definitions
+
+Press **Enter** to accept defaults, or **Ctrl+C** to cancel.
+
+### Options Reference
 
 | Option | Default | Description |
 |---|---|---|
-| `STYLE` (argument) | *required* | Art style prompt, e.g. `"dark gothic ink wash style"` |
-| `--model` | `flux-schnell` | Model to use (`flux-schnell` or `sdxl`) |
-| `--output` | `./output` | Output directory for generated images |
-| `--cards` | `all` | Card subset: `all`, `major`, `minor`, or `sample` |
-| `--seed` | `42` | Base seed for reproducibility |
-| `--parallel` | `1` | Number of concurrent API calls |
-| `--key-card` | *none* | Path to a reference image for style transfer (SDXL only) |
-| `--cards-file` | *none* | Path to a YAML file with custom card definitions |
+| Style prompt | *required* | Art style, e.g. `"dark gothic ink wash style"` |
+| Model | `flux-schnell` | `flux-schnell` or `sdxl` |
+| Cards | `sample` | `sample` (17), `major` (22), `minor` (56), or `all` (78) |
+| Aspect ratio | `2:3` | `1:1`, `16:9`, `9:16`, `2:3`, `3:2`, `4:5`, `5:4`, `21:9`, `9:21` |
+| Output | `./output` | Output directory for generated images |
+| Seed | `42` | Base seed for reproducibility |
+| Parallel | `1` | Number of concurrent API calls |
+| Key card | *none* | Reference image for style transfer (SDXL only) |
+| Prompt strength | `0.47` | How much prompt overrides key card (SDXL only, 0.0-1.0) |
+| Cards file | *none* | Path to custom card definitions YAML |
 
 ## Customizing Cards
 

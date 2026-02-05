@@ -22,6 +22,19 @@ MODELS = {
     "sdxl": "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
 }
 
+# SDXL dimension mappings for each aspect ratio (width, height)
+SDXL_DIMENSIONS = {
+    "1:1": (1024, 1024),
+    "16:9": (1344, 768),
+    "9:16": (768, 1344),
+    "2:3": (768, 1152),
+    "3:2": (1152, 768),
+    "4:5": (896, 1120),
+    "5:4": (1120, 896),
+    "21:9": (1536, 640),
+    "9:21": (640, 1536),
+}
+
 API_BASE = "https://api.replicate.com/v1"
 
 console = Console()
@@ -98,6 +111,8 @@ def _generate_one(
     seed: int,
     output_dir: Path,
     key_card_url: str | None = None,
+    aspect_ratio: str = "2:3",
+    prompt_strength: float = 0.47,
     max_retries: int = 5,
 ) -> tuple[Path, str]:
     """Generate a single card image via Replicate, with retries.
@@ -117,12 +132,16 @@ def _generate_one(
     for attempt in range(1, max_retries + 1):
         try:
             if is_sdxl and key_card_url:
-                console.print(f"[bold magenta]Using img2img with prompt_strength from key card[/bold magenta]")
+                console.print(f"[bold magenta]Using img2img with prompt_strength={prompt_strength} from key card[/bold magenta]")
+                width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
                 input_data = build_sdxl_img2img_input(
                     prompt=prompt,
                     negative_prompt=negative,
                     seed=seed,
                     image_url=key_card_url,
+                    width=width,
+                    height=height,
+                    prompt_strength=prompt_strength,
                 )
                 console.print(f"[dim]img2img input has 'image' key: {'image' in input_data}[/dim]")
             elif is_flux:
@@ -130,15 +149,16 @@ def _generate_one(
                     "prompt": prompt,
                     "seed": seed,
                     "num_outputs": 1,
-                    "aspect_ratio": "2:3",
+                    "aspect_ratio": aspect_ratio,
                 }
             else:
+                width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
                 input_data = {
                     "prompt": prompt,
                     "negative_prompt": negative,
                     "seed": seed,
-                    "width": 768,
-                    "height": 1344,
+                    "width": width,
+                    "height": height,
                     "num_outputs": 1,
                 }
 
@@ -168,6 +188,8 @@ def generate_deck(
     base_seed: int = 42,
     parallel: int = 1,
     key_card_path: str | None = None,
+    aspect_ratio: str = "2:3",
+    prompt_strength: float = 0.47,
 ) -> list[Path]:
     """Generate images for all cards in the list.
 
@@ -200,6 +222,7 @@ def generate_deck(
             console.print(f"[bold cyan]Generating key card:[/bold cyan] {first_card.name}")
             path, key_card_url = _generate_one(
                 first_card, style_prefix, model_id, seed, output_dir,
+                aspect_ratio=aspect_ratio,
             )
             results.append(path)
             console.print(f"[bold green]Key card ready:[/bold green] {first_card.name}")
@@ -222,6 +245,8 @@ def generate_deck(
                 path, _ = _generate_one(
                     card, style_prefix, model_id, seed, output_dir,
                     key_card_url=key_card_url,
+                    aspect_ratio=aspect_ratio,
+                    prompt_strength=prompt_strength,
                 )
                 results.append(path)
                 progress.update(task, advance=1, description=f"Generated {card.name}")
@@ -233,6 +258,8 @@ def generate_deck(
                     fut = pool.submit(
                         _generate_one, card, style_prefix, model_id, seed, output_dir,
                         key_card_url=key_card_url,
+                        aspect_ratio=aspect_ratio,
+                        prompt_strength=prompt_strength,
                     )
                     futures[fut] = card
 

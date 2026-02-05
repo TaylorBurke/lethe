@@ -1,8 +1,9 @@
 """CLI entry point for tarot deck generator."""
 
+import sys
 from pathlib import Path
 
-import click
+import questionary
 from rich.console import Console
 
 from tarot_gen.cards import get_cards
@@ -10,43 +11,117 @@ from tarot_gen.generator import generate_deck, MODELS
 
 console = Console()
 
+ASPECT_RATIOS = ["2:3", "3:2", "1:1", "16:9", "9:16", "4:5", "5:4", "21:9", "9:21"]
+CARD_SUBSETS = ["sample", "major", "minor", "all"]
 
-@click.command()
-@click.argument("style")
-@click.option(
-    "--model",
-    type=click.Choice(list(MODELS.keys()), case_sensitive=False),
-    default="flux-schnell",
-    help="Image generation model to use.",
-)
-@click.option(
-    "--output",
-    type=click.Path(path_type=Path),
-    default=Path("output"),
-    help="Output directory for generated images.",
-)
-@click.option(
-    "--cards",
-    "card_subset",
-    type=click.Choice(["all", "major", "minor", "sample"], case_sensitive=False),
-    default="all",
-    help="Which cards to generate.",
-)
-@click.option("--seed", type=int, default=42, help="Base seed for reproducibility.")
-@click.option("--parallel", type=int, default=1, help="Number of concurrent API calls.")
-@click.option(
-    "--key-card",
-    type=click.Path(exists=True, path_type=Path),
-    default=None,
-    help="Path to a reference image used as style key card (SDXL only).",
-)
-@click.option(
-    "--cards-file",
-    type=click.Path(exists=True, path_type=Path),
-    default=None,
-    help="Path to a YAML file with custom card definitions.",
-)
-def main(
+
+def prompt_for_options() -> dict:
+    """Interactively prompt user for all generation options."""
+
+    style = questionary.text(
+        "Style prompt:",
+        instruction="(e.g., 'dark gothic ink wash style')",
+    ).ask()
+    if style is None:  # User pressed Ctrl+C
+        sys.exit(0)
+    if not style.strip():
+        console.print("[red]Style prompt is required.[/red]")
+        sys.exit(1)
+
+    model = questionary.select(
+        "Model:",
+        choices=list(MODELS.keys()),
+        default="flux-schnell",
+    ).ask()
+    if model is None:
+        sys.exit(0)
+
+    cards = questionary.select(
+        "Cards to generate:",
+        choices=CARD_SUBSETS,
+        default="sample",
+    ).ask()
+    if cards is None:
+        sys.exit(0)
+
+    aspect_ratio = questionary.select(
+        "Aspect ratio:",
+        choices=ASPECT_RATIOS,
+        default="2:3",
+    ).ask()
+    if aspect_ratio is None:
+        sys.exit(0)
+
+    output = questionary.text(
+        "Output directory:",
+        default="output",
+    ).ask()
+    if output is None:
+        sys.exit(0)
+
+    seed_str = questionary.text(
+        "Seed:",
+        default="42",
+    ).ask()
+    if seed_str is None:
+        sys.exit(0)
+    seed = int(seed_str) if seed_str.strip() else 42
+
+    parallel_str = questionary.text(
+        "Parallel API calls:",
+        default="1",
+    ).ask()
+    if parallel_str is None:
+        sys.exit(0)
+    parallel = int(parallel_str) if parallel_str.strip() else 1
+
+    # SDXL-specific options
+    key_card = None
+    prompt_strength = 0.47
+    if model == "sdxl":
+        key_card_str = questionary.text(
+            "Key card image path:",
+            instruction="(leave empty to auto-generate)",
+            default="",
+        ).ask()
+        if key_card_str is None:
+            sys.exit(0)
+        key_card = key_card_str.strip() if key_card_str.strip() else None
+
+        if key_card:
+            ps_str = questionary.text(
+                "Prompt strength:",
+                instruction="(0.0-1.0, lower = closer to key card)",
+                default="0.47",
+            ).ask()
+            if ps_str is None:
+                sys.exit(0)
+            prompt_strength = float(ps_str) if ps_str.strip() else 0.47
+
+    cards_file_str = questionary.text(
+        "Custom cards YAML file:",
+        instruction="(leave empty for built-in cards)",
+        default="",
+    ).ask()
+    if cards_file_str is None:
+        sys.exit(0)
+    cards_file = cards_file_str.strip() if cards_file_str.strip() else None
+
+    return {
+        "style": style,
+        "model": model,
+        "card_subset": cards,
+        "aspect_ratio": aspect_ratio,
+        "output": Path(output),
+        "seed": seed,
+        "parallel": parallel,
+        "key_card": Path(key_card) if key_card else None,
+        "prompt_strength": prompt_strength,
+        "cards_file": Path(cards_file) if cards_file else None,
+    }
+
+
+def run_generation(
     style: str,
     model: str,
     output: Path,
@@ -55,19 +130,23 @@ def main(
     parallel: int,
     key_card: Path | None,
     cards_file: Path | None,
+    aspect_ratio: str,
+    prompt_strength: float,
 ) -> None:
-    """Generate a complete tarot deck with a consistent art style.
-
-    STYLE is the art style prompt, e.g. "dark gothic ink wash style".
-    """
+    """Execute the deck generation with the given options."""
     cards = get_cards(card_subset, cards_file=cards_file)
+    console.print()
     console.print(f"[bold]Generating {len(cards)} tarot cards[/bold]")
     console.print(f"  Style:  {style}")
     console.print(f"  Model:  {model}")
     console.print(f"  Output: {output.resolve()}")
     console.print(f"  Seed:   {seed}")
+    console.print(f"  Aspect: {aspect_ratio}")
+    if key_card:
+        console.print(f"  Key card: {key_card}")
+        console.print(f"  Prompt strength: {prompt_strength}")
     if cards_file:
-        console.print(f"  Cards:  {cards_file.resolve()}")
+        console.print(f"  Cards file: {cards_file.resolve()}")
     console.print()
 
     paths = generate_deck(
@@ -78,9 +157,17 @@ def main(
         base_seed=seed,
         parallel=parallel,
         key_card_path=str(key_card) if key_card else None,
+        aspect_ratio=aspect_ratio,
+        prompt_strength=prompt_strength,
     )
 
     console.print(f"\n[bold green]Done![/bold green] Generated {len(paths)} images in {output.resolve()}")
+
+
+def main() -> None:
+    """Generate a complete tarot deck with a consistent art style."""
+    options = prompt_for_options()
+    run_generation(**options)
 
 
 if __name__ == "__main__":
