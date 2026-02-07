@@ -14,7 +14,7 @@ from tarot_gen.generator import generate_deck, MODELS, STYLE_TRANSFER_MODES
 console = Console()
 LOGS_DIR = Path("output-logs")
 
-ASPECT_RATIOS = ["2:3", "3:2", "1:1", "16:9", "9:16", "4:5", "5:4", "21:9", "9:21"]
+ASPECT_RATIOS = ["11:19", "300x575", "2:3", "3:2", "1:1", "16:9", "9:16", "4:5", "5:4", "21:9", "9:21"]
 CARD_SUBSETS = ["sample", "major", "minor", "all"]
 
 
@@ -50,7 +50,7 @@ def prompt_for_options() -> dict:
     aspect_ratio = questionary.select(
         "Aspect ratio:",
         choices=ASPECT_RATIOS,
-        default="2:3",
+        default="11:19",
     ).ask()
     if aspect_ratio is None:
         sys.exit(0)
@@ -85,16 +85,14 @@ def prompt_for_options() -> dict:
 
     if model == "style-transfer":
         # Style-transfer requires a reference image
-        key_card_str = questionary.text(
-            "Style reference image path:",
-            instruction="(required for style-transfer)",
+        key_card_str = questionary.select(
+            "Style reference image:",
+            choices=["my-ref.png"],
+            default="my-ref.png",
         ).ask()
         if key_card_str is None:
             sys.exit(0)
-        if not key_card_str.strip():
-            console.print("[red]Style reference image is required for style-transfer model.[/red]")
-            sys.exit(1)
-        key_card = key_card_str.strip()
+        key_card = key_card_str
 
         style_transfer_mode = questionary.select(
             "Style transfer mode:",

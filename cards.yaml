@@ -12,7 +12,7 @@ major_arcana:
   - name: The Magician
     numeral: "01"
     description: A figure at a table with arms raised, one pointing up and one down, tools of magic before them
-    key_symbols: [infinity symbol, wand, cup, sword, pentacle, table]
+    key_symbols: [infinity symbol, wand, cup, sword, golden coin, table]
     composition: centered full-body figure facing viewer, one arm raised to sky one pointing down, table with objects in foreground
 
   - name: The High Priestess
@@ -319,63 +319,63 @@ minor_arcana:
         key_symbols: [throne, sword, wind-bent trees, butterflies, storm clouds]
         composition: seated king facing slightly left, sword held upright, wind-bent trees and storm behind, commanding authoritative pose
 
-  pentacles:
+  coins:
     pips:
       "1":
-        description: A hand from a cloud holds a golden pentacle over a lush garden with an archway
-        key_symbols: [hand, cloud, golden pentacle, garden, archway, lilies]
-        composition: disembodied hand from cloud holding large golden pentacle, lush garden with archway below, lilies blooming, abundant offering
+        description: A hand from a cloud holds a golden coin over a lush garden with an archway
+        key_symbols: [hand, cloud, golden coin, garden, archway, lilies]
+        composition: disembodied hand from cloud holding large golden coin, lush garden with archway below, lilies blooming, abundant offering
       "2":
-        description: A juggler dances holding two pentacles in a figure eight, ships on a wavy sea behind
-        key_symbols: [juggler, two pentacles, infinity loop, ships, waves]
-        composition: dancing figure in center juggling two pentacles in infinity pattern, wavy sea with ships behind, dynamic playful balance pose
+        description: A juggler dances holding two coins in a figure eight, ships on a wavy sea behind
+        key_symbols: [juggler, two coins, infinity loop, ships, waves]
+        composition: dancing figure in center juggling two coins in infinity pattern, wavy sea with ships behind, dynamic playful balance pose
       "3":
-        description: A stonemason works on a cathedral arch, three pentacles in the design, monks observe
-        key_symbols: [stonemason, three pentacles, cathedral, monks, tools]
-        composition: stonemason working in center, three pentacles carved in arch above, two monks observing, cathedral interior, craftsmanship scene
+        description: A stonemason works on a cathedral arch, three coins in the design, monks observe
+        key_symbols: [stonemason, three coins, cathedral, monks, tools]
+        composition: stonemason working in center, three coins carved in arch above, two monks observing, cathedral interior, craftsmanship scene
       "4":
-        description: A figure clutches a pentacle to their chest atop a pile, two under feet, one on crown
-        key_symbols: [figure, four pentacles, city background, miserly pose]
-        composition: standing figure clutching pentacle to chest, one under each foot, one balanced on crown, city skyline behind, possessive guarding pose
+        description: A figure clutches a golden coin to their chest atop a pile, two under feet, one on crown
+        key_symbols: [figure, four coins, city background, miserly pose]
+        composition: standing figure clutching golden coin to chest, one under each foot, one balanced on crown, city skyline behind, possessive guarding pose
       "5":
-        description: Two destitute figures trudge through snow past a lit church window with five pentacles
-        key_symbols: [two figures, snow, five pentacles, stained glass window, tattered clothes]
-        composition: two bent figures in foreground trudging through snow, lit stained glass window with five pentacles above and behind, cold and desperate scene
+        description: Two destitute figures trudge through snow past a lit church window with five coins
+        key_symbols: [two figures, snow, five coins, stained glass window, tattered clothes]
+        composition: two bent figures in foreground trudging through snow, lit stained glass window with five coins above and behind, cold and desperate scene
       "6":
-        description: A wealthy merchant weighs pentacles on a scale, giving to kneeling figures
-        key_symbols: [merchant, six pentacles, scale, kneeling figures, generosity]
-        composition: standing merchant in center with scales, two kneeling figures receiving below, six pentacles distributed in scene, charitable giving arrangement
+        description: A wealthy merchant weighs coins on a scale, giving to kneeling figures
+        key_symbols: [merchant, six coins, scale, kneeling figures, generosity]
+        composition: standing merchant in center with scales, two kneeling figures receiving below, six coins distributed in scene, charitable giving arrangement
       "7":
-        description: A farmer leans on a hoe gazing at a bush bearing seven pentacles, patient waiting
-        key_symbols: [farmer, hoe, seven pentacles, bush, patience]
-        composition: farmer figure leaning on hoe in foreground, gazing at bush with seven pentacles growing, patient contemplative stance
+        description: A farmer leans on a hoe gazing at a bush bearing seven coins, patient waiting
+        key_symbols: [farmer, hoe, seven coins, bush, patience]
+        composition: farmer figure leaning on hoe in foreground, gazing at bush with seven coins growing, patient contemplative stance
       "8":
-        description: A craftsman carefully carves pentacles at a workbench, a town in the background
-        key_symbols: [craftsman, workbench, eight pentacles, tools, town]
-        composition: craftsman seated at workbench working, eight pentacles displayed (some finished some in progress), town visible through window, diligent focused work scene
+        description: A craftsman carefully carves coins at a workbench, a town in the background
+        key_symbols: [craftsman, workbench, eight coins, tools, town]
+        composition: craftsman seated at workbench working, eight coins displayed (some finished some in progress), town visible through window, diligent focused work scene
       "9":
-        description: A well-dressed figure in a luxurious garden with a falcon, surrounded by nine pentacles
-        key_symbols: [garden, falcon, nine pentacles, grapevines, manor]
-        composition: elegant figure standing in garden with falcon on hand, nine pentacles growing on vines around, manor house behind, wealthy abundance scene
+        description: A well-dressed figure in a luxurious garden with a falcon, surrounded by nine coins
+        key_symbols: [garden, falcon, nine coins, grapevines, manor]
+        composition: elegant figure standing in garden with falcon on hand, nine coins growing on vines around, manor house behind, wealthy abundance scene
       "10":
-        description: A multigenerational family under an archway with ten pentacles, dogs at their feet
-        key_symbols: [family, ten pentacles, archway, dogs, estate]
-        composition: multigenerational family group under stone archway, ten pentacles arranged in tree of life pattern, dogs at feet, estate grounds, legacy and prosperity scene
+        description: A multigenerational family under an archway with ten coins, dogs at their feet
+        key_symbols: [family, ten coins, archway, dogs, estate]
+        composition: multigenerational family group under stone archway, ten coins arranged in tree of life pattern, dogs at feet, estate grounds, legacy and prosperity scene
 
     court:
       Page:
-        description: A studious youth holds up a pentacle, standing in a green field with young trees
-        key_symbols: [pentacle, green field, young trees, studious pose]
-        composition: standing youthful figure holding pentacle up and studying it, green field with young trees, curious studious examination pose
+        description: A studious youth holds up a golden coin, standing in a green field with young trees
+        key_symbols: [golden coin, green field, young trees, studious pose]
+        composition: standing youthful figure holding golden coin up and studying it, green field with young trees, curious studious examination pose
       Knight:
-        description: A knight on a sturdy, still horse holds a pentacle, a plowed field stretches behind
-        key_symbols: [sturdy horse, pentacle, plowed field, patient stance]
-        composition: mounted knight on still standing horse, pentacle held and examined, plowed fields behind, patient methodical pose
+        description: A knight on a sturdy, still horse holds a golden coin, a plowed field stretches behind
+        key_symbols: [sturdy horse, golden coin, plowed field, patient stance]
+        composition: mounted knight on still standing horse, golden coin held and examined, plowed fields behind, patient methodical pose
       Queen:
-        description: A queen sits on a throne in a flowering garden, cradling a pentacle, a rabbit nearby
-        key_symbols: [throne, pentacle, flowering garden, rabbit]
-        composition: seated queen in garden setting, pentacle cradled lovingly, rabbit at feet, flowers blooming around throne, nurturing abundance pose
+        description: A queen sits on a throne in a flowering garden, cradling a golden coin, a rabbit nearby
+        key_symbols: [throne, golden coin, flowering garden, rabbit]
+        composition: seated queen in garden setting, golden coin cradled lovingly, rabbit at feet, flowers blooming around throne, nurturing abundance pose
       King:
-        description: A prosperous king on a throne decorated with bull carvings, pentacle on lap, castle grounds
-        key_symbols: [throne, bull carvings, pentacle, castle, grapevines]
-        composition: seated king on bull-carved throne, pentacle resting on lap, castle and vineyard grounds behind, prosperous commanding pose
+        description: A prosperous king on a throne decorated with bull carvings, golden coin on lap, castle grounds
+        key_symbols: [throne, bull carvings, golden coin, castle, grapevines]
+        composition: seated king on bull-carved throne, golden coin resting on lap, castle and vineyard grounds behind, prosperous commanding pose

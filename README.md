@@ -15,6 +15,12 @@ tarot-gen/
 │   ├── generator.py       # Replicate API client + generation logic
 │   └── consistency.py     # Seed derivation + style prefix for consistency
 ├── cards.yaml             # Customizable card definitions (descriptions, symbols, composition)
+├── references/            # Style reference images for style-transfer model
+│   ├── major.png          # Reference for Major Arcana (Fool to World)
+│   ├── wands.png          # Reference for Wands suit
+│   ├── cups.png           # Reference for Cups suit
+│   ├── swords.png         # Reference for Swords suit
+│   └── coins.png          # Reference for Coins suit
 ├── output/                # Default output directory
 ├── pyproject.toml
 └── README.md
@@ -44,13 +50,29 @@ You'll be guided through each option:
 1. **Style prompt** - Describe your art style (e.g., "dark gothic ink wash style")
 2. **Model** - Use arrow keys to select `flux-schnell` or `sdxl`
 3. **Cards to generate** - Choose `sample` (17 cards), `major` (22), `minor` (56), or `all` (78)
-4. **Aspect ratio** - Select from common ratios (default: 2:3 portrait)
+4. **Aspect ratio** - Select from common ratios (default: 11:19 portrait)
 5. **Output directory** - Where to save images (default: `output`)
 6. **Seed** - For reproducibility (default: 42)
 7. **Parallel API calls** - Concurrent requests (default: 1)
 8. **Key card** (SDXL only) - Reference image for style consistency
 9. **Prompt strength** (SDXL with key card) - How much prompt overrides reference (0.0-1.0)
 10. **Custom cards file** - Optional YAML with custom card definitions
+
+### Style Transfer with Reference Images
+
+When using the `style-transfer` model, you can provide 5 reference images in the `references/` folder to guide the visual style of each card group:
+
+| Reference File | Cards |
+|---|---|
+| `references/major.png` | Major Arcana (The Fool through The World) |
+| `references/wands.png` | Ace through King of Wands |
+| `references/cups.png` | Ace through King of Cups |
+| `references/swords.png` | Ace through King of Swords |
+| `references/coins.png` | Ace through King of Coins |
+
+Each card group is generated using its corresponding reference image for style consistency. The groups are processed concurrently for faster generation.
+
+Output files are named alphabetically to maintain the traditional tarot order: Major Arcana first (Fool to World), followed by the four suits (Wands, Cups, Swords, Coins), each ordered Ace through King.
 
 Press **Enter** to accept defaults, or **Ctrl+C** to cancel.
 
@@ -61,7 +83,7 @@ Press **Enter** to accept defaults, or **Ctrl+C** to cancel.
 | Style prompt | *required* | Art style, e.g. `"dark gothic ink wash style"` |
 | Model | `flux-schnell` | `flux-schnell` or `sdxl` |
 | Cards | `sample` | `sample` (17), `major` (22), `minor` (56), or `all` (78) |
-| Aspect ratio | `2:3` | `1:1`, `16:9`, `9:16`, `2:3`, `3:2`, `4:5`, `5:4`, `21:9`, `9:21` |
+| Aspect ratio | `11:19` | `11:19`, `2:3`, `3:2`, `1:1`, `16:9`, `9:16`, `4:5`, `5:4`, `21:9`, `9:21` |
 | Output | `./output` | Output directory for generated images |
 | Seed | `42` | Base seed for reproducibility |
 | Parallel | `1` | Number of concurrent API calls |
