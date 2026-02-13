@@ -9,10 +9,28 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
+from PIL import Image
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 
 from tarot_gen.cards import Card
+
+# Map card group to reference filename in references/ directory.
+# Suit "Pentacles" maps to "coins.png" to match the traditional name.
+REFERENCE_FILES = {
+    "major": "major.png",
+    "Wands": "wands.png",
+    "Cups": "cups.png",
+    "Swords": "swords.png",
+    "Pentacles": "coins.png",
+}
+
+
+def _reference_key(card: Card) -> str:
+    """Return the reference map key for a card (arcana_type for major, suit for minor)."""
+    if card.arcana_type == "major":
+        return "major"
+    return card.suit
 from tarot_gen.prompts import build_prompt, build_negative_prompt
 from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2img_input, resize_image_to_aspect
 
@@ -209,6 +227,7 @@ def generate_deck(
     aspect_ratio: str = "2:3",
     prompt_strength: float = 0.47,
     style_transfer_mode: str = "high-quality",
+    reference_map: dict[str, str] | None = None,
 ) -> list[Path]:
     """Generate images for all cards in the list.
 
@@ -217,7 +236,10 @@ def generate_deck(
     ``key_card_path`` is supplied, that image is used as the reference
     instead of auto-generating one.
 
-    For style-transfer, a key_card_path is required as the style reference.
+    For style-transfer, provide ``reference_map`` (a dict mapping group
+    keys like ``"major"``, ``"Wands"``, etc. to image file paths) to use
+    per-group reference images.  Falls back to ``key_card_path`` as a
+    single reference for all cards.
     """
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -229,18 +251,31 @@ def generate_deck(
     is_sdxl = not is_flux and not is_style_transfer
     key_card_url: str | None = None
 
-    # Style-transfer requires a reference image
+    # Style-transfer requires reference image(s)
+    reference_urls: dict[str, str] = {}
     if is_style_transfer:
-        if not key_card_path:
-            raise RuntimeError("style-transfer model requires a style reference image (--key-card)")
         target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
-        p = Path(key_card_path)
-        console.print(f"[bold cyan]Resizing style reference to {target_width}x{target_height}...[/bold cyan]")
-        resized_bytes = resize_image_to_aspect(p, target_width, target_height)
-        encoded = base64.b64encode(resized_bytes).decode()
-        key_card_url = f"data:image/png;base64,{encoded}"
-        console.print(f"[bold cyan]Using style reference:[/bold cyan] {key_card_path}")
-        console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
+        if reference_map:
+            # Pre-encode all group reference images
+            for group_key, img_path in reference_map.items():
+                p = Path(img_path)
+                console.print(f"[bold cyan]Resizing {group_key} reference to {target_width}x{target_height}...[/bold cyan]")
+                resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+                encoded = base64.b64encode(resized_bytes).decode()
+                reference_urls[group_key] = f"data:image/png;base64,{encoded}"
+                console.print(f"[bold cyan]  {group_key} reference:[/bold cyan] {img_path}")
+            console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
+        elif key_card_path:
+            # Single reference fallback
+            p = Path(key_card_path)
+            console.print(f"[bold cyan]Resizing style reference to {target_width}x{target_height}...[/bold cyan]")
+            resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+            encoded = base64.b64encode(resized_bytes).decode()
+            key_card_url = f"data:image/png;base64,{encoded}"
+            console.print(f"[bold cyan]Using style reference:[/bold cyan] {key_card_path}")
+            console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
+        else:
+            raise RuntimeError("style-transfer model requires reference images (--key-card or references/ directory)")
 
     # Resolve the key card reference for SDXL
     elif is_sdxl:
@@ -277,12 +312,18 @@ def generate_deck(
     ) as progress:
         task = progress.add_task("Generating deck", total=len(cards))
 
+        def _resolve_ref(card: Card) -> str | None:
+            """Pick the right reference URL for this card."""
+            if reference_urls:
+                return reference_urls.get(_reference_key(card), key_card_url)
+            return key_card_url
+
         if parallel <= 1:
             for i, card in enumerate(cards):
                 seed = get_seed(base_seed, remaining_start_index + i)
                 path, _ = _generate_one(
                     card, style_prefix, model_id, seed, output_dir,
-                    key_card_url=key_card_url,
+                    key_card_url=_resolve_ref(card),
                     aspect_ratio=aspect_ratio,
                     prompt_strength=prompt_strength,
                     style_transfer_mode=style_transfer_mode,
@@ -296,7 +337,7 @@ def generate_deck(
                     seed = get_seed(base_seed, remaining_start_index + i)
                     fut = pool.submit(
                         _generate_one, card, style_prefix, model_id, seed, output_dir,
-                        key_card_url=key_card_url,
+                        key_card_url=_resolve_ref(card),
                         aspect_ratio=aspect_ratio,
                         prompt_strength=prompt_strength,
                         style_transfer_mode=style_transfer_mode,
@@ -310,3 +351,112 @@ def generate_deck(
                     progress.update(task, advance=1, description=f"Generated {card.name}")
 
     return results
+
+
+def _mirror_4way(image_path: Path) -> None:
+    """Post-process an image for true 4-way symmetry.
+
+    Crops the top-left quadrant, mirrors it horizontally to fill the top half,
+    then mirrors the top half vertically to fill the full image. Overwrites
+    the file in place.
+    """
+    img = Image.open(image_path).convert("RGB")
+    w, h = img.size
+    quadrant = img.crop((0, 0, w // 2, h // 2))
+    top_half = Image.new("RGB", (w, h // 2))
+    top_half.paste(quadrant, (0, 0))
+    top_half.paste(quadrant.transpose(Image.FLIP_LEFT_RIGHT), (w // 2, 0))
+    full = Image.new("RGB", (w, h))
+    full.paste(top_half, (0, 0))
+    full.paste(top_half.transpose(Image.FLIP_TOP_BOTTOM), (0, h // 2))
+    full.save(image_path, format="PNG")
+
+
+def generate_card_back(
+    style: str,
+    model: str,
+    output_dir: Path,
+    base_seed: int,
+    aspect_ratio: str = "11:19",
+    key_card_path: str | None = None,
+    style_transfer_mode: str = "high-quality",
+    reference_map: dict[str, str] | None = None,
+) -> Path:
+    """Generate a 4-way symmetrical card back image.
+
+    Uses the same model and style as the deck, with a prompt focused on
+    ornamental symmetry. The raw output is post-processed with PIL to
+    guarantee true 4-way symmetry by mirroring the top-left quadrant.
+    """
+    model_id = MODELS.get(model, model)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    style_prefix = build_style_prefix(style)
+    dest = output_dir / "78_card_back.png"
+    seed = get_seed(base_seed, 999)
+
+    prompt = (
+        f"{style_prefix}, ornamental symmetrical pattern, decorative card back design, "
+        "intricate mandala, geometric tilework, no text, no figures, no faces, no characters, "
+        "full bleed illustration extending to all edges, no border, no frame, seamless edge-to-edge artwork"
+    )
+    negative = build_negative_prompt()
+
+    console.print("[bold cyan]Generating card back...[/bold cyan]")
+    console.print(f"[dim]Prompt: {prompt}[/dim]")
+
+    is_flux = "flux" in model_id
+    is_style_transfer = "style-transfer" in model_id
+
+    ref_url: str | None = None
+    if is_style_transfer:
+        target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        # Use major reference or first available
+        ref_path = None
+        if reference_map:
+            ref_path = Path(reference_map.get("major") or next(iter(reference_map.values())))
+        elif key_card_path:
+            ref_path = Path(key_card_path)
+        if ref_path:
+            resized_bytes = resize_image_to_aspect(ref_path, target_width, target_height)
+            encoded = base64.b64encode(resized_bytes).decode()
+            ref_url = f"data:image/png;base64,{encoded}"
+
+    if is_style_transfer and ref_url:
+        width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        input_data = {
+            "prompt": prompt,
+            "negative_prompt": negative,
+            "style_image": ref_url,
+            "model": style_transfer_mode,
+            "width": width,
+            "height": height,
+            "seed": seed,
+            "number_of_images": 1,
+            "output_format": "png",
+        }
+    elif is_flux:
+        input_data = {
+            "prompt": prompt,
+            "seed": seed,
+            "num_outputs": 1,
+            "aspect_ratio": aspect_ratio,
+        }
+    else:
+        width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        input_data = {
+            "prompt": prompt,
+            "negative_prompt": negative,
+            "seed": seed,
+            "width": width,
+            "height": height,
+            "num_outputs": 1,
+        }
+
+    urls = _run_model(model_id, input_data)
+    _download_image(urls[0], dest)
+
+    console.print("[bold cyan]Applying 4-way symmetry mirror...[/bold cyan]")
+    _mirror_4way(dest)
+
+    console.print(f"[bold green]Card back ready:[/bold green] {dest}")
+    return dest

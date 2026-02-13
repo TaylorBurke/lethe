@@ -96,19 +96,22 @@ MAJOR_ARCANA: list[Card] = [
 ]
 
 def _minor_cards(suit: str, suit_symbol: str, court_descriptions: dict[str, tuple[str, list[str]]],
-                 pip_descriptions: dict[str, tuple[str, list[str]]]) -> list[Card]:
-    """Build 14 cards for one suit."""
+                 pip_descriptions: dict[str, tuple[str, list[str]]], start_index: int = 0) -> list[Card]:
+    """Build 14 cards for one suit with sequential numbering from start_index."""
     cards = []
+    i = 0
     for num in range(1, 11):
         name_prefix = "Ace" if num == 1 else str(num)
         name = f"{name_prefix} of {suit}"
-        numeral = f"{suit[0].lower()}{num:02d}"
+        numeral = f"{start_index + i:02d}"
         desc, symbols = pip_descriptions[str(num)]
         cards.append(Card(name, numeral, "minor", suit, desc, symbols))
+        i += 1
     for rank, (desc, symbols) in court_descriptions.items():
         name = f"{rank} of {suit}"
-        numeral = f"{suit[0].lower()}{rank[0:2].lower()}"
+        numeral = f"{start_index + i:02d}"
         cards.append(Card(name, numeral, "minor", suit, desc, symbols))
+        i += 1
     return cards
 
 _WANDS_PIPS: dict[str, tuple[str, list[str]]] = {
@@ -188,10 +191,10 @@ _PENTACLES_COURT: dict[str, tuple[str, list[str]]] = {
 }
 
 MINOR_ARCANA: list[Card] = (
-    _minor_cards("Wands", "wand", _WANDS_COURT, _WANDS_PIPS) +
-    _minor_cards("Cups", "cup", _CUPS_COURT, _CUPS_PIPS) +
-    _minor_cards("Swords", "sword", _SWORDS_COURT, _SWORDS_PIPS) +
-    _minor_cards("Pentacles", "pentacle", _PENTACLES_COURT, _PENTACLES_PIPS)
+    _minor_cards("Wands", "wand", _WANDS_COURT, _WANDS_PIPS, start_index=22) +
+    _minor_cards("Cups", "cup", _CUPS_COURT, _CUPS_PIPS, start_index=36) +
+    _minor_cards("Swords", "sword", _SWORDS_COURT, _SWORDS_PIPS, start_index=50) +
+    _minor_cards("Pentacles", "pentacle", _PENTACLES_COURT, _PENTACLES_PIPS, start_index=64)
 )
 
 ALL_CARDS: list[Card] = MAJOR_ARCANA + MINOR_ARCANA
@@ -228,15 +231,22 @@ def _load_cards_from_yaml(yaml_path: Path) -> tuple[list[Card], list[Card]]:
             composition=card_data.get("composition", ""),
         ))
 
+    # Suit order and start indices for sequential numbering
+    suit_start = {"wands": 22, "cups": 36, "swords": 50, "coins": 64, "pentacles": 64}
     minor = []
     for suit_name, suit_data in data.get("minor_arcana", {}).items():
         suit_title = suit_name.title()  # "wands" -> "Wands"
+        # Map "coins" -> "Pentacles" for the suit field
+        if suit_name.lower() == "coins":
+            suit_title = "Pentacles"
+        start_index = suit_start.get(suit_name.lower(), 0)
+        i = 0
         # Load pips (1-10)
         for num_str, pip_data in suit_data.get("pips", {}).items():
             num = int(num_str)
             name_prefix = "Ace" if num == 1 else str(num)
             name = f"{name_prefix} of {suit_title}"
-            numeral = f"{suit_name[0].lower()}{num:02d}"
+            numeral = f"{start_index + i:02d}"
             minor.append(Card(
                 name=name,
                 numeral=numeral,
@@ -246,10 +256,11 @@ def _load_cards_from_yaml(yaml_path: Path) -> tuple[list[Card], list[Card]]:
                 key_symbols=pip_data["key_symbols"],
                 composition=pip_data.get("composition", ""),
             ))
+            i += 1
         # Load court cards
         for rank, court_data in suit_data.get("court", {}).items():
             name = f"{rank} of {suit_title}"
-            numeral = f"{suit_name[0].lower()}{rank[:2].lower()}"
+            numeral = f"{start_index + i:02d}"
             minor.append(Card(
                 name=name,
                 numeral=numeral,
@@ -259,6 +270,7 @@ def _load_cards_from_yaml(yaml_path: Path) -> tuple[list[Card], list[Card]]:
                 key_symbols=court_data["key_symbols"],
                 composition=court_data.get("composition", ""),
             ))
+            i += 1
 
     return major, minor
 

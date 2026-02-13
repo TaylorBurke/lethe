@@ -9,7 +9,7 @@ import questionary
 from rich.console import Console
 
 from tarot_gen.cards import get_cards
-from tarot_gen.generator import generate_deck, MODELS, STYLE_TRANSFER_MODES, REFERENCE_FILES
+from tarot_gen.generator import generate_deck, generate_card_back, MODELS, STYLE_TRANSFER_MODES, REFERENCE_FILES
 
 console = Console()
 LOGS_DIR = Path("output-logs")
@@ -271,6 +271,19 @@ def run_generation(
         style_transfer_mode=style_transfer_mode,
         reference_map=reference_map,
     )
+
+    # Generate card back with 4-way symmetry
+    card_back_path = generate_card_back(
+        style=style,
+        model=model,
+        output_dir=output,
+        base_seed=seed,
+        key_card_path=str(key_card) if key_card else None,
+        aspect_ratio=aspect_ratio,
+        style_transfer_mode=style_transfer_mode,
+        reference_map=reference_map,
+    )
+    paths.append(card_back_path)
 
     console.print(f"\n[bold green]Done![/bold green] Generated {len(paths)} images in {output.resolve()}")
 
