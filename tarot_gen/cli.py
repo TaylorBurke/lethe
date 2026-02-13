@@ -2,6 +2,7 @@
 
 import shutil
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
@@ -77,6 +78,20 @@ def prompt_for_options() -> dict:
     if parallel_str is None:
         sys.exit(0)
     parallel = int(parallel_str) if parallel_str.strip() else 1
+
+    num_decks = questionary.select(
+        "Number of decks to generate:",
+        choices=[
+            questionary.Choice("1", value=1),
+            questionary.Choice("2", value=2),
+            questionary.Choice("3", value=3),
+            questionary.Choice("4", value=4),
+            questionary.Choice("5", value=5),
+        ],
+        default=1,
+    ).ask()
+    if num_decks is None:
+        sys.exit(0)
 
     # Model-specific options
     key_card = None
@@ -162,6 +177,7 @@ def prompt_for_options() -> dict:
         "output": Path(output),
         "seed": seed,
         "parallel": parallel,
+        "num_decks": num_decks,
         "key_card": Path(key_card) if key_card else None,
         "prompt_strength": prompt_strength,
         "style_transfer_mode": style_transfer_mode,
@@ -207,6 +223,7 @@ def save_prompt_file(output: Path, options: dict) -> Path:
         f"Aspect Ratio: {options['aspect_ratio']}",
         f"Seed: {options['seed']}",
         f"Parallel: {options['parallel']}",
+        f"Decks: {options.get('num_decks', 1)}",
     ]
     if options.get('key_card'):
         lines.append(f"Key Card: {options['key_card']}")
@@ -222,6 +239,57 @@ def save_prompt_file(output: Path, options: dict) -> Path:
     return prompt_path
 
 
+def _generate_single_deck(
+    deck_num: int | None,
+    cards: list,
+    style: str,
+    model: str,
+    output: Path,
+    seed: int,
+    parallel: int,
+    key_card: Path | None,
+    aspect_ratio: str,
+    prompt_strength: float,
+    style_transfer_mode: str,
+    reference_map: dict[str, str] | None,
+) -> list[Path]:
+    """Generate one complete deck (cards + card back).
+
+    When ``deck_num`` is set, filenames are suffixed (e.g. ``00_the_fool_2.png``)
+    and the seed is offset so each deck produces unique images.
+    """
+    deck_seed = seed if deck_num is None else seed + (deck_num - 1) * 1000
+
+    paths = generate_deck(
+        cards=cards,
+        style=style,
+        model=model,
+        output_dir=output,
+        base_seed=deck_seed,
+        parallel=parallel,
+        key_card_path=str(key_card) if key_card else None,
+        aspect_ratio=aspect_ratio,
+        prompt_strength=prompt_strength,
+        style_transfer_mode=style_transfer_mode,
+        reference_map=reference_map,
+        deck_num=deck_num,
+    )
+
+    card_back_path = generate_card_back(
+        style=style,
+        model=model,
+        output_dir=output,
+        base_seed=deck_seed,
+        key_card_path=str(key_card) if key_card else None,
+        aspect_ratio=aspect_ratio,
+        style_transfer_mode=style_transfer_mode,
+        reference_map=reference_map,
+        deck_num=deck_num,
+    )
+    paths.append(card_back_path)
+    return paths
+
+
 def run_generation(
     style: str,
     model: str,
@@ -229,6 +297,7 @@ def run_generation(
     card_subset: str,
     seed: int,
     parallel: int,
+    num_decks: int,
     key_card: Path | None,
     cards_file: Path | None,
     aspect_ratio: str,
@@ -250,6 +319,7 @@ def run_generation(
         "aspect_ratio": aspect_ratio,
         "seed": seed,
         "parallel": parallel,
+        "num_decks": num_decks,
         "key_card": key_card,
         "prompt_strength": prompt_strength,
         "style_transfer_mode": style_transfer_mode,
@@ -261,12 +331,13 @@ def run_generation(
 
     cards = get_cards(card_subset, cards_file=cards_file)
     console.print()
-    console.print(f"[bold]Generating {len(cards)} tarot cards[/bold]")
+    console.print(f"[bold]Generating {len(cards)} tarot cards × {num_decks} deck(s)[/bold]")
     console.print(f"  Style:  {style}")
     console.print(f"  Model:  {model}")
     console.print(f"  Output: {output.resolve()}")
     console.print(f"  Seed:   {seed}")
     console.print(f"  Aspect: {aspect_ratio}")
+    console.print(f"  Decks:  {num_decks}")
     if key_card:
         console.print(f"  Key card: {key_card}")
     if model == "sdxl":
@@ -277,34 +348,54 @@ def run_generation(
         console.print(f"  Cards file: {cards_file.resolve()}")
     console.print()
 
-    paths = generate_deck(
-        cards=cards,
-        style=style,
-        model=model,
-        output_dir=output,
-        base_seed=seed,
-        parallel=parallel,
-        key_card_path=str(key_card) if key_card else None,
-        aspect_ratio=aspect_ratio,
-        prompt_strength=prompt_strength,
-        style_transfer_mode=style_transfer_mode,
-        reference_map=reference_map,
-    )
+    all_paths: list[Path] = []
 
-    # Generate card back with 4-way symmetry
-    card_back_path = generate_card_back(
-        style=style,
-        model=model,
-        output_dir=output,
-        base_seed=seed,
-        key_card_path=str(key_card) if key_card else None,
-        aspect_ratio=aspect_ratio,
-        style_transfer_mode=style_transfer_mode,
-        reference_map=reference_map,
-    )
-    paths.append(card_back_path)
+    if num_decks <= 1:
+        # Single deck — no filename suffix
+        all_paths = _generate_single_deck(
+            deck_num=None,
+            cards=cards,
+            style=style,
+            model=model,
+            output=output,
+            seed=seed,
+            parallel=parallel,
+            key_card=key_card,
+            aspect_ratio=aspect_ratio,
+            prompt_strength=prompt_strength,
+            style_transfer_mode=style_transfer_mode,
+            reference_map=reference_map,
+        )
+    else:
+        # Multiple decks — run concurrently, suffix filenames with deck number
+        with ThreadPoolExecutor(max_workers=num_decks) as pool:
+            futures = {}
+            for d in range(1, num_decks + 1):
+                console.print(f"[bold cyan]Launching deck {d}/{num_decks}...[/bold cyan]")
+                fut = pool.submit(
+                    _generate_single_deck,
+                    deck_num=d,
+                    cards=cards,
+                    style=style,
+                    model=model,
+                    output=output,
+                    seed=seed,
+                    parallel=parallel,
+                    key_card=key_card,
+                    aspect_ratio=aspect_ratio,
+                    prompt_strength=prompt_strength,
+                    style_transfer_mode=style_transfer_mode,
+                    reference_map=reference_map,
+                )
+                futures[fut] = d
 
-    console.print(f"\n[bold green]Done![/bold green] Generated {len(paths)} images in {output.resolve()}")
+            for fut in as_completed(futures):
+                d = futures[fut]
+                paths = fut.result()
+                all_paths.extend(paths)
+                console.print(f"[bold green]Deck {d} complete![/bold green] ({len(paths)} images)")
+
+    console.print(f"\n[bold green]Done![/bold green] Generated {len(all_paths)} images in {output.resolve()}")
 
 
 def main() -> None:

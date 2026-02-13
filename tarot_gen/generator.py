@@ -135,14 +135,19 @@ def _generate_one(
     prompt_strength: float = 0.47,
     style_transfer_mode: str = "high-quality",
     max_retries: int = 5,
+    deck_num: int | None = None,
 ) -> tuple[Path, str]:
     """Generate a single card image via Replicate, with retries.
 
     Returns a (local_path, output_url) tuple.
+    When ``deck_num`` is set, the filename is suffixed (e.g. ``00_the_fool_2.png``).
     """
     prompt = build_prompt(card, style)
     negative = build_negative_prompt()
-    dest = output_dir / card.filename
+    if deck_num is not None:
+        dest = output_dir / f"{card.numeral}_{card.slug}_{deck_num}.png"
+    else:
+        dest = output_dir / card.filename
 
     console.print(f"[dim]Prompt: {prompt}[/dim]")
     console.print(f"[dim]Negative: {negative}[/dim]")
@@ -228,6 +233,7 @@ def generate_deck(
     prompt_strength: float = 0.47,
     style_transfer_mode: str = "high-quality",
     reference_map: dict[str, str] | None = None,
+    deck_num: int | None = None,
 ) -> list[Path]:
     """Generate images for all cards in the list.
 
@@ -296,6 +302,7 @@ def generate_deck(
             path, key_card_url = _generate_one(
                 first_card, style_prefix, model_id, seed, output_dir,
                 aspect_ratio=aspect_ratio,
+                deck_num=deck_num,
             )
             results.append(path)
             console.print(f"[bold green]Key card ready:[/bold green] {first_card.name}")
@@ -327,6 +334,7 @@ def generate_deck(
                     aspect_ratio=aspect_ratio,
                     prompt_strength=prompt_strength,
                     style_transfer_mode=style_transfer_mode,
+                    deck_num=deck_num,
                 )
                 results.append(path)
                 progress.update(task, advance=1, description=f"Generated {card.name}")
@@ -341,6 +349,7 @@ def generate_deck(
                         aspect_ratio=aspect_ratio,
                         prompt_strength=prompt_strength,
                         style_transfer_mode=style_transfer_mode,
+                        deck_num=deck_num,
                     )
                     futures[fut] = card
 
@@ -381,6 +390,7 @@ def generate_card_back(
     key_card_path: str | None = None,
     style_transfer_mode: str = "high-quality",
     reference_map: dict[str, str] | None = None,
+    deck_num: int | None = None,
 ) -> Path:
     """Generate a 4-way symmetrical card back image.
 
@@ -391,7 +401,10 @@ def generate_card_back(
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
     style_prefix = build_style_prefix(style)
-    dest = output_dir / "78_card_back.png"
+    if deck_num is not None:
+        dest = output_dir / f"78_card_back_{deck_num}.png"
+    else:
+        dest = output_dir / "78_card_back.png"
     seed = get_seed(base_seed, 999)
 
     prompt = (
