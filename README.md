@@ -15,7 +15,8 @@ tarot-gen/
 │   ├── generator.py       # Replicate API client + generation logic
 │   └── consistency.py     # Seed derivation + style prefix for consistency
 ├── cards.yaml             # Customizable card definitions (descriptions, symbols, composition)
-├── references/            # Style reference images for style-transfer model
+├── my-ref.png             # Single style reference (optional, for 1-image mode)
+├── references/            # Per-group style references (for 5-image mode)
 │   ├── major.png          # Reference for Major Arcana (Fool to World)
 │   ├── wands.png          # Reference for Wands suit
 │   ├── cups.png           # Reference for Cups suit
@@ -54,16 +55,20 @@ You'll be guided through each option:
 5. **Output directory** - Where to save images (default: `output`)
 6. **Seed** - For reproducibility (default: 42)
 7. **Parallel API calls** - Concurrent requests (default: 1)
-8. **Style transfer mode** (style-transfer only) - Quality preset (default: high-quality)
-9. **Key card** (SDXL only) - Reference image for style consistency
-10. **Prompt strength** (SDXL with key card) - How much prompt overrides reference (0.0-1.0)
-11. **Custom cards file** - Optional YAML with custom card definitions
+8. **Reference images** (style-transfer only) - 1 image (`my-ref.png`) or 5 (per-group from `references/`)
+9. **Style transfer mode** (style-transfer only) - Quality preset (default: high-quality)
+10. **Key card** (SDXL only) - Reference image for style consistency
+11. **Prompt strength** (SDXL with key card) - How much prompt overrides reference (0.0-1.0)
+12. **Custom cards file** - Optional YAML with custom card definitions
 
 A **card back** image with 4-way symmetry is automatically generated at the end of every run.
 
 ### Style Transfer with Reference Images
 
-When using the `style-transfer` model, place reference images in the `references/` folder. They are auto-discovered at startup to guide the visual style of each card group:
+When using the `style-transfer` model, you'll be prompted to choose between **1 or 5 reference images**:
+
+- **1 image** — Uses `my-ref.png` (in the project root) as the style reference for all cards.
+- **5 images** — Uses per-group reference images from the `references/` folder, auto-discovered at startup:
 
 | Reference File | Cards |
 |---|---|
@@ -73,7 +78,7 @@ When using the `style-transfer` model, place reference images in the `references
 | `references/swords.png` | Ace through King of Swords |
 | `references/coins.png` | Ace through King of Coins |
 
-Each card group is generated using its corresponding reference image for style consistency. The groups are processed concurrently for faster generation.
+With 5 images, each card group is generated using its corresponding reference image for style consistency.
 
 ### Card Back
 

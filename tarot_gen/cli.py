@@ -85,19 +85,38 @@ def prompt_for_options() -> dict:
 
     reference_map = None
     if model == "style-transfer":
-        # Build reference map from references/ directory
-        ref_dir = Path("references")
-        reference_map = {}
-        for group_key, filename in REFERENCE_FILES.items():
-            ref_path = ref_dir / filename
-            if ref_path.exists():
-                reference_map[group_key] = str(ref_path)
-        if reference_map:
-            console.print(f"[bold cyan]Using {len(reference_map)} reference images from references/[/bold cyan]")
+        ref_count = questionary.select(
+            "Reference images:",
+            choices=[
+                questionary.Choice("1 image (my-ref.png)", value="1"),
+                questionary.Choice("5 images (per-group from references/)", value="5"),
+            ],
+            default="5",
+        ).ask()
+        if ref_count is None:
+            sys.exit(0)
+
+        if ref_count == "1":
+            ref_path = Path("my-ref.png")
+            if not ref_path.exists():
+                console.print("[red]my-ref.png not found in project root.[/red]")
+                sys.exit(1)
+            key_card = str(ref_path)
+            console.print(f"[bold cyan]Using single reference image: my-ref.png[/bold cyan]")
         else:
-            console.print("[red]No reference images found in references/ directory.[/red]")
-            console.print(f"[red]Expected files: {', '.join(REFERENCE_FILES.values())}[/red]")
-            sys.exit(1)
+            # Build reference map from references/ directory
+            ref_dir = Path("references")
+            reference_map = {}
+            for group_key, filename in REFERENCE_FILES.items():
+                ref_path = ref_dir / filename
+                if ref_path.exists():
+                    reference_map[group_key] = str(ref_path)
+            if reference_map:
+                console.print(f"[bold cyan]Using {len(reference_map)} reference images from references/[/bold cyan]")
+            else:
+                console.print("[red]No reference images found in references/ directory.[/red]")
+                console.print(f"[red]Expected files: {', '.join(REFERENCE_FILES.values())}[/red]")
+                sys.exit(1)
 
         style_transfer_mode = questionary.select(
             "Style transfer mode:",
