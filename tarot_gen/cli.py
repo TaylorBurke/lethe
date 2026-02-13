@@ -9,7 +9,7 @@ import questionary
 from rich.console import Console
 
 from tarot_gen.cards import get_cards
-from tarot_gen.generator import generate_deck, MODELS, STYLE_TRANSFER_MODES
+from tarot_gen.generator import generate_deck, MODELS, STYLE_TRANSFER_MODES, REFERENCE_FILES
 
 console = Console()
 LOGS_DIR = Path("output-logs")
@@ -83,16 +83,21 @@ def prompt_for_options() -> dict:
     prompt_strength = 0.47
     style_transfer_mode = "high-quality"
 
+    reference_map = None
     if model == "style-transfer":
-        # Style-transfer requires a reference image
-        key_card_str = questionary.select(
-            "Style reference image:",
-            choices=["my-ref.png"],
-            default="my-ref.png",
-        ).ask()
-        if key_card_str is None:
-            sys.exit(0)
-        key_card = key_card_str
+        # Build reference map from references/ directory
+        ref_dir = Path("references")
+        reference_map = {}
+        for group_key, filename in REFERENCE_FILES.items():
+            ref_path = ref_dir / filename
+            if ref_path.exists():
+                reference_map[group_key] = str(ref_path)
+        if reference_map:
+            console.print(f"[bold cyan]Using {len(reference_map)} reference images from references/[/bold cyan]")
+        else:
+            console.print("[red]No reference images found in references/ directory.[/red]")
+            console.print(f"[red]Expected files: {', '.join(REFERENCE_FILES.values())}[/red]")
+            sys.exit(1)
 
         style_transfer_mode = questionary.select(
             "Style transfer mode:",
@@ -142,6 +147,7 @@ def prompt_for_options() -> dict:
         "prompt_strength": prompt_strength,
         "style_transfer_mode": style_transfer_mode,
         "cards_file": Path(cards_file) if cards_file else None,
+        "reference_map": reference_map,
     }
 
 
@@ -209,6 +215,7 @@ def run_generation(
     aspect_ratio: str,
     prompt_strength: float,
     style_transfer_mode: str,
+    reference_map: dict[str, str] | None = None,
 ) -> None:
     """Execute the deck generation with the given options."""
     # Archive existing output if present
@@ -262,6 +269,7 @@ def run_generation(
         aspect_ratio=aspect_ratio,
         prompt_strength=prompt_strength,
         style_transfer_mode=style_transfer_mode,
+        reference_map=reference_map,
     )
 
     console.print(f"\n[bold green]Done![/bold green] Generated {len(paths)} images in {output.resolve()}")
