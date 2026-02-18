@@ -152,19 +152,22 @@ def prompt_for_options() -> dict:
         sys.exit(0)
     parallel = int(parallel_str) if parallel_str.strip() else 1
 
-    num_decks = questionary.select(
-        "Number of decks to generate:",
-        choices=[
-            questionary.Choice("1", value=1),
-            questionary.Choice("2", value=2),
-            questionary.Choice("3", value=3),
-            questionary.Choice("4", value=4),
-            questionary.Choice("5", value=5),
-        ],
-        default=1,
-    ).ask()
-    if num_decks is None:
-        sys.exit(0)
+    if cards == "single":
+        num_decks = 1
+    else:
+        num_decks = questionary.select(
+            "Number of decks to generate:",
+            choices=[
+                questionary.Choice("1", value=1),
+                questionary.Choice("2", value=2),
+                questionary.Choice("3", value=3),
+                questionary.Choice("4", value=4),
+                questionary.Choice("5", value=5),
+            ],
+            default=1,
+        ).ask()
+        if num_decks is None:
+            sys.exit(0)
 
     # Model-specific options
     key_card = None
@@ -173,18 +176,8 @@ def prompt_for_options() -> dict:
 
     reference_map = None
     if model == "style-transfer":
-        ref_count = questionary.select(
-            "Reference images:",
-            choices=[
-                questionary.Choice("1 image (my-ref.png)", value="1"),
-                questionary.Choice("5 images (per-group from references/)", value="5"),
-            ],
-            default="5",
-        ).ask()
-        if ref_count is None:
-            sys.exit(0)
-
-        if ref_count == "1":
+        if cards == "single":
+            # Single card mode always uses my-ref.png
             ref_path = Path("my-ref.png")
             if not ref_path.exists():
                 console.print("[red]my-ref.png not found in project root.[/red]")
@@ -192,19 +185,38 @@ def prompt_for_options() -> dict:
             key_card = str(ref_path)
             console.print(f"[bold cyan]Using single reference image: my-ref.png[/bold cyan]")
         else:
-            # Build reference map from references/ directory
-            ref_dir = Path("references")
-            reference_map = {}
-            for group_key, filename in REFERENCE_FILES.items():
-                ref_path = ref_dir / filename
-                if ref_path.exists():
-                    reference_map[group_key] = str(ref_path)
-            if reference_map:
-                console.print(f"[bold cyan]Using {len(reference_map)} reference images from references/[/bold cyan]")
+            ref_count = questionary.select(
+                "Reference images:",
+                choices=[
+                    questionary.Choice("1 image (my-ref.png)", value="1"),
+                    questionary.Choice("5 images (per-group from references/)", value="5"),
+                ],
+                default="5",
+            ).ask()
+            if ref_count is None:
+                sys.exit(0)
+
+            if ref_count == "1":
+                ref_path = Path("my-ref.png")
+                if not ref_path.exists():
+                    console.print("[red]my-ref.png not found in project root.[/red]")
+                    sys.exit(1)
+                key_card = str(ref_path)
+                console.print(f"[bold cyan]Using single reference image: my-ref.png[/bold cyan]")
             else:
-                console.print("[red]No reference images found in references/ directory.[/red]")
-                console.print(f"[red]Expected files: {', '.join(REFERENCE_FILES.values())}[/red]")
-                sys.exit(1)
+                # Build reference map from references/ directory
+                ref_dir = Path("references")
+                reference_map = {}
+                for group_key, filename in REFERENCE_FILES.items():
+                    ref_path = ref_dir / filename
+                    if ref_path.exists():
+                        reference_map[group_key] = str(ref_path)
+                if reference_map:
+                    console.print(f"[bold cyan]Using {len(reference_map)} reference images from references/[/bold cyan]")
+                else:
+                    console.print("[red]No reference images found in references/ directory.[/red]")
+                    console.print(f"[red]Expected files: {', '.join(REFERENCE_FILES.values())}[/red]")
+                    sys.exit(1)
 
         style_transfer_mode = questionary.select(
             "Style transfer mode:",
@@ -233,14 +245,17 @@ def prompt_for_options() -> dict:
             sys.exit(0)
         prompt_strength = float(ps_str) if ps_str.strip() else 0.47
 
-    cards_file_str = questionary.text(
-        "Custom cards YAML file:",
-        instruction="(leave empty for built-in cards)",
-        default="",
-    ).ask()
-    if cards_file_str is None:
-        sys.exit(0)
-    cards_file = cards_file_str.strip() if cards_file_str.strip() else None
+    if cards == "single":
+        cards_file = None
+    else:
+        cards_file_str = questionary.text(
+            "Custom cards YAML file:",
+            instruction="(leave empty for built-in cards)",
+            default="",
+        ).ask()
+        if cards_file_str is None:
+            sys.exit(0)
+        cards_file = cards_file_str.strip() if cards_file_str.strip() else None
 
     return {
         "style": style,
