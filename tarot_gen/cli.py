@@ -9,14 +9,14 @@ from pathlib import Path
 import questionary
 from rich.console import Console
 
-from tarot_gen.cards import get_cards
-from tarot_gen.generator import generate_deck, generate_card_back, MODELS, STYLE_TRANSFER_MODES, REFERENCE_FILES
+from tarot_gen.cards import Card, get_cards, get_card_by_index
+from tarot_gen.generator import generate_deck, generate_single_card, generate_card_back, MODELS, STYLE_TRANSFER_MODES, REFERENCE_FILES
 
 console = Console()
 LOGS_DIR = Path("output-logs")
 
 ASPECT_RATIOS = ["11:19", "300x575", "2:3", "3:2", "1:1", "16:9", "9:16", "4:5", "5:4", "21:9", "9:21"]
-CARD_SUBSETS = ["sample", "major", "minor", "all"]
+CARD_SUBSETS = ["sample", "major", "minor", "all", "single"]
 
 
 def prompt_for_options() -> dict:
@@ -47,6 +47,79 @@ def prompt_for_options() -> dict:
     ).ask()
     if cards is None:
         sys.exit(0)
+
+    # Single-card mode options
+    single_card_index = None
+    single_card_count = 1
+    single_card_desc = None
+    single_card_symbols = None
+    single_card_composition = None
+
+    if cards == "single":
+        idx_str = questionary.text(
+            "Card index (0-78):",
+            instruction="(0-77 for cards, 78 for card back)",
+        ).ask()
+        if idx_str is None:
+            sys.exit(0)
+        try:
+            single_card_index = int(idx_str.strip())
+        except ValueError:
+            console.print("[red]Invalid index. Must be an integer 0-78.[/red]")
+            sys.exit(1)
+        if single_card_index < 0 or single_card_index > 78:
+            console.print("[red]Index must be between 0 and 78.[/red]")
+            sys.exit(1)
+
+        # Show card name for confirmation (skip for card back)
+        if single_card_index < 78:
+            # Peek at the card name (cards_file not known yet, use built-in)
+            try:
+                preview_card = get_card_by_index(single_card_index)
+                console.print(f"[bold cyan]Selected: {preview_card.name}[/bold cyan]")
+            except ValueError:
+                pass
+
+            use_default = questionary.confirm(
+                "Use default description?",
+                default=True,
+            ).ask()
+            if use_default is None:
+                sys.exit(0)
+
+            if not use_default:
+                single_card_desc = questionary.text("Description:").ask()
+                if single_card_desc is None:
+                    sys.exit(0)
+
+                symbols_str = questionary.text(
+                    "Key symbols:",
+                    instruction="(comma-separated)",
+                ).ask()
+                if symbols_str is None:
+                    sys.exit(0)
+                single_card_symbols = [s.strip() for s in symbols_str.split(",") if s.strip()]
+
+                single_card_composition = questionary.text("Composition:").ask()
+                if single_card_composition is None:
+                    sys.exit(0)
+        else:
+            console.print("[bold cyan]Selected: Card Back[/bold cyan]")
+
+        count_str = questionary.text(
+            "Number of copies (1-20):",
+            default="1",
+        ).ask()
+        if count_str is None:
+            sys.exit(0)
+        try:
+            single_card_count = int(count_str.strip())
+        except ValueError:
+            console.print("[red]Invalid count. Must be an integer 1-20.[/red]")
+            sys.exit(1)
+        if single_card_count < 1 or single_card_count > 20:
+            console.print("[red]Count must be between 1 and 20.[/red]")
+            sys.exit(1)
 
     aspect_ratio = questionary.select(
         "Aspect ratio:",
@@ -183,6 +256,11 @@ def prompt_for_options() -> dict:
         "style_transfer_mode": style_transfer_mode,
         "cards_file": Path(cards_file) if cards_file else None,
         "reference_map": reference_map,
+        "single_card_index": single_card_index,
+        "single_card_count": single_card_count,
+        "single_card_desc": single_card_desc,
+        "single_card_symbols": single_card_symbols,
+        "single_card_composition": single_card_composition,
     }
 
 
@@ -233,6 +311,15 @@ def save_prompt_file(output: Path, options: dict) -> Path:
         lines.append(f"Style Transfer Mode: {options['style_transfer_mode']}")
     if options.get('cards_file'):
         lines.append(f"Cards File: {options['cards_file']}")
+    if options.get('single_card_index') is not None:
+        lines.append(f"Single Card Index: {options['single_card_index']}")
+        lines.append(f"Copies: {options.get('single_card_count', 1)}")
+        if options.get('single_card_desc'):
+            lines.append(f"Custom Description: {options['single_card_desc']}")
+        if options.get('single_card_symbols'):
+            lines.append(f"Custom Symbols: {', '.join(options['single_card_symbols'])}")
+        if options.get('single_card_composition'):
+            lines.append(f"Custom Composition: {options['single_card_composition']}")
     lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
     prompt_path.write_text("\n".join(lines))
@@ -304,6 +391,11 @@ def run_generation(
     prompt_strength: float,
     style_transfer_mode: str,
     reference_map: dict[str, str] | None = None,
+    single_card_index: int | None = None,
+    single_card_count: int = 1,
+    single_card_desc: str | None = None,
+    single_card_symbols: list[str] | None = None,
+    single_card_composition: str | None = None,
 ) -> None:
     """Execute the deck generation with the given options."""
     # Archive existing output if present
@@ -324,11 +416,90 @@ def run_generation(
         "prompt_strength": prompt_strength,
         "style_transfer_mode": style_transfer_mode,
         "cards_file": cards_file,
+        "single_card_index": single_card_index,
+        "single_card_count": single_card_count,
+        "single_card_desc": single_card_desc,
+        "single_card_symbols": single_card_symbols,
+        "single_card_composition": single_card_composition,
     }
 
     # Save prompt.txt before generation
     save_prompt_file(output, options)
 
+    # --- Single card mode ---
+    if card_subset == "single" and single_card_index is not None:
+        is_card_back = single_card_index == 78
+
+        console.print()
+        if is_card_back:
+            console.print(f"[bold]Generating {single_card_count} card back copy/copies[/bold]")
+        else:
+            card = get_card_by_index(single_card_index, cards_file=cards_file)
+            # Apply custom description overrides
+            if single_card_desc is not None:
+                card = Card(
+                    name=card.name,
+                    numeral=card.numeral,
+                    arcana_type=card.arcana_type,
+                    suit=card.suit,
+                    description=single_card_desc,
+                    key_symbols=single_card_symbols or card.key_symbols,
+                    composition=single_card_composition or card.composition,
+                )
+            console.print(f"[bold]Generating {single_card_count} copy/copies of {card.name}[/bold]")
+
+        console.print(f"  Style:  {style}")
+        console.print(f"  Model:  {model}")
+        console.print(f"  Output: {output.resolve()}")
+        console.print(f"  Seed:   {seed}")
+        console.print(f"  Aspect: {aspect_ratio}")
+        if key_card:
+            console.print(f"  Key card: {key_card}")
+        if model == "sdxl":
+            console.print(f"  Prompt strength: {prompt_strength}")
+        if model == "style-transfer":
+            console.print(f"  Style transfer mode: {style_transfer_mode}")
+        if cards_file:
+            console.print(f"  Cards file: {cards_file.resolve()}")
+        console.print()
+
+        all_paths: list[Path] = []
+
+        if is_card_back:
+            for i in range(single_card_count):
+                copy_seed = seed + i * 100
+                copy_num = (i + 1) if single_card_count > 1 else None
+                path = generate_card_back(
+                    style=style,
+                    model=model,
+                    output_dir=output,
+                    base_seed=copy_seed,
+                    key_card_path=str(key_card) if key_card else None,
+                    aspect_ratio=aspect_ratio,
+                    style_transfer_mode=style_transfer_mode,
+                    reference_map=reference_map,
+                    deck_num=copy_num,
+                )
+                all_paths.append(path)
+        else:
+            all_paths = generate_single_card(
+                card=card,
+                style=style,
+                model=model,
+                output_dir=output,
+                base_seed=seed,
+                count=single_card_count,
+                key_card_path=str(key_card) if key_card else None,
+                aspect_ratio=aspect_ratio,
+                prompt_strength=prompt_strength,
+                style_transfer_mode=style_transfer_mode,
+                reference_map=reference_map,
+            )
+
+        console.print(f"\n[bold green]Done![/bold green] Generated {len(all_paths)} images in {output.resolve()}")
+        return
+
+    # --- Normal deck mode ---
     cards = get_cards(card_subset, cards_file=cards_file)
     console.print()
     console.print(f"[bold]Generating {len(cards)} tarot cards × {num_decks} deck(s)[/bold]")

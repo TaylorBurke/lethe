@@ -308,3 +308,16 @@ def get_cards(subset: str = "all", cards_file: Path | None = None) -> list[Card]
             return cards
         case _:
             raise ValueError(f"Unknown card subset: {subset!r}. Use 'all', 'major', 'minor', or 'sample'.")
+
+
+def get_card_by_index(index: int, cards_file: Path | None = None) -> Card:
+    """Return the card matching the given index (0-77).
+
+    Looks up by the two-digit numeral (e.g. index 0 → numeral "00").
+    """
+    all_cards = get_cards("all", cards_file=cards_file)
+    numeral = f"{index:02d}"
+    for card in all_cards:
+        if card.numeral == numeral:
+            return card
+    raise ValueError(f"No card found with index {index}")

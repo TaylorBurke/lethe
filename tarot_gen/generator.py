@@ -362,6 +362,92 @@ def generate_deck(
     return results
 
 
+def generate_single_card(
+    card: Card,
+    style: str,
+    model: str = "flux-schnell",
+    output_dir: Path = Path("output"),
+    base_seed: int = 42,
+    count: int = 1,
+    key_card_path: str | None = None,
+    aspect_ratio: str = "2:3",
+    prompt_strength: float = 0.47,
+    style_transfer_mode: str = "high-quality",
+    reference_map: dict[str, str] | None = None,
+) -> list[Path]:
+    """Generate N copies of a single card with varied seeds.
+
+    Each copy uses ``base_seed + i`` as the seed so the outputs differ while
+    remaining reproducible.  When ``count > 1``, filenames are suffixed
+    (e.g. ``00_the_fool_1.png``, ``00_the_fool_2.png``).
+    """
+    model_id = MODELS.get(model, model)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    style_prefix = build_style_prefix(style)
+    results: list[Path] = []
+
+    is_flux = "flux" in model_id
+    is_style_transfer = "style-transfer" in model_id
+    is_sdxl = not is_flux and not is_style_transfer
+    key_card_url: str | None = None
+
+    # Reference setup (same logic as generate_deck)
+    reference_urls: dict[str, str] = {}
+    if is_style_transfer:
+        target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        if reference_map:
+            for group_key, img_path in reference_map.items():
+                p = Path(img_path)
+                resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+                encoded = base64.b64encode(resized_bytes).decode()
+                reference_urls[group_key] = f"data:image/png;base64,{encoded}"
+        elif key_card_path:
+            p = Path(key_card_path)
+            resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+            encoded = base64.b64encode(resized_bytes).decode()
+            key_card_url = f"data:image/png;base64,{encoded}"
+        else:
+            raise RuntimeError("style-transfer model requires reference images")
+    elif is_sdxl and key_card_path:
+        target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        p = Path(key_card_path)
+        resized_bytes = resize_image_to_aspect(p, target_width, target_height)
+        encoded = base64.b64encode(resized_bytes).decode()
+        key_card_url = f"data:image/png;base64,{encoded}"
+
+    def _resolve_ref(c: Card) -> str | None:
+        if reference_urls:
+            return reference_urls.get(_reference_key(c), key_card_url)
+        return key_card_url
+
+    console.print(f"[bold]Generating {count} copy/copies of {card.name}[/bold]")
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[bold blue]{task.description}"),
+        BarColumn(),
+        MofNCompleteColumn(),
+        console=console,
+    ) as progress:
+        task = progress.add_task(f"Generating {card.name}", total=count)
+
+        for i in range(count):
+            seed = base_seed + i
+            copy_num = (i + 1) if count > 1 else None
+            path, _ = _generate_one(
+                card, style_prefix, model_id, seed, output_dir,
+                key_card_url=_resolve_ref(card),
+                aspect_ratio=aspect_ratio,
+                prompt_strength=prompt_strength,
+                style_transfer_mode=style_transfer_mode,
+                deck_num=copy_num,
+            )
+            results.append(path)
+            progress.update(task, advance=1, description=f"Generated copy {i + 1}/{count}")
+
+    return results
+
+
 def _mirror_4way(image_path: Path) -> None:
     """Post-process an image for true 4-way symmetry.
 
