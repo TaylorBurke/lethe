@@ -17,5 +17,8 @@ dependencies = [
     "questionary>=2.0.0",
 ]
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
 [project.scripts]
 tarot-gen = "tarot_gen.cli:main"
