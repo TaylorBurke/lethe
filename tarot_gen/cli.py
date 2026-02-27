@@ -226,6 +226,14 @@ def prompt_for_options() -> dict:
         if style_transfer_mode is None:
             sys.exit(0)
 
+        diversity = questionary.select(
+            "Reference diversity:",
+            choices=["low", "medium", "high"],
+            default="medium",
+        ).ask()
+        if diversity is None:
+            sys.exit(0)
+
     elif model == "sdxl":
         key_card_str = questionary.text(
             "Key card image path:",
@@ -244,6 +252,9 @@ def prompt_for_options() -> dict:
         if ps_str is None:
             sys.exit(0)
         prompt_strength = float(ps_str) if ps_str.strip() else 0.47
+
+    if model not in ("style-transfer",):
+        diversity = "medium"
 
     if cards == "single":
         cards_file = None
@@ -269,6 +280,7 @@ def prompt_for_options() -> dict:
         "key_card": Path(key_card) if key_card else None,
         "prompt_strength": prompt_strength,
         "style_transfer_mode": style_transfer_mode,
+        "diversity": diversity,
         "cards_file": Path(cards_file) if cards_file else None,
         "reference_map": reference_map,
         "single_card_index": single_card_index,
@@ -324,6 +336,7 @@ def save_prompt_file(output: Path, options: dict) -> Path:
         lines.append(f"Prompt Strength: {options['prompt_strength']}")
     if options.get('model') == 'style-transfer':
         lines.append(f"Style Transfer Mode: {options['style_transfer_mode']}")
+        lines.append(f"Reference Diversity: {options.get('diversity', 'medium')}")
     if options.get('cards_file'):
         lines.append(f"Cards File: {options['cards_file']}")
     if options.get('single_card_index') is not None:
@@ -354,6 +367,7 @@ def _generate_single_deck(
     prompt_strength: float,
     style_transfer_mode: str,
     reference_map: dict[str, str] | None,
+    diversity: str = "medium",
 ) -> list[Path]:
     """Generate one complete deck (cards + card back).
 
@@ -375,6 +389,7 @@ def _generate_single_deck(
         style_transfer_mode=style_transfer_mode,
         reference_map=reference_map,
         deck_num=deck_num,
+        diversity=diversity,
     )
 
     card_back_path = generate_card_back(
@@ -387,6 +402,7 @@ def _generate_single_deck(
         style_transfer_mode=style_transfer_mode,
         reference_map=reference_map,
         deck_num=deck_num,
+        diversity=diversity,
     )
     paths.append(card_back_path)
     return paths
@@ -405,6 +421,7 @@ def run_generation(
     aspect_ratio: str,
     prompt_strength: float,
     style_transfer_mode: str,
+    diversity: str = "medium",
     reference_map: dict[str, str] | None = None,
     single_card_index: int | None = None,
     single_card_count: int = 1,
@@ -430,6 +447,7 @@ def run_generation(
         "key_card": key_card,
         "prompt_strength": prompt_strength,
         "style_transfer_mode": style_transfer_mode,
+        "diversity": diversity,
         "cards_file": cards_file,
         "single_card_index": single_card_index,
         "single_card_count": single_card_count,
@@ -474,6 +492,7 @@ def run_generation(
             console.print(f"  Prompt strength: {prompt_strength}")
         if model == "style-transfer":
             console.print(f"  Style transfer mode: {style_transfer_mode}")
+            console.print(f"  Diversity: {diversity}")
         if cards_file:
             console.print(f"  Cards file: {cards_file.resolve()}")
         console.print()
@@ -494,6 +513,7 @@ def run_generation(
                     style_transfer_mode=style_transfer_mode,
                     reference_map=reference_map,
                     deck_num=copy_num,
+                    diversity=diversity,
                 )
                 all_paths.append(path)
         else:
@@ -509,6 +529,7 @@ def run_generation(
                 prompt_strength=prompt_strength,
                 style_transfer_mode=style_transfer_mode,
                 reference_map=reference_map,
+                diversity=diversity,
             )
 
         console.print(f"\n[bold green]Done![/bold green] Generated {len(all_paths)} images in {output.resolve()}")
@@ -530,6 +551,7 @@ def run_generation(
         console.print(f"  Prompt strength: {prompt_strength}")
     if model == "style-transfer":
         console.print(f"  Style transfer mode: {style_transfer_mode}")
+        console.print(f"  Diversity: {diversity}")
     if cards_file:
         console.print(f"  Cards file: {cards_file.resolve()}")
     console.print()
@@ -551,6 +573,7 @@ def run_generation(
             prompt_strength=prompt_strength,
             style_transfer_mode=style_transfer_mode,
             reference_map=reference_map,
+            diversity=diversity,
         )
     else:
         # Multiple decks — run concurrently, suffix filenames with deck number
@@ -572,6 +595,7 @@ def run_generation(
                     prompt_strength=prompt_strength,
                     style_transfer_mode=style_transfer_mode,
                     reference_map=reference_map,
+                    diversity=diversity,
                 )
                 futures[fut] = d
 
