@@ -233,6 +233,7 @@ def generate_deck(
     prompt_strength: float = 0.47,
     style_transfer_mode: str = "high-quality",
     reference_map: dict[str, str] | None = None,
+    diversity: str = "medium",
     deck_num: int | None = None,
 ) -> list[Path]:
     """Generate images for all cards in the list.
@@ -246,6 +247,9 @@ def generate_deck(
     keys like ``"major"``, ``"Wands"``, etc. to image file paths) to use
     per-group reference images.  Falls back to ``key_card_path`` as a
     single reference for all cards.
+
+    ``diversity`` controls how much the reference crop varies per card:
+    ``"low"``, ``"medium"``, or ``"high"``.
     """
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -258,28 +262,22 @@ def generate_deck(
     key_card_url: str | None = None
 
     # Style-transfer requires reference image(s)
-    reference_urls: dict[str, str] = {}
+    reference_paths: dict[str, Path] = {}
     if is_style_transfer:
         target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         if reference_map:
-            # Pre-encode all group reference images
             for group_key, img_path in reference_map.items():
                 p = Path(img_path)
-                console.print(f"[bold cyan]Resizing {group_key} reference to {target_width}x{target_height}...[/bold cyan]")
-                resized_bytes = resize_image_to_aspect(p, target_width, target_height)
-                encoded = base64.b64encode(resized_bytes).decode()
-                reference_urls[group_key] = f"data:image/png;base64,{encoded}"
+                reference_paths[group_key] = p
                 console.print(f"[bold cyan]  {group_key} reference:[/bold cyan] {img_path}")
             console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
+            console.print(f"[bold cyan]Reference diversity:[/bold cyan] {diversity}")
         elif key_card_path:
-            # Single reference fallback
             p = Path(key_card_path)
-            console.print(f"[bold cyan]Resizing style reference to {target_width}x{target_height}...[/bold cyan]")
-            resized_bytes = resize_image_to_aspect(p, target_width, target_height)
-            encoded = base64.b64encode(resized_bytes).decode()
-            key_card_url = f"data:image/png;base64,{encoded}"
+            reference_paths["_single"] = p
             console.print(f"[bold cyan]Using style reference:[/bold cyan] {key_card_path}")
             console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
+            console.print(f"[bold cyan]Reference diversity:[/bold cyan] {diversity}")
         else:
             raise RuntimeError("style-transfer model requires reference images (--key-card or references/ directory)")
 
@@ -319,10 +317,18 @@ def generate_deck(
     ) as progress:
         task = progress.add_task("Generating deck", total=len(cards))
 
-        def _resolve_ref(card: Card) -> str | None:
-            """Pick the right reference URL for this card."""
-            if reference_urls:
-                return reference_urls.get(_reference_key(card), key_card_url)
+        def _resolve_ref(card: Card, card_seed: int) -> str | None:
+            """Encode the right reference for this card with seed-based crop."""
+            if reference_paths:
+                ref_key = _reference_key(card) if len(reference_paths) > 1 else "_single"
+                ref_path = reference_paths.get(ref_key)
+                if ref_path:
+                    resized = resize_image_to_aspect(
+                        ref_path, target_width, target_height,
+                        card_seed=card_seed, diversity=diversity,
+                    )
+                    encoded = base64.b64encode(resized).decode()
+                    return f"data:image/png;base64,{encoded}"
             return key_card_url
 
         if parallel <= 1:
@@ -330,7 +336,7 @@ def generate_deck(
                 seed = get_seed(base_seed, remaining_start_index + i)
                 path, _ = _generate_one(
                     card, style_prefix, model_id, seed, output_dir,
-                    key_card_url=_resolve_ref(card),
+                    key_card_url=_resolve_ref(card, seed),
                     aspect_ratio=aspect_ratio,
                     prompt_strength=prompt_strength,
                     style_transfer_mode=style_transfer_mode,
@@ -345,7 +351,7 @@ def generate_deck(
                     seed = get_seed(base_seed, remaining_start_index + i)
                     fut = pool.submit(
                         _generate_one, card, style_prefix, model_id, seed, output_dir,
-                        key_card_url=_resolve_ref(card),
+                        key_card_url=_resolve_ref(card, seed),
                         aspect_ratio=aspect_ratio,
                         prompt_strength=prompt_strength,
                         style_transfer_mode=style_transfer_mode,
@@ -374,12 +380,16 @@ def generate_single_card(
     prompt_strength: float = 0.47,
     style_transfer_mode: str = "high-quality",
     reference_map: dict[str, str] | None = None,
+    diversity: str = "medium",
 ) -> list[Path]:
     """Generate N copies of a single card with varied seeds.
 
     Each copy uses ``base_seed + i`` as the seed so the outputs differ while
     remaining reproducible.  When ``count > 1``, filenames are suffixed
     (e.g. ``00_the_fool_1.png``, ``00_the_fool_2.png``).
+
+    ``diversity`` controls how much the reference crop varies per card:
+    ``"low"``, ``"medium"``, or ``"high"``.
     """
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -392,20 +402,14 @@ def generate_single_card(
     key_card_url: str | None = None
 
     # Reference setup (same logic as generate_deck)
-    reference_urls: dict[str, str] = {}
+    reference_paths: dict[str, Path] = {}
     if is_style_transfer:
         target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         if reference_map:
             for group_key, img_path in reference_map.items():
-                p = Path(img_path)
-                resized_bytes = resize_image_to_aspect(p, target_width, target_height)
-                encoded = base64.b64encode(resized_bytes).decode()
-                reference_urls[group_key] = f"data:image/png;base64,{encoded}"
+                reference_paths[group_key] = Path(img_path)
         elif key_card_path:
-            p = Path(key_card_path)
-            resized_bytes = resize_image_to_aspect(p, target_width, target_height)
-            encoded = base64.b64encode(resized_bytes).decode()
-            key_card_url = f"data:image/png;base64,{encoded}"
+            reference_paths["_single"] = Path(key_card_path)
         else:
             raise RuntimeError("style-transfer model requires reference images")
     elif is_sdxl and key_card_path:
@@ -415,9 +419,17 @@ def generate_single_card(
         encoded = base64.b64encode(resized_bytes).decode()
         key_card_url = f"data:image/png;base64,{encoded}"
 
-    def _resolve_ref(c: Card) -> str | None:
-        if reference_urls:
-            return reference_urls.get(_reference_key(c), key_card_url)
+    def _resolve_ref(c: Card, card_seed: int) -> str | None:
+        if reference_paths:
+            ref_key = _reference_key(c) if len(reference_paths) > 1 else "_single"
+            ref_path = reference_paths.get(ref_key)
+            if ref_path:
+                resized = resize_image_to_aspect(
+                    ref_path, target_width, target_height,
+                    card_seed=card_seed, diversity=diversity,
+                )
+                encoded = base64.b64encode(resized).decode()
+                return f"data:image/png;base64,{encoded}"
         return key_card_url
 
     console.print(f"[bold]Generating {count} copy/copies of {card.name}[/bold]")
@@ -436,7 +448,7 @@ def generate_single_card(
             copy_num = (i + 1) if count > 1 else None
             path, _ = _generate_one(
                 card, style_prefix, model_id, seed, output_dir,
-                key_card_url=_resolve_ref(card),
+                key_card_url=_resolve_ref(card, seed),
                 aspect_ratio=aspect_ratio,
                 prompt_strength=prompt_strength,
                 style_transfer_mode=style_transfer_mode,
@@ -476,6 +488,7 @@ def generate_card_back(
     key_card_path: str | None = None,
     style_transfer_mode: str = "high-quality",
     reference_map: dict[str, str] | None = None,
+    diversity: str = "medium",
     deck_num: int | None = None,
 ) -> Path:
     """Generate a 4-way symmetrical card back image.
@@ -509,14 +522,17 @@ def generate_card_back(
     ref_url: str | None = None
     if is_style_transfer:
         target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
-        # Use major reference or first available
         ref_path = None
         if reference_map:
             ref_path = Path(reference_map.get("major") or next(iter(reference_map.values())))
         elif key_card_path:
             ref_path = Path(key_card_path)
         if ref_path:
-            resized_bytes = resize_image_to_aspect(ref_path, target_width, target_height)
+            card_back_seed = get_seed(base_seed, 999)
+            resized_bytes = resize_image_to_aspect(
+                ref_path, target_width, target_height,
+                card_seed=card_back_seed, diversity=diversity,
+            )
             encoded = base64.b64encode(resized_bytes).decode()
             ref_url = f"data:image/png;base64,{encoded}"
 
