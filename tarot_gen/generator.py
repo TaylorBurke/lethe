@@ -490,6 +490,7 @@ def generate_card_back(
     reference_map: dict[str, str] | None = None,
     diversity: str = "medium",
     deck_num: int | None = None,
+    card_count: int = 78,
 ) -> Path:
     """Generate a 4-way symmetrical card back image.
 
@@ -501,9 +502,9 @@ def generate_card_back(
     output_dir.mkdir(parents=True, exist_ok=True)
     style_prefix = build_style_prefix(style)
     if deck_num is not None:
-        dest = output_dir / f"78_card_back_{deck_num}.png"
+        dest = output_dir / f"{card_count:02d}_card_back_{deck_num}.png"
     else:
-        dest = output_dir / "78_card_back.png"
+        dest = output_dir / f"{card_count:02d}_card_back.png"
     seed = get_seed(base_seed, 999)
 
     prompt = (
