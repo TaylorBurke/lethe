@@ -1,0 +1,20 @@
+# Oracle Deck Template
+# Fill in your cards below. Each card needs a name, description, and keywords.
+# 'meaning' is optional metadata (not used in image generation).
+# 'composition' is optional framing/layout hint for the AI.
+# Maximum 100 cards per deck.
+
+deck_name: "My Oracle Deck"
+
+cards:
+  - name: "The Dawn"
+    description: "A radiant sunrise breaking over a calm sea, golden light spilling across the water"
+    keywords: [sunrise, calm sea, golden light, horizon]
+    meaning: "New beginnings, fresh starts, hope on the horizon"
+    composition: "wide landscape view, sun centered on horizon, water in foreground"
+
+  - name: "The Mirror"
+    description: "An ornate hand mirror reflecting a starry night sky instead of the holder's face"
+    keywords: [hand mirror, starry sky, reflection, ornate frame]
+    meaning: "Self-reflection, inner truth, seeing beyond the surface"
+    composition: "close-up of mirror in hand, starfield visible in reflection, dark background"
