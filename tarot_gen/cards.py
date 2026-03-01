@@ -15,6 +15,7 @@ class Card:
     description: str  # Scene/imagery description
     key_symbols: list[str]
     composition: str = ""  # Framing/composition hint (e.g., "centered full-body figure")
+    meaning: str = ""  # Oracle card meaning (metadata, not used in prompts)
 
     @property
     def slug(self) -> str:
@@ -321,3 +322,38 @@ def get_card_by_index(index: int, cards_file: Path | None = None) -> Card:
         if card.numeral == numeral:
             return card
     raise ValueError(f"No card found with index {index}")
+
+
+MAX_ORACLE_CARDS = 100
+
+
+def load_oracle_cards(yaml_path: Path) -> list[Card]:
+    """Load oracle cards from a YAML file.
+
+    Returns a list of Card objects with arcana_type="oracle" and
+    sequential numerals (00, 01, 02...).
+
+    Raises ValueError if the deck has 0 or more than 100 cards.
+    """
+    with open(yaml_path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    raw_cards = data.get("cards", [])
+    if len(raw_cards) < 1:
+        raise ValueError("Oracle deck must have at least 1 card.")
+    if len(raw_cards) > MAX_ORACLE_CARDS:
+        raise ValueError(f"Oracle deck exceeds maximum of {MAX_ORACLE_CARDS} cards.")
+
+    cards: list[Card] = []
+    for i, card_data in enumerate(raw_cards):
+        cards.append(Card(
+            name=card_data["name"],
+            numeral=f"{i:02d}",
+            arcana_type="oracle",
+            suit=None,
+            description=card_data["description"],
+            key_symbols=card_data.get("keywords", []),
+            meaning=card_data.get("meaning", ""),
+            composition=card_data.get("composition", ""),
+        ))
+    return cards
