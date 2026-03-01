@@ -9,7 +9,7 @@ from pathlib import Path
 import questionary
 from rich.console import Console
 
-from tarot_gen.cards import Card, get_cards, get_card_by_index
+from tarot_gen.cards import Card, get_cards, get_card_by_index, load_oracle_cards
 from tarot_gen.generator import generate_deck, generate_single_card, generate_card_back, MODELS, STYLE_TRANSFER_MODES, REFERENCE_FILES
 
 console = Console()
@@ -32,6 +32,14 @@ def prompt_for_options() -> dict:
         console.print("[red]Style prompt is required.[/red]")
         sys.exit(1)
 
+    deck_type = questionary.select(
+        "Deck type:",
+        choices=["tarot", "oracle"],
+        default="tarot",
+    ).ask()
+    if deck_type is None:
+        sys.exit(0)
+
     model = questionary.select(
         "Model:",
         choices=list(MODELS.keys()),
@@ -40,11 +48,18 @@ def prompt_for_options() -> dict:
     if model is None:
         sys.exit(0)
 
-    cards = questionary.select(
-        "Cards to generate:",
-        choices=CARD_SUBSETS,
-        default="sample",
-    ).ask()
+    if deck_type == "oracle":
+        cards = questionary.select(
+            "Cards to generate:",
+            choices=["all", "single"],
+            default="all",
+        ).ask()
+    else:
+        cards = questionary.select(
+            "Cards to generate:",
+            choices=CARD_SUBSETS,
+            default="sample",
+        ).ask()
     if cards is None:
         sys.exit(0)
 
@@ -56,55 +71,79 @@ def prompt_for_options() -> dict:
     single_card_composition = None
 
     if cards == "single":
-        idx_str = questionary.text(
-            "Card index (0-78):",
-            instruction="(0-77 for cards, 78 for card back)",
-        ).ask()
-        if idx_str is None:
-            sys.exit(0)
-        try:
-            single_card_index = int(idx_str.strip())
-        except ValueError:
-            console.print("[red]Invalid index. Must be an integer 0-78.[/red]")
-            sys.exit(1)
-        if single_card_index < 0 or single_card_index > 78:
-            console.print("[red]Index must be between 0 and 78.[/red]")
-            sys.exit(1)
-
-        # Show card name for confirmation (skip for card back)
-        if single_card_index < 78:
-            # Peek at the card name (cards_file not known yet, use built-in)
-            try:
-                preview_card = get_card_by_index(single_card_index)
-                console.print(f"[bold cyan]Selected: {preview_card.name}[/bold cyan]")
-            except ValueError:
-                pass
-
-            use_default = questionary.confirm(
-                "Use default description?",
-                default=True,
+        if deck_type == "oracle":
+            oracle_path = Path("oracle.yaml")
+            oracle_cards_preview = load_oracle_cards(oracle_path)
+            max_idx = len(oracle_cards_preview)  # card back is at len(oracle_cards)
+            idx_str = questionary.text(
+                f"Card index (0-{max_idx}):",
+                instruction=f"(0-{max_idx - 1} for cards, {max_idx} for card back)",
             ).ask()
-            if use_default is None:
+            if idx_str is None:
                 sys.exit(0)
+            try:
+                single_card_index = int(idx_str.strip())
+            except ValueError:
+                console.print(f"[red]Invalid index. Must be an integer 0-{max_idx}.[/red]")
+                sys.exit(1)
+            if single_card_index < 0 or single_card_index > max_idx:
+                console.print(f"[red]Index must be between 0 and {max_idx}.[/red]")
+                sys.exit(1)
 
-            if not use_default:
-                single_card_desc = questionary.text("Description:").ask()
-                if single_card_desc is None:
-                    sys.exit(0)
-
-                symbols_str = questionary.text(
-                    "Key symbols:",
-                    instruction="(comma-separated)",
-                ).ask()
-                if symbols_str is None:
-                    sys.exit(0)
-                single_card_symbols = [s.strip() for s in symbols_str.split(",") if s.strip()]
-
-                single_card_composition = questionary.text("Composition:").ask()
-                if single_card_composition is None:
-                    sys.exit(0)
+            if single_card_index < max_idx:
+                console.print(f"[bold cyan]Selected: {oracle_cards_preview[single_card_index].name}[/bold cyan]")
+            else:
+                console.print("[bold cyan]Selected: Card Back[/bold cyan]")
         else:
-            console.print("[bold cyan]Selected: Card Back[/bold cyan]")
+            idx_str = questionary.text(
+                "Card index (0-78):",
+                instruction="(0-77 for cards, 78 for card back)",
+            ).ask()
+            if idx_str is None:
+                sys.exit(0)
+            try:
+                single_card_index = int(idx_str.strip())
+            except ValueError:
+                console.print("[red]Invalid index. Must be an integer 0-78.[/red]")
+                sys.exit(1)
+            if single_card_index < 0 or single_card_index > 78:
+                console.print("[red]Index must be between 0 and 78.[/red]")
+                sys.exit(1)
+
+            # Show card name for confirmation (skip for card back)
+            if single_card_index < 78:
+                # Peek at the card name (cards_file not known yet, use built-in)
+                try:
+                    preview_card = get_card_by_index(single_card_index)
+                    console.print(f"[bold cyan]Selected: {preview_card.name}[/bold cyan]")
+                except ValueError:
+                    pass
+
+                use_default = questionary.confirm(
+                    "Use default description?",
+                    default=True,
+                ).ask()
+                if use_default is None:
+                    sys.exit(0)
+
+                if not use_default:
+                    single_card_desc = questionary.text("Description:").ask()
+                    if single_card_desc is None:
+                        sys.exit(0)
+
+                    symbols_str = questionary.text(
+                        "Key symbols:",
+                        instruction="(comma-separated)",
+                    ).ask()
+                    if symbols_str is None:
+                        sys.exit(0)
+                    single_card_symbols = [s.strip() for s in symbols_str.split(",") if s.strip()]
+
+                    single_card_composition = questionary.text("Composition:").ask()
+                    if single_card_composition is None:
+                        sys.exit(0)
+            else:
+                console.print("[bold cyan]Selected: Card Back[/bold cyan]")
 
         count_str = questionary.text(
             "Number of copies (1-20):",
@@ -176,8 +215,8 @@ def prompt_for_options() -> dict:
 
     reference_map = None
     if model == "style-transfer":
-        if cards == "single":
-            # Single card mode always uses my-ref.png
+        if deck_type == "oracle" or cards == "single":
+            # Oracle and single card mode always use my-ref.png
             ref_path = Path("my-ref.png")
             if not ref_path.exists():
                 console.print("[red]my-ref.png not found in project root.[/red]")
@@ -256,7 +295,19 @@ def prompt_for_options() -> dict:
     if model not in ("style-transfer",):
         diversity = "medium"
 
-    if cards == "single":
+    if deck_type == "oracle":
+        cards_file = "oracle.yaml"
+        oracle_path = Path(cards_file)
+        if not oracle_path.exists():
+            console.print(f"[red]{cards_file} not found in project root.[/red]")
+            sys.exit(1)
+        try:
+            oracle_cards = load_oracle_cards(oracle_path)
+        except ValueError as e:
+            console.print(f"[red]Invalid oracle deck: {e}[/red]")
+            sys.exit(1)
+        console.print(f"[bold cyan]Oracle deck: {len(oracle_cards)} cards from {cards_file}[/bold cyan]")
+    elif cards == "single":
         cards_file = None
     else:
         cards_file_str = questionary.text(
@@ -271,6 +322,7 @@ def prompt_for_options() -> dict:
     return {
         "style": style,
         "model": model,
+        "deck_type": deck_type,
         "card_subset": cards,
         "aspect_ratio": aspect_ratio,
         "output": Path(output),
@@ -322,6 +374,7 @@ def save_prompt_file(output: Path, options: dict) -> Path:
     prompt_path = output / "prompt.txt"
 
     lines = [
+        f"Deck Type: {options.get('deck_type', 'tarot')}",
         f"Style: {options['style']}",
         f"Model: {options['model']}",
         f"Cards: {options['card_subset']}",
@@ -368,6 +421,7 @@ def _generate_single_deck(
     style_transfer_mode: str,
     reference_map: dict[str, str] | None,
     diversity: str = "medium",
+    card_count: int | None = None,
 ) -> list[Path]:
     """Generate one complete deck (cards + card back).
 
@@ -403,6 +457,7 @@ def _generate_single_deck(
         reference_map=reference_map,
         deck_num=deck_num,
         diversity=diversity,
+        card_count=card_count if card_count is not None else len(cards),
     )
     paths.append(card_back_path)
     return paths
@@ -428,6 +483,7 @@ def run_generation(
     single_card_desc: str | None = None,
     single_card_symbols: list[str] | None = None,
     single_card_composition: str | None = None,
+    deck_type: str = "tarot",
 ) -> None:
     """Execute the deck generation with the given options."""
     # Archive existing output if present
@@ -439,6 +495,7 @@ def run_generation(
     options = {
         "style": style,
         "model": model,
+        "deck_type": deck_type,
         "card_subset": card_subset,
         "aspect_ratio": aspect_ratio,
         "seed": seed,
@@ -461,24 +518,35 @@ def run_generation(
 
     # --- Single card mode ---
     if card_subset == "single" and single_card_index is not None:
-        is_card_back = single_card_index == 78
+        if deck_type == "oracle":
+            all_oracle = load_oracle_cards(Path(cards_file) if cards_file else Path("oracle.yaml"))
+            card_back_index = len(all_oracle)
+            is_card_back = single_card_index == card_back_index
+            if not is_card_back:
+                if single_card_index >= len(all_oracle):
+                    console.print(f"[red]Card index {single_card_index} out of range (0-{len(all_oracle) - 1}).[/red]")
+                    sys.exit(1)
+                card = all_oracle[single_card_index]
+        else:
+            is_card_back = single_card_index == 78
 
         console.print()
         if is_card_back:
             console.print(f"[bold]Generating {single_card_count} card back copy/copies[/bold]")
         else:
-            card = get_card_by_index(single_card_index, cards_file=cards_file)
-            # Apply custom description overrides
-            if single_card_desc is not None:
-                card = Card(
-                    name=card.name,
-                    numeral=card.numeral,
-                    arcana_type=card.arcana_type,
-                    suit=card.suit,
-                    description=single_card_desc,
-                    key_symbols=single_card_symbols or card.key_symbols,
-                    composition=single_card_composition or card.composition,
-                )
+            if deck_type != "oracle":
+                card = get_card_by_index(single_card_index, cards_file=cards_file)
+                # Apply custom description overrides
+                if single_card_desc is not None:
+                    card = Card(
+                        name=card.name,
+                        numeral=card.numeral,
+                        arcana_type=card.arcana_type,
+                        suit=card.suit,
+                        description=single_card_desc,
+                        key_symbols=single_card_symbols or card.key_symbols,
+                        composition=single_card_composition or card.composition,
+                    )
             console.print(f"[bold]Generating {single_card_count} copy/copies of {card.name}[/bold]")
 
         console.print(f"  Style:  {style}")
@@ -500,6 +568,7 @@ def run_generation(
         all_paths: list[Path] = []
 
         if is_card_back:
+            cb_card_count = card_back_index if deck_type == "oracle" else 78
             for i in range(single_card_count):
                 copy_seed = seed + i * 100
                 copy_num = (i + 1) if single_card_count > 1 else None
@@ -514,6 +583,7 @@ def run_generation(
                     reference_map=reference_map,
                     deck_num=copy_num,
                     diversity=diversity,
+                    card_count=cb_card_count,
                 )
                 all_paths.append(path)
         else:
@@ -536,9 +606,12 @@ def run_generation(
         return
 
     # --- Normal deck mode ---
-    cards = get_cards(card_subset, cards_file=cards_file)
+    if deck_type == "oracle":
+        cards = load_oracle_cards(Path(cards_file) if cards_file else Path("oracle.yaml"))
+    else:
+        cards = get_cards(card_subset, cards_file=cards_file)
     console.print()
-    console.print(f"[bold]Generating {len(cards)} tarot cards × {num_decks} deck(s)[/bold]")
+    console.print(f"[bold]Generating {len(cards)} {deck_type} cards × {num_decks} deck(s)[/bold]")
     console.print(f"  Style:  {style}")
     console.print(f"  Model:  {model}")
     console.print(f"  Output: {output.resolve()}")
@@ -574,6 +647,7 @@ def run_generation(
             style_transfer_mode=style_transfer_mode,
             reference_map=reference_map,
             diversity=diversity,
+            card_count=len(cards),
         )
     else:
         # Multiple decks — run concurrently, suffix filenames with deck number
@@ -596,6 +670,7 @@ def run_generation(
                     style_transfer_mode=style_transfer_mode,
                     reference_map=reference_map,
                     diversity=diversity,
+                    card_count=len(cards),
                 )
                 futures[fut] = d
 
