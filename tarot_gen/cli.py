@@ -14,6 +14,16 @@ from tarot_gen.generator import generate_deck, generate_single_card, generate_ca
 
 console = Console()
 LOGS_DIR = Path("output-logs")
+_IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
+
+
+def _find_image(base_name: str, directory: Path = Path(".")) -> Path | None:
+    """Find an image file by base name, trying .png, .jpg, and .jpeg extensions."""
+    for ext in _IMAGE_EXTENSIONS:
+        p = directory / f"{base_name}{ext}"
+        if p.exists():
+            return p
+    return None
 
 ASPECT_RATIOS = ["11:19", "300x575", "2:3", "3:2", "1:1", "16:9", "9:16", "4:5", "5:4", "21:9", "9:21"]
 CARD_SUBSETS = ["sample", "major", "minor", "all", "single"]
@@ -216,18 +226,18 @@ def prompt_for_options() -> dict:
     reference_map = None
     if model == "style-transfer":
         if deck_type == "oracle" or cards == "single":
-            # Oracle and single card mode always use my-ref.png
-            ref_path = Path("my-ref.png")
-            if not ref_path.exists():
-                console.print("[red]my-ref.png not found in project root.[/red]")
+            # Oracle and single card mode always use my-ref.*
+            ref_path = _find_image("my-ref")
+            if ref_path is None:
+                console.print("[red]my-ref image not found in project root (tried .png, .jpg, .jpeg).[/red]")
                 sys.exit(1)
             key_card = str(ref_path)
-            console.print(f"[bold cyan]Using single reference image: my-ref.png[/bold cyan]")
+            console.print(f"[bold cyan]Using single reference image: {ref_path.name}[/bold cyan]")
         else:
             ref_count = questionary.select(
                 "Reference images:",
                 choices=[
-                    questionary.Choice("1 image (my-ref.png)", value="1"),
+                    questionary.Choice("1 image (my-ref.*)", value="1"),
                     questionary.Choice("5 images (per-group from references/)", value="5"),
                 ],
                 default="5",
@@ -236,25 +246,26 @@ def prompt_for_options() -> dict:
                 sys.exit(0)
 
             if ref_count == "1":
-                ref_path = Path("my-ref.png")
-                if not ref_path.exists():
-                    console.print("[red]my-ref.png not found in project root.[/red]")
+                ref_path = _find_image("my-ref")
+                if ref_path is None:
+                    console.print("[red]my-ref image not found in project root (tried .png, .jpg, .jpeg).[/red]")
                     sys.exit(1)
                 key_card = str(ref_path)
-                console.print(f"[bold cyan]Using single reference image: my-ref.png[/bold cyan]")
+                console.print(f"[bold cyan]Using single reference image: {ref_path.name}[/bold cyan]")
             else:
                 # Build reference map from references/ directory
                 ref_dir = Path("references")
                 reference_map = {}
-                for group_key, filename in REFERENCE_FILES.items():
-                    ref_path = ref_dir / filename
-                    if ref_path.exists():
+                for group_key, base_name in REFERENCE_FILES.items():
+                    ref_path = _find_image(base_name, ref_dir)
+                    if ref_path is not None:
                         reference_map[group_key] = str(ref_path)
                 if reference_map:
                     console.print(f"[bold cyan]Using {len(reference_map)} reference images from references/[/bold cyan]")
                 else:
+                    expected = [f"{v}.(png|jpg|jpeg)" for v in REFERENCE_FILES.values()]
                     console.print("[red]No reference images found in references/ directory.[/red]")
-                    console.print(f"[red]Expected files: {', '.join(REFERENCE_FILES.values())}[/red]")
+                    console.print(f"[red]Expected files: {', '.join(expected)}[/red]")
                     sys.exit(1)
 
         style_transfer_mode = questionary.select(

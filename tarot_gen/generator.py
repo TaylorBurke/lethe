@@ -15,14 +15,15 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCo
 
 from tarot_gen.cards import Card
 
-# Map card group to reference filename in references/ directory.
-# Suit "Pentacles" maps to "coins.png" to match the traditional name.
+# Map card group to reference base name in references/ directory.
+# Suit "Pentacles" maps to "coins" to match the traditional name.
+# Actual file may be .png, .jpg, or .jpeg — resolved at lookup time.
 REFERENCE_FILES = {
-    "major": "major.png",
-    "Wands": "wands.png",
-    "Cups": "cups.png",
-    "Swords": "swords.png",
-    "Pentacles": "coins.png",
+    "major": "major",
+    "Wands": "wands",
+    "Cups": "cups",
+    "Swords": "swords",
+    "Pentacles": "coins",
 }
 
 
