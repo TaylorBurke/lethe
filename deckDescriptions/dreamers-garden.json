@@ -1,0 +1,473 @@
+{
+  "deckName": "The Dreamer's Garden Tarot",
+  "cards": [
+    {
+      "name": "The Fool",
+      "meaning": "You stand at the threshold of something unnamed. Step through the gate without knowing what grows on the other side — trust that the path will reveal itself underfoot.",
+      "reversedMeaning": "Refusing to leave the familiar garden. Mistaking hesitation for wisdom, or leaping so recklessly that you trample what has already taken root.",
+      "keywords": "wrought-iron gate, overgrown path, red fox, bare feet"
+    },
+    {
+      "name": "The Magician",
+      "meaning": "Everything you need is already on the table before you. The candle, the water, the blade, the seed — arrange them with intention and watch the greenhouse come alive.",
+      "reversedMeaning": "Scattered tools and wasted potential. Manipulating growth rather than tending it, or paralysis before abundance — unable to choose which seed to plant first.",
+      "keywords": "stone potting bench, candle, bowl of water, pruning knife, seed"
+    },
+    {
+      "name": "The High Priestess",
+      "meaning": "Some knowledge only comes in stillness, written in silver light on pages you must sit quietly to read. The yew trees hold centuries of patience — borrow some.",
+      "reversedMeaning": "Ignoring your intuition in favor of noise. Secrets kept from yourself, or refusing to open the journal because you fear what the moonlight will illuminate.",
+      "keywords": "two yew trees, full moon, leather journal, silver light"
+    },
+    {
+      "name": "The Empress",
+      "meaning": "Let the garden overflow. There is a season for abundance without apology — lie down among the wildflowers and let sweetness find you without effort.",
+      "reversedMeaning": "Smothering what you love with too much care. Growth without boundaries, fertility turned to excess, or neglecting yourself while tending everyone else's garden.",
+      "keywords": "wildflower meadow, wisteria, stone wall, hare"
+    },
+    {
+      "name": "The Emperor",
+      "meaning": "Order has its own beauty. The rows are planted with purpose, the walls built to shelter — structure is not the enemy of wildness but its necessary companion.",
+      "reversedMeaning": "Rigidity choking the life from the garden. Control mistaken for care, or authority wielded like a wall rather than a trellis — nothing can climb you.",
+      "keywords": "stone throne, ivy, oak staff, ordered garden rows"
+    },
+    {
+      "name": "The Hierophant",
+      "meaning": "Some wisdom must be passed hand to hand, spoken in the old stone places where moss softens the edges of doctrine. Kneel not to authority but to tradition that still bears fruit.",
+      "reversedMeaning": "Dogma overgrown with ritual, the chapel so covered in moss the door no longer opens. Rejecting all guidance, or following teachings that have lost their living root.",
+      "keywords": "moss-covered chapel, ferns, two kneeling figures, candles"
+    },
+    {
+      "name": "The Lovers",
+      "meaning": "The stream between you is not an obstacle but a mirror. Reach across the water — what draws you together illuminates both banks like fireflies rising from wet grass.",
+      "reversedMeaning": "A gap you refuse to bridge, or one you try to cross by draining the stream entirely. Losing yourself in another's reflection instead of standing on your own shore.",
+      "keywords": "stream, moonlit clearing, fireflies, reaching hands"
+    },
+    {
+      "name": "The Chariot",
+      "meaning": "Drive forward through the flood. The two deer pull in tension but that tension is your power — hold the reins steady and let the rain wash away what does not serve the journey.",
+      "reversedMeaning": "Forcing direction when you should be navigating. The cart stuck in rising water, two wills pulling apart, or mistaking speed for progress on a flooded path.",
+      "keywords": "wooden cart, two deer, flooded path, rain"
+    },
+    {
+      "name": "Strength",
+      "meaning": "Kneel beside the wounded thing and tend it gently. True strength is the patience to remove a thorn without flinching — yours or someone else's.",
+      "reversedMeaning": "Brute force where tenderness is needed. Ignoring the thorn to prove you can endure it, or gentleness so excessive it becomes avoidance of necessary pain.",
+      "keywords": "fox, thorn, autumn leaves, kneeling figure"
+    },
+    {
+      "name": "The Hermit",
+      "meaning": "Walk alone into the dark trees carrying your own light. The moths in the lantern are not captured — they chose the warmth. Solitude is not loneliness but a form of deep listening.",
+      "reversedMeaning": "Isolation mistaken for wisdom. The lantern turned inward until it blinds you, or wandering so far into the pines that you forget there are other gardens.",
+      "keywords": "glass lantern, glowing moths, pine forest, cloak"
+    },
+    {
+      "name": "Wheel of Fortune",
+      "meaning": "The sundial turns whether you watch it or not. Snowdrops follow bare branches follow wheat follows roses — you are simply in one quadrant of an ancient rotation.",
+      "reversedMeaning": "Resisting the season you are in. Clinging to summer while autumn arrives, or believing the wheel has stopped when it has only slowed to a turn you cannot perceive.",
+      "keywords": "stone sundial, circular garden, four seasonal plants, ivy"
+    },
+    {
+      "name": "Justice",
+      "meaning": "Place the dried rose and the green sprig on the scales and see what is truly balanced. Truth lives in roofless rooms where nothing can be hidden from the sky.",
+      "reversedMeaning": "Scales tipped by sentiment or spite. Judging by the dead bloom alone and ignoring the living shoot, or demanding fairness from a world that operates on seasons, not contracts.",
+      "keywords": "brass scales, dried rose, green sprig, owl, stone table"
+    },
+    {
+      "name": "The Hanged Man",
+      "meaning": "Surrender to the willow's pull and see the world reflected differently. What looks like stillness from above is a profound reorientation — your hair touches the water and you learn what the pond knows.",
+      "reversedMeaning": "Hanging on out of stubbornness rather than surrender. Stagnation dressed as patience, or refusing to come down from the branch when the lesson has already been absorbed.",
+      "keywords": "willow tree, still pond, hanging figure, trailing hair"
+    },
+    {
+      "name": "Death",
+      "meaning": "The golden collapse is not the end of the garden — it is the garden making room. Look down: green shoots are already pushing through the dark soil where the old growth falls.",
+      "reversedMeaning": "Refusing to let the leaves drop. Clinging to the golden decay as if it were still summer, or tearing out the new shoots because you are not ready to begin again.",
+      "keywords": "stone archway, golden decay, green shoots, dark soil"
+    },
+    {
+      "name": "Temperance",
+      "meaning": "Stand in the current and pour slowly between the vessels. The mist rises where warm patience meets cool water — balance is not stillness but a steady, living flow.",
+      "reversedMeaning": "Pouring too fast or not at all. Imbalance masquerading as moderation, or standing so long in the stream that you forget you are allowed to walk to shore.",
+      "keywords": "clay vessels, stream, morning mist, pouring water"
+    },
+    {
+      "name": "The Devil",
+      "meaning": "The ivy around your wrists is loose enough to slip. The fruit is overripe, the sweetness turning — notice that the gate is not locked. You stay because you choose to stay.",
+      "reversedMeaning": "Breaking free with such violence you damage the trellis and yourself. Or finally seeing the bindings for what they are but refusing to acknowledge your complicity in wearing them.",
+      "keywords": "iron trellis, ivy bindings, overripe fruit, walled garden"
+    },
+    {
+      "name": "The Tower",
+      "meaning": "Lightning finds the folly because the folly was already crumbling. Let the stones fall and the birds flee — what was built on vanity cannot shelter you in a storm.",
+      "reversedMeaning": "Clinging to the crumbling structure because rebuilding terrifies you. Or a destruction you engineer yourself, tearing down what still had value in a moment of reckless despair.",
+      "keywords": "garden folly, lightning, falling stones, fleeing birds"
+    },
+    {
+      "name": "The Star",
+      "meaning": "Kneel at the spring and cup the glowing water. After the storm, the mushrooms offer their quiet light and the canopy opens to reveal the sky has been there all along.",
+      "reversedMeaning": "Refusing hope after ruin. The spring is right there but you will not drink, or you pour the glowing water out because you do not believe you deserve its light.",
+      "keywords": "bioluminescent mushrooms, forest spring, glowing water, night sky"
+    },
+    {
+      "name": "The Moon",
+      "meaning": "The garden is flooded and the path has disappeared beneath the water. The hare and fox sit with what they cannot understand — not everything needs to be resolved tonight.",
+      "reversedMeaning": "Drowning in confusion rather than sitting with it. Demanding clarity from the flooded garden, or ignoring the rising water until it swallows the path entirely.",
+      "keywords": "low moon, flooded garden, hare, fox, submerged path"
+    },
+    {
+      "name": "The Sun",
+      "meaning": "Dance barefoot among the sunflowers. This is the season of uncomplicated joy — the light touches everything and the wren sings because singing is what wrens do in warm gardens.",
+      "reversedMeaning": "Joy dimmed by self-consciousness, or a brightness so relentless it burns the tender seedlings. Performing happiness instead of feeling it, the garden too hot for shade-loving things.",
+      "keywords": "sunflowers, marigolds, wren, walled garden"
+    },
+    {
+      "name": "Judgement",
+      "meaning": "Rise from the flower bed where you have been sleeping. The bell rings across the garden at dawn and the soil falls from your shoulders — you are being called to wake, not punished for having slept.",
+      "reversedMeaning": "Refusing the bell's call, pulling the earth back over yourself. Or rising in judgment of others who are still sleeping in their beds, forgetting you were just underground yourself.",
+      "keywords": "flower beds, rising figures, bell, oak tree, dawn"
+    },
+    {
+      "name": "The World",
+      "meaning": "You have walked every quadrant — spring's promise, summer's fullness, autumn's release, winter's rest. Dance at the center of the maze because you finally understand the pattern is the destination.",
+      "reversedMeaning": "A cycle incomplete, one season skipped or avoided. Standing at the maze's center but refusing to celebrate, or never reaching the center because you keep retracing the same hedge wall.",
+      "keywords": "circular hedge maze, dancing figure, four seasons, aerial view"
+    },
+    {
+      "name": "Ace of Moths",
+      "meaning": "A single flame calls the luna moth from the darkness. This is the first spark of passion, creative impulse arriving on green wings — hold still and let it land.",
+      "reversedMeaning": "The flame gutters out before the moth arrives, or the moth singes its wings on an unguarded fire. Inspiration wasted through impatience or carelessness.",
+      "keywords": "luna moth, candle flame, dark greenhouse"
+    },
+    {
+      "name": "Two of Moths",
+      "meaning": "Two lanterns, two paths, one archway. The crossroads asks you to choose not between good and bad but between two kinds of light — both real, both calling their own moths.",
+      "reversedMeaning": "Standing at the crossroads until both lanterns burn out. Fear of choosing the wrong path becomes its own choice — the moths scatter when there is no light to follow.",
+      "keywords": "two lanterns, garden arch, crossroads, moths"
+    },
+    {
+      "name": "Three of Moths",
+      "meaning": "Collaboration lifts the lanterns higher than any one person could reach alone. The conservatory fills with warm light when three pairs of hands work together toward shared brightness.",
+      "reversedMeaning": "Too many visions and not enough ladders. Creative partnerships faltering because no one agrees which lantern to hang first, or one person doing all the climbing while others watch.",
+      "keywords": "paper lanterns, conservatory, three figures, moths"
+    },
+    {
+      "name": "Four of Moths",
+      "meaning": "Rest within the structure you have built. The four torches hold steady at the corners while you sit beneath the wisteria — celebration earned through effort, a foundation that can bear your weight.",
+      "reversedMeaning": "Complacency disguised as contentment. The torches burn unattended while you doze, or restlessness in a moment that is asking you to simply enjoy what you have created.",
+      "keywords": "four torches, stone courtyard, wisteria canopy, resting figure"
+    },
+    {
+      "name": "Five of Moths",
+      "meaning": "The moths beat against glass they cannot pass. The candle has fallen, the wax is pooling — this is conflict born from trapped energy that has no outlet and no direction.",
+      "reversedMeaning": "Opening the window before you are ready, letting the moths scatter into cold air. Or refusing to open it at all, watching the wax harden around the wick permanently.",
+      "keywords": "five moths, closed window, knocked candle, spilled wax"
+    },
+    {
+      "name": "Six of Moths",
+      "meaning": "Walk the lantern-lit path and share your flame. The six who wait along the way need only a small candle from your abundance — generosity of spirit that costs little and illuminates much.",
+      "reversedMeaning": "Giving your fire away until you walk in darkness yourself. Or hoarding the flame, passing the waiting figures without stopping, the moths following you alone.",
+      "keywords": "lantern-lit path, six figures, small candles, moths"
+    },
+    {
+      "name": "Seven of Moths",
+      "meaning": "You hold the highest ground and the brightest torch. The swarm comes to you because you dared to climb — defend your position not with force but with the steadiness of your flame.",
+      "reversedMeaning": "Arrogance on the hilltop, believing the moths worship you rather than the fire. Or exhaustion from holding the torch above your head when you could plant it in the earth.",
+      "keywords": "hilltop figure, seven torches, moth swarm, night garden"
+    },
+    {
+      "name": "Eight of Moths",
+      "meaning": "The eight moths fly in formation toward the lit window — swift, purposeful, aligned. When direction is clear, movement becomes effortless. Trust the trajectory already set in motion.",
+      "reversedMeaning": "Haste without aim. The moths scatter in different directions, or the window they fly toward is shuttered. Speed masking a lack of true destination.",
+      "keywords": "eight moths, twilight sky, garden wall, lit window"
+    },
+    {
+      "name": "Nine of Moths",
+      "meaning": "The fire is dying but you have not. Exhaustion is not failure — it is proof you carried the flame as far as you could. Guard what remains until morning.",
+      "reversedMeaning": "Paranoia by the dying fire. Seeing threats in every shadow, hoarding the last embers instead of letting them warm you, or refusing to admit the fire needs tending.",
+      "keywords": "dying campfire, nine moths, walled garden, solitary figure"
+    },
+    {
+      "name": "Ten of Moths",
+      "meaning": "The burden of unlit torches bends your back. You carry more than you can ignite alone — this weight is not strength but stubbornness. Set some down before you fall.",
+      "reversedMeaning": "Dropping everything at once and walking away from your own fire. Or finally setting the bundle down but feeling hollow without the weight you mistook for purpose.",
+      "keywords": "bundle of torches, staggering figure, dark path, ten moths"
+    },
+    {
+      "name": "Page of Moths",
+      "meaning": "Cup the glowing moth gently and marvel at what you have found. Curiosity is its own kind of flame — the wide-eyed wonder of encountering something luminous for the first time.",
+      "reversedMeaning": "Crushing the moth by holding too tightly, or opening your hands too soon because you doubt the glow is real. Inexperience extinguishing the very spark it discovers.",
+      "keywords": "glowing moth, cupped hands, tall grass, wonder"
+    },
+    {
+      "name": "Knight of Moths",
+      "meaning": "Run through the darkness with your torch held high. The moths will follow — passion in motion draws its own companions. You do not need a map when the fire lights the next step.",
+      "reversedMeaning": "Recklessness mistaken for courage. Running so fast you set the hedges ablaze, or burning out before reaching the garden's end because you sprinted when the night required a steady walk.",
+      "keywords": "blazing torch, running figure, streaming coat, moth trail"
+    },
+    {
+      "name": "Queen of Moths",
+      "meaning": "The moths rest on your shoulders because your warmth is steady, not scorching. You tend many flames at once without burning — creative mastery that feels like calm in a room full of candles.",
+      "reversedMeaning": "So many candles that the greenhouse overheats. Emotional intensity smothering the room, or withdrawing your warmth entirely and watching the moths depart one by one.",
+      "keywords": "greenhouse, many candles, moths on shoulders, seated woman"
+    },
+    {
+      "name": "King of Moths",
+      "meaning": "Your lantern illuminates the entire garden. Hundreds of moths fill the air like snow because your vision is vast and unwavering — lead with light so strong it makes the darkness irrelevant.",
+      "reversedMeaning": "Blinding others with the intensity of your own fire. A vision so consuming it leaves no room for anyone else's flame, or a lantern held so tightly the iron cuts your palm.",
+      "keywords": "iron lantern, vast garden, hundreds of moths, bearded figure"
+    },
+    {
+      "name": "Ace of Pools",
+      "meaning": "One still basin, one floating lily, one perfect reflection. The first offering of the heart arrives quietly — receive it without disturbing the water's surface.",
+      "reversedMeaning": "The water is too clouded to reflect anything true. An emotional beginning blocked by turbulence, or a cup offered that you refuse to drink from out of distrust.",
+      "keywords": "stone basin, still water, water lily, moonlight"
+    },
+    {
+      "name": "Two of Pools",
+      "meaning": "Sit together on the bench and see yourselves reflected in each other's vessel. Partnership is not merging the water but honoring both reflections side by side.",
+      "reversedMeaning": "Codependence — pouring all the water into one vessel. Or two people on the same bench refusing to look at the other's reflection, connected in proximity but not in truth.",
+      "keywords": "two stone vessels, garden bench, two figures, reflections"
+    },
+    {
+      "name": "Three of Pools",
+      "meaning": "Dance in the flooded courtyard while the sky clears. Joy shared is joy amplified — the splashing water catches the light of three bodies moving together in celebration.",
+      "reversedMeaning": "Overindulgence in the flood. Revelry that ignores the damage the storm caused, or exclusion — two dancing while the third stands at the edge, unwelcome in the splash.",
+      "keywords": "flooded courtyard, three dancing figures, splashing water, clearing sky"
+    },
+    {
+      "name": "Four of Pools",
+      "meaning": "Three more ponds glimmer in the distance but you cannot see them from under the willow. Apathy has narrowed your vision — the frog watches you ignore what is already offered.",
+      "reversedMeaning": "Finally looking up from your withdrawal, but with such restless hunger that you drain the nearest pond trying to reach the others. Dissatisfaction giving way to desperate grasping.",
+      "keywords": "willow tree, four ponds, withdrawn figure, frog"
+    },
+    {
+      "name": "Five of Pools",
+      "meaning": "Three vessels lie broken in the drained pool, but two still stand behind you untouched. Grief narrows the eyes downward — lift your gaze and feel the first rain on your skin.",
+      "reversedMeaning": "Refusing to mourn the broken vessels at all, or mourning so deeply you shatter the two that remain. Loss either unfelt or so consuming it becomes the only story you tell.",
+      "keywords": "drained pool, cracked earth, broken vessels, first raindrops"
+    },
+    {
+      "name": "Six of Pools",
+      "meaning": "Draw water from the well and fill every small cup. Generosity of the heart is wildflowers growing from stone — it finds its way through cracks when the giving is genuine.",
+      "reversedMeaning": "Nostalgia masquerading as generosity. Giving water from a well you have outgrown, or offering cups to children while your own thirst goes unacknowledged.",
+      "keywords": "garden well, clay cups, six children, wildflowers"
+    },
+    {
+      "name": "Seven of Pools",
+      "meaning": "Seven ponds, seven reflections, each showing something different. The terraced garden of the imagination offers many visions — choose which truth to approach, knowing that choosing one does not destroy the others.",
+      "reversedMeaning": "Fantasy replacing reality. Staring into reflections rather than touching the water, or so enchanted by possibility that you stand on the terrace forever, approaching nothing.",
+      "keywords": "seven ponds, terraced garden, different reflections, standing figure"
+    },
+    {
+      "name": "Eight of Pools",
+      "meaning": "Leave the cloak behind and walk into the forest. Some departures are not abandonment but maturation — the eight pools served you well, but the path ahead asks you to travel light.",
+      "reversedMeaning": "Walking away from what still nourishes you out of restlessness. Or returning to the pools and the cloak, unable to commit to the darker path that growth requires.",
+      "keywords": "eight pools, marshy path, abandoned cloak, dark forest"
+    },
+    {
+      "name": "Nine of Pools",
+      "meaning": "Open your arms to the downpour. The barrels overflow because abundance has arrived in excess — satisfaction so complete it pours over the rim and runs along the stones.",
+      "reversedMeaning": "Smugness in abundance. Displaying your overflowing barrels while others go dry, or a satisfaction so self-contained it becomes isolation — alone on the bench in the rain, calling it contentment.",
+      "keywords": "nine rain barrels, downpour, stone bench, upturned face"
+    },
+    {
+      "name": "Ten of Pools",
+      "meaning": "The family gathers at the water's edge where the stepping stones connect every pool. This is wholeness earned — a rainbow forming in the mist over a garden that weathered the storm together.",
+      "reversedMeaning": "A fractured family standing at the same water but unable to share it. Stepping stones that lead in circles, or a rainbow no one pauses to see because they are too busy arguing about the flood damage.",
+      "keywords": "ten connected pools, stepping stones, family group, rainbow"
+    },
+    {
+      "name": "Page of Pools",
+      "meaning": "Kneel at the edge and reach for the small fish. Emotional curiosity ripples outward — you do not yet know what lives beneath the surface, but the willingness to reach is everything.",
+      "reversedMeaning": "Pulling your hand back before touching the water. Emotional timidity, or reaching so eagerly you fall in and disturb the very thing you hoped to understand.",
+      "keywords": "garden pond, small fish, reaching hand, rippled reflection"
+    },
+    {
+      "name": "Knight of Pools",
+      "meaning": "Row through the flooded garden with steady determination. The water lilies part for someone who moves with emotional purpose — the rain falls but the boat holds.",
+      "reversedMeaning": "Rowing in circles through an emotional landscape without direction. Dramatic gestures of devotion that go nowhere, or abandoning the boat at the first sign of deeper water.",
+      "keywords": "wooden boat, flooded garden, water lilies, rain"
+    },
+    {
+      "name": "Queen of Pools",
+      "meaning": "Sit at the grotto's edge and let your feet rest in the deep water. The heron stands still because stillness is its mastery — you understand the depths without needing to drown in them.",
+      "reversedMeaning": "Emotional manipulation from a place of power. Using depth as a weapon, or retreating so far into the grotto that no one can reach you, the heron your only company.",
+      "keywords": "grotto pool, ferns, moss, heron"
+    },
+    {
+      "name": "King of Pools",
+      "meaning": "Your hand rests on the sluice gate because you have earned the authority to direct the flow. Emotional mastery is not damming the water but knowing when to release it and when to hold.",
+      "reversedMeaning": "Controlling the canal with an iron grip, flooding or starving the garden at will. Emotional authority turned cold — the fountains are ornamental, the water no longer nourishes.",
+      "keywords": "garden canal, stone fountains, sluice gate, bearded figure"
+    },
+    {
+      "name": "Ace of Thorns",
+      "meaning": "One dark rose breaks through stone. The first cut of clarity arrives with thorns — truth is beautiful and it draws blood. Accept both the bloom and the wound.",
+      "reversedMeaning": "Cruelty disguised as honesty. A truth weaponized, or a wound you inflict on yourself by refusing to handle the rose with care. The blood falls but nothing blooms.",
+      "keywords": "dark rose, thorns, stone wall, blood drop"
+    },
+    {
+      "name": "Two of Thorns",
+      "meaning": "Sit blindfolded with the crossed thorns pressing your palms. The decision cannot be seen, only felt — sometimes clarity requires closing your eyes and trusting what the pain tells you.",
+      "reversedMeaning": "Indecision so prolonged the thorns draw blood needlessly. Or tearing off the blindfold and choosing impulsively, neither option examined by touch or by sight.",
+      "keywords": "blindfold, two crossed stems, thorns, moonlit garden"
+    },
+    {
+      "name": "Three of Thorns",
+      "meaning": "The bouquet is pinned to the wall by three thorny stems — heartbreak displayed in the rain. This grief is real and the petals fall where they fall. Let the storm witness it.",
+      "reversedMeaning": "Refusing to grieve. Pulling the stems from the wall before the rain can touch you, or pinning yourself to someone else's sorrow because your own feels too small.",
+      "keywords": "three briar swords, wilted bouquet, rain-soaked wall, scattered petals"
+    },
+    {
+      "name": "Four of Thorns",
+      "meaning": "Lie still beneath the rose arbor with one thorn held loosely across your chest. Rest is necessary even when the mind resists — three stems laid aside, one kept close, guarding sleep.",
+      "reversedMeaning": "A rest that becomes avoidance. Lying so long on the stone bench that the thorns grow around you, or refusing rest entirely, clutching all four stems until exhaustion forces your hand.",
+      "keywords": "stone bench, rose arbor, four thorny stems, resting figure"
+    },
+    {
+      "name": "Five of Thorns",
+      "meaning": "Gather what was scattered while others walk away. Defeat leaves thorns on the ground but also the knowledge of what broke — the raven watches and remembers, and so should you.",
+      "reversedMeaning": "Clinging to the ruins of conflict out of spite. Refusing to let the others leave, or walking away yourself with empty hands, too proud to pick up what remains.",
+      "keywords": "thorny branches, ruined garden, broken gate, raven"
+    },
+    {
+      "name": "Six of Thorns",
+      "meaning": "Pole the raft steadily across dark water toward the waiting lantern. Transition comes with thorny cargo — carry the difficult things with you rather than abandoning them to the deep.",
+      "reversedMeaning": "Stuck on the water, unable to reach either shore. The thorns weigh the raft down, or you jettison the cargo and arrive unburdened but unprepared for what the new shore demands.",
+      "keywords": "flat raft, six thorn bundles, dark water, distant lantern"
+    },
+    {
+      "name": "Seven of Thorns",
+      "meaning": "Reach through the briar for the white rose at the center. Six stems already cut, one more to claim — persistence through pain yields the thing of value that the thorns protect.",
+      "reversedMeaning": "Cunning without integrity. Taking the rose by deception, or reaching so many times your arms are ruined and the rose no longer seems worth the blood.",
+      "keywords": "briar hedge, white rose, six cut stems, scratched arms"
+    },
+    {
+      "name": "Eight of Thorns",
+      "meaning": "The thorn tunnel narrows but the light at the end is real. Move quickly through restriction — this confinement is temporary and the path, though painful, has a clear exit.",
+      "reversedMeaning": "Believing the tunnel has no end. Paralysis inside the thorns, or moving so fast you tear yourself open on every arch. Mental confinement that has become comfortable in its misery.",
+      "keywords": "thorn tunnel, eight arching briars, narrow path, distant light"
+    },
+    {
+      "name": "Nine of Thorns",
+      "meaning": "Sit upright in the bed where thorns have grown through the walls. Anxiety keeps its vigil at three in the morning — the owl in the window sees clearly what you cannot in the dark.",
+      "reversedMeaning": "Suffering you refuse to name or address. The vines grow thicker because you will not cut them, or you tear them down in panic and bring the ceiling with them.",
+      "keywords": "thorny vines, nine stems, bed, owl in window"
+    },
+    {
+      "name": "Ten of Thorns",
+      "meaning": "The thorns have pinned you flat but dawn breaks over the wall ahead. This is the lowest point — the weight of ten stems across your back — but the light is already arriving.",
+      "reversedMeaning": "Refusing the dawn. Believing the thorns are permanent, or rising too quickly and carrying the branches with you into the next garden, unable to leave the pain behind.",
+      "keywords": "fallen figure, ten thorn branches, garden path, dawn light"
+    },
+    {
+      "name": "Page of Thorns",
+      "meaning": "Turn the thorny stem in your fingers and study it by the light. A small bead of blood is the price of understanding — curiosity about difficult truths is the beginning of intellectual courage.",
+      "reversedMeaning": "Using sharp words without understanding their edge. Curiosity turned cruel, or dropping the stem at the first prick and deciding that truth is not worth the discomfort.",
+      "keywords": "thorny stem, examining hands, blood bead, backlight"
+    },
+    {
+      "name": "Knight of Thorns",
+      "meaning": "Cut through the briar hedge with decisive force. Some obstacles require the blade, not patience — ride hard into the gap you are making and do not look at the thorns flying past.",
+      "reversedMeaning": "Attacking every problem with a blade when some briars only need untangling. Aggression mistaken for decisiveness, or a charge so reckless the horse stumbles in the debris.",
+      "keywords": "horseback figure, curved blade, briar hedge, flying thorns"
+    },
+    {
+      "name": "Queen of Thorns",
+      "meaning": "Sit upon the throne of living thorns without bleeding. Mastery of the intellect means holding sharp truths without being cut by them — the raven speaks and you listen without flinching.",
+      "reversedMeaning": "Coldness mistaken for clarity. Sitting on the throne so long you forget the thorns can hurt others even if they no longer hurt you. Isolation in your own sharpness.",
+      "keywords": "thorn throne, raven, dark garden, unbloodied hands"
+    },
+    {
+      "name": "King of Thorns",
+      "meaning": "Prune the rose bush with deliberate cuts, knowing exactly which stems to remove. Intellectual authority at its finest is surgical — not destruction but careful editing of what no longer serves growth.",
+      "reversedMeaning": "Over-pruning until nothing remains, or refusing to cut at all and letting the bush grow wild and thorny. Control so precise it becomes its own form of cruelty.",
+      "keywords": "winter garden, pruning shears, rose bush, neat thorn pile"
+    },
+    {
+      "name": "Ace of Roots",
+      "meaning": "One great root breaks through the chapel floor. The material world announces itself with mushrooms and spilled soil — a new foundation is forming in the ruins of what was sacred before.",
+      "reversedMeaning": "A beginning blocked or buried. The root pushes but the stone holds, or the foundation arrives but you are not ready to build on ground that is still shifting.",
+      "keywords": "tree root, stone chapel floor, mushrooms, spilled soil"
+    },
+    {
+      "name": "Two of Roots",
+      "meaning": "Two saplings lean apart but share the same root system underground. Balance between opposing directions is possible when the connection runs deeper than what is visible above the surface.",
+      "reversedMeaning": "Trying to serve two purposes until the root splits. Imbalance between competing demands, or pretending the underground connection does not exist when it sustains both trunks.",
+      "keywords": "two saplings, exposed roots, eroded bank, underground connection"
+    },
+    {
+      "name": "Three of Roots",
+      "meaning": "Three pairs of hands in the dark soil, planting together in the morning mist. Craft is learned in collaboration — the raised bed is built by shared labor and the seeds do not care whose fingers pressed them down.",
+      "reversedMeaning": "Working together poorly. Three planters with three different visions for the same bed, or collaboration so surface-level the seeds are planted at the wrong depth and nothing takes root.",
+      "keywords": "raised bed, three figures planting, dark soil, morning mist"
+    },
+    {
+      "name": "Four of Roots",
+      "meaning": "Shelter within the oak's spreading roots. Security is not a cage but a living structure — the four great roots form walls that protect without imprisoning, as long as you remember the canopy opens above.",
+      "reversedMeaning": "Hoarding your shelter. The roots become a fortress you refuse to leave, or clinging to material security so tightly that the oak itself begins to feel like a prison.",
+      "keywords": "enormous oak, four spreading roots, sheltered figure, enclosed space"
+    },
+    {
+      "name": "Five of Roots",
+      "meaning": "Locked outside the garden in cold rain with only scattered root vegetables in the mud. Material hardship is real and the abundance behind the gate is visible but unreachable — endure, and look for another way in.",
+      "reversedMeaning": "Poverty of spirit more than circumstance. The gate is locked but you have stopped looking for the key, or you find the key but refuse to enter because you have made suffering your identity.",
+      "keywords": "locked gate, cold rain, scattered vegetables, two figures"
+    },
+    {
+      "name": "Six of Roots",
+      "meaning": "Kneel and offer the basket of roots and herbs to those gathered at the table. Generosity of resources circulates abundance — what you give from the kitchen garden feeds more than bodies.",
+      "reversedMeaning": "Charity with strings attached. Offering the basket but counting what you gave, or hoarding the harvest while the table sits empty and the others go without.",
+      "keywords": "basket of roots, six figures, stone table, kitchen garden"
+    },
+    {
+      "name": "Seven of Roots",
+      "meaning": "Stand in the root cellar by lantern light and take honest stock of your stores. The seven bundles hang where you placed them — patience and careful planning have brought you to a point of quiet assessment.",
+      "reversedMeaning": "Obsessive inventory. Counting the jars so often you never open them, or discovering the stores are less than you thought and panicking instead of adjusting your plans.",
+      "keywords": "root cellar, preserved jars, seven root bundles, lantern"
+    },
+    {
+      "name": "Eight of Roots",
+      "meaning": "Eight figures work the terraced hill, each at their own section but part of the same slope. Skill is built through repetition and the mycelium connects the labor underground in ways no one sees.",
+      "reversedMeaning": "Drudgery without purpose. Working the same terrace until the soil is exhausted, or perfectionism so consuming that the hill is never fully planted because no row meets your standard.",
+      "keywords": "terraced hillside, eight working figures, mycelium, turned soil"
+    },
+    {
+      "name": "Nine of Roots",
+      "meaning": "Stand among the nine fruit trees you grew alone and let the weight of the harvest validate the years. Self-sufficiency earned through patience — the garden is vast because you did not rush it.",
+      "reversedMeaning": "Solitary achievement that has cost you companionship. The garden is magnificent but you eat the fruit alone, or you cannot enjoy the harvest because you are already worrying about next season.",
+      "keywords": "nine fruit trees, mature garden, solitary figure, heavy fruit"
+    },
+    {
+      "name": "Ten of Roots",
+      "meaning": "The whole family gathers at the roots of the ancient tree where generations have sat before. This is legacy — not wealth hoarded but a living inheritance of roots that form seats for those who come after.",
+      "reversedMeaning": "A legacy that burdens rather than shelters. The family gathered but fractured, fighting over the feast, or an inheritance so heavy with expectation that the youngest roots cannot breathe.",
+      "keywords": "ancient tree, root formations, family gathering, feast"
+    },
+    {
+      "name": "Page of Roots",
+      "meaning": "Pull the first carrot from the earth and marvel at what grew in darkness. The earthworms and the beetle are part of the miracle — learning begins with dirt under your fingernails and wonder at what the soil produces.",
+      "reversedMeaning": "Impatience with the pace of growth. Pulling the carrot too early, or disgust at the worms and dirt that are inseparable from the harvest. Wanting the fruit without the soil.",
+      "keywords": "pulled carrot, earthworms, kneeling figure, beetle"
+    },
+    {
+      "name": "Knight of Roots",
+      "meaning": "Hike through the dense forest with your spade and heavy pack, stepping over the massive roots of trees that were here long before you. Steady progress toward a planting ground no one else has found.",
+      "reversedMeaning": "Stubbornness disguised as endurance. Carrying too much for too long on a path that leads nowhere, or so focused on the destination that you trip over the roots at your feet.",
+      "keywords": "heavy pack, spade, exposed roots, badger"
+    },
+    {
+      "name": "Queen of Roots",
+      "meaning": "Sit barefoot on the moss and feel the mycelium glow beneath you. The forest answers to your presence because you have learned to listen with your whole body — abundance grows where you are still.",
+      "reversedMeaning": "Material comfort at the cost of connection. Sitting on the throne of moss while the forest around you withers, or nurturing everyone else's roots while your own ferns stay furled.",
+      "keywords": "moss-covered seat, glowing mycelium, bare feet, unfurling ferns"
+    },
+    {
+      "name": "King of Roots",
+      "meaning": "Your hand on the trunk of the largest tree, your grafting knife in the other — you have built this orchard over decades and the exposed roots prove the depth of what you planted. Mastery of the material world, earned in seasons.",
+      "reversedMeaning": "Possessiveness over the orchard you grew. Refusing to teach others how to graft, or an empire of trees so vast you can no longer tend them all and the outer rows begin to fail.",
+      "keywords": "orchard, grafting knife, tree trunk, exposed roots"
+    }
+  ]
+}

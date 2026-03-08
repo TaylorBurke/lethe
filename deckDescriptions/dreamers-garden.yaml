@@ -1,0 +1,377 @@
+# The Dreamer's Garden Tarot — A Botanical Dreamcore Tarot Deck
+# 78 cards reinterpreted through moonlit gardens, overgrown ruins, and the natural world at twilight.
+# Suits: Moths (Wands/Fire), Pools (Cups/Water), Thorns (Swords/Air), Roots (Pentacles/Earth)
+
+major_arcana:
+  - name: The Fool
+    numeral: "00"
+    description: A barefoot figure in white linen stepping through a rusted wrought-iron garden gate into an overgrown path at dawn, a red fox trotting beside them
+    key_symbols: [wrought-iron gate, overgrown path, red fox, bare feet]
+    composition: full-body figure in profile stepping left to right through gate, fox at ankle height, dawn light spilling through gate opening, path disappearing into wild greenery
+
+  - name: The Magician
+    numeral: "01"
+    description: A figure standing at a weathered stone potting bench inside a greenhouse with broken glass panes, four objects arranged before them — a lit candle, a bowl of rainwater, a pruning knife, and a dark seed
+    key_symbols: [stone potting bench, candle, bowl of water, pruning knife, seed]
+    composition: centered figure behind bench facing viewer, four objects spread across bench surface, broken greenhouse glass overhead letting in a single beam of light, vines climbing the iron frame
+
+  - name: The High Priestess
+    numeral: "02"
+    description: A woman in grey wool sitting between two ancient yew trees under a full moon, a leather-bound journal open in her lap, silver light falling across the pages
+    key_symbols: [two yew trees, full moon, leather journal, silver light]
+    composition: centered seated figure on mossy ground, dark symmetrical yew trunks framing her on each side, moon directly above creating strong downward light, low eye-level angle
+
+  - name: The Empress
+    numeral: "03"
+    description: A woman reclining in a wildflower meadow at the edge of a walled garden, honeysuckle and wisteria cascading over the stone wall behind her, a hare resting against her hip
+    key_symbols: [wildflower meadow, wisteria, stone wall, hare]
+    composition: three-quarter view of reclining figure in lower third, wall of flowers rising behind her, warm golden-hour light from the left, hare curled at her side
+
+  - name: The Emperor
+    numeral: "04"
+    description: A weathered figure seated on a stone garden throne overgrown with ivy, holding a gnarled oak staff, an ancient walled garden stretching out behind them in ordered rows
+    key_symbols: [stone throne, ivy, oak staff, ordered garden rows]
+    composition: frontal view of seated figure, ivy-covered throne as centerpiece, geometric garden beds receding into background, overcast sky with diffused light from above
+
+  - name: The Hierophant
+    numeral: "05"
+    description: A robed figure standing at the entrance of a stone chapel overtaken by moss and ferns, two younger figures kneeling on the steps below, candlelight glowing from inside
+    key_symbols: [moss-covered chapel, ferns, two kneeling figures, candles]
+    composition: tall chapel doorway framing the standing figure from behind, two smaller kneeling figures on steps in foreground, warm candlelight from interior contrasting cool blue exterior dusk
+
+  - name: The Lovers
+    numeral: "06"
+    description: Two figures standing on opposite sides of a narrow stream in a moonlit clearing, reaching toward each other across the water, fireflies rising between them
+    key_symbols: [stream, moonlit clearing, fireflies, reaching hands]
+    composition: two figures mirrored across the center stream, fireflies concentrated in the gap between them, moonlight from directly above, birch trees forming a natural arch overhead
+
+  - name: The Chariot
+    numeral: "07"
+    description: A figure standing in an old wooden garden cart pulled along a flooded stone path by two deer — one pale and one dark — rain falling heavily around them
+    key_symbols: [wooden cart, two deer, flooded path, rain]
+    composition: figure seen from slightly below facing viewer in the cart, deer pulling forward toward camera, rain streaking diagonally, overgrown hedgerows on either side narrowing into the distance
+
+  - name: Strength
+    numeral: "08"
+    description: A figure kneeling beside a large fox in an autumn garden, gently removing a thorn from its paw, golden leaves falling around them both
+    key_symbols: [fox, thorn, autumn leaves, kneeling figure]
+    composition: close medium shot of figure and fox at same level, golden backlight filtering through trees behind, scattered leaves in mid-air, warm amber tones throughout
+
+  - name: The Hermit
+    numeral: "09"
+    description: A cloaked figure walking alone through a dark pine forest carrying a glass lantern filled with glowing moths, the only light source in deep shadow
+    key_symbols: [glass lantern, glowing moths, pine forest, cloak]
+    composition: solitary figure in three-quarter view moving into the frame from right, lantern held at chest height casting warm glow on nearby tree trunks, deep darkness beyond, slight fog at ground level
+
+  - name: Wheel of Fortune
+    numeral: "10"
+    description: A massive stone sundial in the center of an overgrown circular garden, ivy crawling across its face, four seasonal plants growing in quadrants around it — snowdrops, roses, wheat, bare branches
+    key_symbols: [stone sundial, circular garden, four seasonal plants, ivy]
+    composition: overhead bird's-eye view of the circular garden divided into four quadrants, sundial at center, each season's plants radiating outward, soft diffused light creating minimal shadows
+
+  - name: Justice
+    numeral: "11"
+    description: A figure seated at a long stone table in a roofless ruin, a pair of old brass scales before them with a dried rose on one side and a green sprig on the other, an owl perched on the wall behind
+    key_symbols: [brass scales, dried rose, green sprig, owl, stone table]
+    composition: centered figure behind table facing viewer, scales prominent in foreground, owl on broken wall above and behind, open sky above the roofless room, cool even light
+
+  - name: The Hanged Man
+    numeral: "12"
+    description: A figure hanging upside-down from the branch of a massive willow tree over a still pond, their hair trailing into the dark water, expression peaceful
+    key_symbols: [willow tree, still pond, hanging figure, trailing hair]
+    composition: vertical composition with figure suspended in center, willow branches framing from above, dark pond reflecting the scene below, soft green-grey light filtering through leaves
+
+  - name: Death
+    numeral: "13"
+    description: A garden in deep autumn seen through an archway, every plant golden and collapsing, but vivid green shoots pushing up through dark soil in the foreground
+    key_symbols: [stone archway, golden decay, green shoots, dark soil]
+    composition: view through stone archway into the dying garden, golden foliage filling the middle ground, close-up green shoots in sharp focus in foreground soil, muted overcast light
+
+  - name: Temperance
+    numeral: "14"
+    description: A figure standing ankle-deep in a shallow stream, slowly pouring water between two clay vessels, morning mist rising from the water's surface around them
+    key_symbols: [clay vessels, stream, morning mist, pouring water]
+    composition: full-body figure centered in stream facing slightly left, water arcing between two vessels, mist obscuring lower legs, warm sunrise light from behind creating rim lighting on figure and mist
+
+  - name: The Devil
+    numeral: "15"
+    description: Two figures standing in a walled garden at night, thick ivy binding their wrists loosely to an iron trellis, overripe fruit hanging heavy above them, neither figure trying to leave
+    key_symbols: [iron trellis, ivy bindings, overripe fruit, walled garden]
+    composition: two figures flanking a central trellis, ivy loosely connecting wrists to iron, dark fruit clusters hanging from above, only light from a low amber lantern on the ground between them
+
+  - name: The Tower
+    numeral: "16"
+    description: A crumbling stone garden folly struck by lightning in a night storm, ivy ripping away from the walls as stones fall, two birds fleeing into the dark sky
+    key_symbols: [garden folly, lightning, falling stones, fleeing birds]
+    composition: tall structure dominating center frame, lightning bolt from upper right striking the peak, debris and ivy falling mid-air, two dark bird silhouettes against the flash, rain visible in the light
+
+  - name: The Star
+    numeral: "17"
+    description: A figure kneeling at the edge of a dark forest spring surrounded by bioluminescent mushrooms, cupping glowing water in their hands, the night sky visible through a break in the canopy above
+    key_symbols: [bioluminescent mushrooms, forest spring, glowing water, night sky]
+    composition: figure kneeling in lower third, mushrooms ringing the spring creating blue-green ground light, dark tree trunks framing, circular opening in canopy revealing stars directly above
+
+  - name: The Moon
+    numeral: "18"
+    description: A flooded walled garden under a massive low moon, a stone path disappearing into dark water, a hare sitting on one side and a fox sitting on the other, both staring at the moon's reflection
+    key_symbols: [low moon, flooded garden, hare, fox, submerged path]
+    composition: large moon in upper third reflecting in the water below, two animals flanking the path symmetrically in the middle ground, submerged stone path leading from foreground into the flooded garden, silver-blue monochrome light
+
+  - name: The Sun
+    numeral: "19"
+    description: A figure dancing barefoot in a sunlit walled garden bursting with sunflowers and marigolds, a wren perched on a nearby fence post, warm golden light flooding every surface
+    key_symbols: [sunflowers, marigolds, wren, walled garden]
+    composition: full-body figure mid-dance in center, tall sunflowers rising around them, strong warm light from upper left creating long shadows, wren small but visible on wooden post at right edge, high-energy open composition
+
+  - name: Judgement
+    numeral: "20"
+    description: Figures rising from flower beds in a vast garden at dawn as if waking from sleep, soil falling from their clothes, a great bell hanging from an oak tree ringing above them
+    key_symbols: [flower beds, rising figures, bell, oak tree, dawn]
+    composition: wide shot of garden with multiple figures in various stages of rising from the earth, large oak with hanging bell at center-right, dawn light breaking across the horizon behind, earth-toned palette with golden highlights
+
+  - name: The World
+    numeral: "21"
+    description: A figure dancing in the center of a circular hedge maze seen from above, each of the four quadrants showing a different season — spring blossoms, summer fullness, autumn gold, winter bare branches
+    key_symbols: [circular hedge maze, dancing figure, four seasons, aerial view]
+    composition: perfect overhead bird's-eye view, circular maze filling the frame, small figure at center with arms raised, four distinct seasonal quadrants radiating out, soft even light with no harsh shadows
+
+minor_arcana:
+  moths:
+    pips:
+      "1":
+        description: A single enormous luna moth resting on a lit candle in a dark greenhouse, its wings glowing pale green in the warm flame light
+        key_symbols: [luna moth, candle flame, dark greenhouse]
+        composition: close-up centered on the moth and candle, wings spread wide catching the light, glass panes of greenhouse dark behind, shallow depth of field
+      "2":
+        description: Two lanterns hanging from a garden arch at a crossroads of two stone paths at dusk, moths circling each lantern independently
+        key_symbols: [two lanterns, garden arch, crossroads, moths]
+        composition: symmetrical view through the arch, two paths diverging left and right, lanterns flanking at top of arch, moths as bright specks around each light, dusky purple-blue sky
+      "3":
+        description: Three figures in a candlelit conservatory working together to hang paper lanterns from the glass ceiling, moths already gathering at the warm lights
+        key_symbols: [paper lanterns, conservatory, three figures, moths]
+        composition: looking upward at the three figures on ladders, lanterns glowing at various heights, moths visible around the lights, iron and glass framework of ceiling as structural lines
+      "4":
+        description: Four torches planted in the ground at the corners of a stone courtyard, a figure resting on a bench at center beneath a canopy of wisteria, moths orbiting each flame
+        key_symbols: [four torches, stone courtyard, wisteria canopy, resting figure]
+        composition: slightly elevated view of square courtyard, torches at each corner creating warm pools of light, figure on bench at center, wisteria draping overhead, moths as glowing dots around flames
+      "5":
+        description: Five moths battering against a closed glass window from inside a dark room, a candle knocked over on the sill, wax pooling, a garden visible outside
+        key_symbols: [five moths, closed window, knocked candle, spilled wax]
+        composition: interior view facing the window, moths pressed against glass in upper portion, fallen candle and pooling wax on sill in lower portion, moonlit garden visible through glass beyond
+      "6":
+        description: A figure walking down a lantern-lit garden path at night distributing small candles to six others waiting along the way, moths following the trail of light
+        key_symbols: [lantern-lit path, six figures, small candles, moths]
+        composition: path receding from foreground to background, central figure walking toward viewer offering a candle, others spaced along the path behind, warm pools of light along the trail, moths visible in each light pool
+      "7":
+        description: A figure standing on a hill in a night garden holding a torch above their head, six more torches burning below on the slope, moths swarming the highest flame
+        key_symbols: [hilltop figure, seven torches, moth swarm, night garden]
+        composition: figure silhouetted on hilltop at center-top of frame, six torches descending the slope below, dense cloud of moths around the raised torch, dark garden spreading out at the base
+      "8":
+        description: Eight moths in flight across a twilight sky above a garden wall, moving in a loose diagonal formation toward a distant lit window in an old house
+        key_symbols: [eight moths, twilight sky, garden wall, lit window]
+        composition: wide landscape orientation, moths arranged in diagonal sweep from lower-left to upper-right, stone wall as horizontal anchor in lower third, distant house with one warm window at upper right
+      "9":
+        description: A solitary figure sitting by a dying campfire in a walled garden at night, nine moths circling the last embers, bruises of exhaustion under their eyes
+        key_symbols: [dying campfire, nine moths, walled garden, solitary figure]
+        composition: figure seated at left of frame hunched toward the fire, nine moths orbiting the low glow at center, dark stone walls enclosing the scene, only light from the fading embers casting orange on the figure
+      "10":
+        description: A figure carrying an enormous bundle of unlit torches on their back, staggering along a dark garden path, ten moths resting on the bundle waiting for flame
+        key_symbols: [bundle of torches, staggering figure, dark path, ten moths]
+        composition: full-body figure in profile moving right, heavy bundle creating dramatic silhouette on their back, moths perched visibly on the torch ends, only faint moonlight on the path ahead
+    court:
+      Page:
+        description: A young figure crouched in tall grass at night, cupping a single glowing moth in their hands and staring at it with wide-eyed wonder
+        key_symbols: [glowing moth, cupped hands, tall grass, wonder]
+        composition: close medium shot from slightly above, figure crouched low looking down at hands, moth glow illuminating their face from below, tall grass framing on all sides, dark background
+      Knight:
+        description: A figure running through a night garden carrying a blazing torch, their coat streaming behind them, moths pouring out of the darkness to follow the flame
+        key_symbols: [blazing torch, running figure, streaming coat, moth trail]
+        composition: full-body figure mid-stride moving left, torch held forward creating motion blur of light, moths trailing behind in a stream, garden hedges blurring past on either side
+      Queen:
+        description: A woman seated in an overgrown greenhouse at a table covered in candles of varying heights, moths resting calmly on her shoulders and in her hair, completely at ease
+        key_symbols: [greenhouse, many candles, moths on shoulders, seated woman]
+        composition: three-quarter portrait of seated figure, candle forest on table before her creating complex warm light, moths settled visibly on her shoulders and hair, glass greenhouse panes dark behind
+      King:
+        description: A bearded figure standing in a vast garden at night holding a great iron lantern that illuminates everything around them, hundreds of moths filling the air like snow
+        key_symbols: [iron lantern, vast garden, hundreds of moths, bearded figure]
+        composition: full-body figure at center holding lantern at hip height, light radiating outward revealing garden paths and beds, moths dense in the air catching the light, strong contrast between illuminated circle and surrounding darkness
+
+  pools:
+    pips:
+      "1":
+        description: A single stone basin filled with perfectly still dark water in the center of a moonlit garden, a single water lily floating on the surface
+        key_symbols: [stone basin, still water, water lily, moonlight]
+        composition: centered overhead view of the round basin, water lily at center of the dark water, moonlight creating a bright reflection on the surface, mossy stone edge framing the circle
+      "2":
+        description: Two rain-filled stone vessels on either side of a garden bench where two figures sit close together, their reflections visible in each vessel's water
+        key_symbols: [two stone vessels, garden bench, two figures, reflections]
+        composition: symmetrical front view with figures on bench at center, one vessel on each side in foreground, reflections of the pair visible in the water, soft rain still falling, overcast diffused light
+      "3":
+        description: Three friends dancing in a flooded garden courtyard after a rainstorm, water splashing around their bare feet, three puddles reflecting the clearing sky
+        key_symbols: [flooded courtyard, three dancing figures, splashing water, clearing sky]
+        composition: wide shot of courtyard with three figures mid-dance, water at ankle height, splashes frozen in motion, bright sky breaking through clouds reflected in the water below, joyful energy
+      "4":
+        description: A figure sitting beneath a willow tree beside a still pond, staring at three more ponds visible in the distance, arms crossed and expression withdrawn, a frog on a lily pad nearby
+        key_symbols: [willow tree, four ponds, withdrawn figure, frog]
+        composition: figure seated under willow at left foreground, nearest pond beside them, three smaller ponds receding into misty background, frog on pad in nearest water, grey-green muted palette
+      "5":
+        description: A figure standing in a drained garden pool with cracked earth at the bottom, three broken vessels lying around them, two intact vessels behind them unnoticed, rain beginning to fall
+        key_symbols: [drained pool, cracked earth, broken vessels, first raindrops]
+        composition: figure standing in the empty pool looking down at broken pottery, two intact vessels behind and above at pool's edge, first rain visible against dark sky, muted browns and greys with hint of blue sky
+      "6":
+        description: A figure filling small clay cups with water from a garden well and handing them to six children gathered around, wildflowers growing from cracks in the well's stones
+        key_symbols: [garden well, clay cups, six children, wildflowers]
+        composition: central figure at the well distributing cups, children in a semicircle in the foreground, wildflowers visible in the well stones, warm afternoon light from behind creating gentle backlit glow
+      "7":
+        description: A figure standing before seven misty ponds in a terraced garden, each pond reflecting something different in its surface — moon, clouds, trees, stars — the figure choosing which to approach
+        key_symbols: [seven ponds, terraced garden, different reflections, standing figure]
+        composition: figure in foreground back to viewer looking up at terraced ponds rising in tiers, each pond a distinct oval catching different light, mist threading between them, twilight blue-silver palette
+      "8":
+        description: A figure walking away from eight small pools along a marshy path into a dark forest, leaving behind a cloak draped over a stone at the water's edge
+        key_symbols: [eight pools, marshy path, abandoned cloak, dark forest]
+        composition: figure seen from behind walking into the forest at upper center, eight pools scattered in the marshy foreground, cloak draped over a rock at lower frame, moonlight catching the water surfaces
+      "9":
+        description: A solitary figure sitting on a stone bench surrounded by nine rain barrels overflowing in a downpour, arms spread wide, face turned up to the rain
+        key_symbols: [nine rain barrels, downpour, stone bench, upturned face]
+        composition: figure centered on bench with arms wide, rain barrels arranged in a semicircle behind, heavy rain visible as streaks, water overflowing from barrel rims, dramatic dark sky above
+      "10":
+        description: A family gathered at the edge of a vast flooded garden at sunrise, ten pools of varying sizes stretching before them connected by stepping stones, a rainbow forming in the mist above
+        key_symbols: [ten connected pools, stepping stones, family group, rainbow]
+        composition: family group at lower-left looking out across the flooded landscape, stepping stones leading the eye into the scene, pools reflecting sunrise colors, faint rainbow arcing across upper portion, warm golden light
+    court:
+      Page:
+        description: A young figure kneeling at the edge of a dark garden pond, reaching toward a small fish just below the surface, their reflection rippling in the water
+        key_symbols: [garden pond, small fish, reaching hand, rippled reflection]
+        composition: figure kneeling at right edge of frame, pond taking up most of the composition, fish visible as a pale shape below surface, rippled reflection of the figure distorted in the water, soft overcast light
+      Knight:
+        description: A figure rowing a small wooden boat across a flooded walled garden, water lilies parting around the hull, determination on their face, rain falling steadily
+        key_symbols: [wooden boat, flooded garden, water lilies, rain]
+        composition: three-quarter view of figure in boat moving from right to left, water lilies scattered on the surface, submerged garden walls visible below water line, rain streaking across the scene, grey-green tones
+      Queen:
+        description: A woman sitting at the edge of a deep natural pool in a grotto, her bare feet in the water, ferns and moss covering every surface, a heron standing motionless nearby
+        key_symbols: [grotto pool, ferns, moss, heron]
+        composition: figure seated at left with feet in water, grotto walls curving overhead covered in ferns, heron standing in shallows at right, cool blue-green light filtering through vegetation above
+      King:
+        description: A bearded figure standing at the head of a long canal in a formal garden, stone fish fountains on either side, his hand resting on a sluice gate controlling the water's flow
+        key_symbols: [garden canal, stone fountains, sluice gate, bearded figure]
+        composition: figure at center-top of frame, canal receding toward viewer in strong perspective, fountain figures on each side, hand on the iron sluice mechanism, overcast sky reflected in the canal water
+
+  thorns:
+    pips:
+      "1":
+        description: A single long-stemmed dark rose growing through a crack in a stone wall, thorns prominent along its stem, a drop of blood on the nearest thorn catching the light
+        key_symbols: [dark rose, thorns, stone wall, blood drop]
+        composition: tight close-up of the rose and upper stem, thorns in sharp focus, blood drop glistening at center, cracked stone as textured background, cool directional light from upper left
+      "2":
+        description: A blindfolded figure sitting at a stone table in a moonlit garden, holding two crossed rose stems with thorns pressing into their palms, a decision unmade
+        key_symbols: [blindfold, two crossed stems, thorns, moonlit garden]
+        composition: medium shot of seated figure from the front, crossed thorny stems held up at chest height, moonlight from above casting the blindfold in shadow, stone table edge in lower frame
+      "3":
+        description: Three swords of briar and thorn pinning a wilted bouquet to a rain-soaked garden wall, storm clouds overhead, petals scattered on the wet stone below
+        key_symbols: [three briar swords, wilted bouquet, rain-soaked wall, scattered petals]
+        composition: close-up of the wall surface with three thorny stems piercing through flowers, petals on wet stone ledge below, rain visible against dark sky above, muted rose and grey palette
+      "4":
+        description: A figure lying on a stone bench beneath a rose arbor in a walled garden, hands folded on chest, three thorny stems laid beside them and one held loosely, resting but guarded
+        key_symbols: [stone bench, rose arbor, four thorny stems, resting figure]
+        composition: figure lying in profile on the bench, arbor creating geometric framework overhead, three stems lined up on the ground beside the bench, one across their chest, stained glass quality light through rose leaves
+      "5":
+        description: Two figures in a ruined garden gathering scattered thorny branches while three others walk away empty-handed through a broken gate, a raven watching from the wall
+        key_symbols: [thorny branches, ruined garden, broken gate, raven]
+        composition: two figures in foreground bending to pick up branches, three retreating figures smaller through the gate in background, raven perched on wall at upper right, overcast flat light, grey-brown desolate garden
+      "6":
+        description: A figure poling a flat raft across dark water, six bundles of thorny rose cuttings stacked on the raft, heading toward a distant garden shore where a lantern waits
+        key_symbols: [flat raft, six thorn bundles, dark water, distant lantern]
+        composition: figure standing at back of raft poling from right to left, bundles arranged in foreground on the raft, dark water below, lantern light as small warm point at the distant shore, deep blue and amber palette
+      "7":
+        description: A figure in a tangled briar hedge reaching through the thorns toward a single white rose at the center, six cut stems already in their other hand, scratches on their arms
+        key_symbols: [briar hedge, white rose, six cut stems, scratched arms]
+        composition: figure at left reaching into dense briar mass at center-right, white rose glowing at the heart of the thorns, scratches visible on forearms, seven stems total creating a counting element, dark green and red tones
+      "8":
+        description: A figure walking quickly down a narrow path completely enclosed by thorny hedgerows on both sides, eight arching briar branches overhead creating a tunnel, moving toward a sliver of light at the end
+        key_symbols: [thorn tunnel, eight arching briars, narrow path, distant light]
+        composition: strong one-point perspective down the tunnel, figure small at center walking away, briar arches creating repeating frames, thin light at vanishing point, claustrophobic framing, dark with green undertones
+      "9":
+        description: A figure sitting upright in bed in a room where thorny vines have grown through the walls and across the ceiling, nine thorny stems surrounding them, awake in the dark, an owl visible through the cracked window
+        key_symbols: [thorny vines, nine stems, bed, owl in window]
+        composition: figure sitting up in bed at center, thorny vines creating a dark web across walls and ceiling, owl silhouette in the broken window at upper right, only light from moonlight through that window, oppressive interior
+      "10":
+        description: A figure lying face-down in a garden path completely covered by fallen thorny rose branches, ten stems pinning them down, but dawn light breaking over the garden wall ahead of them
+        key_symbols: [fallen figure, ten thorn branches, garden path, dawn light]
+        composition: figure prone in lower half of frame, thorny branches across their back, garden wall and dawn sky in upper half, warm light just cresting the wall contrasting the dark tangle below, hope at the horizon line
+    court:
+      Page:
+        description: A young figure carefully examining a single thorny stem held up to the light, turning it in their fingers, a small bead of blood on their thumb, curious rather than hurt
+        key_symbols: [thorny stem, examining hands, blood bead, backlight]
+        composition: close medium shot of figure from chest up, stem held up at eye level with light behind it, face illuminated by the glow through the leaves, single blood drop on thumb catching light, soft focus background
+      Knight:
+        description: A figure on horseback cutting through an overgrown briar hedge with a long curved blade, thorny branches flying apart, riding hard into the gap they are making
+        key_symbols: [horseback figure, curved blade, briar hedge, flying thorns]
+        composition: dynamic diagonal composition, horse and rider charging from lower-left to upper-right, blade mid-swing, briar fragments in the air, dust and leaves scattering, strong motion and energy, dramatic side-lighting
+      Queen:
+        description: A woman seated in a throne-like chair woven entirely from living thorny rose canes in a dark garden, a raven on her armrest, her hands resting easily on the thorns without bleeding
+        key_symbols: [thorn throne, raven, dark garden, unbloodied hands]
+        composition: frontal portrait of seated figure, throne of living thorny canes with leaves and buds, raven at right armrest, dark garden behind, cool silver-green light from above, commanding and calm presence
+      King:
+        description: A bearded figure standing in a winter garden pruning a massive old rose bush with deliberate cuts, thorny branches piled neatly at his feet, knowing exactly which stems to remove
+        key_symbols: [winter garden, pruning shears, rose bush, neat thorn pile]
+        composition: three-quarter view of figure at work, large rose bush filling right side of frame, pile of cut thorny branches at lower left, winter light flat and even, breath visible in cold air, precise controlled energy
+
+  roots:
+    pips:
+      "1":
+        description: A single massive tree root breaking through the floor of an abandoned stone chapel, pale mushrooms growing along its length, soil spilling across the flagstones
+        key_symbols: [tree root, stone chapel floor, mushrooms, spilled soil]
+        composition: root entering from upper right and curving across the frame, mushrooms dotting its surface, cracked flagstones around the breach, dim light from a high window illuminating the root's texture, earthy warm tones
+      "2":
+        description: Two saplings growing from the same root system visible through an eroded riverbank, their trunks leaning in opposite directions, connected underground
+        key_symbols: [two saplings, exposed roots, eroded bank, underground connection]
+        composition: cross-section view of the riverbank showing soil layers and intertwined roots below, two saplings rising above, one leaning left and one right, river water at the base, warm afternoon light on the upper portions
+      "3":
+        description: Three figures planting seeds together in a raised stone garden bed, their hands deep in dark soil, a wheelbarrow of compost behind them, early morning mist in the air
+        key_symbols: [raised bed, three figures planting, dark soil, morning mist]
+        composition: three figures spaced along the raised bed bending to plant, hands in soil as focal point, wheelbarrow at right edge, mist softening the background garden, warm low-angle morning light from the left
+      "4":
+        description: A figure sitting beneath an enormous oak tree with roots spreading out in all four directions like walls, arms wrapped around their knees, sheltered and enclosed by the root system
+        key_symbols: [enormous oak, four spreading roots, sheltered figure, enclosed space]
+        composition: figure small at the base of the massive trunk, roots radiating out to four edges of frame creating natural compartments, canopy blocking most of the sky, dappled green-gold light, sense of protective enclosure
+      "5":
+        description: Two figures sitting outside a locked garden gate in cold rain, mushrooms and root vegetables scattered on the muddy ground around them, the abundant garden visible but unreachable through the iron bars
+        key_symbols: [locked gate, cold rain, scattered vegetables, two figures]
+        composition: two figures huddled at the gate in center frame, iron bars separating them from the lush garden behind, root vegetables and mushrooms on the mud in foreground, rain streaking down, grey and brown cold palette
+      "6":
+        description: A figure kneeling to offer a basket of root vegetables and herbs to six others gathered around a stone table in a walled kitchen garden, autumn light warming the scene
+        key_symbols: [basket of roots, six figures, stone table, kitchen garden]
+        composition: giving figure at left offering basket, six others around a stone table at center-right, walled garden with herb beds behind, golden autumn light from upper left, warm generous atmosphere
+      "7":
+        description: A figure standing in a root cellar examining shelves of preserved jars and dried herbs, seven root bundles hanging from the ceiling, assessing their stores by lantern light
+        key_symbols: [root cellar, preserved jars, seven root bundles, lantern]
+        composition: figure in profile at left holding lantern, shelves of jars receding along the right wall, root bundles hanging overhead, lantern creating warm circle of light in the underground space, deep earth tones
+      "8":
+        description: Eight figures working in a line along a terraced hillside garden, each digging or planting at their own section, mycelium networks visible in the freshly turned soil
+        key_symbols: [terraced hillside, eight working figures, mycelium, turned soil]
+        composition: diagonal composition following the terraced hillside from lower-left to upper-right, figures spaced along the terraces, white mycelium threads visible in the dark soil, morning light raking across the hill
+      "9":
+        description: A solitary figure standing in a vast mature garden they have built alone, nine ancient fruit trees heavy with produce surrounding them, satisfaction and weariness in their posture
+        key_symbols: [nine fruit trees, mature garden, solitary figure, heavy fruit]
+        composition: figure at center surrounded by laden trees, fruit hanging prominently from branches, well-maintained paths and beds visible, late golden afternoon light, long shadow stretching from the figure, warm harvest tones
+      "10":
+        description: A multi-generational family seated around the base of an enormous ancient tree, its roots forming natural seats and shelves, ten distinct root formations visible, a feast spread on the ground between them
+        key_symbols: [ancient tree, root formations, family gathering, feast]
+        composition: wide shot of the massive tree filling the upper frame, family arranged around its base in the lower portion, root formations creating natural furniture, feast food spread on cloths, warm dappled light through the canopy
+    court:
+      Page:
+        description: A young figure on their knees in the dirt pulling up their first carrot, marveling at the root system and the earthworms clinging to it, a beetle crawling nearby
+        key_symbols: [pulled carrot, earthworms, kneeling figure, beetle]
+        composition: close medium shot of figure from above, freshly pulled carrot held up with dirt falling from it, worms visible on the roots, beetle on the soil nearby, warm diffused light, rich brown earth tones
+      Knight:
+        description: A figure hiking through a dense forest with a heavy pack and a spade strapped to their back, stepping over massive exposed tree roots, a badger watching from a hollow
+        key_symbols: [heavy pack, spade, exposed roots, badger]
+        composition: full-body figure mid-stride stepping over a large root, pack and spade creating strong silhouette, massive roots crossing the path, badger peering from a root hollow at lower right, filtered green forest light
+      Queen:
+        description: A woman sitting in a moss-covered stone seat in an ancient forest, mycelium networks glowing faintly in the soil around her bare feet, hands resting on the earth, ferns unfurling beside her
+        key_symbols: [moss-covered seat, glowing mycelium, bare feet, unfurling ferns]
+        composition: three-quarter portrait of seated figure, mycelium creating faint luminous web in soil around her feet, ferns at various stages of unfurling on either side, deep forest behind, soft green-gold light from above
+      King:
+        description: A bearded figure standing in a vast orchard at harvest time, one hand on the trunk of the largest tree, the other holding a grafting knife, roots of his planted trees visible where paths have eroded
+        key_symbols: [orchard, grafting knife, tree trunk, exposed roots]
+        composition: figure at center-left touching the trunk of a prominent tree, orchard rows extending into the background, grafting knife in right hand, root systems visible in eroded path in foreground, rich autumn light

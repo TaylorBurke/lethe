@@ -1,0 +1,376 @@
+# Thresholds Tarot — A Liminal Space Tarot Deck
+# 78 cards reinterpreted through empty spaces, transitions, and the in-between.
+
+major_arcana:
+  - name: The Fool
+    numeral: "00"
+    description: A figure in a hoodie stepping through a propped-open fire exit into dense white fog, a long fluorescent hallway stretching behind them
+    key_symbols: [open fire exit, fog, fluorescent hallway, hoodie figure]
+    composition: full-body figure seen from behind at center frame, doorway framing them, fog filling the right half, harsh overhead lighting behind
+
+  - name: The Magician
+    numeral: "01"
+    description: A solitary figure standing behind a reception desk in a vast empty hotel lobby, four objects arranged on the marble counter — a key card, a glass of water, a letter opener, and a coin
+    key_symbols: [reception desk, key card, glass of water, letter opener, coin]
+    composition: wide shot of empty lobby, figure centered behind desk, overhead chandelier providing dim warm light, polished floor reflecting the scene
+
+  - name: The High Priestess
+    numeral: "02"
+    description: A woman sitting perfectly still on a bench between two closed elevator doors in a silent cream-colored corridor, her reflection faintly visible in the polished metal doors
+    key_symbols: [two elevator doors, bench, polished metal reflection, silent corridor]
+    composition: symmetrical frontal view, figure centered between two elevator doors, long corridor receding behind, soft overhead fluorescent glow
+
+  - name: The Empress
+    numeral: "03"
+    description: A woman reclining on a long cushioned bench in an abandoned shopping mall atrium where plants have overgrown the planters and vines climb the skylights
+    key_symbols: [overgrown planters, mall atrium, skylight, cushioned bench]
+    composition: low angle looking up at figure on bench, greenery cascading from upper levels, natural light streaming through dirty skylights above
+
+  - name: The Emperor
+    numeral: "04"
+    description: A man sitting in a high-backed office chair at the head of an impossibly long conference table in an empty corporate boardroom, city lights visible through floor-to-ceiling windows
+    key_symbols: [office chair, long conference table, floor-to-ceiling windows, city lights]
+    composition: one-point perspective down the length of the table, figure small but centered at the far end, cold blue window light from behind
+
+  - name: The Hierophant
+    numeral: "05"
+    description: A figure standing at a podium in an empty lecture hall, rows of folding seats stretching back into shadow, a single projector casting white light on a blank screen behind them
+    key_symbols: [podium, empty lecture hall, folding seats, blank projector screen]
+    composition: low angle from the front row looking up at figure at podium, projector beam visible as a cone of light, tiered seating fading to dark
+
+  - name: The Lovers
+    numeral: "06"
+    description: Two figures standing on opposite sides of a glass partition in an empty airport terminal, palms almost touching through the glass, departure gates stretching behind each of them
+    key_symbols: [glass partition, two figures, airport terminal, departure gates]
+    composition: profile view of both figures facing each other with glass between them, terminal corridors receding symmetrically on each side, diffused daylight from high windows
+
+  - name: The Chariot
+    numeral: "07"
+    description: A figure riding a stopped escalator in a dead mall, one escalator going up and one going down side by side, the figure striding upward with momentum on the frozen steps
+    key_symbols: [dual escalators, dead mall, frozen steps, striding figure]
+    composition: low angle looking up the escalators, figure ascending on the left side, second escalator empty on the right, ceiling lights receding to a vanishing point above
+
+  - name: Strength
+    numeral: "08"
+    description: A figure kneeling calmly beside a large stray dog in the middle of an empty underground parking garage, one hand extended, fluorescent tubes buzzing overhead
+    key_symbols: [stray dog, parking garage, fluorescent tubes, kneeling figure]
+    composition: wide shot of concrete garage, figure and dog small at center, rows of empty parking spaces stretching in all directions, green-white fluorescent light from above
+
+  - name: The Hermit
+    numeral: "09"
+    description: A solitary figure holding a phone as a flashlight at the end of an unlit hotel corridor, the small blue-white glow illuminating numbered doors receding into total darkness
+    key_symbols: [phone flashlight, dark corridor, numbered doors, solitary figure]
+    composition: figure seen from behind at center, phone light casting a narrow cone forward, doors lining both sides, deep shadows swallowing the far end
+
+  - name: Wheel of Fortune
+    numeral: "10"
+    description: A revolving door in a vast marble lobby seen from directly above, four glass chambers rotating, each chamber catching light at a different angle
+    key_symbols: [revolving door, marble lobby, glass chambers, overhead view]
+    composition: bird's-eye view looking straight down, revolving door as a radial pattern at center, marble floor radiating outward, warm light entering from one side
+
+  - name: Justice
+    numeral: "11"
+    description: A figure sitting behind the counter of an abandoned courthouse information desk, a balance scale and a security metal detector frame flanking the scene
+    key_symbols: [information desk, balance scale, metal detector frame, empty courthouse]
+    composition: frontal symmetrical view, figure centered behind desk, metal detector arch on the right, scale on the desk, institutional lighting from above
+
+  - name: The Hanged Man
+    numeral: "12"
+    description: A figure lying on their back on the floor of a drained indoor swimming pool, looking up at the ceiling lights, the pool walls rising around them in pale blue tile
+    key_symbols: [drained pool, blue tile, ceiling lights, prone figure]
+    composition: overhead shot looking down into the empty pool, figure lying at center with arms spread, tile grid creating geometric pattern, greenish light reflecting off tiles
+
+  - name: Death
+    numeral: "13"
+    description: An empty room mid-demolition — walls stripped to bare studs, plaster dust suspended in the air, raw daylight pouring through a gap where a window used to be
+    key_symbols: [bare studs, plaster dust, missing window, raw daylight]
+    composition: interior shot facing the missing window, light flooding in and overexposing the center, debris on the floor, exposed framing creating vertical lines
+
+  - name: Temperance
+    numeral: "14"
+    description: A figure standing at a water fountain in a long empty hospital corridor, water arcing in a thin stream between the spout and their cupped hands, green-white light overhead
+    key_symbols: [water fountain, hospital corridor, arcing water, cupped hands]
+    composition: side profile of figure bending to fountain, corridor stretching deep behind them, linoleum floor reflecting overhead lights, soft focus on the background
+
+  - name: The Devil
+    numeral: "15"
+    description: Two figures sitting in adjacent plastic chairs in a fluorescent-lit laundromat at night, both staring at the spinning dryers, neither looking at the other, connected by shared stillness
+    key_symbols: [plastic chairs, spinning dryers, laundromat, fluorescent light]
+    composition: wide shot through the plate glass window from outside, two figures visible inside bathed in harsh white light, night darkness surrounding the frame
+
+  - name: The Tower
+    numeral: "16"
+    description: A multi-story parking garage mid-collapse, concrete floors pancaking downward, dust and debris caught in the beams of still-functioning fluorescent lights
+    key_symbols: [collapsing concrete, pancaking floors, dust clouds, fluorescent beams]
+    composition: dramatic low angle looking up at the structure as it falls, dust billowing outward, light cutting through the chaos, diagonal lines of broken concrete
+
+  - name: The Star
+    numeral: "17"
+    description: A single working fluorescent tube in an otherwise pitch-dark corridor, its cold light illuminating a patch of wet floor tiles that reflect it like a still pool
+    key_symbols: [single fluorescent tube, dark corridor, wet floor tiles, reflected light]
+    composition: centered on the light source, corridor walls barely visible in the glow, wet floor creating a mirror effect below, deep blacks framing the light
+
+  - name: The Moon
+    numeral: "18"
+    description: A long institutional hallway lit only by green emergency exit signs at regular intervals, each sign casting a small pool of green on the floor, the far end invisible in shadow
+    key_symbols: [exit signs, green light pools, institutional hallway, deep shadow]
+    composition: one-point perspective down the hallway, exit signs receding into distance, alternating pools of green glow and darkness, no visible end point
+
+  - name: The Sun
+    numeral: "19"
+    description: A rooftop swimming pool filled with crystal-clear water on top of an empty building, bright midday sun overhead, the city skyline visible but hazy in the distance
+    key_symbols: [rooftop pool, clear water, midday sun, hazy skyline]
+    composition: wide shot from pool level, sun directly overhead creating sharp shadows, water surface catching the light, building edge and sky framing the top half
+
+  - name: Judgement
+    numeral: "20"
+    description: An empty airport baggage claim with a single carousel still running, a lone suitcase circling endlessly on the belt, arrival screens glowing above with no listed flights
+    key_symbols: [baggage carousel, lone suitcase, blank arrival screens, empty terminal]
+    composition: wide shot of the carousel from above at an angle, single suitcase as focal point, screens glowing blue-white in the background, polished floor reflecting everything
+
+  - name: The World
+    numeral: "21"
+    description: A revolving door seen from above with all four glass chambers visible, light streaming through each panel, a figure captured mid-step between the inside and outside
+    key_symbols: [revolving door from above, four chambers, streaming light, mid-step figure]
+    composition: perfect bird's-eye view, revolving door forming a cross pattern at center, warm outdoor light and cool indoor light splitting the frame, figure at the threshold
+
+minor_arcana:
+  doors:
+    pips:
+      "1":
+        description: A single red door standing slightly ajar at the end of a long empty white corridor, warm golden light spilling through the gap onto the floor
+        key_symbols: [red door, white corridor, golden light spill, gap]
+        composition: one-point perspective down the corridor, door centered at vanishing point, light creating a wedge shape on the floor, stark white walls
+      "2":
+        description: Two identical doors facing each other across a narrow hallway, both slightly open, each revealing a different quality of light — warm amber on the left, cool blue on the right
+        key_symbols: [two facing doors, narrow hallway, amber light, blue light]
+        composition: centered in the hallway looking at both doors from the side, warm and cool light pooling on the floor between them, symmetrical arrangement
+      "3":
+        description: Three doors in a row along a hotel corridor, each one progressively more open — the first cracked, the second half-open, the third wide open to bright light
+        key_symbols: [three hotel doors, progressive opening, bright light, hotel corridor]
+        composition: angled view down the corridor, three doors receding to the right, increasing light from each, patterned carpet leading the eye forward
+      "4":
+        description: Four doors arranged in a perfect square on the walls of a small windowless room, all four closed and identical, a single ceiling light illuminating the tight space
+        key_symbols: [four identical doors, square room, ceiling light, windowless space]
+        composition: slightly elevated view showing all four doors from the center of the room, symmetrical arrangement, single overhead light creating even shadows
+      "5":
+        description: Five doors along a hallway, three slammed shut and two hanging off their hinges, splinters on the linoleum floor, flickering light from a dying fluorescent tube
+        key_symbols: [broken doors, splinters, linoleum floor, flickering fluorescent]
+        composition: low angle from floor level, broken doors creating jagged shapes, debris scattered forward, unstable light causing motion blur effect
+      "6":
+        description: Six doors in a curved hotel corridor, all standing wide open, revealing identical empty rooms beyond, warm light flowing freely between all of them
+        key_symbols: [six open doors, curved corridor, identical rooms, warm flowing light]
+        composition: sweeping view along the curve of the corridor, open doors creating a rhythmic pattern, light connecting room to room, gentle arc leading the eye
+      "7":
+        description: A figure standing in a hallway facing seven doors of different sizes and colors, hand raised toward one but not yet touching the handle
+        key_symbols: [seven varied doors, hesitant figure, raised hand, hallway]
+        composition: figure seen from behind at center, seven doors arranged in a fan-like spread before them, each door a slightly different hue, overhead light on the figure
+      "8":
+        description: Eight doors flying open simultaneously along a corridor as if caught in a sudden wind, papers scattering into the hallway from each room
+        key_symbols: [eight opening doors, wind effect, scattered papers, dynamic corridor]
+        composition: dynamic diagonal view down the corridor, doors swinging outward on both sides, papers mid-air creating movement, motion blur on the doors
+      "9":
+        description: Nine doors in a long basement corridor, eight of them sealed with heavy padlocks, the ninth at the very end standing slightly ajar with faint light behind it
+        key_symbols: [padlocked doors, basement corridor, ajar final door, faint light]
+        composition: deep perspective down the dim corridor, locked doors lining both sides, single point of light at the far end, heavy shadows throughout
+      "10":
+        description: A massive wall of doors stacked and arranged like a grid — ten doors of all types, some modern, some old, filling an entire warehouse wall from floor to ceiling
+        key_symbols: [door grid, warehouse wall, mixed door types, floor to ceiling]
+        composition: wide shot facing the wall of doors straight on, variety of shapes and materials creating a mosaic pattern, industrial ceiling visible above, figure tiny at base for scale
+    court:
+      Page:
+        description: A teenager in a backpack peering through the mail slot of a locked door in an empty apartment hallway, eye visible through the narrow opening, curious and intent
+        key_symbols: [mail slot, locked door, backpack, apartment hallway]
+        composition: close medium shot from inside looking out through the mail slot, eye peering in, corridor light visible around the figure, intimate and voyeuristic angle
+      Knight:
+        description: A figure in a jacket striding through a series of doors in a long enfilade, each doorway framing the next, moving fast enough that their jacket billows behind them
+        key_symbols: [enfilade doorways, striding figure, billowing jacket, sequential frames]
+        composition: straight-on view through the enfilade, figure mid-stride in the second doorway, repeating door frames creating depth, motion conveyed through body lean
+      Queen:
+        description: A woman leaning against an open doorframe in a sunlit apartment, arms crossed, perfectly at ease, the room behind her warmly lit and the corridor ahead dim
+        key_symbols: [open doorframe, sunlit apartment, crossed arms, light contrast]
+        composition: three-quarter view of figure in doorframe, warm interior light behind, cooler corridor light in front, figure relaxed and grounded at the threshold
+      King:
+        description: A man in a long coat standing before a grand set of double doors in an empty civic building, one hand on the handle, the other holding a ring of keys
+        key_symbols: [double doors, civic building, ring of keys, long coat]
+        composition: low angle looking up at the figure and the tall double doors, architectural details visible above, figure imposing and centered, cold stone light
+
+  mirrors:
+    pips:
+      "1":
+        description: A single large mirror leaning against a wall in an empty room, reflecting a window that is not visible from the viewer's angle, showing only sky and clouds
+        key_symbols: [leaning mirror, empty room, reflected window, sky and clouds]
+        composition: angled view of the mirror from the side, reflected sky bright and expansive, actual room bare and dim, contrast between reflection and reality
+      "2":
+        description: Two mirrors facing each other across a narrow dressing room, creating an infinite regress of reflections, each successive image slightly darker and more distorted
+        key_symbols: [facing mirrors, infinite regress, dressing room, fading reflections]
+        composition: shot from the side capturing both mirrors and the tunnel of reflections between them, diminishing figures creating depth, warm vanity lighting
+      "3":
+        description: Three round mirrors arranged in a triangle on the wall of an abandoned salon, each reflecting a different section of the empty room, together showing the whole space
+        key_symbols: [three round mirrors, triangle arrangement, abandoned salon, fragmented view]
+        composition: straight-on view of the wall with three mirrors, each reflection showing a different angle of the room, dusty light from a side window, faded wallpaper
+      "4":
+        description: Four mirrored walls of a small elevator creating infinite reflections in every direction, a single overhead light multiplied endlessly in the glass
+        key_symbols: [mirrored elevator, infinite reflections, overhead light, enclosed space]
+        composition: shot from inside the elevator looking into one corner, reflections cascading in all directions, warm yellow overhead light multiplied, claustrophobic framing
+      "5":
+        description: A shattered bathroom mirror in five large pieces still clinging to the wall, each shard reflecting a different fragment of the fluorescent-lit room behind the viewer
+        key_symbols: [shattered mirror, five shards, bathroom, fragmented reflection]
+        composition: close-up of the cracked mirror, each piece angled differently, fractured reflections creating a cubist effect, harsh bathroom light, tile visible at edges
+      "6":
+        description: Six hand mirrors arranged in a circle on the floor of an empty dance studio, each angled to reflect the ceiling lights, creating a ring of bright spots on the hardwood
+        key_symbols: [hand mirrors, circle arrangement, dance studio, reflected ceiling lights]
+        composition: overhead shot looking down at the mirror circle on the wooden floor, each mirror catching and redirecting light, studio mirrors visible on the far wall
+      "7":
+        description: A figure standing in a department store after hours, surrounded by seven full-length mirrors on rolling stands, their reflection caught at different angles in each one
+        key_symbols: [full-length mirrors, rolling stands, department store, multiple reflections]
+        composition: wide shot with figure at center, mirrors arranged around them like standing stones, each showing a different angle of the figure, dim security lighting
+      "8":
+        description: Eight mirrored panels forming the walls of a revolving door, spinning rapidly, reflections of the lobby and street blurring together into streaks of light and color
+        key_symbols: [mirrored revolving door, spinning panels, blurred reflections, light streaks]
+        composition: motion-blurred shot of the spinning door, reflections smeared into abstract bands of light, lobby and exterior merging, dynamic circular movement
+      "9":
+        description: A lone figure sitting on the floor of a mirrored room, nine reflections of themselves visible, each slightly delayed as if the reflections are catching up
+        key_symbols: [mirrored room, seated figure, nine reflections, temporal delay]
+        composition: wide shot from one corner, figure seated at center, reflections surrounding them on walls and ceiling, each reflection in a slightly different pose, cool diffused light
+      "10":
+        description: A wall of ten security monitors in a control room, each screen showing a different empty room from a CCTV feed, the monitors casting blue-grey light on the vacant desk
+        key_symbols: [security monitors, CCTV feeds, empty rooms, control desk]
+        composition: straight-on view of the monitor wall, each screen a small window into a different space, desk and chair in foreground, screens as the only light source
+    court:
+      Page:
+        description: A young person pressing their face close to a fogged-over bathroom mirror, drawing a small circle in the condensation to see their own eye staring back
+        key_symbols: [fogged mirror, drawn circle, bathroom, close-up eye]
+        composition: close-up from mirror's perspective, finger creating a clear circle in fog, one eye visible through the gap, warm steam diffusing the surrounding frame
+      Knight:
+        description: A figure walking quickly through a hall of mirrors in a closed fairground, their reflection multiplied and distorted in every convex and concave surface around them
+        key_symbols: [hall of mirrors, distorted reflections, fairground, moving figure]
+        composition: dynamic shot following the figure, warped reflections stretching and compressing on all sides, colored bulb lights barely visible, sense of forward momentum
+      Queen:
+        description: A woman sitting at a vintage vanity in a dim room, reflected in its oval mirror, the reflection showing her face in soft focus while the real figure is seen only from behind
+        key_symbols: [vintage vanity, oval mirror, soft reflection, figure from behind]
+        composition: over-the-shoulder shot, mirror reflection as the main focal point showing the face, actual figure silhouetted, single lamp providing warm side light
+      King:
+        description: A man standing in the center of a circular mirrored room, perfectly still, every surface reflecting him — he has arranged the space so every reflection shows him from the front
+        key_symbols: [circular mirrored room, perfect reflections, centered figure, total control]
+        composition: shot from above at an angle, figure at the exact center, concentric circles of reflection radiating outward, cool white overhead light, geometric precision
+
+  corridors:
+    pips:
+      "1":
+        description: A single long corridor stretching to a distant vanishing point, white walls, white floor, white ceiling, one overhead light illuminating the nearest section
+        key_symbols: [infinite corridor, white surfaces, single light, vanishing point]
+        composition: perfect one-point perspective, corridor centered and receding, nearest section bright, progressive darkness toward the end, minimalist and stark
+      "2":
+        description: A T-junction in a basement corridor, the path splitting left and right, identical in both directions, a figure standing at the intersection facing the choice
+        key_symbols: [T-junction, basement corridor, identical paths, standing figure]
+        composition: shot from behind the figure, corridor splitting symmetrically, both directions lit identically, figure at the exact center of the fork, low ceiling
+      "3":
+        description: Three corridors converging at a central atrium in an empty office building, each hallway visible through glass walls, creating overlapping lines of perspective
+        key_symbols: [three converging corridors, central atrium, glass walls, overlapping perspectives]
+        composition: elevated shot from the atrium looking down the three corridors, glass walls creating transparency and layering, office ceiling grids visible, diffused overhead light
+      "4":
+        description: A four-way intersection of identical hospital corridors, floor tiles forming a cross pattern at the center, all four directions equally empty and uniformly lit
+        key_symbols: [four-way intersection, hospital corridors, cross pattern, uniform light]
+        composition: overhead view looking straight down at the intersection, four corridors extending to the edges of frame, cross pattern in the tiles, green-white fluorescent light
+      "5":
+        description: A corridor with the ceiling partially collapsed, debris and ceiling tiles scattered across the floor, exposed pipes and wires visible above, one section still lit
+        key_symbols: [collapsed ceiling, debris, exposed pipes, partial lighting]
+        composition: low angle looking down the damaged corridor, fallen tiles in foreground, intact section visible in the distance, dangling wires creating vertical lines, dust in the air
+      "6":
+        description: A long school corridor lined with lockers on both sides, every locker door standing open, afternoon light entering from classroom doorways and casting warm rectangles on the floor
+        key_symbols: [open lockers, school corridor, warm light rectangles, classroom doorways]
+        composition: angled perspective down the corridor, open locker doors creating a rhythmic zigzag pattern, light patches on the linoleum floor, golden afternoon tones
+      "7":
+        description: A figure pausing at the seventh turn of a winding corridor in a parking structure, concrete walls marked with level numbers, the path behind them no longer visible around the curves
+        key_symbols: [winding corridor, parking structure, level numbers, hidden path]
+        composition: medium shot of figure at a curve, concrete wall filling one side of frame, corridor bending away in both directions, overhead tube light on the ceiling, painted floor markings
+      "8":
+        description: Eight corridors radiating from a central octagonal hub in an underground complex, each hallway a different length, a figure walking briskly down one of them
+        key_symbols: [octagonal hub, eight radiating corridors, underground complex, walking figure]
+        composition: bird's-eye view of the hub, corridors extending like spokes, figure small and in motion down one corridor, industrial lighting at the center, tunnels fading to dark
+      "9":
+        description: A nearly endless corridor with doors on both sides, all closed, the ninth door from the viewer marked by a thin line of light at its base, everything else in shadow
+        key_symbols: [endless corridor, closed doors, ninth door, thin light line]
+        composition: one-point perspective, corridor receding deeply, doors barely distinguishable in the dark, one door marked by light at its base drawing the eye, minimal illumination
+      "10":
+        description: A corridor that has been completely sealed at both ends with cinder block walls, the full length of the passage visible and inescapable, fluorescent lights still running overhead
+        key_symbols: [sealed corridor, cinder block walls, sealed ends, running fluorescents]
+        composition: wide angle showing both sealed ends, corridor as a closed box, fluorescent lights running the full length, nowhere to go, claustrophobic framing with low ceiling
+    court:
+      Page:
+        description: A young person peering around the corner of a corridor in an abandoned school, one hand on the wall, leaning forward with wide-eyed curiosity, the hallway stretching into darkness ahead
+        key_symbols: [corridor corner, abandoned school, curious lean, dark hallway]
+        composition: shot from down the corridor looking back at the corner, figure half-visible, hand on the wall, light from behind them silhouetting the lean, dark passage in foreground
+      Knight:
+        description: A figure in a windbreaker running full speed through a long underground tunnel, their footsteps echoing, strip lights blurring into streaks above them
+        key_symbols: [underground tunnel, running figure, strip lights, motion blur]
+        composition: tracking shot from slightly ahead, figure running toward camera, tunnel walls converging behind, lights streaking overhead, dynamic low angle
+      Queen:
+        description: A woman walking slowly through a glass-walled corridor connecting two buildings, city lights visible on both sides, her reflection doubling in the glass, completely unhurried
+        key_symbols: [glass skybridge, city lights, walking figure, double reflection]
+        composition: side view through the glass, figure walking right to left, city visible beyond, reflection overlaid on the cityscape, cool blue evening light
+      King:
+        description: A man standing at the far end of a vast underground corridor, arms at his sides, the entire passage converging on him like a frame, security cameras visible on the ceiling
+        key_symbols: [vast corridor, convergent perspective, security cameras, commanding figure]
+        composition: extreme one-point perspective, figure tiny but centered at the vanishing point, corridor walls and ceiling all leading to them, cameras dotting the ceiling, cold institutional light
+
+  stairs:
+    pips:
+      "1":
+        description: A single concrete staircase ascending from a dim basement into bright white light at the top, the steps worn smooth at their centers from years of foot traffic
+        key_symbols: [concrete staircase, basement, bright white light above, worn steps]
+        composition: low angle looking up the stairs, light overexposing the top landing, steps receding upward, handrail visible on one side, dark basement framing the bottom
+      "2":
+        description: Two staircases in an empty subway station, one going up and one going down, perfectly parallel, both empty, the tiles between them a faded seafoam green
+        key_symbols: [dual staircases, subway station, parallel paths, seafoam tiles]
+        composition: frontal view showing both staircases side by side, one ascending left and one descending right, tiled wall between them, overhead strip lighting, symmetrical framing
+      "3":
+        description: Three flights of stairs visible through an open stairwell in an office building, each flight turning at a landing, the space between the flights forming a vertical shaft of negative space
+        key_symbols: [open stairwell, three flights, turning landings, vertical shaft]
+        composition: looking straight down the center of the stairwell, flights spiraling below, handrails creating geometric pattern, light entering from a window on one landing
+      "4":
+        description: Four steps leading up to a raised platform in the center of an empty warehouse, the platform perfectly square, a single folding chair sitting on top under a work light
+        key_symbols: [four steps, raised platform, warehouse, folding chair, work light]
+        composition: wide shot showing the platform as a stage in the vast space, four steps visible on the near side, work light creating a bright circle, dark warehouse surrounding
+      "5":
+        description: A broken escalator in a dead mall, its metal steps frozen mid-sequence, five of the treads buckled and jutting upward at wrong angles, caution tape draped loosely across
+        key_symbols: [broken escalator, buckled treads, dead mall, caution tape]
+        composition: medium shot from the side, damaged escalator filling the frame diagonally, buckled steps creating jagged shapes, mall atrium visible in soft focus behind, yellowed light
+      "6":
+        description: A wide ceremonial staircase in an empty museum, six broad steps leading to a mezzanine level, late afternoon light streaming through tall windows and painting gold stripes across the stone
+        key_symbols: [ceremonial staircase, museum, gold light stripes, tall windows]
+        composition: low angle looking up the wide stairs, light stripes crossing diagonally, mezzanine railing visible above, figure ascending seen from behind at a distance, warm golden tones
+      "7":
+        description: A figure pausing on the seventh step of a fire escape on the exterior of a building at dusk, looking out over a rooftop vista of other buildings, the metal grating casting shadow patterns on their face
+        key_symbols: [fire escape, seventh step, rooftop vista, metal grating shadows]
+        composition: medium shot from slightly below, figure in profile looking outward, fire escape metal framing them, dusk sky and rooftops in background, warm-cool light transition
+      "8":
+        description: Eight flights of stairs in a brutalist parking structure, each flight a sharp zigzag of poured concrete, a figure visible far above climbing rapidly, their movement a blur against the static geometry
+        key_symbols: [zigzag stairs, brutalist concrete, climbing figure, parking structure]
+        composition: looking up through the stairwell from the bottom, zigzag flights creating an angular pattern, small figure near the top, raw concrete textures, cold overhead light from the top
+      "9":
+        description: A spiral staircase in a lighthouse-like tower, nine visible turns ascending into a column of pale light at the top, the iron steps laced with condensation
+        key_symbols: [spiral staircase, nine turns, pale light above, condensation on iron]
+        composition: looking straight up the center of the spiral, steps curving around the frame, light at the apex creating a bright circle, moisture visible on dark iron, vertigo-inducing angle
+      "10":
+        description: A massive tiered amphitheater of concrete steps descending into a sunken plaza, all seats empty, a forgotten jacket draped over one step halfway down
+        key_symbols: [amphitheater steps, sunken plaza, forgotten jacket, concrete tiers]
+        composition: wide shot from the top tier looking down, concentric half-circles of steps descending, jacket as a small point of color and human trace, overcast light from above, monumental scale
+    court:
+      Page:
+        description: A young person sitting on the bottom step of a grand staircase in an empty civic building, backpack beside them, looking up at the flights above with a mix of awe and hesitation
+        key_symbols: [bottom step, grand staircase, backpack, upward gaze]
+        composition: low angle from slightly in front, figure small at the base, staircase rising dramatically behind and above, marble or stone surfaces, diffused overhead light from a high window
+      Knight:
+        description: A figure taking stairs two at a time in a concrete stairwell, jacket flying, hand barely touching the railing, between floors in a high-rise, stairwell numbers painted on the walls
+        key_symbols: [leaping stride, concrete stairwell, flying jacket, floor numbers]
+        composition: dynamic shot from one landing looking up, figure mid-leap between steps, number painted on the wall behind them, motion blur on limbs, stark overhead lighting
+      Queen:
+        description: A woman sitting on a wide marble landing halfway up a grand staircase, legs stretched across the step, completely at ease, light from a tall window illuminating her from the side
+        key_symbols: [marble landing, grand staircase, reclining pose, window light]
+        composition: three-quarter view from below, figure lounging across the landing, staircase continuing above and below, tall window providing strong side light, elegant architecture
+      King:
+        description: A man standing at the very top of a monumental outdoor staircase, looking down over an empty civic plaza below, hands in coat pockets, the stairs descending away from him in clean geometric lines
+        key_symbols: [monumental staircase top, civic plaza, descending lines, commanding view]
+        composition: shot from slightly behind and to the side, figure at the apex, stairs spreading downward filling the lower frame, plaza and buildings far below, overcast sky above

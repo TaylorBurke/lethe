@@ -1,0 +1,473 @@
+{
+  "deckName": "Thresholds Tarot",
+  "cards": [
+    {
+      "name": "The Fool",
+      "meaning": "You are standing at the edge of something unnamed. Step through without knowing what waits — the fog is not a warning, it is an invitation.",
+      "reversedMeaning": "Paralysis at the threshold. You keep opening the door but never walking through it. The hallway behind you is safe, but it has nothing left to offer.",
+      "keywords": "open fire exit, fog, fluorescent hallway, hoodie figure"
+    },
+    {
+      "name": "The Magician",
+      "meaning": "Everything you need is already on the counter in front of you. The empty lobby is yours to fill — arrange your tools and begin.",
+      "reversedMeaning": "Performing competence in an empty room. Manipulating surfaces without substance. The lobby is grand but you have no guests.",
+      "keywords": "reception desk, key card, glass of water, letter opener, coin"
+    },
+    {
+      "name": "The High Priestess",
+      "meaning": "Be still between the closed doors. The answer arrives not through action but through the silence of waiting, watching your own reflection without flinching.",
+      "reversedMeaning": "Refusing to sit with uncertainty. Pressing every button at once. The elevator doors stay closed because you will not stop moving long enough to be chosen.",
+      "keywords": "two elevator doors, bench, polished metal reflection, silent corridor"
+    },
+    {
+      "name": "The Empress",
+      "meaning": "Life reclaims what was abandoned. Let yourself rest in the overgrowth — what commerce forgot, the green remembers. Abundance finds the cracks.",
+      "reversedMeaning": "Smothering growth. The vines are choking the skylights. Nurturing so fiercely that nothing can breathe or find its own shape.",
+      "keywords": "overgrown planters, mall atrium, skylight, cushioned bench"
+    },
+    {
+      "name": "The Emperor",
+      "meaning": "You have built the structure. Now sit at the head of it and hold the space, even when every chair is empty. Authority is presence sustained.",
+      "reversedMeaning": "Ruling over nothing. An empty boardroom where control has become isolation. The city lights outside remind you that life is happening without you.",
+      "keywords": "office chair, long conference table, floor-to-ceiling windows, city lights"
+    },
+    {
+      "name": "The Hierophant",
+      "meaning": "Speak into the empty room. The teaching matters even when no one is seated. What you know becomes real only when you give it a voice.",
+      "reversedMeaning": "Lecturing to empty seats and mistaking the echo for agreement. Dogma projected onto a blank screen. Tradition without a living audience.",
+      "keywords": "podium, empty lecture hall, folding seats, blank projector screen"
+    },
+    {
+      "name": "The Lovers",
+      "meaning": "Connection persists through separation. The glass between you is real, but so is the warmth of a palm almost touching yours. Choose to stay at the partition.",
+      "reversedMeaning": "The departure gate is calling and you are pretending the glass is not there. Denying the barrier or using it as an excuse to turn away.",
+      "keywords": "glass partition, two figures, airport terminal, departure gates"
+    },
+    {
+      "name": "The Chariot",
+      "meaning": "The mechanism has stopped but your momentum has not. Climb the frozen escalator under your own power — the direction was always yours to choose.",
+      "reversedMeaning": "Forcing motion through a dead system. Exhausting yourself on broken infrastructure. The mall is closed; your willpower alone cannot reopen it.",
+      "keywords": "dual escalators, dead mall, frozen steps, striding figure"
+    },
+    {
+      "name": "Strength",
+      "meaning": "Kneel down in the harsh light. The stray thing that frightens others will come to your open hand if you are patient and unafraid.",
+      "reversedMeaning": "Gentleness as performance. Kneeling not out of compassion but control. The parking garage echoes with your need to be seen as kind.",
+      "keywords": "stray dog, parking garage, fluorescent tubes, kneeling figure"
+    },
+    {
+      "name": "The Hermit",
+      "meaning": "Your small light is enough. Walk the dark corridor alone and let the numbered doors stay closed — you are not looking for a room, you are looking for yourself.",
+      "reversedMeaning": "Isolation mistaken for wisdom. The phone light illuminates nothing because you have stopped moving. Solitude has become hiding.",
+      "keywords": "phone flashlight, dark corridor, numbered doors, solitary figure"
+    },
+    {
+      "name": "Wheel of Fortune",
+      "meaning": "The revolving door turns whether you push or not. Step into the next chamber and trust the rotation — every panel catches the light differently.",
+      "reversedMeaning": "Trapped in the spin. Going around and around without ever stepping out. Mistaking circulation for progress.",
+      "keywords": "revolving door, marble lobby, glass chambers, overhead view"
+    },
+    {
+      "name": "Justice",
+      "meaning": "Sit behind the desk and weigh what is before you. The metal detector does not lie and the scale does not negotiate. Fairness lives in empty rooms.",
+      "reversedMeaning": "Bureaucratic cruelty. Hiding behind process to avoid mercy. The courthouse is empty because everyone has given up on finding justice here.",
+      "keywords": "information desk, balance scale, metal detector frame, empty courthouse"
+    },
+    {
+      "name": "The Hanged Man",
+      "meaning": "Lie down in the emptied-out place and look up. The drained pool holds you differently than water would. Surrender your usual orientation.",
+      "reversedMeaning": "Stalling disguised as surrender. You are lying in the empty pool not because you chose stillness but because you are afraid to climb out.",
+      "keywords": "drained pool, blue tile, ceiling lights, prone figure"
+    },
+    {
+      "name": "Death",
+      "meaning": "The walls are stripped to studs and the window is gone. What remains is raw daylight and possibility. Demolition is not the end — it is the room before the room.",
+      "reversedMeaning": "Clinging to plaster dust. Refusing to let the demolition finish. Standing in the wreckage and calling it home because you fear what gets built next.",
+      "keywords": "bare studs, plaster dust, missing window, raw daylight"
+    },
+    {
+      "name": "Temperance",
+      "meaning": "The water arcs gently from source to hands. In the long corridor of recovery, small acts of balance sustain you. Take only what you need.",
+      "reversedMeaning": "Overcorrection. Drinking too much or refusing to drink at all. The hospital corridor stretches on because you cannot find moderation.",
+      "keywords": "water fountain, hospital corridor, arcing water, cupped hands"
+    },
+    {
+      "name": "The Devil",
+      "meaning": "You are sitting next to someone in the bright, humming room, watching the same cycle spin. The attachment is comfortable and you have stopped questioning it.",
+      "reversedMeaning": "Breaking the trance only to find another laundromat. Swapping one numbing cycle for another. Freedom that leads right back to the plastic chair.",
+      "keywords": "plastic chairs, spinning dryers, laundromat, fluorescent light"
+    },
+    {
+      "name": "The Tower",
+      "meaning": "The structure is coming down. Do not try to hold the floors in place — the collapse is making room for sky where there was only concrete.",
+      "reversedMeaning": "Refusing to evacuate. Believing the garage will hold if you just stay still enough. Denial in the face of cascading failure.",
+      "keywords": "collapsing concrete, pancaking floors, dust clouds, fluorescent beams"
+    },
+    {
+      "name": "The Star",
+      "meaning": "One light in total darkness is enough. The wet floor becomes a mirror, doubling what little glow remains. Hope is not a flood — it is a single tube still burning.",
+      "reversedMeaning": "Despair at the smallness of the light. Refusing comfort because it is not bright enough. The corridor is dark because you will not look at what is shining.",
+      "keywords": "single fluorescent tube, dark corridor, wet floor tiles, reflected light"
+    },
+    {
+      "name": "The Moon",
+      "meaning": "Follow the green glow from sign to sign. You cannot see the end of the hallway, and that is the point. Trust the exit markers even when the path feels endless.",
+      "reversedMeaning": "Paranoia in the green-lit dark. Every shadow is a threat, every sign a trick. The hallway has no end because your fear keeps extending it.",
+      "keywords": "exit signs, green light pools, institutional hallway, deep shadow"
+    },
+    {
+      "name": "The Sun",
+      "meaning": "Surface into the full light. The rooftop pool is yours and the city is distant enough to be beautiful. Clarity and warmth without apology.",
+      "reversedMeaning": "Blinding yourself with brightness. The midday sun hides nothing, and you are not ready to be that exposed. Joy forced into performance.",
+      "keywords": "rooftop pool, clear water, midday sun, hazy skyline"
+    },
+    {
+      "name": "Judgement",
+      "meaning": "The carousel still turns. What you sent away has come back around, and now you must decide whether to pick it up. The screens are blank — only you know what arrived.",
+      "reversedMeaning": "Letting the suitcase circle forever. Refusing to claim what is yours. The blank screens are a relief because judgment requires you to show up.",
+      "keywords": "baggage carousel, lone suitcase, blank arrival screens, empty terminal"
+    },
+    {
+      "name": "The World",
+      "meaning": "You are mid-step in the revolving door, caught between inside and outside, and both are lit. This is completion — not arriving, but being fully present at the threshold.",
+      "reversedMeaning": "Stuck in the revolving door, unable to commit to inside or outside. The cycle of almost-finishing. Completion deferred by one more spin.",
+      "keywords": "revolving door from above, four chambers, streaming light, mid-step figure"
+    },
+    {
+      "name": "Ace of Doors",
+      "meaning": "A single door stands ajar and golden light pours through the gap. This is the first opening — do not ask where it leads. Walk toward the warmth.",
+      "reversedMeaning": "The door is open but you will not approach it. The golden light feels like a trap. A first chance wasted by overthinking the threshold.",
+      "keywords": "red door, white corridor, golden light spill, gap"
+    },
+    {
+      "name": "Two of Doors",
+      "meaning": "Two doors face each other, offering warmth and coolness in equal measure. Hold both possibilities open. The choice is not either-or — it is which light you need right now.",
+      "reversedMeaning": "Paralyzed between two options that are more alike than different. The narrow hallway closes in while you stand frozen between amber and blue.",
+      "keywords": "two facing doors, narrow hallway, amber light, blue light"
+    },
+    {
+      "name": "Three of Doors",
+      "meaning": "Each door opens wider than the last. Your willingness to step forward is building into momentum. The third door shows you what the first only hinted at.",
+      "reversedMeaning": "Rushing through doors without pausing in any room. Expansion without presence. The bright light at the end blinds you to what each room held.",
+      "keywords": "three hotel doors, progressive opening, bright light, hotel corridor"
+    },
+    {
+      "name": "Four of Doors",
+      "meaning": "Four identical doors, four walls, one light. The structure is stable and the space is contained. Rest here — not every room needs a window.",
+      "reversedMeaning": "The sealed room has become a cage. Security has calcified into claustrophobia. You built four walls and forgot to leave one door unlocked.",
+      "keywords": "four identical doors, square room, ceiling light, windowless space"
+    },
+    {
+      "name": "Five of Doors",
+      "meaning": "Some doors have been broken through by force. The splinters on the floor are evidence of necessary rupture — not everything opens with a key.",
+      "reversedMeaning": "Destruction without purpose. Breaking doors that were never locked. The flickering light reveals damage you caused out of frustration, not need.",
+      "keywords": "broken doors, splinters, linoleum floor, flickering fluorescent"
+    },
+    {
+      "name": "Six of Doors",
+      "meaning": "Every door is open and the light flows freely between rooms. Generosity of access, warmth shared without gatekeeping. You are welcome in all of them.",
+      "reversedMeaning": "No boundaries, no privacy. The open doors mean anyone can walk through. Generosity has dissolved into a loss of self.",
+      "keywords": "six open doors, curved corridor, identical rooms, warm flowing light"
+    },
+    {
+      "name": "Seven of Doors",
+      "meaning": "Your hand is raised but you have not chosen yet. Seven possibilities shimmer before you. The hesitation is not weakness — it is the sacred pause before commitment.",
+      "reversedMeaning": "Chronic indecision. The hand stays raised forever. You have turned choosing into an identity, and the doors are starting to close.",
+      "keywords": "seven varied doors, hesitant figure, raised hand, hallway"
+    },
+    {
+      "name": "Eight of Doors",
+      "meaning": "All the doors fly open at once and the wind carries everything into the hallway. Rapid change, swift movement, things scattering into new positions.",
+      "reversedMeaning": "Chaos without direction. The wind blows papers everywhere but delivers nothing. Speed masking a lack of intention.",
+      "keywords": "eight opening doors, wind effect, scattered papers, dynamic corridor"
+    },
+    {
+      "name": "Nine of Doors",
+      "meaning": "Eight doors are locked and only one offers light. The path has narrowed to a single option — and that option is enough. Walk toward the faint glow.",
+      "reversedMeaning": "Fixating on the locked doors instead of the open one. Resentment at having only one choice. The basement corridor feels like punishment.",
+      "keywords": "padlocked doors, basement corridor, ajar final door, faint light"
+    },
+    {
+      "name": "Ten of Doors",
+      "meaning": "Every kind of door you have ever walked through is gathered here, floor to ceiling. This is the full collection of your passages — honor the accumulated weight of every threshold crossed.",
+      "reversedMeaning": "Overwhelmed by options. The wall of doors is a monument to indecision. So many entries that none of them feel like they matter.",
+      "keywords": "door grid, warehouse wall, mixed door types, floor to ceiling"
+    },
+    {
+      "name": "Page of Doors",
+      "meaning": "Press your eye to the mail slot and look. Curiosity about what lies behind closed doors is its own kind of bravery. You do not need a key to begin learning.",
+      "reversedMeaning": "Spying without entering. Gathering information as a substitute for experience. The mail slot shows you everything except what it feels like inside.",
+      "keywords": "mail slot, locked door, backpack, apartment hallway"
+    },
+    {
+      "name": "Knight of Doors",
+      "meaning": "Move through the enfilade without stopping. Each doorway frames the next and your momentum carries you forward. Action is its own kind of knowledge.",
+      "reversedMeaning": "Rushing through doors without seeing the rooms. Speed as avoidance. Your jacket billows impressively but you have learned nothing from the passage.",
+      "keywords": "enfilade doorways, striding figure, billowing jacket, sequential frames"
+    },
+    {
+      "name": "Queen of Doors",
+      "meaning": "Lean against the doorframe where warmth meets shadow. You belong to both sides and neither owns you. Mastery is standing at the threshold by choice.",
+      "reversedMeaning": "Guarding the doorway. Using your position between rooms to control who passes. Ease that has hardened into territorial authority.",
+      "keywords": "open doorframe, sunlit apartment, crossed arms, light contrast"
+    },
+    {
+      "name": "King of Doors",
+      "meaning": "You hold the keys and you stand before the grand doors. The authority to open or close belongs to you — exercise it with the gravity the space demands.",
+      "reversedMeaning": "Hoarding keys. The ring is heavy because you will not delegate access. The civic building is empty because you locked everyone out.",
+      "keywords": "double doors, civic building, ring of keys, long coat"
+    },
+    {
+      "name": "Ace of Mirrors",
+      "meaning": "The mirror shows you a window you cannot see from where you stand. Something true is being reflected back to you from an unexpected angle. Look.",
+      "reversedMeaning": "Mistaking the reflection for reality. The sky in the mirror is not the sky above you. Beautiful illusions replacing difficult truths.",
+      "keywords": "leaning mirror, empty room, reflected window, sky and clouds"
+    },
+    {
+      "name": "Two of Mirrors",
+      "meaning": "Stand between two reflections and watch yourself multiply into infinity. Relationship is a hall of echoes — what you send out returns, slightly changed each time.",
+      "reversedMeaning": "Losing yourself in the infinite regress. The reflections grow darker with each repetition. Co-dependency as a vanishing point.",
+      "keywords": "facing mirrors, infinite regress, dressing room, fading reflections"
+    },
+    {
+      "name": "Three of Mirrors",
+      "meaning": "Three perspectives show you the whole room. No single mirror tells the full story — collaboration reveals what solitary vision cannot.",
+      "reversedMeaning": "Fragmented self-image. Each mirror contradicts the others and you cannot reconcile them. The salon is abandoned because no one could agree on what they saw.",
+      "keywords": "three round mirrors, triangle arrangement, abandoned salon, fragmented view"
+    },
+    {
+      "name": "Four of Mirrors",
+      "meaning": "You are surrounded by yourself on every side. The enclosed space forces total self-reflection — there is nowhere to look that is not you.",
+      "reversedMeaning": "Narcissistic enclosure. The mirrored elevator has no exit button. Self-reflection has become a trap of infinite self-regard.",
+      "keywords": "mirrored elevator, infinite reflections, overhead light, enclosed space"
+    },
+    {
+      "name": "Five of Mirrors",
+      "meaning": "The mirror is shattered but each piece still reflects. Your broken self-image is not worthless — it is a cubist truth, harder to read but more honest.",
+      "reversedMeaning": "Clinging to a shattered reflection. Cutting yourself on the pieces while trying to reassemble something that broke for a reason.",
+      "keywords": "shattered mirror, five shards, bathroom, fragmented reflection"
+    },
+    {
+      "name": "Six of Mirrors",
+      "meaning": "Lay the mirrors in a circle and let them catch the light for each other. Mutual reflection, shared illumination. The dance floor is empty but the light is communal.",
+      "reversedMeaning": "Reflected light without a source. The circle of mirrors bounces brightness between them but none of it is original. Borrowed joy, secondhand insight.",
+      "keywords": "hand mirrors, circle arrangement, dance studio, reflected ceiling lights"
+    },
+    {
+      "name": "Seven of Mirrors",
+      "meaning": "Seven angles of yourself surround you after hours. In the quiet, study which reflections you recognize and which ones surprise you. Not all of them are flattering, and that is the gift.",
+      "reversedMeaning": "Overwhelmed by self-scrutiny. Too many mirrors, too many versions. You are shopping for an identity instead of living in one.",
+      "keywords": "full-length mirrors, rolling stands, department store, multiple reflections"
+    },
+    {
+      "name": "Eight of Mirrors",
+      "meaning": "The reflections are spinning too fast to hold. Let them blur — sometimes clarity comes from releasing the need to see yourself sharply.",
+      "reversedMeaning": "Dizziness from too much self-examination at speed. The revolving door of introspection that never lets you step out and simply be.",
+      "keywords": "mirrored revolving door, spinning panels, blurred reflections, light streaks"
+    },
+    {
+      "name": "Nine of Mirrors",
+      "meaning": "Nine versions of you sit in the mirrored room, each slightly out of sync. The delay between self and reflection is where wisdom lives. You are not who you were a moment ago.",
+      "reversedMeaning": "Haunted by past selves. The reflections are not catching up because you refuse to let old versions of yourself go. A room full of ghosts wearing your face.",
+      "keywords": "mirrored room, seated figure, nine reflections, temporal delay"
+    },
+    {
+      "name": "Ten of Mirrors",
+      "meaning": "Ten screens show ten empty rooms and you watch them all from a vacant desk. Total surveillance, total awareness. You have seen everything and must now decide what matters.",
+      "reversedMeaning": "Voyeurism replacing participation. Watching every feed but entering no room. The control desk is comfortable because it keeps you out of the frame.",
+      "keywords": "security monitors, CCTV feeds, empty rooms, control desk"
+    },
+    {
+      "name": "Page of Mirrors",
+      "meaning": "Draw a small circle in the fog and meet your own eye. Self-knowledge begins with the willingness to clear a tiny window and look without flinching.",
+      "reversedMeaning": "Wiping the mirror clean before you are ready to see. The fog was protecting you. Premature self-confrontation that overwhelms.",
+      "keywords": "fogged mirror, drawn circle, bathroom, close-up eye"
+    },
+    {
+      "name": "Knight of Mirrors",
+      "meaning": "Move fast through the distortions. The warped reflections cannot hold you if you keep walking. Not every version of yourself that you glimpse deserves your attention.",
+      "reversedMeaning": "Running from your own reflection. The fairground mirrors are horrifying because they show truths you distort differently yourself.",
+      "keywords": "hall of mirrors, distorted reflections, fairground, moving figure"
+    },
+    {
+      "name": "Queen of Mirrors",
+      "meaning": "Your face lives in the mirror while your body stays in shadow. You have mastered the art of revealing exactly what you choose. The soft focus is intentional.",
+      "reversedMeaning": "Hiding behind a curated reflection. The vanity mirror shows a performance, not a person. You have forgotten which version is real.",
+      "keywords": "vintage vanity, oval mirror, soft reflection, figure from behind"
+    },
+    {
+      "name": "King of Mirrors",
+      "meaning": "Every surface reflects you from the front because you arranged it that way. Total self-awareness is power — you have left no blind spot uncovered.",
+      "reversedMeaning": "Compulsive self-control. The circular room is a prison of your own design. You cannot tolerate any angle you have not pre-approved.",
+      "keywords": "circular mirrored room, perfect reflections, centered figure, total control"
+    },
+    {
+      "name": "Ace of Corridors",
+      "meaning": "One path, one light, one vanishing point. The corridor is pure potential — every journey begins with a single direction chosen in silence.",
+      "reversedMeaning": "The infinite hallway as existential dread. One direction feels like no choice at all. The white walls offer nothing to hold onto.",
+      "keywords": "infinite corridor, white surfaces, single light, vanishing point"
+    },
+    {
+      "name": "Two of Corridors",
+      "meaning": "The path splits and both ways look the same. Stand at the junction and feel which direction pulls. The symmetry is a test — your intuition breaks the tie.",
+      "reversedMeaning": "Stuck at the T-junction, convinced that the wrong choice is fatal. Both corridors are identical and yet you cannot move.",
+      "keywords": "T-junction, basement corridor, identical paths, standing figure"
+    },
+    {
+      "name": "Three of Corridors",
+      "meaning": "Three perspectives converge in a shared space. The glass walls let you see how others are moving through their own corridors. Collaboration is visible overlap.",
+      "reversedMeaning": "Transparency without connection. You can see through the glass walls but cannot reach anyone. Parallel paths that never actually meet.",
+      "keywords": "three converging corridors, central atrium, glass walls, overlapping perspectives"
+    },
+    {
+      "name": "Four of Corridors",
+      "meaning": "The four-way intersection holds you at its center. Stability in all directions — nowhere urgent to be. The cross pattern on the floor says you are exactly where you should be.",
+      "reversedMeaning": "Stagnation at the crossroads. The uniform light in every direction has made them all equally unappealing. Stability has become stuckness.",
+      "keywords": "four-way intersection, hospital corridors, cross pattern, uniform light"
+    },
+    {
+      "name": "Five of Corridors",
+      "meaning": "The ceiling has fallen but the corridor continues. Walk through the debris — the collapse exposed the infrastructure that was always above you. Now you see the wires.",
+      "reversedMeaning": "Dwelling in the wreckage. The exposed pipes drip and the dust settles on you because you refuse to keep walking. Crisis has become identity.",
+      "keywords": "collapsed ceiling, debris, exposed pipes, partial lighting"
+    },
+    {
+      "name": "Six of Corridors",
+      "meaning": "Every locker is open, every classroom lets light through. The school corridor remembers generosity — knowledge shared freely, warmth on the floor where anyone can walk.",
+      "reversedMeaning": "Nostalgia for an openness that no longer exists. The lockers are open because everyone left. Warmth without people is just temperature.",
+      "keywords": "open lockers, school corridor, warm light rectangles, classroom doorways"
+    },
+    {
+      "name": "Seven of Corridors",
+      "meaning": "Pause at the seventh turn. The path behind you has vanished around the curves, and you cannot see what is ahead. Trust the level numbers — you are still climbing.",
+      "reversedMeaning": "Lost in the winding structure with no landmarks. The level numbers blur together. You have been turning so long you no longer know if you are ascending or descending.",
+      "keywords": "winding corridor, parking structure, level numbers, hidden path"
+    },
+    {
+      "name": "Eight of Corridors",
+      "meaning": "Eight paths radiate from the center and you are already moving down one of them. The choice was made; now commit to the spoke you chose. Momentum is the only compass.",
+      "reversedMeaning": "Scattered energy. Eight directions and you are running down a different one every hour. The hub keeps pulling you back because you will not commit to a corridor.",
+      "keywords": "octagonal hub, eight radiating corridors, underground complex, walking figure"
+    },
+    {
+      "name": "Nine of Corridors",
+      "meaning": "One door in the darkness shows a line of light at its base. After a long walk past closed doors, the ninth one whispers. Almost there — the thin glow is real.",
+      "reversedMeaning": "Fixating on the one light and ignoring everything else. The corridor is not as dark as you have decided it is. Tunnel vision as coping mechanism.",
+      "keywords": "endless corridor, closed doors, ninth door, thin light line"
+    },
+    {
+      "name": "Ten of Corridors",
+      "meaning": "The corridor is sealed at both ends and the fluorescents still hum. This is the completed passage — walk its full length and understand that containment is not the same as confinement.",
+      "reversedMeaning": "Trapped with no exit. The cinder block walls are real and the lights are a cruelty. Completion has become a sentence. The ceiling presses down.",
+      "keywords": "sealed corridor, cinder block walls, sealed ends, running fluorescents"
+    },
+    {
+      "name": "Page of Corridors",
+      "meaning": "Peer around the corner with wide eyes. The dark hallway ahead is not a threat — it is an unread chapter. Your curiosity is braver than you think.",
+      "reversedMeaning": "Hanging back at the corner forever. Curiosity that never converts to action. The abandoned school has many hallways and you have explored none of them.",
+      "keywords": "corridor corner, abandoned school, curious lean, dark hallway"
+    },
+    {
+      "name": "Knight of Corridors",
+      "meaning": "Run. The tunnel stretches and the lights blur into streaks above you. Full commitment to the passage, no looking back, the echoing footsteps are your own applause.",
+      "reversedMeaning": "Running from something, not toward it. The tunnel never ends because you chose speed over direction. Exhaustion disguised as progress.",
+      "keywords": "underground tunnel, running figure, strip lights, motion blur"
+    },
+    {
+      "name": "Queen of Corridors",
+      "meaning": "Walk the glass skybridge between two worlds. The city lights surround you and your reflection walks beside you. Grace is moving slowly when everyone else hurries.",
+      "reversedMeaning": "Detachment as elegance. You float above the city in your glass corridor, untouched and untouchable. The double reflection keeps you company because no one else can.",
+      "keywords": "glass skybridge, city lights, walking figure, double reflection"
+    },
+    {
+      "name": "King of Corridors",
+      "meaning": "Stand at the vanishing point. Every line in the corridor converges on you — the cameras see you, the walls frame you. You have claimed the entire passage as your domain.",
+      "reversedMeaning": "Surveillance as sovereignty. The cameras record everything but the corridors are empty. You rule a passage no one wants to walk through.",
+      "keywords": "vast corridor, convergent perspective, security cameras, commanding figure"
+    },
+    {
+      "name": "Ace of Stairs",
+      "meaning": "One staircase, one direction: up. The worn steps prove others have climbed before you. The light at the top is white and total. Begin the ascent.",
+      "reversedMeaning": "Staring up at the light and staying in the basement. The first step is the hardest and you have convinced yourself the climb is impossible.",
+      "keywords": "concrete staircase, basement, bright white light above, worn steps"
+    },
+    {
+      "name": "Two of Stairs",
+      "meaning": "One staircase goes up, one goes down, and both are valid. Duality is not a dilemma — it is the architecture of choice. The seafoam tiles between them hold neutral ground.",
+      "reversedMeaning": "Ascending and descending feel equally pointless. The parallel paths mock each other. You stand between them on the faded tiles, going nowhere.",
+      "keywords": "dual staircases, subway station, parallel paths, seafoam tiles"
+    },
+    {
+      "name": "Three of Stairs",
+      "meaning": "Three flights turn at their landings, each one lifting you higher. Look down the vertical shaft and see how far you have already come. The negative space is progress made visible.",
+      "reversedMeaning": "Vertigo from looking down. The spiral of progress makes you dizzy and you cling to the landing instead of climbing the next flight.",
+      "keywords": "open stairwell, three flights, turning landings, vertical shaft"
+    },
+    {
+      "name": "Four of Stairs",
+      "meaning": "Four steps to a small platform, a chair, a light. Not every ascent needs to be grand. This modest elevation is enough to see the whole warehouse from above.",
+      "reversedMeaning": "Building a throne from four steps and a folding chair. Mistaking a small platform for a mountain. The warehouse dwarfs your elevation.",
+      "keywords": "four steps, raised platform, warehouse, folding chair, work light"
+    },
+    {
+      "name": "Five of Stairs",
+      "meaning": "The escalator is broken and the treads jut at wrong angles. Disruption has stopped the automatic ride — now you must find another way up. The caution tape marks the old path, not the new one.",
+      "reversedMeaning": "Waiting for the broken escalator to be repaired. Refusing to take the stairs because the machine owes you a ride. Entitlement in a dead mall.",
+      "keywords": "broken escalator, buckled treads, dead mall, caution tape"
+    },
+    {
+      "name": "Six of Stairs",
+      "meaning": "Climb the wide ceremonial steps into the golden light. This ascent is not a struggle — it is a procession. The museum holds what others have preserved for you.",
+      "reversedMeaning": "Treating every staircase as a ceremony. The golden light is beautiful but the museum is empty. Reverence for form over substance.",
+      "keywords": "ceremonial staircase, museum, gold light stripes, tall windows"
+    },
+    {
+      "name": "Seven of Stairs",
+      "meaning": "Pause on the seventh step of the fire escape and look out. The rooftop vista reveals a world you cannot see from the ground. Perspective is earned by climbing.",
+      "reversedMeaning": "Stopping to admire the view as an excuse not to keep climbing. The fire escape has more steps above you. Resting too long on someone else's building.",
+      "keywords": "fire escape, seventh step, rooftop vista, metal grating shadows"
+    },
+    {
+      "name": "Eight of Stairs",
+      "meaning": "Eight zigzag flights of raw concrete, climbed rapidly. The brutalist geometry does not care about your feelings — it only cares that you are ascending. Keep going.",
+      "reversedMeaning": "Punishing ascent without purpose. You are climbing because stopping terrifies you, not because the top holds anything you need.",
+      "keywords": "zigzag stairs, brutalist concrete, climbing figure, parking structure"
+    },
+    {
+      "name": "Nine of Stairs",
+      "meaning": "Nine spiral turns with pale light above. The iron steps are slick with condensation but the column of light at the top calls you upward. Endurance is almost its own reward.",
+      "reversedMeaning": "The spiral has made you dizzy and the top never seems closer. Nine turns completed and your hands are cold on wet iron. Exhaustion masquerading as devotion.",
+      "keywords": "spiral staircase, nine turns, pale light above, condensation on iron"
+    },
+    {
+      "name": "Ten of Stairs",
+      "meaning": "All the steps descend to a sunken center where something was left behind. The amphitheater of your accumulated experience holds one small human trace — a forgotten jacket. Completion is bittersweet.",
+      "reversedMeaning": "Monumental emptiness. You built a coliseum of steps and no one came. The forgotten jacket belongs to the last person who cared enough to visit.",
+      "keywords": "amphitheater steps, sunken plaza, forgotten jacket, concrete tiers"
+    },
+    {
+      "name": "Page of Stairs",
+      "meaning": "Sit at the bottom step with your backpack and look up. The grand staircase is daunting but you are already here. Awe and hesitation are the same feeling, differently named.",
+      "reversedMeaning": "Overwhelmed before beginning. The staircase is too grand and your backpack is too heavy. You have decided the climb is not for someone like you.",
+      "keywords": "bottom step, grand staircase, backpack, upward gaze"
+    },
+    {
+      "name": "Knight of Stairs",
+      "meaning": "Take the stairs two at a time. Your jacket flies and your hand barely grazes the railing. Between floors is where you are most alive — the landing is just a launchpad.",
+      "reversedMeaning": "Reckless speed on the stairs. Skipping steps because you cannot tolerate the pace of one at a time. The floor numbers blur because you are not paying attention.",
+      "keywords": "leaping stride, concrete stairwell, flying jacket, floor numbers"
+    },
+    {
+      "name": "Queen of Stairs",
+      "meaning": "Stretch across the marble landing and claim the halfway point. The grand staircase continues above and below, but you have chosen this step. Rest is not failure — it is mastery of pace.",
+      "reversedMeaning": "Luxuriating on the landing while the staircase waits. Comfort at the midpoint that has become refusal to finish. The window light is warm but the stairs still exist.",
+      "keywords": "marble landing, grand staircase, reclining pose, window light"
+    },
+    {
+      "name": "King of Stairs",
+      "meaning": "Stand at the top and look down. The plaza spreads below you and the geometric lines all descend from where you are. You have climbed the full height. The view belongs to you.",
+      "reversedMeaning": "Lonely at the summit. The civic plaza is empty and the stairs only go down from here. You conquered the height and found nothing but wind and distance.",
+      "keywords": "monumental staircase top, civic plaza, descending lines, commanding view"
+    }
+  ]
+}
