@@ -1,0 +1,187 @@
+# Salvador Dalí Oracle Deck
+# 30 cards drawn from the surrealist master's recurring motifs,
+# paintings, and obsessions. Each description is an image prompt.
+# Maximum 100 cards per deck.
+
+deck_name: "The Dalí Oracle"
+
+cards:
+  - name: "The Melting Clock"
+    description: "A soft melting pocket watch draped over the branch of a dead olive tree in a vast desert plain, amber light pooling beneath it, the distant cliffs of a rocky coast fading into haze"
+    keywords: [melting clock, dead tree, desert, amber light, drooping watch]
+    meaning: "Time is not what it seems. Release urgency. What feels fixed is actually fluid."
+    composition: "close-up of draped watch on branch, barren plain stretching to distant cliffs"
+
+  - name: "The Elephants"
+    description: "Two enormous elephants walking across a twilight plain on impossibly thin stilt-like legs, carrying golden obelisks on their backs, their reflections shimmering in shallow water below"
+    keywords: [elephants, stilt legs, obelisks, twilight, reflection]
+    meaning: "Strength concealed by fragility. Great burdens carried with hidden grace."
+    composition: "full figures of elephants in profile, low horizon line, expansive sky"
+
+  - name: "The Ants"
+    description: "A swarm of black ants crawling across the face of a golden pocket watch lying on warm sand, their bodies forming spiraling patterns as afternoon light casts long shadows"
+    keywords: [ants, pocket watch, sand, spiraling pattern, decay]
+    meaning: "Entropy is already at work. Attend to what you have been neglecting."
+    composition: "overhead view of watch on sand, ants radiating outward from center"
+
+  - name: "The Cosmic Egg"
+    description: "A massive cracked egg floating above a calm sea at dawn, golden light pouring through the fracture, a tiny human figure emerging from within, shell fragments suspended in midair"
+    keywords: [cracked egg, floating, dawn sea, golden light, emerging figure]
+    meaning: "A new self is breaking through. The discomfort you feel is emergence, not destruction."
+    composition: "centered egg above water horizon, light streaming through crack, figure silhouetted"
+
+  - name: "The Crutch"
+    description: "An ornate forked wooden crutch standing alone in a barren landscape, propping up a sagging cloud made of soft flesh-colored material, the sky behind it deep amber and violet"
+    keywords: [forked crutch, sagging cloud, barren landscape, amber sky]
+    meaning: "What support are you leaning on? Examine whether your crutch serves or traps you."
+    composition: "vertical crutch centered, sagging form draped over fork, empty plain"
+
+  - name: "The Burning Giraffe"
+    description: "A giraffe engulfed in blue-orange flames standing on a distant plain, in the foreground a woman with open drawers protruding from her torso and legs, her arms outstretched"
+    keywords: [burning giraffe, flames, drawer woman, desert plain]
+    meaning: "Inner conflict is consuming what you ignore. Open the drawers you have kept shut."
+    composition: "foreground figure with drawers, burning giraffe on middle-ground plain, dark sky"
+
+  - name: "The Drawers of the Self"
+    description: "A smooth marble human torso with six half-open wooden drawers emerging from the chest and abdomen, wisps of golden smoke curling from each opening, set against deep blue darkness"
+    keywords: [marble torso, open drawers, golden smoke, blue darkness]
+    meaning: "You contain hidden rooms. Something buried is ready to be examined."
+    composition: "frontal view of torso, drawers open at angles, smoke rising"
+
+  - name: "The Lobster Telephone"
+    description: "A bright red lobster resting on the handset of a black rotary telephone on a polished table, its claws curling over the earpiece, dreamlike soft focus"
+    keywords: [red lobster, rotary telephone, polished surface, surreal still life]
+    meaning: "Communication has become absurd. Say the strange thing. Speak what feels irrational."
+    composition: "still life center frame, shallow depth of field, dark background"
+
+  - name: "The Eye of Time"
+    description: "An enormous disembodied human eye floating above a reflective salt flat, a clock face embedded in the iris, tears of liquid mercury streaming down, clouds gathering above"
+    keywords: [disembodied eye, clock iris, mercury tears, salt flat]
+    meaning: "You are being watched by your own awareness. Perception itself is the teacher."
+    composition: "large eye centered above horizon, reflective ground, dramatic sky"
+
+  - name: "The Pomegranate Dream"
+    description: "A ripe pomegranate bursting open in midair above a sleeping figure, two fierce tigers leaping from the spray of seeds, a bayonet and a golden fish erupting alongside them"
+    keywords: [bursting pomegranate, leaping tigers, sleeping figure, fish, bayonet]
+    meaning: "Something is about to jolt you awake. The unconscious is sending urgent signals."
+    composition: "sleeping figure at bottom, explosion of imagery erupting upward from fruit"
+
+  - name: "The Swans and Elephants"
+    description: "Three white swans on a glassy lake at sunset, their reflections in the water forming the shapes of grey elephants with long trunks, the boundary between real and reflected perfectly ambiguous"
+    keywords: [white swans, elephant reflections, glassy lake, sunset, double image]
+    meaning: "Things are not what they first appear. Look at the reflection, not just the surface."
+    composition: "horizontal lake scene, swans in upper half, elephant reflections in lower half"
+
+  - name: "The Rhinoceros Horn"
+    description: "A single spiraling rhinoceros horn standing upright on a marble pedestal in a cathedral of light, golden ratio spirals radiating outward from its surface, dust motes in sunbeams"
+    keywords: [rhinoceros horn, spiral, marble pedestal, cathedral light, golden ratio]
+    meaning: "Sacred geometry underlies the chaos. Trust the hidden order of things."
+    composition: "vertical horn centered, radiating spiral lines, light streaming from above"
+
+  - name: "The Bread"
+    description: "An impossibly long French baguette balanced on the edge of a rooftop overlooking a Mediterranean town at dusk, one end draped downward like soft cloth, warm golden crust glowing"
+    keywords: [long baguette, rooftop, Mediterranean town, soft bread, dusk]
+    meaning: "The mundane is sacred. Nourishment is found in what you overlook every day."
+    composition: "bread spanning frame diagonally, town vista beyond, warm light"
+
+  - name: "The Meditative Rose"
+    description: "A single enormous red rose hovering above a flat desert landscape, a tiny drop of blood falling from one petal, no stem or leaves, the sky behind it perfectly clear and pale blue"
+    keywords: [floating rose, desert, blood drop, clear sky, enormous flower]
+    meaning: "Beauty requires no explanation. Sit with what is exquisite without analyzing it."
+    composition: "large rose centered in upper frame, vast empty desert below, minimal"
+
+  - name: "The Leaping Tigers"
+    description: "Two bengal tigers mid-leap against a blank golden sky, their bodies stretched and elongated, claws extended, mouths open, frozen at the apex of their jump"
+    keywords: [leaping tigers, golden sky, elongated bodies, frozen motion]
+    meaning: "Instinct is overtaking reason. Trust the primal response moving through you."
+    composition: "two tigers in dynamic diagonal poses, negative space around them, golden tone"
+
+  - name: "The Muse"
+    description: "A woman with dark hair and piercing eyes standing in a doorway of light, her silhouette half in shadow and half illuminated, a crown of small golden keys floating above her head"
+    keywords: [woman in doorway, light and shadow, floating keys, dark hair, muse]
+    meaning: "Inspiration arrives through devotion to another. Who unlocks your deeper work?"
+    composition: "figure centered in bright doorway, keys orbiting above, dark room framing"
+
+  - name: "The Metamorphosis of Narcissus"
+    description: "A kneeling human figure dissolving into stone beside a pool, a giant stone hand rising from the earth beside them holding a cracked egg with a flower sprouting from it"
+    keywords: [kneeling figure, stone hand, cracked egg, flower, pool, metamorphosis]
+    meaning: "Self-obsession leads to petrification. Let the old self crack open so new life can grow."
+    composition: "figure and hand side by side, reflective pool in foreground, dark landscape"
+
+  - name: "The Persistence of Desire"
+    description: "A landscape of soft melting forms draped over rocks and dead branches at dusk, everything sagging and yielding to gravity, a single hard diamond glinting among the softness"
+    keywords: [melting forms, dead branches, dusk, diamond, soft landscape]
+    meaning: "Everything softens with time except what you truly want. The hard thing is the real thing."
+    composition: "wide landscape of drooping forms, small bright diamond off-center, low light"
+
+  - name: "The Skull of Zurbaran"
+    description: "A human skull resting on a stone table, but upon closer looking the skull is composed of seven robed figures arranged in a precise formation, an optical illusion of life forming death"
+    keywords: [skull, robed figures, optical illusion, stone table, double image]
+    meaning: "Death and life are the same image seen differently. Shift your perspective."
+    composition: "skull filling center frame, close enough to see figures composing it, dark background"
+
+  - name: "The Corpus Hypercubus"
+    description: "A luminous figure with arms outstretched suspended before a cross made of eight unfolded golden cubes, floating above a checkerboard floor, a robed witness below gazing upward"
+    keywords: [floating figure, hypercube cross, golden cubes, checkerboard, witness]
+    meaning: "Transcendence requires unfolding into dimensions you cannot yet see."
+    composition: "vertical composition, figure on cross in upper portion, witness at bottom"
+
+  - name: "The Atomica"
+    description: "Objects floating in perfect suspension around a central point of light — a book, a chalice, drops of water, a cat, a chair — nothing touching, everything held by invisible force"
+    keywords: [floating objects, suspension, central light, levitation, atomic]
+    meaning: "Everything is mostly empty space. What holds your world together is invisible."
+    composition: "objects arranged radially around bright center point, dark background, no ground"
+
+  - name: "The Cypress"
+    description: "A tall dark cypress tree standing alone on a rocky headland above the Mediterranean, its silhouette flame-shaped against a turquoise sky, small white boats far below on calm water"
+    keywords: [cypress tree, rocky headland, Mediterranean, turquoise sky, boats]
+    meaning: "Stand in your solitude. The sentinel position is lonely but it sees the farthest."
+    composition: "tall narrow tree at center, sea and sky behind, high vantage point"
+
+  - name: "The Soft Self-Portrait"
+    description: "A drooping soft face propped up by a wooden crutch in an empty plaza, the features melting downward like warm wax, ants crawling along one closed eyelid, a calm evening sky"
+    keywords: [melting face, crutch, empty plaza, ants, soft portrait]
+    meaning: "Your identity is more flexible than you believe. Let the rigid mask soften."
+    composition: "large drooping face at center, crutch supporting from below, open plaza"
+
+  - name: "The Ship of Dreams"
+    description: "A tall sailing ship floating just above the surface of a calm sea, its sails made of translucent white bedsheets, the hull casting a shadow on the water it does not touch"
+    keywords: [floating ship, bedsheet sails, calm sea, hovering, shadow on water]
+    meaning: "The vessel is ready but has not yet committed to the water. Launch what you have been holding aloft."
+    composition: "ship centered, narrow gap between hull and water, wide open sea"
+
+  - name: "The Disintegration"
+    description: "A human figure in the act of dissolving into hundreds of small golden spheres that scatter outward into space, the core of the body still intact, the edges already particles"
+    keywords: [dissolving figure, golden spheres, scattering, disintegration, space]
+    meaning: "You are not falling apart. You are expanding beyond a form that was too small."
+    composition: "figure at center dissolving outward, particles streaming to edges, dark void"
+
+  - name: "The Key"
+    description: "A large ornate golden key half-buried in wet sand on a beach at low tide, its teeth forming the skyline of a distant city, waves approaching but not yet reaching it"
+    keywords: [golden key, wet sand, beach, city skyline teeth, approaching waves]
+    meaning: "The answer is partially revealed but time is a factor. Reach for it now."
+    composition: "key in lower frame angled in sand, city teeth silhouette, sea beyond"
+
+  - name: "The Butterfly Sail"
+    description: "An enormous monarch butterfly with sails for wings floating above a harbor, its proboscis dipped into the mast of a small wooden boat, fishermen below gazing upward in wonder"
+    keywords: [giant butterfly, sail wings, harbor, wooden boat, fishermen]
+    meaning: "Something delicate is carrying more weight than anyone expected. Do not underestimate fragility."
+    composition: "butterfly spanning upper frame, boat and figures below, harbor setting"
+
+  - name: "The Telephone in the Desert"
+    description: "A black rotary telephone sitting on cracked desert earth, its cord trailing off toward the horizon and disappearing, the receiver lifted slightly as if someone just set it down"
+    keywords: [rotary telephone, cracked earth, desert, trailing cord, horizon]
+    meaning: "Someone is trying to reach you across a great distance. Are you willing to answer?"
+    composition: "phone at center on flat desert, cord leading to vanishing point, empty sky"
+
+  - name: "The Persistence of Angels"
+    description: "A single angel with enormous wings hovering motionless in a twilight sky, but the wings are made of melting clock faces dripping downward, the angel's expression serene and still"
+    keywords: [angel, melting clock wings, twilight, hovering, serene face]
+    meaning: "Grace operates outside of time. What protects you is not bound by your deadlines."
+    composition: "angel centered in sky, melting wing detail, gradient twilight behind"
+
+  - name: "The Port of Cadaqués"
+    description: "A small Mediterranean fishing village at golden hour seen from the water, white buildings climbing a hillside, a single figure standing at the end of a stone pier, utterly still"
+    keywords: [fishing village, golden hour, white buildings, stone pier, solitary figure]
+    meaning: "Return to your origin. The place you came from holds something you still need."
+    composition: "village panorama from sea level, warm light, figure small but prominent on pier"
