@@ -83,29 +83,43 @@ def _download_image(url: str, dest: Path) -> None:
     dest.write_bytes(resp.content)
 
 
-def _run_model(model_id: str, input_data: dict) -> list[str]:
-    """Run a model via the Replicate HTTP API and return output URLs."""
+def _run_model(model_id: str, input_data: dict, _max_retries: int = 5) -> list[str]:
+    """Run a model via the Replicate HTTP API and return output URLs.
+
+    Retries with exponential backoff on 429 (rate limit) responses.
+    """
     headers = _api_headers()
 
-    # For versioned models (owner/name:version), use the predictions endpoint
-    if ":" in model_id:
-        owner_name, version = model_id.split(":", 1)
-        resp = requests.post(
-            f"{API_BASE}/predictions",
-            headers=headers,
-            json={"version": version, "input": input_data},
-            timeout=300,
-        )
-    else:
-        # For official models (owner/name), use the models run endpoint
-        resp = requests.post(
-            f"{API_BASE}/models/{model_id}/predictions",
-            headers=headers,
-            json={"input": input_data},
-            timeout=300,
-        )
+    for attempt in range(_max_retries):
+        # For versioned models (owner/name:version), use the predictions endpoint
+        if ":" in model_id:
+            owner_name, version = model_id.split(":", 1)
+            resp = requests.post(
+                f"{API_BASE}/predictions",
+                headers=headers,
+                json={"version": version, "input": input_data},
+                timeout=300,
+            )
+        else:
+            # For official models (owner/name), use the models run endpoint
+            resp = requests.post(
+                f"{API_BASE}/models/{model_id}/predictions",
+                headers=headers,
+                json={"input": input_data},
+                timeout=300,
+            )
 
-    resp.raise_for_status()
+        if resp.status_code == 429:
+            wait = 2 ** attempt * 5  # 5s, 10s, 20s, 40s, 80s
+            console.print(f"[yellow]Rate limited (429). Retrying in {wait}s...[/yellow]")
+            time.sleep(wait)
+            continue
+
+        resp.raise_for_status()
+        break
+    else:
+        # All retries exhausted
+        resp.raise_for_status()
     data = resp.json()
 
     # The "Prefer: wait" header makes Replicate block until done,

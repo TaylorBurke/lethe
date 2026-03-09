@@ -1,0 +1,184 @@
+{
+  "cards": [
+    {
+      "name": "The Melting Clock",
+      "meaning": "Time is not what it seems. Release urgency. What feels fixed is actually fluid.",
+      "reversedMeaning": "Clinging to schedules and rigidity. Fear of losing control over time. Refusing to adapt.",
+      "keywords": "melting clock, dead tree, desert, amber light, drooping watch"
+    },
+    {
+      "name": "The Elephants",
+      "meaning": "Strength concealed by fragility. Great burdens carried with hidden grace.",
+      "reversedMeaning": "Collapse under pressure. The facade of strength cracking. Asking for help you have refused to seek.",
+      "keywords": "elephants, stilt legs, obelisks, twilight, reflection"
+    },
+    {
+      "name": "The Ants",
+      "meaning": "Entropy is already at work. Attend to what you have been neglecting.",
+      "reversedMeaning": "Obsessive maintenance. Over-controlling the small things while ignoring the large. Anxiety disguised as diligence.",
+      "keywords": "ants, pocket watch, sand, spiraling pattern, decay"
+    },
+    {
+      "name": "The Cosmic Egg",
+      "meaning": "A new self is breaking through. The discomfort you feel is emergence, not destruction.",
+      "reversedMeaning": "Refusing to be born. Staying in the shell past its usefulness. Mistaking safety for growth.",
+      "keywords": "cracked egg, floating, dawn sea, golden light, emerging figure"
+    },
+    {
+      "name": "The Crutch",
+      "meaning": "What support are you leaning on? Examine whether your crutch serves or traps you.",
+      "reversedMeaning": "Throwing away support too soon. Premature independence. Pride preventing you from accepting aid.",
+      "keywords": "forked crutch, sagging cloud, barren landscape, amber sky"
+    },
+    {
+      "name": "The Burning Giraffe",
+      "meaning": "Inner conflict is consuming what you ignore. Open the drawers you have kept shut.",
+      "reversedMeaning": "The fire has burned out, leaving numbness. Emotional exhaustion from prolonged avoidance. The conflict has gone silent but is not resolved.",
+      "keywords": "burning giraffe, flames, drawer woman, desert plain"
+    },
+    {
+      "name": "The Drawers of the Self",
+      "meaning": "You contain hidden rooms. Something buried is ready to be examined.",
+      "reversedMeaning": "Slamming drawers shut. Refusing self-examination. Fear of what you might find inside.",
+      "keywords": "marble torso, open drawers, golden smoke, blue darkness"
+    },
+    {
+      "name": "The Lobster Telephone",
+      "meaning": "Communication has become absurd. Say the strange thing. Speak what feels irrational.",
+      "reversedMeaning": "Miscommunication causing real harm. Absurdity without purpose. Confusing provocation with honesty.",
+      "keywords": "red lobster, rotary telephone, polished surface, surreal still life"
+    },
+    {
+      "name": "The Eye of Time",
+      "meaning": "You are being watched by your own awareness. Perception itself is the teacher.",
+      "reversedMeaning": "Self-surveillance turned toxic. Hyper-vigilance. Watching yourself so closely that you cannot act.",
+      "keywords": "disembodied eye, clock iris, mercury tears, salt flat"
+    },
+    {
+      "name": "The Pomegranate Dream",
+      "meaning": "Something is about to jolt you awake. The unconscious is sending urgent signals.",
+      "reversedMeaning": "Ignoring dreams and intuitions. Sleeping through the alarm. Choosing comfort over the message trying to reach you.",
+      "keywords": "bursting pomegranate, leaping tigers, sleeping figure, fish, bayonet"
+    },
+    {
+      "name": "The Swans and Elephants",
+      "meaning": "Things are not what they first appear. Look at the reflection, not just the surface.",
+      "reversedMeaning": "Seeing only what you want to see. Willful illusion. Refusing the second look that would reveal the truth.",
+      "keywords": "white swans, elephant reflections, glassy lake, sunset, double image"
+    },
+    {
+      "name": "The Rhinoceros Horn",
+      "meaning": "Sacred geometry underlies the chaos. Trust the hidden order of things.",
+      "reversedMeaning": "Imposing false order on genuine chaos. Seeing patterns where there are none. Spiritual bypassing.",
+      "keywords": "rhinoceros horn, spiral, marble pedestal, cathedral light, golden ratio"
+    },
+    {
+      "name": "The Bread",
+      "meaning": "The mundane is sacred. Nourishment is found in what you overlook every day.",
+      "reversedMeaning": "Taking sustenance for granted. Starving while searching for exotic food. Neglecting basic needs in pursuit of the extraordinary.",
+      "keywords": "long baguette, rooftop, Mediterranean town, soft bread, dusk"
+    },
+    {
+      "name": "The Meditative Rose",
+      "meaning": "Beauty requires no explanation. Sit with what is exquisite without analyzing it.",
+      "reversedMeaning": "Dissecting beauty until it dies. Overthinking wonder. Inability to simply receive what is offered.",
+      "keywords": "floating rose, desert, blood drop, clear sky, enormous flower"
+    },
+    {
+      "name": "The Leaping Tigers",
+      "meaning": "Instinct is overtaking reason. Trust the primal response moving through you.",
+      "reversedMeaning": "Recklessness mistaken for instinct. Acting on impulse without discernment. Aggression posing as authenticity.",
+      "keywords": "leaping tigers, golden sky, elongated bodies, frozen motion"
+    },
+    {
+      "name": "The Muse",
+      "meaning": "Inspiration arrives through devotion to another. Who unlocks your deeper work?",
+      "reversedMeaning": "Unhealthy fixation disguised as inspiration. Losing yourself in someone else's image. The muse has become the master.",
+      "keywords": "woman in doorway, light and shadow, floating keys, dark hair, muse"
+    },
+    {
+      "name": "The Metamorphosis of Narcissus",
+      "meaning": "Self-obsession leads to petrification. Let the old self crack open so new life can grow.",
+      "reversedMeaning": "Productive self-reflection misread as vanity. Necessary introspection cut short by guilt. Not all mirrors are traps.",
+      "keywords": "kneeling figure, stone hand, cracked egg, flower, pool, metamorphosis"
+    },
+    {
+      "name": "The Persistence of Desire",
+      "meaning": "Everything softens with time except what you truly want. The hard thing is the real thing.",
+      "reversedMeaning": "Stubbornness confused with passion. Holding onto a desire that has already transformed. The diamond is actually glass.",
+      "keywords": "melting forms, dead branches, dusk, diamond, soft landscape"
+    },
+    {
+      "name": "The Skull of Zurbarán",
+      "meaning": "Death and life are the same image seen differently. Shift your perspective.",
+      "reversedMeaning": "Morbid fixation. Seeing death everywhere. Inability to shift out of a dark interpretation.",
+      "keywords": "skull, robed figures, optical illusion, stone table, double image"
+    },
+    {
+      "name": "The Corpus Hypercubus",
+      "meaning": "Transcendence requires unfolding into dimensions you cannot yet see.",
+      "reversedMeaning": "Spiritual ambition without grounding. Reaching for higher dimensions while neglecting this one. Bypassing the body.",
+      "keywords": "floating figure, hypercube cross, golden cubes, checkerboard, witness"
+    },
+    {
+      "name": "The Atomica",
+      "meaning": "Everything is mostly empty space. What holds your world together is invisible.",
+      "reversedMeaning": "Things are falling apart and the invisible bonds are failing. Loss of faith in what you cannot see or prove.",
+      "keywords": "floating objects, suspension, central light, levitation, atomic"
+    },
+    {
+      "name": "The Cypress",
+      "meaning": "Stand in your solitude. The sentinel position is lonely but it sees the farthest.",
+      "reversedMeaning": "Isolation mistaken for wisdom. Loneliness worn as a badge. Refusing connection under the guise of independence.",
+      "keywords": "cypress tree, rocky headland, Mediterranean, turquoise sky, boats"
+    },
+    {
+      "name": "The Soft Self-Portrait",
+      "meaning": "Your identity is more flexible than you believe. Let the rigid mask soften.",
+      "reversedMeaning": "Loss of self. Softening past the point of form. Not knowing who you are without the mask.",
+      "keywords": "melting face, crutch, empty plaza, ants, soft portrait"
+    },
+    {
+      "name": "The Ship of Dreams",
+      "meaning": "The vessel is ready but has not yet committed to the water. Launch what you have been holding aloft.",
+      "reversedMeaning": "Launching before the vessel is ready. Premature action. The dream touches water and begins to sink.",
+      "keywords": "floating ship, bedsheet sails, calm sea, hovering, shadow on water"
+    },
+    {
+      "name": "The Disintegration",
+      "meaning": "You are not falling apart. You are expanding beyond a form that was too small.",
+      "reversedMeaning": "Genuine collapse, not expansion. The distinction matters. Sometimes falling apart is just falling apart.",
+      "keywords": "dissolving figure, golden spheres, scattering, disintegration, space"
+    },
+    {
+      "name": "The Key",
+      "meaning": "The answer is partially revealed but time is a factor. Reach for it now.",
+      "reversedMeaning": "The key was there and the tide has come in. A missed opportunity. The answer buried deeper than before.",
+      "keywords": "golden key, wet sand, beach, city skyline teeth, approaching waves"
+    },
+    {
+      "name": "The Butterfly Sail",
+      "meaning": "Something delicate is carrying more weight than anyone expected. Do not underestimate fragility.",
+      "reversedMeaning": "The delicate thing has been overburdened and is tearing. Asking too much of what is gentle. Exploitation of softness.",
+      "keywords": "giant butterfly, sail wings, harbor, wooden boat, fishermen"
+    },
+    {
+      "name": "The Telephone in the Desert",
+      "meaning": "Someone is trying to reach you across a great distance. Are you willing to answer?",
+      "reversedMeaning": "The line is dead. The call was missed or the caller has given up. Disconnection by choice or neglect.",
+      "keywords": "rotary telephone, cracked earth, desert, trailing cord, horizon"
+    },
+    {
+      "name": "The Persistence of Angels",
+      "meaning": "Grace operates outside of time. What protects you is not bound by your deadlines.",
+      "reversedMeaning": "Demanding grace on your schedule. Impatience with the divine. Doubting protection because it has not arrived when expected.",
+      "keywords": "angel, melting clock wings, twilight, hovering, serene face"
+    },
+    {
+      "name": "The Port of Cadaqués",
+      "meaning": "Return to your origin. The place you came from holds something you still need.",
+      "reversedMeaning": "Romanticizing the past. The origin has changed or was never what you remember. Nostalgia as avoidance.",
+      "keywords": "fishing village, golden hour, white buildings, stone pier, solitary figure"
+    }
+  ]
+}
