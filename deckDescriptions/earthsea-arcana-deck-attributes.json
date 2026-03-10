@@ -1,0 +1,806 @@
+{
+  "suitAliases": [
+    { "standardName": "Wands", "alias": "Flames" },
+    { "standardName": "Cups", "alias": "Waves" },
+    { "standardName": "Swords", "alias": "Winds" },
+    { "standardName": "Pentacles", "alias": "Stones" }
+  ],
+  "rankAliases": [
+    { "standardName": "Ace", "alias": "" },
+    { "standardName": "Two", "alias": "" },
+    { "standardName": "Three", "alias": "" },
+    { "standardName": "Four", "alias": "" },
+    { "standardName": "Five", "alias": "" },
+    { "standardName": "Six", "alias": "" },
+    { "standardName": "Seven", "alias": "" },
+    { "standardName": "Eight", "alias": "" },
+    { "standardName": "Nine", "alias": "" },
+    { "standardName": "Ten", "alias": "" },
+    { "standardName": "Page", "alias": "Child" },
+    { "standardName": "Knight", "alias": "Seeker" },
+    { "standardName": "Queen", "alias": "Keeper" },
+    { "standardName": "King", "alias": "Namer" }
+  ],
+  "cards": [
+    {
+      "standardName": "The Fool",
+      "arcana": "major",
+      "suit": null,
+      "number": 0,
+      "alias": "",
+      "uprightMeaning": "You stand at the harbor of Gont with nothing but your true name hidden in your heart. The sea is wide and you do not yet know what you are. Go anyway. Every mage began as someone who did not know they were one.",
+      "reversedMeaning": "You have been given a boat and you sit in it at the dock, afraid of the horizon. The not-knowing has become not-going. A name unspoken is not the same as a name kept safe -- it is a name wasted.",
+      "keywords": "harbor, open sea, bare feet, unnamed island, dawn"
+    },
+    {
+      "standardName": "The Magician",
+      "arcana": "major",
+      "suit": null,
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "You hold the staff and the word rises in you like tide. Wind, water, fire, stone -- they answer because you have learned their names. To know the true name of a thing is not to command it. It is to understand it so deeply that it moves with you willingly.",
+      "reversedMeaning": "You speak the Old Speech as if it were a trick, a lever to pry the world open. The words still work but the Balance shifts beneath you. Power used without understanding is a debt, and this debt is coming due.",
+      "keywords": "wizard's staff, four elements, true name, Roke tower, spoken word"
+    },
+    {
+      "standardName": "The High Priestess",
+      "arcana": "major",
+      "suit": null,
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "There is a place beneath the Tombs of Atuan where no light has entered since the world was made. She who sits there knows what the darkness knows. Be still. The labyrinth teaches only those who stop trying to find the exit.",
+      "reversedMeaning": "You have sat so long in the dark that you have mistaken it for wisdom. The labyrinth is not sacred -- it is a prison you have forgotten how to leave. The knowledge you guard has become the wall that guards you.",
+      "keywords": "labyrinth, darkness, Tombs of Atuan, hidden knowledge, silence"
+    },
+    {
+      "standardName": "The Empress",
+      "arcana": "major",
+      "suit": null,
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "The Immanent Grove stands at the heart of Roke, and its roots drink from a spring older than wizardry. Nothing was planted there. Everything grew. You are in a season of growing, and the only thing required of you is not to interfere with it.",
+      "reversedMeaning": "You have tried to make the grove bear fruit on your schedule. The branches are heavy but the fruit is bitter. Creation forced is creation false. Step back from what you are tending and let it remember its own rhythm.",
+      "keywords": "Immanent Grove, spring water, green canopy, wild growth, island garden"
+    },
+    {
+      "standardName": "The Emperor",
+      "arcana": "major",
+      "suit": null,
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "The king of the Archipelago does not rule the sea. He rules because the people remember why the throne exists -- to hold the Balance when no one else will. Authority that serves is the only authority that endures.",
+      "reversedMeaning": "The throne sits in Havnor but the king has forgotten what it is for. He issues decrees to the tide and wonders why it does not obey. You have confused the chair with the duty. The Archipelago will not be ruled by someone who rules only for the ruling.",
+      "keywords": "throne of Havnor, Archipelago, crown, stone hall, duty"
+    },
+    {
+      "standardName": "The Hierophant",
+      "arcana": "major",
+      "suit": null,
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "On Roke the Masters teach what can be taught, and then they fall silent. The school exists not to fill you but to show you the shape of what you do not know. The greatest lesson is the one the teacher cannot speak.",
+      "reversedMeaning": "The school has become the doctrine. The Masters repeat the forms but the meaning has leaked out like water from a cracked hull. You are teaching the words without the silence between them, and your students learn only noise.",
+      "keywords": "School of Roke, Masters, old books, rune stones, courtyard"
+    },
+    {
+      "standardName": "The Lovers",
+      "arcana": "major",
+      "suit": null,
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "Two people stand on different islands and the sea between them is honest. It hides nothing. To choose someone is to choose the distance too -- the crossing, the effort, the salt. Love in Earthsea is a voyage, not a harbor.",
+      "reversedMeaning": "You chose the island and refused the sea. Or you chose the sea and forgot there must be a shore to sail toward. Connection without commitment is driftwood. Commitment without honesty is a locked tomb.",
+      "keywords": "two islands, crossing, salt wind, joined hands, open water"
+    },
+    {
+      "standardName": "The Chariot",
+      "arcana": "major",
+      "suit": null,
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "The magewind fills your sail and the prow cuts the water clean. You called this wind with your will and it answers. But the sea is not your road -- you are borrowing passage across something far older than your purpose.",
+      "reversedMeaning": "You have called the magewind so hard and so long that the weather has broken around you. The sail tears. The sea does not punish -- it simply is, and you have forgotten that your will is not the only force upon the water.",
+      "keywords": "magewind, sailboat, Lookfar, prow, determination"
+    },
+    {
+      "standardName": "Strength",
+      "arcana": "major",
+      "suit": null,
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "The dragon lands before you and you do not raise your staff. You speak its name. Not to bind it but to greet it as what it is. The greatest strength is the hand that remains open when every instinct says to make a fist.",
+      "reversedMeaning": "You met the dragon and tried to master it. Or worse, you tried to become it. Strength turned to domination is the oldest error in the Archipelago, and the dragon remembers every wizard who made it.",
+      "keywords": "dragon, open hands, true name, courage, gentle power"
+    },
+    {
+      "standardName": "The Hermit",
+      "arcana": "major",
+      "suit": null,
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "Ogion walked the mountain paths of Gont and said little. He watched the falcon and the rain and the way moss grows on the north side of stones. He was not waiting for wisdom. He was letting wisdom find its own pace.",
+      "reversedMeaning": "You have been alone so long that solitude has become hiding. Ogion's silence was full. Yours is empty. The mountain does not care whether you are meditating or merely avoiding the valley. Go down.",
+      "keywords": "Gont mountain, Ogion, staff, silence, falcon"
+    },
+    {
+      "standardName": "Wheel of Fortune",
+      "arcana": "major",
+      "suit": null,
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "The Balance turns. What was full empties. What was empty fills. This is not cruelty -- it is the way the world breathes. You are in the turning now. Do not cling to what was. The tide that takes also brings.",
+      "reversedMeaning": "You have tried to stop the wheel with your hands and your hands are bleeding. The Balance does not pause for anyone who demands it pause. You are not being punished. You are being moved, and your resistance is the only thing that hurts.",
+      "keywords": "turning tide, Balance, seasons, Archipelago currents, change"
+    },
+    {
+      "standardName": "Justice",
+      "arcana": "major",
+      "suit": null,
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "Every act of magic shifts the world. Light a candle and the shadow grows. Heal the sick tree and somewhere a healthy one bends. The Equilibrium does not judge -- it balances. You are being asked to see the full weight of what you have done.",
+      "reversedMeaning": "You took from one side of the Balance and did not look at what fell on the other. The Equilibrium is patient but it is not forgiving. What you shifted is shifting back, and it will not land gently.",
+      "keywords": "Equilibrium, scales, shadow and light, cost, reckoning"
+    },
+    {
+      "standardName": "The Hanged Man",
+      "arcana": "major",
+      "suit": null,
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "The wizard who cannot act learns to see. Suspended between doing and being, you discover that the world looks entirely different from this angle. Surrender is not defeat. It is the moment before understanding.",
+      "reversedMeaning": "You hang and call it patience, but you are only afraid to fall. There is no revelation coming. You have seen what there is to see from here. Cut yourself down and walk with what you learned, or admit you learned nothing.",
+      "keywords": "suspension, inversion, stillness, new sight, between worlds"
+    },
+    {
+      "standardName": "Death",
+      "arcana": "major",
+      "suit": null,
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "The dry land is real. The low stone wall is real. On the other side, the stars do not move and the grass does not grow and the dead stand still. But you are not dead. You are here to understand that the wall exists, and that it is not a wall to be climbed.",
+      "reversedMeaning": "You have tried to open the door between the living and the dead, or to close it forever. Both are the same error. The wall in the dry land was not built to be broken. Every mage who tried to cheat death cracked the world a little wider.",
+      "keywords": "dry land, stone wall, still stars, passage, completion"
+    },
+    {
+      "standardName": "Temperance",
+      "arcana": "major",
+      "suit": null,
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "Where the river meets the sea the water is neither fresh nor salt. The herons stand there because that is where the richest life gathers -- in the place where two things blend and become a third. You are in such a place now. Do not choose sides.",
+      "reversedMeaning": "You have refused the blending. Fresh here, salt there, everything in its separate jar. But life happens in the estuary, not the source. Your insistence on purity is a kind of poverty, and the herons have gone elsewhere.",
+      "keywords": "estuary, blending, heron, balance, moderation"
+    },
+    {
+      "standardName": "The Devil",
+      "arcana": "major",
+      "suit": null,
+      "number": 15,
+      "alias": "",
+      "uprightMeaning": "The shadow has your face. It always did. When Ged loosed his shadow at Roke it wore his shape because it was his shape -- the self he would not claim. What binds you is not the darkness. It is your refusal to recognize it as your own.",
+      "reversedMeaning": "You have been running from your shadow so long that it has grown stronger than you. It does not chase -- it waits. And the longer you deny it your name, the louder it will speak it for you, in places you cannot control.",
+      "keywords": "shadow self, mirror, Ged's shadow, bondage, denial"
+    },
+    {
+      "standardName": "The Tower",
+      "arcana": "major",
+      "suit": null,
+      "number": 16,
+      "alias": "",
+      "uprightMeaning": "Dragonfire does not burn what is true. It burns what was built on false foundations -- the tower of pride, the fortress of certainty. When the dragon comes, let the false tower fall. What remains standing is what was always real.",
+      "reversedMeaning": "The tower fell and you are rebuilding it with the same stones in the same pattern. The dragon's fire was not a punishment but a revelation, and you have learned nothing from the wreckage. Build differently or do not build at all.",
+      "keywords": "dragonfire, falling tower, rubble, revelation, false foundations"
+    },
+    {
+      "standardName": "The Star",
+      "arcana": "major",
+      "suit": null,
+      "number": 17,
+      "alias": "",
+      "uprightMeaning": "After the tower falls, the tide pool remains. Small, clear, reflecting stars. This is enough. After ruin, there is always this -- a still place where the light gathers. Kneel down. Drink. You have survived what you thought would destroy you.",
+      "reversedMeaning": "The stars are there but you will not look up. You sit in the wreckage and refuse the comfort of the tide pool. Hope is not naive -- it is the first act of rebuilding. Your refusal to begin again is not grief. It is pride wearing grief's clothing.",
+      "keywords": "tide pool, starlight, hope, clear water, night shore"
+    },
+    {
+      "standardName": "The Moon",
+      "arcana": "major",
+      "suit": null,
+      "number": 18,
+      "alias": "",
+      "uprightMeaning": "The sea at night is not the sea by day. Things move beneath the surface that have no names in the common tongue. You are sailing dark water now. Trust is not certainty -- it is the willingness to cross without seeing the far shore.",
+      "reversedMeaning": "You have mistaken the moon's reflection for the moon. Illusion is not always a lie -- sometimes it is a truth you are not yet ready to see directly. But you have been staring at the reflection so long you have forgotten to look up.",
+      "keywords": "night sea, moonlight, illusion, deep water, unseen things"
+    },
+    {
+      "standardName": "The Sun",
+      "arcana": "major",
+      "suit": null,
+      "number": 19,
+      "alias": "",
+      "uprightMeaning": "The children on the bright shore of Gont do not know what the wizards know. They know something better -- that the sun is warm, that the water is good for swimming, that the day is long enough for everything that matters. Remember this.",
+      "reversedMeaning": "You have forgotten simple joy. The wizard who cannot sit on a warm rock and watch children play has lost something no spell can restore. Your knowledge has cost you the bright shore, and you did not notice the price until now.",
+      "keywords": "bright shore, children, warm stone, clear day, simple joy"
+    },
+    {
+      "standardName": "Judgement",
+      "arcana": "major",
+      "suit": null,
+      "number": 20,
+      "alias": "",
+      "uprightMeaning": "The tombs are open. What was buried in the dark has risen into the light -- not as a ghost but as a truth finally acknowledged. You are being called to stand in your whole self, shadow and light together, and answer to your true name.",
+      "reversedMeaning": "The call has come and you have covered your ears. The tombs are open but you are trying to seal them shut again. What has been unearthed cannot be reburied. You will answer to your name eventually. The only question is whether you answer willingly.",
+      "keywords": "open tombs, emergence, true name spoken, awakening, wholeness"
+    },
+    {
+      "standardName": "The World",
+      "arcana": "major",
+      "suit": null,
+      "number": 21,
+      "alias": "",
+      "uprightMeaning": "The dragon and the human were one people once, before the division. In completion, they remember each other. The dance is the oldest magic -- not the Old Speech, not the runes, but the turning of the world itself. You have arrived where you began, and you know the place for the first time.",
+      "reversedMeaning": "The dance has stopped because you are trying to lead it. Completion is not a destination you reach by walking faster. The dragon waits. The world turns. You are the only one who believes the circle is not already closed.",
+      "keywords": "dragon and human, dance, completion, Archipelago whole, circle closed"
+    },
+    {
+      "standardName": "Ace of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 1,
+      "alias": "Ace of Flames",
+      "uprightMeaning": "A single flame leaps from the wizard's staff -- unbidden, bright, the first spark of a power you did not know you carried. This is the raw fire of will before it has been shaped into spell or purpose. Hold it gently. Dragonfire and hearth-fire begin the same way.",
+      "reversedMeaning": "The spark came and you crushed it in your fist, afraid of what it might burn. Or you flung it carelessly and now the dry grass catches. The first flame demands respect, not fear and not recklessness. You have offered it one or the other.",
+      "keywords": "spark, wizard's staff, dragonfire, new power, ignition"
+    },
+    {
+      "standardName": "Two of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 2,
+      "alias": "Two of Flames",
+      "uprightMeaning": "You stand on the sea-cliff of Gont holding a flame in each hand -- one for the known island, one for the unknown sea. The choice between safety and calling is not really a choice. You already know which flame burns brighter.",
+      "reversedMeaning": "Two paths, two fires, and you stand between them until both gutter out. The fear of choosing wrong has become the wrong choice. The cliff does not care how long you stand on it. The sea is patient, but your fire is not.",
+      "keywords": "two flames, sea-cliff, horizon, choice, planning"
+    },
+    {
+      "standardName": "Three of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 3,
+      "alias": "Three of Flames",
+      "uprightMeaning": "Three masts on the horizon, each carrying fire-light from a different island. Your will has gone out into the world and the world is answering. The ships are coming in. What you set in motion is returning to you, multiplied.",
+      "reversedMeaning": "The ships you sent out have not returned, or they return empty. You cast your will across the water without checking the wind or the current. Ambition without attention is a fleet with no captain, and the Archipelago is wide enough to swallow it.",
+      "keywords": "three masts, horizon, returning ships, expansion, foresight"
+    },
+    {
+      "standardName": "Four of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 4,
+      "alias": "Four of Flames",
+      "uprightMeaning": "Four torches mark the corners of the celebration ground on the night a new mage is named. The community gathers because one person's fire warms everyone. Tonight the work rests. Tonight the flames are for joy.",
+      "reversedMeaning": "The celebration is hollow. The torches burn but the people stand apart, watching each other instead of the fire. You have built something worth celebrating and then forgotten to invite anyone to share it. A solitary festival is just a man standing among torches.",
+      "keywords": "four torches, celebration, naming day, community, homecoming"
+    },
+    {
+      "standardName": "Five of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 5,
+      "alias": "Five of Flames",
+      "uprightMeaning": "Five apprentices in the practice yard at Roke, each casting a different wind against the others. This is not war -- it is learning. Friction sharpens the will the way a whetstone sharpens iron. Let the contest teach you where your power meets its edge.",
+      "reversedMeaning": "The practice bout has turned bitter. Someone forgot this was training and now the winds are tearing the yard apart. Competition that serves no learning is just destruction wearing a teacher's mask. Put down the staff before the damage is real.",
+      "keywords": "five staffs, practice yard, Roke apprentices, competition, friction"
+    },
+    {
+      "standardName": "Six of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 6,
+      "alias": "Six of Flames",
+      "uprightMeaning": "The mage returns to the village with the sickness healed and the drought broken. The people line the road with torches. This is earned fire -- the recognition that comes when power has been used in service. Accept it. You did this well.",
+      "reversedMeaning": "You walk the torchlit road but the healing was incomplete, or it was not yours to claim. Glory taken for work half-done is a debt to the Balance. The village will remember, and their memory is longer than your pride.",
+      "keywords": "torchlit road, return, recognition, earned honor, village"
+    },
+    {
+      "standardName": "Seven of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 7,
+      "alias": "Seven of Flames",
+      "uprightMeaning": "You hold the high ground on the cliff path and the challengers come from below. Your staff is steady and your fire is your own. You did not seek this fight but you will not yield the ground. Some positions are worth the holding.",
+      "reversedMeaning": "You hold the cliff path out of stubbornness, not conviction. The challengers may be right. The ground you defend may not be worth the fire you are spending. Know the difference between courage and refusal to retreat from a lost position.",
+      "keywords": "cliff path, high ground, lone stand, defiance, staff raised"
+    },
+    {
+      "standardName": "Eight of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 8,
+      "alias": "Eight of Flames",
+      "uprightMeaning": "Eight bolts of magelight cross the night sky like falling stars over the Archipelago. Everything is in motion. Messages sent, spells cast, winds called -- all of it flying toward its target. There is nothing to do now but let the fire land where it will.",
+      "reversedMeaning": "The magelight scatters. Too many spells at once, too many messages that contradict each other. You threw everything into the air and now nothing is landing where you aimed. Speed without direction is just beautiful chaos, and chaos does not serve.",
+      "keywords": "magelight, falling stars, swift passage, messages, momentum"
+    },
+    {
+      "standardName": "Nine of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 9,
+      "alias": "Nine of Flames",
+      "uprightMeaning": "You have been walking the fire-road for so long that your staff is charred and your hands are burned. But you are still walking. The last stretch of any great working is the hardest, and you are in it now. Your endurance is its own kind of magic.",
+      "reversedMeaning": "The fire has burned you down to stubbornness and stubbornness alone. You cannot tell the difference between perseverance and punishment anymore. The wise mage knows when the working has taken too much. Set down the staff before it sets down you.",
+      "keywords": "charred staff, burned hands, endurance, last stretch, weariness"
+    },
+    {
+      "standardName": "Ten of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 10,
+      "alias": "Ten of Flames",
+      "uprightMeaning": "Ten fires, and you tend them all. The hearth, the forge, the lighthouse, the signal tower -- every flame in the village answers to your keeping. The burden is real. But so is the warmth. Carry it a little farther. The door is close.",
+      "reversedMeaning": "You carry ten fires and nine of them are not yours. The village has given you every flame because you never said no, and now you are burning from the inside. Put down what is not yours to carry. The Balance does not reward martyrdom.",
+      "keywords": "ten fires, burden, lighthouse, village keeper, heavy staff"
+    },
+    {
+      "standardName": "Page of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 11,
+      "alias": "Child of Flames",
+      "uprightMeaning": "The goatherd's child on Gont who calls fire to their fingertips for the first time -- laughing, startled, delighted. The power is raw and untrained and absolutely real. This is the moment before the school, before the staff, before the cost is understood. Let the wonder stay a little longer.",
+      "reversedMeaning": "The child plays with fire and does not yet understand that fire plays back. Wonder without caution is how barns burn down. Someone needs to teach this one the word for fire before the fire teaches them its word for pain.",
+      "keywords": "young fire-caller, Gont, goat path, wonder, raw spark"
+    },
+    {
+      "standardName": "Knight of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 12,
+      "alias": "Seeker of Flames",
+      "uprightMeaning": "The young mage who sails alone to find the dragon -- not to slay it, but to speak with it. The Seeker of Flames crosses open water with nothing but will and curiosity and a staff that has not yet learned all its uses. The journey is the teaching.",
+      "reversedMeaning": "The seeker has confused speed with purpose. Sailing toward the dragon without learning its name first is not bravery -- it is appetite dressed as courage. The fire you chase will not be impressed by your haste. Slow down. Study. Then sail.",
+      "keywords": "lone sailor, dragon quest, young mage, open water, burning ambition"
+    },
+    {
+      "standardName": "Queen of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 13,
+      "alias": "Keeper of Flames",
+      "uprightMeaning": "She tends the great hearth where the council of mages gathers. Her fire does not blaze -- it endures. She knows which logs to add and when to let the coals breathe. The Keeper of Flames understands that the most powerful fire is the one that lasts through the night.",
+      "reversedMeaning": "The hearth-keeper has become the hearth-hoarder, feeding the fire so fiercely that no one can sit near it. Your passion has become your territory and you guard it with heat instead of warmth. The council has moved to a cooler room.",
+      "keywords": "great hearth, council fire, enduring flame, warmth, steady power"
+    },
+    {
+      "standardName": "King of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 14,
+      "alias": "Namer of Flames",
+      "uprightMeaning": "The Namer of Flames knows the true name of fire -- not just its heat and light, but its hunger, its patience, its kinship with the dragon. He speaks and the fire answers not as servant but as equal. This is mastery: not control, but communion with the force you wield.",
+      "reversedMeaning": "The master has forgotten that fire has its own will. He commands the flame as if naming were owning, and the fire obeys -- for now. But a named thing that is not respected will find the moment when the namer's attention slips. And fire is very patient.",
+      "keywords": "fire-namer, dragon-kin, mastery, staff of power, true command"
+    },
+    {
+      "standardName": "Ace of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 1,
+      "alias": "Ace of Waves",
+      "uprightMeaning": "A single wave reaches the shore of an island you have never seen. It carries salt and warmth and the smell of a place you have not been yet. This is the first feeling -- the one that arrives before you have a name for it. Let it wash over your feet. You do not need to understand it yet.",
+      "reversedMeaning": "The wave came and you stepped back from it. The feeling arrived and you refused to feel it. The shore is dry where you stand and the water has gone back out. You cannot reject the tide forever. It knows where the shore is.",
+      "keywords": "first wave, unknown shore, new feeling, salt spray, arrival"
+    },
+    {
+      "standardName": "Two of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 2,
+      "alias": "Two of Waves",
+      "uprightMeaning": "Two currents meet between the islands and the water turns a deeper blue where they join. This is how it feels when two people recognize each other -- not by face or name, but by the way their waters run together without either one losing its course.",
+      "reversedMeaning": "The two currents clash instead of blending. You brought your whole tide to the meeting and so did they, and now the water is rough and neither of you can see the bottom. Connection requires that someone ease their current first. It might need to be you.",
+      "keywords": "two currents, meeting waters, recognition, partnership, deep blue"
+    },
+    {
+      "standardName": "Three of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 3,
+      "alias": "Three of Waves",
+      "uprightMeaning": "Three boats anchor in the same cove and the sailors share what they have carried across the water -- wine, stories, the names of stars they navigated by. Tonight the cove holds more than any one boat could carry. Abundance is what happens when separate voyages converge.",
+      "reversedMeaning": "The three boats rock in the cove but the sailors do not come ashore. Or they come ashore and find they have nothing to share, each having drunk their own wine on the crossing. Community is not proximity. It is the willingness to pour from your own cup.",
+      "keywords": "harbor cove, shared wine, three sailors, starlight, fellowship"
+    },
+    {
+      "standardName": "Four of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 4,
+      "alias": "Four of Waves",
+      "uprightMeaning": "The sea is calm and the boat does not move. You sit on still water and the horizon offers you nothing new. But look down. The still water is the clearest water, and what lies beneath it has been waiting for you to stop moving long enough to see.",
+      "reversedMeaning": "You have been becalmed so long that you have stopped looking at the water entirely. Apathy is not peace. The sea offered you stillness so you could see deeper, and you closed your eyes. The opportunity below the surface will not wait forever.",
+      "keywords": "still water, becalmed boat, looking down, missed depth, apathy"
+    },
+    {
+      "standardName": "Five of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 5,
+      "alias": "Five of Waves",
+      "uprightMeaning": "Three jars of fresh water have cracked and spilled on the deck, and the salt sea has taken what was sweet. You stand in the puddle of your loss. But two jars remain, and the island ahead has a spring. Grief is real. So is what survives it.",
+      "reversedMeaning": "You mourn the three broken jars and have forgotten the two that are whole. Worse, you have forgotten the spring on the island ahead. Grief that refuses all comfort is not deeper grief -- it is grief that has fallen in love with itself.",
+      "keywords": "spilled water, broken jars, salt tears, remaining hope, island spring"
+    },
+    {
+      "standardName": "Six of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 6,
+      "alias": "Six of Waves",
+      "uprightMeaning": "The old fisherman on Gont mends nets the way his mother taught him, with the same knots, in the same order. The sea has not changed. The knots have not changed. There is a kind of sweetness in the things that hold -- the old patterns, the first harbor, the water that tastes like home.",
+      "reversedMeaning": "You are mending nets for a harbor you no longer sail from. The nostalgia has become a cage, the old patterns a refusal to learn new knots. Gont is still there. You do not need to live in your memory of it when the real island is under your feet.",
+      "keywords": "old nets, Gont harbor, mother's knots, childhood, memory"
+    },
+    {
+      "standardName": "Seven of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 7,
+      "alias": "Seven of Waves",
+      "uprightMeaning": "Seven islands rise from the mist, each one beautiful, each one promising what you most desire. The illusion-master on Roke could show you more. But only one island is real, and the only way to find it is to sail to each one and test the ground beneath your feet.",
+      "reversedMeaning": "You have been sailing from mirage to mirage and calling it exploration. The mist islands are your own projections and you know it. Choose one real thing. Let the other six dissolve. The mist does not mind. It was never what you wanted anyway.",
+      "keywords": "mist islands, illusion, seven visions, desire, choosing"
+    },
+    {
+      "standardName": "Eight of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 8,
+      "alias": "Eight of Waves",
+      "uprightMeaning": "You leave the harbor at night, with the tide, and you do not look back. The cups you drank from were good cups. The water was sweet. But something deeper calls you toward the open sea, and you trust it more than you trust your comfort. This leaving is not loss. It is the tide pulling you where you need to go.",
+      "reversedMeaning": "You left the harbor but you are still looking over your shoulder. Or you never left at all, and the tide went out without you. The call to deeper water does not repeat itself many times. If you will not go, the current will move on without you.",
+      "keywords": "night departure, leaving harbor, deeper water, moonlit sail, following the call"
+    },
+    {
+      "standardName": "Nine of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 9,
+      "alias": "Nine of Waves",
+      "uprightMeaning": "The sailor who has crossed every reach of the Archipelago sits in a warm kitchen with a full cup and the sound of rain on the roof. This is contentment earned by salt and distance. The sea gave you this. Drink slowly. You have come far enough to rest.",
+      "reversedMeaning": "The cup is full but you cannot taste it. You sit in the warm kitchen and think only of the sea. Contentment offered and contentment received are not the same thing. The rain falls on the roof for you. Can you hear it, or are you already planning the next voyage?",
+      "keywords": "warm kitchen, full cup, rain on roof, contentment, earned rest"
+    },
+    {
+      "standardName": "Ten of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 10,
+      "alias": "Ten of Waves",
+      "uprightMeaning": "The whole village gathers at the shore to watch the boats come home. Every face is known. Every current between these people runs clear. This is not perfection -- it is belonging. The Archipelago is made of islands, but the sea between them is what makes them a world.",
+      "reversedMeaning": "The village stands at the shore but the boats are late, or the faces have changed, or the currents between people have gone muddy. Belonging is not a thing you achieve once. It is tended like a net, mended like a hull. You have let the work of connection lapse, and the water between you and yours has grown cold.",
+      "keywords": "village shore, boats returning, belonging, clear water, Archipelago home"
+    },
+    {
+      "standardName": "Page of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 11,
+      "alias": "Child of Waves",
+      "uprightMeaning": "The child who finds a shell on the beach and holds it to their ear hears the whole sea in that spiral. They do not question it. The feeling is the knowledge, and the knowledge is enough. This is intuition before it learns to doubt itself -- pure, startled, shining.",
+      "reversedMeaning": "The child holds the shell but hears nothing, or hears something that frightens them and throws the shell away. The first feelings are the most fragile. If they are mocked or ignored, the ear closes, and the sea becomes just noise.",
+      "keywords": "shell, beach child, listening, first intuition, spiral"
+    },
+    {
+      "standardName": "Knight of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 12,
+      "alias": "Seeker of Waves",
+      "uprightMeaning": "The Seeker of Waves sails not toward a destination but toward a feeling -- the pull of the current that says this way, this way. They follow the heart's compass across the open Reaches, trusting that the water knows where to take them even when the charts run out.",
+      "reversedMeaning": "The seeker follows every current and arrives nowhere. Feeling without direction is drifting, and the open Reaches are not kind to those who drift. Your heart's compass needs calibrating. Find north before you sail again.",
+      "keywords": "heart's compass, open Reaches, following current, romantic voyage, trust"
+    },
+    {
+      "standardName": "Queen of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 13,
+      "alias": "Keeper of Waves",
+      "uprightMeaning": "She sits by the deep well that feeds the island's spring. She knows every current that passes beneath the rock, every mood the sea takes in every season. The Keeper of Waves does not control the water. She remembers it, and in remembering, she understands what it will do next.",
+      "reversedMeaning": "The well-keeper has drowned in her own depths. She feels everything and filters nothing, and the water has risen above her head. Empathy without boundaries is not compassion. It is drowning with company. Come up for air before you pull others under.",
+      "keywords": "deep well, spring, island keeper, empathy, sea-memory"
+    },
+    {
+      "standardName": "King of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 14,
+      "alias": "Namer of Waves",
+      "uprightMeaning": "The Namer of Waves speaks the true name of the sea and the sea is still. Not silenced -- known. He holds the depth and the storm and the calm within himself without being swept away by any of them. Mastery of emotion is not the absence of feeling. It is the capacity to feel everything and still steer true.",
+      "reversedMeaning": "The master of the sea has become the sea's prisoner. He named the water to contain it and now he cannot release it. Emotional mastery that becomes emotional suppression is a dam, and every dam breaks eventually. Let something flow before the wall gives way on its own.",
+      "keywords": "sea-namer, calm depth, emotional mastery, still surface, deep current"
+    },
+    {
+      "standardName": "Ace of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 1,
+      "alias": "Ace of Winds",
+      "uprightMeaning": "A single word in the Old Speech, spoken clearly, cuts through every confusion like the first wind of morning. This is truth before it has been argued or interpreted -- one clean syllable that names what is. Speak it. The air has been waiting to carry it.",
+      "reversedMeaning": "The word was spoken too soon, or too loudly, or without understanding what the Old Speech does to the air it passes through. A truth used as a weapon is still a truth, but the wound it leaves is not what truth is for.",
+      "keywords": "first word, Old Speech, clear wind, single truth, morning air"
+    },
+    {
+      "standardName": "Two of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 2,
+      "alias": "Two of Winds",
+      "uprightMeaning": "Two winds blow from opposite directions and your sail luffs uselessly between them. You cannot sail both ways. But you can wait. The winds will shift, or you will see which one carries rain and which one carries clear sky, and then you will choose.",
+      "reversedMeaning": "You have been waiting for the winds to decide for you, and they will not. The stalemate is yours, not the sky's. A decision avoided is a decision made -- you have chosen paralysis, and the sea does not care for your reasons.",
+      "keywords": "two winds, luffing sail, crossroads, stalemate, waiting"
+    },
+    {
+      "standardName": "Three of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 3,
+      "alias": "Three of Winds",
+      "uprightMeaning": "Three words spoken in the Old Speech that cannot be unspoken. They hang in the air like hawks. The truth has cut you, yes. But the wound is clean, and clean wounds heal. It is the things left unsaid that fester.",
+      "reversedMeaning": "The three words were said to wound, not to clarify. The Old Speech was not made for cruelty, and when it is used for cruelty, the speaker's tongue remembers. You have spoken truth like a blade and now the blade hangs in the air between you.",
+      "keywords": "three cutting words, heartbreak, Old Speech, clean wound, hawks"
+    },
+    {
+      "standardName": "Four of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 4,
+      "alias": "Four of Winds",
+      "uprightMeaning": "The wind falls and the sea goes flat and the mind rests. In the quiet room on Roke where the students sleep, the air holds still because even thought needs to be set down. Rest your mind the way you rest your body. The words will be there when you wake.",
+      "reversedMeaning": "You call it rest but your mind will not stop naming things. You lie in the quiet room and the winds blow through your skull without ceasing. This is not rest. This is exhaustion pretending to sleep. Until you truly stop thinking, you are not truly still.",
+      "keywords": "quiet room, still air, Roke, rest, sleeping student"
+    },
+    {
+      "standardName": "Five of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 5,
+      "alias": "Five of Winds",
+      "uprightMeaning": "The argument is over and you hold the field, but the wind smells like ash. You won with words what should have been won with understanding, and the others have gone silent not because you were right but because they are tired of the gale. A victory that empties the room is not a victory.",
+      "reversedMeaning": "You lost the argument and the loss sits in you like a bone in the throat. But the words that defeated you may have been true. The hardest wind to face is the one that carries a truth you do not want to hear. Stand in it anyway.",
+      "keywords": "empty field, hollow victory, scattered opponents, ash-wind, argument"
+    },
+    {
+      "standardName": "Six of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 6,
+      "alias": "Six of Winds",
+      "uprightMeaning": "The boat moves across calm water toward a shore you have not seen. Behind you, the island of sorrow grows small. The passage is quiet and the wind is kind, carrying you from what was to what will be. You do not need to know the name of the new shore yet. You only need to stay in the boat.",
+      "reversedMeaning": "The boat moves but you are rowing backward, staring at the shore you left. The passage cannot carry you forward if your eyes refuse to look ahead. Let the island of sorrow shrink. It will still be there if you need to remember it. But you do not need to watch it go.",
+      "keywords": "calm passage, leaving sorrow, quiet boat, new shore, kind wind"
+    },
+    {
+      "standardName": "Seven of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 7,
+      "alias": "Seven of Winds",
+      "uprightMeaning": "The trickster who steals words from the wind and rearranges them -- not lying, exactly, but letting others hear what they expect to hear. Cleverness has its season. But in the Old Speech there are no half-truths, and you are living in the Old Speech whether you like it or not.",
+      "reversedMeaning": "The trick has been discovered. The stolen words blow back to their owners and they recognize what you rearranged. Cleverness used against trust is the most expensive bargain in the Archipelago. The wind remembers every word it has carried, and it does not forget who rearranged them.",
+      "keywords": "stolen words, trickster, rearranged truth, wind-thief, cleverness"
+    },
+    {
+      "standardName": "Eight of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 8,
+      "alias": "Eight of Winds",
+      "uprightMeaning": "Eight winds press against you from every direction and you cannot move. But look -- your hands are free. The binding is in your mind, not in the air. The winds are your own thoughts circling, and they will part the moment you speak one true thing.",
+      "reversedMeaning": "You realized the winds were your own thoughts and you are still standing there. Knowing the prison is self-made does not open it. Only action opens it. Speak the word. Any true word. The first syllable is the hardest; the rest will follow.",
+      "keywords": "eight winds, mental prison, bound mind, one true word, circling thoughts"
+    },
+    {
+      "standardName": "Nine of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 9,
+      "alias": "Nine of Winds",
+      "uprightMeaning": "You lie awake while the wind howls through the rigging and every thought is a blade. The fears that come at three in the morning wear the faces of things you cannot fix. But the wind always sounds worse from inside the cabin. Go on deck. See the actual weather. It is rarely as terrible as the sound of it suggested.",
+      "reversedMeaning": "You went on deck and the storm was real. Sometimes the fear is accurate and the night is exactly as dark as it sounds. In that case, lash yourself to the mast and wait. The storm will pass. They always pass. But this one is not imaginary, and pretending it is will not save you.",
+      "keywords": "night howl, sleepless, rigging, dark thoughts, cabin fear"
+    },
+    {
+      "standardName": "Ten of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 10,
+      "alias": "Ten of Winds",
+      "uprightMeaning": "Every word has been said. Every wind has blown through you. You lie flat on the deck and the storm is over and you are not dead, though you thought you would be. The worst has passed. It does not feel like relief yet. It will. For now, lie still and breathe the air that has finally gone quiet.",
+      "reversedMeaning": "The storm ended but you are still bracing for it. You cannot believe the wind has stopped. You lie on the deck waiting for the next gale and the sky is blue and the sea is calm and your body has not received the message. Rest. It is truly over.",
+      "keywords": "spent storm, flat calm, aftermath, survival, still deck"
+    },
+    {
+      "standardName": "Page of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 11,
+      "alias": "Child of Winds",
+      "uprightMeaning": "The apprentice who names the hawk before studying its flight has learned a word but not a truth. Sit longer. Watch more. The name will come when you have earned it. This child hears every wind and wants to answer them all. Patience. One wind at a time.",
+      "reversedMeaning": "The child has a sharp tongue and uses it before the mind has finished thinking. Words launched without understanding are arrows fired in the dark -- they may hit something, but not what you aimed at. Learn the weight of what you say before you say more of it.",
+      "keywords": "young namer, hawk-watching, sharp tongue, curiosity, apprentice"
+    },
+    {
+      "standardName": "Knight of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 12,
+      "alias": "Seeker of Winds",
+      "uprightMeaning": "The Seeker of Winds chases the word to its source. Across the Reaches, into the libraries of Roke, through the oldest runes -- this one will not rest until the true name is found. The pursuit of truth is noble. But remember: the truth, once found, must be carried gently. It is heavier than you think.",
+      "reversedMeaning": "The seeker mistakes speed for insight. You have crossed three Reaches and read nine libraries and you are no closer to the name because you are reading for confirmation, not understanding. The true name does not yield to haste. It yields to honesty.",
+      "keywords": "rune-chaser, Roke library, relentless pursuit, wind-rider, truth-seeker"
+    },
+    {
+      "standardName": "Queen of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 13,
+      "alias": "Keeper of Winds",
+      "uprightMeaning": "She has heard every wind that blows through the Archipelago and she can tell you which carries truth and which carries rumor. The Keeper of Winds does not speak often, but when she does, her words have been tested against every gale. Trust her clarity. It was earned in storms.",
+      "reversedMeaning": "The keeper's clarity has become coldness. She tests every word so rigorously that warmth cannot survive the examination. Truth without compassion is a wind that strips the leaves from every tree it touches. You are right, and you are alone, and the two facts are not unrelated.",
+      "keywords": "wind-reader, clarity, tested truth, sharp gaze, solitary tower"
+    },
+    {
+      "standardName": "King of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 14,
+      "alias": "Namer of Winds",
+      "uprightMeaning": "The Namer of Winds speaks and the air rearranges itself around his words. He does not command the wind -- he knows it so thoroughly that when he speaks its name, the wind recognizes itself in his voice. This is the mastery of thought: not to control what is true, but to speak it so clearly that reality nods.",
+      "reversedMeaning": "The master namer has begun to believe his words create the wind rather than name it. When thought mistakes itself for reality, the naming goes wrong. The wind does not need your permission to blow, and the day you forget that is the day your words become lies.",
+      "keywords": "wind-namer, Old Speech master, air bending, absolute clarity, spoken authority"
+    },
+    {
+      "standardName": "Ace of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 1,
+      "alias": "Ace of Stones",
+      "uprightMeaning": "A single stone from the mountain of Gont, smooth and heavy in your palm. It does not glow. It does not speak. It is simply there, solid and real, the way the earth is real when everything else shifts. This is the foundation. Build on it.",
+      "reversedMeaning": "You hold the stone and do nothing with it. A foundation unlaid is just a rock in your pocket, growing heavier each day you carry it instead of setting it down where it belongs. The mountain gave you this for a reason. Use it or return it.",
+      "keywords": "Gont stone, foundation, solid ground, first offering, mountain gift"
+    },
+    {
+      "standardName": "Two of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 2,
+      "alias": "Two of Stones",
+      "uprightMeaning": "The sailor who balances on the deck of a pitching boat with a crate in each hand -- this is the daily work of staying upright when the sea wants you sideways. The balance is not graceful. It is constant small corrections. That is enough. Keep adjusting.",
+      "reversedMeaning": "You dropped one crate to save the other and now the boat lists. Or you held both so tightly that your arms gave out and both went over the side. The balance between two needs is not about grip strength. It is about knowing which moment asks for which hand.",
+      "keywords": "pitching deck, two crates, balancing act, sea legs, juggling"
+    },
+    {
+      "standardName": "Three of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 3,
+      "alias": "Three of Stones",
+      "uprightMeaning": "Three craftspeople in the shipyard on Roke -- the woodworker, the sailmaker, the ropewalker -- each one's skill touching the others' work without a word wasted. The boat they build together will hold the sea because each one trusted the others to do their part truly.",
+      "reversedMeaning": "The shipyard is quiet because no one will yield their piece of the work. Three crafts, three prides, and the boat sits half-built while each artisan waits for the others to acknowledge their mastery first. The sea does not care who built the boat. It cares whether the hull holds.",
+      "keywords": "shipyard, three crafts, Roke builders, collaboration, skilled hands"
+    },
+    {
+      "standardName": "Four of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 4,
+      "alias": "Four of Stones",
+      "uprightMeaning": "Four stones mark the corners of your house and the walls are sound and the roof does not leak. You have built something that holds. Guard it -- not with fear but with the quiet attention of someone who knows what it cost to lay each stone.",
+      "reversedMeaning": "You sit inside your four stone walls and will not open the door. Security has become hoarding. The house that lets no one in becomes a tomb. You built this to live in, not to hide in. Open the door before you forget there is a world outside it.",
+      "keywords": "four cornerstones, sealed house, hoarding, stone walls, locked door"
+    },
+    {
+      "standardName": "Five of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 5,
+      "alias": "Five of Stones",
+      "uprightMeaning": "You walk the winter road past the warm towers of Roke and the doors are closed to you. The cold is real and the lack is real. But the road does not end at these doors. There are villages ahead where the hearth is open to strangers, if you keep walking.",
+      "reversedMeaning": "You have been walking past warm doors so long that you have forgotten how to knock. The hardship has become your identity. Roke's doors may be closed, but the goatherd's door on Gont never was. Not all help looks like what you expect. Ask.",
+      "keywords": "winter road, closed towers, cold, hardship, walking on"
+    },
+    {
+      "standardName": "Six of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 6,
+      "alias": "Six of Stones",
+      "uprightMeaning": "The village shares the harvest equally because the island is small and the winter is long and everyone remembers the year the sharing stopped. What you give now circles back. The Balance applies to bread as surely as it applies to magic.",
+      "reversedMeaning": "The giving has strings. You share the harvest but you keep count, and the counting poisons the gift. Or you take more than your share and call it earned. The island is small. Everyone sees the pile behind your door. The Balance applies to bread, and bread remembers.",
+      "keywords": "shared harvest, village, equal portions, generosity, island winter"
+    },
+    {
+      "standardName": "Seven of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 7,
+      "alias": "Seven of Stones",
+      "uprightMeaning": "The farmer on Gont stands at the edge of the field and counts what has grown against what was planted. The harvest is not yet in. You are in the long middle of the work -- past the planting, before the reaping. Be patient. The mountain soil is slow but it does not lie.",
+      "reversedMeaning": "You have been standing at the edge of the field so long that you have become a scarecrow. Watching the crop does not make it grow faster. Either trust the soil and go do something else, or admit that you planted in the wrong season and start over.",
+      "keywords": "Gont field, patient farmer, green shoots, slow growth, counting"
+    },
+    {
+      "standardName": "Eight of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 8,
+      "alias": "Eight of Stones",
+      "uprightMeaning": "The rune-carver on Roke cuts the same stone for the hundredth time, and the hundredth cut is truer than the first. This is craft: not inspiration, not genius, but the patient repetition that turns a hand into an instrument. The stone teaches the carver as much as the carver shapes the stone.",
+      "reversedMeaning": "You carve the same rune over and over and it has stopped teaching you anything. Repetition without attention is not craft -- it is habit. The stone has nothing more to show you at this depth. Go deeper or go elsewhere, but do not mistake routine for mastery.",
+      "keywords": "rune-carving, Roke stone, hundredth cut, craft, patient hands"
+    },
+    {
+      "standardName": "Nine of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 9,
+      "alias": "Nine of Stones",
+      "uprightMeaning": "The garden on the hill above the harbor is yours -- every tree planted by your hand, every wall laid stone by stone over years. The hawk sits on your wrist because it chooses to. This abundance is not luck. It is the long harvest of a life's careful work.",
+      "reversedMeaning": "The garden is beautiful but you cannot enjoy it because you are already planning the next wall, the next tree, the next expansion. Abundance without the ability to rest inside it is just a prettier kind of hunger. Sit in your garden. The hawk is waiting.",
+      "keywords": "hilltop garden, tamed hawk, stone walls, earned abundance, solitary beauty"
+    },
+    {
+      "standardName": "Ten of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 10,
+      "alias": "Ten of Stones",
+      "uprightMeaning": "The stone house on Gont has sheltered four generations. The grandmother's loom, the father's forge, the child's first carved rune -- all under one roof that has never leaked because every generation re-laid the stones. Legacy is not what you leave behind. It is what you maintain so well that others can build on it.",
+      "reversedMeaning": "The old house stands but no one remembers why it was built this way. The traditions are observed but the meaning has drained out of them like water from limestone. A legacy maintained without understanding is a shell. Someone needs to ask why the grandmother set the first stone where she did.",
+      "keywords": "stone house, Gont, four generations, loom and forge, legacy"
+    },
+    {
+      "standardName": "Page of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 11,
+      "alias": "Child of Stones",
+      "uprightMeaning": "The child who picks up a stone and turns it over and over, studying the grain, the weight, the color -- not looking for anything, just looking. This is the first act of craft: to hold the material in your hands and let it tell you what it is before you decide what to make of it.",
+      "reversedMeaning": "The child picks up stones and throws them without looking. Or picks up one stone and stares at it so long that the day passes without anything being made. Curiosity must eventually become action, or it is just daydreaming with props.",
+      "keywords": "stone-turner, young hands, studying grain, first craft, patient looking"
+    },
+    {
+      "standardName": "Knight of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 12,
+      "alias": "Seeker of Stones",
+      "uprightMeaning": "The Seeker of Stones walks the mountain paths of every island, testing the ground. This one does not rush. Each step is placed where the rock is solid. The journey is slower than the other seekers', but when the Seeker of Stones arrives, the path behind them is a road anyone can follow.",
+      "reversedMeaning": "Slow has become stuck. You test each stone so carefully that you never take the step. The mountain will not give you certainty -- it will give you solid ground, and you must learn the difference. At some point the testing must end and the walking must begin.",
+      "keywords": "mountain path, sure-footed, slow journey, tested ground, reliable seeker"
+    },
+    {
+      "standardName": "Queen of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 13,
+      "alias": "Keeper of Stones",
+      "uprightMeaning": "She knows every plant that grows on the island and what each one is good for -- the herb that heals, the root that feeds, the flower that means nothing except beauty, which is its own kind of nourishment. The Keeper of Stones tends the world as it is, not as she wishes it were, and the world grows well under her hands.",
+      "reversedMeaning": "The keeper tends and tends and will not let anything grow wild. Every root is useful, every flower serves a purpose, and beauty for its own sake has been weeded out. Your garden feeds the body but it has starved something else. Let something grow that you do not control.",
+      "keywords": "island herbalist, garden keeper, healing root, practical wisdom, nourishing hands"
+    },
+    {
+      "standardName": "King of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 14,
+      "alias": "Namer of Stones",
+      "uprightMeaning": "The Namer of Stones speaks the true name of the mountain and the mountain does not move. It does not need to. It knows itself, and the namer knows it, and between them there is the oldest understanding in the Archipelago: that what endures needs no display of power. It simply endures.",
+      "reversedMeaning": "The master of stone has become as rigid as what he names. He knows the mountain's true name but has forgotten that even mountains change -- slowly, over ages, but they change. Mastery of what endures must include understanding that nothing endures forever. Even Gont was once beneath the sea.",
+      "keywords": "mountain-namer, Gont's peak, enduring mastery, bedrock, stone circle"
+    }
+  ]
+}
