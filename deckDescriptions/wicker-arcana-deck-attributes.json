@@ -1,0 +1,806 @@
+{
+  "suitAliases": [
+    { "standardName": "Wands", "alias": "Torches" },
+    { "standardName": "Cups", "alias": "Cauldrons" },
+    { "standardName": "Swords", "alias": "Sickles" },
+    { "standardName": "Pentacles", "alias": "Bones" }
+  ],
+  "rankAliases": [
+    { "standardName": "Ace", "alias": "" },
+    { "standardName": "Two", "alias": "" },
+    { "standardName": "Three", "alias": "" },
+    { "standardName": "Four", "alias": "" },
+    { "standardName": "Five", "alias": "" },
+    { "standardName": "Six", "alias": "" },
+    { "standardName": "Seven", "alias": "" },
+    { "standardName": "Eight", "alias": "" },
+    { "standardName": "Nine", "alias": "" },
+    { "standardName": "Ten", "alias": "" },
+    { "standardName": "Page", "alias": "Maiden" },
+    { "standardName": "Knight", "alias": "Hunter" },
+    { "standardName": "Queen", "alias": "Crone" },
+    { "standardName": "King", "alias": "Horned King" }
+  ],
+  "cards": [
+    {
+      "standardName": "The Fool",
+      "arcana": "major",
+      "suit": null,
+      "number": 0,
+      "alias": "",
+      "uprightMeaning": "You have come to the edge of the stone circle without knowing why. The path behind you is overgrown and will not take you back. Step between the stones — the land on the other side has been waiting for someone exactly as foolish as you.",
+      "reversedMeaning": "You circle the standing stones but refuse to enter. The grass is wearing thin beneath your feet and still you walk the same ring. The threshold does not close, but your courage is rotting like fruit left on the ground.",
+      "keywords": "standing stones, bare feet, open gate, dawn mist, wanderer"
+    },
+    {
+      "standardName": "The Magician",
+      "arcana": "major",
+      "suit": null,
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "The torch, the cauldron, the sickle, and the bone are laid before you at the crossroads. You did not bring them — they were already here. Pick them up. You have always known what to do with these things.",
+      "reversedMeaning": "You stand at the crossroads rearranging the tools but never using them. The performance of power without the act. The candles gutter and the crossroads remembers every liar who has stood where you stand now.",
+      "keywords": "crossroads, four tools, raised hand, midnight, ritual circle"
+    },
+    {
+      "standardName": "The High Priestess",
+      "arcana": "major",
+      "suit": null,
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "She sits between two stones that were old before the village had a name. What she knows cannot be spoken in daylight. Be still and let the silence between her words teach you what the words themselves cannot.",
+      "reversedMeaning": "You have mistaken secrecy for wisdom. The veil is not protecting sacred knowledge — it is hiding an empty altar. You guard mysteries you do not possess, and the stones are tired of your pretending.",
+      "keywords": "standing stones, veil, moonlight, silence, sacred well"
+    },
+    {
+      "standardName": "The Empress",
+      "arcana": "major",
+      "suit": null,
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "The field is thick with wheat and the orchard bows under its own weight. She does not plant — she is the planting. Lie down in the furrow and let yourself be held by the same earth that holds the roots of everything alive.",
+      "reversedMeaning": "The abundance has turned to rot. Fruit splits on the branch and the wheat is black with ergot. You have fed and fed without resting and now the soil gives back only sickness. Even the earth mother must let a field lie fallow.",
+      "keywords": "wheat field, orchard, green woman, fertile soil, ivy crown"
+    },
+    {
+      "standardName": "The Emperor",
+      "arcana": "major",
+      "suit": null,
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "He sits on the hill fort with his back to the wind and his face to the valley below. The boundary stones were placed by his hand and they hold. You are being asked to draw a line in the earth and mean it.",
+      "reversedMeaning": "The hill fort is empty and the boundary stones have been pulled up and stacked like a child's game. You rule over scorched pasture and call it order. Authority without stewardship is just a man shouting on a hill.",
+      "keywords": "hill fort, boundary stones, oak throne, iron crown, valley"
+    },
+    {
+      "standardName": "The Hierophant",
+      "arcana": "major",
+      "suit": null,
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "The masked elder speaks the words that have been spoken at every turning of the year since before the church was built over the spring. Listen. The old way survived because it was true, and it is being handed to you now.",
+      "reversedMeaning": "The mask has grown into the face. The elder repeats the ritual but has forgotten its meaning, and the congregation follows out of fear, not faith. Tradition without understanding is a cage made of old wood.",
+      "keywords": "wooden mask, elder, ritual procession, ancient spring, congregation"
+    },
+    {
+      "standardName": "The Lovers",
+      "arcana": "major",
+      "suit": null,
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "Two figures face each other across the bonfire. The flames make it impossible to see clearly, but you do not need to see — you need to choose. Step toward the heat. What you want is on the other side of what frightens you.",
+      "reversedMeaning": "You chose the body across the fire but you are watching the flames, not them. The bonfire has become more interesting than the person you leapt for. Desire without presence is just hunger wearing a human face.",
+      "keywords": "bonfire, two figures, leaping flames, midsummer, choice"
+    },
+    {
+      "standardName": "The Chariot",
+      "arcana": "major",
+      "suit": null,
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "The cart is pulled by two beasts that do not agree, but your hands are steady on the reins and the road through the dark forest is straight enough. You do not need the beasts to love each other. You need them to move.",
+      "reversedMeaning": "The beasts have turned on each other and the cart is splintered in the ditch. You held the reins so tightly that you forgot to steer. Will without direction is just violence wearing a harness.",
+      "keywords": "cart, dark forest, two beasts, reins, straight road"
+    },
+    {
+      "standardName": "Strength",
+      "arcana": "major",
+      "suit": null,
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "The black dog has followed you since the village edge. It is large and its teeth are long but it has not bitten. Kneel down. Put your hand on its head. The thing that frightens the others is yours to gentle.",
+      "reversedMeaning": "You kneel before the black dog not out of courage but submission. You have mistaken surrender for gentleness and now the beast decides where you walk. Strength without a spine is just a leash held from the wrong end.",
+      "keywords": "black dog, open hand, kneeling, moor, gentle power"
+    },
+    {
+      "standardName": "The Hermit",
+      "arcana": "major",
+      "suit": null,
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "The lantern you carry lights only three feet of the moor at a time, and that is enough. You left the village because what you need to learn cannot be taught in company. Walk until the silence has something to say to you.",
+      "reversedMeaning": "You have been alone on the moor so long that you have forgotten the sound of another voice. The lantern has become a wall, not a light. Solitude was meant to sharpen you, but you have only grown dull and cold.",
+      "keywords": "lantern, moorland, solitary figure, fog, walking staff"
+    },
+    {
+      "standardName": "Wheel of Fortune",
+      "arcana": "major",
+      "suit": null,
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "The seasons turn and what was buried in autumn pushes through the frost in spring. You are not in control of the wheel — you are bound to it, as the seed is bound to the soil. Trust the rotation. What went down will come up changed.",
+      "reversedMeaning": "You cling to summer while the leaves are already falling. The wheel turns and you have lashed yourself to one spoke, rising and falling with sickening regularity. Let go. The ground is not as far as you think.",
+      "keywords": "stone wheel, four seasons, turning year, seed and frost, spiral"
+    },
+    {
+      "standardName": "Justice",
+      "arcana": "major",
+      "suit": null,
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "The blade is balanced on its edge and it will fall to one side or the other. There is no mercy in this card and no cruelty — only the weight of what you have done meeting the weight of what is owed. The harvest is exactly as large as the planting.",
+      "reversedMeaning": "You have put your thumb on the scale and called the tilt natural. The reckoning you avoided has not disappeared — it has compounded. The sickle does not forget who owes the field a cutting.",
+      "keywords": "balanced blade, scales, harvest reckoning, stone seat, truth"
+    },
+    {
+      "standardName": "The Hanged Man",
+      "arcana": "major",
+      "suit": null,
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "You are woven into the wicker frame and the world is upside down. This is not punishment — you climbed in willingly. From here the fields look different, the sky is where the earth was, and what you thought you knew rearranges itself around your silence.",
+      "reversedMeaning": "You hang in the wicker but you are thrashing. The sacrifice means nothing if you fight it the whole way down. You volunteered for the frame and now you scream as though you were taken. Be still or climb out — but stop pretending.",
+      "keywords": "wicker frame, inversion, willing sacrifice, hanging figure, stillness"
+    },
+    {
+      "standardName": "Death",
+      "arcana": "major",
+      "suit": null,
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "The effigy burns and its face is yours. Watch it blacken. You are not dying — the shape you wore is dying, and the heat on your face is the warmth of the field that will grow from these ashes. Let the old form go.",
+      "reversedMeaning": "You pulled the effigy from the fire before it finished burning. Now it stands in the field half-charred, neither alive nor ash, and you must live beside the thing you refused to let die. The transformation stalls and the rot begins.",
+      "keywords": "burning effigy, ashes, transformation, bonfire, new growth"
+    },
+    {
+      "standardName": "Temperance",
+      "arcana": "major",
+      "suit": null,
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "The holy well holds water so clear you can see the coins on the bottom from three centuries ago. Pour slowly. What you mix here — grief and gratitude, poison and cure — must be measured by a hand that does not tremble.",
+      "reversedMeaning": "You dumped everything into the well at once and the water has gone cloudy. Impatience has turned the remedy into something undrinkable. The well will clear, but not while you keep stirring it with your hands.",
+      "keywords": "holy well, two vessels, pouring water, balance, ancient coins"
+    },
+    {
+      "standardName": "The Devil",
+      "arcana": "major",
+      "suit": null,
+      "number": 15,
+      "alias": "",
+      "uprightMeaning": "You put the horned mask on at the festival and now you cannot find the edge where it meets your skin. The revels are sweet and the bondage is willing, but look down — the chain around your ankle has no lock. It never did.",
+      "reversedMeaning": "You tore the mask off and the skin came with it. The liberation is bloody and honest and it hurts more than the wearing did. But the air on your raw face is real air, and you can breathe again.",
+      "keywords": "horned mask, chains, festival revels, willing bondage, firelight"
+    },
+    {
+      "standardName": "The Tower",
+      "arcana": "major",
+      "suit": null,
+      "number": 16,
+      "alias": "",
+      "uprightMeaning": "Lightning finds the steeple because the steeple is the tallest lie in the village. What falls was already unsound. You did not cause this — you built too high on bad ground, and the storm is not malice. It is correction.",
+      "reversedMeaning": "The steeple cracked but did not fall, and now you live beneath a structure you know is broken. The refusal to let it collapse means you flinch at every wind. A ruin you inhabit is worse than a ruin you leave.",
+      "keywords": "struck steeple, lightning, falling stones, broken ground, storm"
+    },
+    {
+      "standardName": "The Star",
+      "arcana": "major",
+      "suit": null,
+      "number": 17,
+      "alias": "",
+      "uprightMeaning": "After the storm the pool is still and the moths have found the light again. Kneel at the water's edge and pour out what you carried through the wreckage. You survived. The darkness is not gone but you can see by starlight now, and that is enough.",
+      "reversedMeaning": "You kneel at the pool but will not look in. The hope is there but you have decided you do not deserve it. The moths circle and circle and you refuse to be the light they are looking for.",
+      "keywords": "still pool, moths, starlight, pouring water, kneeling figure"
+    },
+    {
+      "standardName": "The Moon",
+      "arcana": "major",
+      "suit": null,
+      "number": 18,
+      "alias": "",
+      "uprightMeaning": "The path between the barrows is lit by a moon that shows you everything and nothing truly. The shapes at the edge of the field may be standing stones or they may be watching. Walk anyway. Fear is not a reason to stop — it is a reason to pay attention.",
+      "reversedMeaning": "You have mistaken the moonlit shadows for the things themselves and now you swing at shapes that are not there. The real danger is behind you, in the barrow you refused to look at, while you fight the dark.",
+      "keywords": "barrow path, full moon, shadows, howling, illusion"
+    },
+    {
+      "standardName": "The Sun",
+      "arcana": "major",
+      "suit": null,
+      "number": 19,
+      "alias": "",
+      "uprightMeaning": "The maypole ribbons are bright and the children are laughing and the sun is high enough to burn the dew off every dark thing that crept through the night. This joy is not naive — it is earned. You walked through the barrows to get here. Dance.",
+      "reversedMeaning": "The maypole dance goes on but you are watching from the edge of the green, unable to join. The sun is shining and you have convinced yourself it is too bright to be trusted. Joy is standing right in front of you and you will not take its hand.",
+      "keywords": "maypole, ribbons, children dancing, high sun, village green"
+    },
+    {
+      "standardName": "Judgement",
+      "arcana": "major",
+      "suit": null,
+      "number": 20,
+      "alias": "",
+      "uprightMeaning": "The bronze horn sounds across the valley and the barrow doors open. What rises is not what was buried — it has changed in the dark earth. You are being called to account for every version of yourself you tried to leave underground. Answer.",
+      "reversedMeaning": "The horn sounds and you cover your ears. The dead are rising and you are pretending you do not know them. But they have your face and your name and they will stand in the field until you turn around.",
+      "keywords": "bronze horn, open barrows, rising figures, valley, reckoning"
+    },
+    {
+      "standardName": "The World",
+      "arcana": "major",
+      "suit": null,
+      "number": 21,
+      "alias": "",
+      "uprightMeaning": "The wreath of wheat and ivy closes around you and the year is complete. You have burned, you have drowned, you have been cut and buried, and you are still here. The dance is not a circle — it is a spiral, and you stand at the center of everything you survived.",
+      "reversedMeaning": "The wreath will not close. One strand of ivy keeps slipping and the harvest feels unfinished. You are so close to completion that you can taste the grain, but something in you refuses to tie the last knot. Finish it.",
+      "keywords": "wheat-and-ivy wreath, spiral dance, four elements, completion, harvest crown"
+    },
+    {
+      "standardName": "Ace of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 1,
+      "alias": "Ace of Torches",
+      "uprightMeaning": "A single torch is thrust into the dark earth and it catches. The flame is raw and hungry and it has no plan — only heat. Take it. The fire does not ask permission to burn, and neither should you.",
+      "reversedMeaning": "The torch gutters and smokes but will not hold its flame. You struck the spark too soon or too carelessly and now the kindling is damp. Passion without patience is just a pile of wet wood and a burnt hand.",
+      "keywords": "single torch, dark earth, new flame, raw spark, thrust hand"
+    },
+    {
+      "standardName": "Two of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 2,
+      "alias": "Two of Torches",
+      "uprightMeaning": "You hold a torch in each hand and the fields spread before you in two directions. Both paths are lit enough to walk. The choice is not which fire to carry — it is which darkness to enter. Decide before the wax runs down to your knuckles.",
+      "reversedMeaning": "You stand between two lit paths and walk neither. The torches burn lower while you calculate, and soon you will stand in the dark holding two spent sticks. Hesitation is its own kind of choosing.",
+      "keywords": "two torches, crossroads, distant fields, planning, horizon"
+    },
+    {
+      "standardName": "Three of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 3,
+      "alias": "Three of Torches",
+      "uprightMeaning": "Three torches are planted on the hillside and their light reaches the valley below. What you set in motion is visible now from a distance. Stand on the ridge and watch your fires catch — the signal has been sent and the answer is coming.",
+      "reversedMeaning": "The three torches on the hill are burning but no one in the valley has seen them. Your signal goes unanswered. Either the message was unclear or you have overestimated how far your light can carry.",
+      "keywords": "hilltop, three flames, distant valley, signal fire, waiting"
+    },
+    {
+      "standardName": "Four of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 4,
+      "alias": "Four of Torches",
+      "uprightMeaning": "Four torches mark the corners of the dancing ground and the harvest feast is laid. The work is done well enough to celebrate. Come in from the fields — the fire is warm and the table is set and the people you labored beside are waiting.",
+      "reversedMeaning": "The feast is laid but the joy feels forced. The four torches flicker in a wind that should not be there, and the smiles around the table do not reach the eyes. You are celebrating something that is not yet finished, and the fields know it.",
+      "keywords": "four torchposts, harvest feast, dancing ground, celebration, garlands"
+    },
+    {
+      "standardName": "Five of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 5,
+      "alias": "Five of Torches",
+      "uprightMeaning": "Five torchbearers circle each other in the dark, each one certain their flame is the true one. The conflict is not about the fire — it is about who gets to lead the procession. Let them clash. The sparks that fly when wills collide can light something none of them intended.",
+      "reversedMeaning": "The torchbearers have stopped circling and started swinging. What was healthy contest has curdled into spite. The flames are being used as weapons now and the only thing burning is the ground between you.",
+      "keywords": "five figures, clashing torches, sparks, procession, rivalry"
+    },
+    {
+      "standardName": "Six of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 6,
+      "alias": "Six of Torches",
+      "uprightMeaning": "You return to the village with the torch held high and the people line the lane to see it. The fire you carried through the dark woods has not gone out. Accept the recognition — you earned it in the cold and the black, and the light you brought back is real.",
+      "reversedMeaning": "The village lines the lane but the torch you carry is borrowed. You accept the praise for a fire you did not kindle, and the applause sounds hollow because you know the dark woods never touched you. False victory spoils faster than no victory at all.",
+      "keywords": "returning figure, raised torch, village lane, recognition, laurel"
+    },
+    {
+      "standardName": "Seven of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 7,
+      "alias": "Seven of Torches",
+      "uprightMeaning": "You stand on the ridge with one torch against six that rise from the treeline below. The height is yours and the flame is yours and you did not come this far to step aside. Hold your ground. The hill does not care how many come — it only cares that you do not leave it.",
+      "reversedMeaning": "You are still on the ridge but your arm is shaking and the six flames below have not retreated. Stubbornness is holding you here, not courage. There is a difference between defending your ground and refusing to admit the position is lost.",
+      "keywords": "ridge, single defender, six flames below, high ground, defiance"
+    },
+    {
+      "standardName": "Eight of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 8,
+      "alias": "Eight of Torches",
+      "uprightMeaning": "Eight torches arc through the night sky like falling stars. Whatever you set in motion has left your hand and cannot be called back. The fire is in the air now — swift, bright, unstoppable. Trust the throw.",
+      "reversedMeaning": "The torches were thrown but the wind caught them wrong. Messages misfire, arrivals are delayed, and the swift thing you launched wobbles in the air. Something that should have landed by now is still falling.",
+      "keywords": "flying torches, night sky, swift motion, momentum, arrival"
+    },
+    {
+      "standardName": "Nine of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 9,
+      "alias": "Nine of Torches",
+      "uprightMeaning": "Eight torches stand behind you like a fence of fire, and you hold the ninth with burned hands. You have been through enough to quit and you have not quit. The wounds are real but so is the fact that you are still standing. One more night. You can hold one more night.",
+      "reversedMeaning": "Your hands are too burned to grip and still you will not set the torch down. There is no honor in holding fire until it takes your fingers. Rest is not defeat. Put it down before the thing you are defending costs more than it is worth.",
+      "keywords": "burned hands, torch fence, exhaustion, persistence, last stand"
+    },
+    {
+      "standardName": "Ten of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 10,
+      "alias": "Ten of Torches",
+      "uprightMeaning": "You carry ten torches in your arms and the heat blisters your chest and the light blinds you. Every one of them was important when you picked it up. But the body has limits the will does not, and you are three steps from dropping them all. Set some down. The ones that matter will still be lit when you come back.",
+      "reversedMeaning": "The torches have fallen and scattered and the field is catching fire. What you refused to put down has put itself down for you, and not gently. The collapse you feared is here, and it is messier than any careful laying-down would have been.",
+      "keywords": "ten torches, burdened figure, blistered arms, scattered fire, overload"
+    },
+    {
+      "standardName": "Page of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 11,
+      "alias": "Maiden of Torches",
+      "uprightMeaning": "The maiden stands at the edge of the bonfire with her eyes full of sparks. She has never carried fire before but she reaches for it without flinching. Youth is not the absence of fear — it is the belief that the burning is worth it. Let her reach.",
+      "reversedMeaning": "The maiden reaches for the fire and pulls her hand back, reaches and pulls back, and the dance of almost-touching has become its own small prison. The spark she wants is real but she will not commit to the burn.",
+      "keywords": "young woman, bonfire edge, reaching hand, sparks, innocence"
+    },
+    {
+      "standardName": "Knight of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 12,
+      "alias": "Hunter of Torches",
+      "uprightMeaning": "The hunter rides through the night forest with a torch in his fist and the quarry's trail hot in the bracken. He does not slow for branches or doubt. When the fire in your belly tells you to move, move like him — fast, reckless, and aimed at something living.",
+      "reversedMeaning": "The hunter has set the forest on fire chasing something he cannot name. Speed without direction has burned the trail behind him and now there is no way back. Reckless passion leaves scorched earth, not trophies.",
+      "keywords": "mounted hunter, night forest, burning trail, pursuit, recklessness"
+    },
+    {
+      "standardName": "Queen of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 13,
+      "alias": "Crone of Torches",
+      "uprightMeaning": "The crone tends the village fire and has done so since before you were born. She knows which wood burns slow and which burns bright, and she has never let the flame go out. Trust the one who understands fire well enough to live beside it without fear.",
+      "reversedMeaning": "The crone has let the fire grow too large because she feeds it with everything that comes near. Her warmth has become a consuming heat that no one can sit beside. The firekeeper has become the fire, and the village is afraid to tell her.",
+      "keywords": "village fire, old woman, tended hearth, firelight, steady flame"
+    },
+    {
+      "standardName": "King of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 14,
+      "alias": "Horned King of Torches",
+      "uprightMeaning": "The horned king sits before the great bonfire and the antlers cast branching shadows over the field. He is the will of the land made flesh, the controlled burn that clears the way for new growth. His authority is not borrowed — it rises from the same earth that feeds the flame.",
+      "reversedMeaning": "The horned king has mistaken the bonfire for himself and will not let it be banked. His will has become tyranny, his confidence an inferno that burns anyone who approaches. The antlers throw shadows but the man beneath them has been consumed by his own heat.",
+      "keywords": "antlered king, great bonfire, branching shadows, authority, controlled burn"
+    },
+    {
+      "standardName": "Ace of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 1,
+      "alias": "Ace of Cauldrons",
+      "uprightMeaning": "The cauldron fills from a spring that has no visible source. The water is cold and sweet and older than the name of the village. Cup your hands and drink. This is the first taste of something the heart has been waiting for without knowing it.",
+      "reversedMeaning": "The cauldron overflows and the water pools around your feet and still it rises. Feeling without vessel becomes flood. You opened yourself to everything and now nothing can be held, tasted, or understood — only endured.",
+      "keywords": "stone cauldron, hidden spring, clear water, cupped hands, first offering"
+    },
+    {
+      "standardName": "Two of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 2,
+      "alias": "Two of Cauldrons",
+      "uprightMeaning": "Two cauldrons are brought to the same well and the water fills them equally. What passes between you and another is not given or taken — it is drawn from the same source. The bond is real because it comes from below, where the roots of all honest things are tangled together.",
+      "reversedMeaning": "The two cauldrons are at the well but one has a crack and the other is too full. The giving and taking have gone uneven and the water spills between you, wasted. A bond that only flows one way is a drain, not a well.",
+      "keywords": "two vessels, shared well, pouring between, bond, equal measure"
+    },
+    {
+      "standardName": "Three of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 3,
+      "alias": "Three of Cauldrons",
+      "uprightMeaning": "Three women dip their cups into the same cauldron and laugh as the firelight catches the steam. What brews here is shared joy — the kind that only rises when the loneliness of the work is broken by the people who understand it. Drink together.",
+      "reversedMeaning": "The three cups are raised but the cauldron between them has gone cold. The laughter is performance and the togetherness is a mask worn over separate miseries. Community without honesty is just a circle of polite strangers.",
+      "keywords": "three women, shared cauldron, firelight, laughter, celebration"
+    },
+    {
+      "standardName": "Four of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 4,
+      "alias": "Four of Cauldrons",
+      "uprightMeaning": "Three cauldrons sit before you, tasted and set aside, and a fourth is offered from the shadows. You are tired of drinking and your tongue is dull. But the hand that offers this cup has come a long way to find you. Look up before you refuse.",
+      "reversedMeaning": "You have looked up and taken the fourth cauldron and drunk deep, and the restlessness breaks like a fever. What you needed was not a new offering but a new willingness to receive. The apathy drains and the taste returns.",
+      "keywords": "three vessels, shadowed hand, seated figure, refusal, offered cup"
+    },
+    {
+      "standardName": "Five of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 5,
+      "alias": "Five of Cauldrons",
+      "uprightMeaning": "Three cauldrons are overturned and the water seeps into the bog. You stand over them with the posture of someone attending a funeral. But behind you two cauldrons remain upright and full. The grief is real — but it is not the whole story, and the bog gives nothing back to those who stare too long.",
+      "reversedMeaning": "You have turned from the spilled cauldrons and found the two that still hold water. The grief does not vanish — it is simply no longer the only thing you can see. The bog keeps what it takes, but you do not have to keep watching it swallow.",
+      "keywords": "overturned vessels, bog water, mourning figure, two remaining cups, loss"
+    },
+    {
+      "standardName": "Six of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 6,
+      "alias": "Six of Cauldrons",
+      "uprightMeaning": "A child offers you a cauldron filled with wildflowers from the meadow you played in before you knew the names of things. The gift is memory, uncorrupted by what came after. Take it. Not everything from the past has spoiled.",
+      "reversedMeaning": "You are living in the meadow that no longer exists, filling cauldrons with flowers that have long since dried. Nostalgia has become a place you inhabit instead of a place you visit, and the present rots while you tend a garden made of ghosts.",
+      "keywords": "child, wildflowers, old meadow, memory, offered vessel"
+    },
+    {
+      "standardName": "Seven of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 7,
+      "alias": "Seven of Cauldrons",
+      "uprightMeaning": "Seven cauldrons float in the mist, each one steaming with a different vision. One holds gold, one holds a serpent, one holds a face you almost recognize. The bog mist makes everything look possible and nothing look real. Choose before the fog lifts, or you will have chosen nothing.",
+      "reversedMeaning": "The mist clears and the seven cauldrons are revealed for what they are — some empty, some foul, only one or two worth drinking from. The illusion breaks and clarity, though harsh, is better than drowning in beautiful fog.",
+      "keywords": "seven vessels, bog mist, visions, illusion, choice"
+    },
+    {
+      "standardName": "Eight of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 8,
+      "alias": "Eight of Cauldrons",
+      "uprightMeaning": "Eight cauldrons stand in a row and every one of them is full, and still you turn your back and walk toward the marshland under the waning moon. Something in you knows that fullness is not the same as fulfillment. The leaving is quiet and it is necessary.",
+      "reversedMeaning": "You keep walking back to the eight cauldrons you already left. The departure that should have been final has become a loop, and each return makes the leaving harder. Either stay and mean it, or go and do not look back.",
+      "keywords": "eight vessels, departing figure, waning moon, marshland, quiet leaving"
+    },
+    {
+      "standardName": "Nine of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 9,
+      "alias": "Nine of Cauldrons",
+      "uprightMeaning": "Nine cauldrons line the shelf behind you and every one holds something you asked for. The wish has been granted — not by luck but by the slow work of wanting clearly and tending faithfully. Sit with your back to the plenty and let yourself feel satisfied. You are allowed.",
+      "reversedMeaning": "The nine cauldrons are full but the taste is wrong. You got what you wished for and it does not nourish. The wanting was more alive than the having, and now you sit before an abundance that leaves you emptier than before.",
+      "keywords": "nine vessels, shelf of plenty, seated figure, granted wish, contentment"
+    },
+    {
+      "standardName": "Ten of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 10,
+      "alias": "Ten of Cauldrons",
+      "uprightMeaning": "Ten cauldrons steam over the hearth and the family gathers in the warmth of a house that has weathered every season. This is the happiness that comes not from wanting but from having built something that holds. The roof is sound. The well is deep. The people beside you chose to stay.",
+      "reversedMeaning": "The hearth is warm but the family around it is fractured. Ten cauldrons and not one of them holds what the household truly needs. The image of togetherness is intact but the feeling has leaked out through cracks no one wants to name.",
+      "keywords": "hearth, family gathering, ten vessels, warm house, lasting joy"
+    },
+    {
+      "standardName": "Page of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 11,
+      "alias": "Maiden of Cauldrons",
+      "uprightMeaning": "The maiden peers into the cauldron and sees something swimming that should not be there — a fish, a face, a message from below the surface. She is not afraid. She reaches in. When the water shows you something strange, do not look away. Innocence is the hand that reaches where wisdom would hesitate.",
+      "reversedMeaning": "The maiden dropped the cauldron when the water showed her something she was not ready to see. The vision was real but the vessel was not strong enough to hold it. Emotional immaturity shatters what sensitivity discovers.",
+      "keywords": "young woman, peering into water, fish, strange vision, wonder"
+    },
+    {
+      "standardName": "Knight of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 12,
+      "alias": "Hunter of Cauldrons",
+      "uprightMeaning": "The hunter follows the river deeper into the valley, carrying a cauldron he intends to fill from the source. He rides slowly because what he pursues cannot be caught by speed — only by devotion. Follow the feeling upstream. The spring is real and it is closer than the mist suggests.",
+      "reversedMeaning": "The hunter has ridden so far into the valley that the river has become a trickle and the cauldron is still empty. He followed the feeling past the point where it led and now rides in circles through fog. Devotion without discernment is just a man lost in a pretty landscape.",
+      "keywords": "mounted figure, river valley, carried vessel, slow pursuit, mist"
+    },
+    {
+      "standardName": "Queen of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 13,
+      "alias": "Crone of Cauldrons",
+      "uprightMeaning": "The crone sits beside the bog pool and she sees to the bottom of it, past the dark water, past the peat, down to where the old things sleep. She has drowned in her own feelings enough times to know how to breathe underwater. Trust her when she tells you what the depths hold.",
+      "reversedMeaning": "The crone has sunk so deep into the bog of feeling that she no longer surfaces. Her visions are true but she cannot speak them — the water fills her mouth every time she tries. Intuition without boundaries becomes a drowning no one can witness.",
+      "keywords": "old woman, bog pool, deep seeing, peat water, still surface"
+    },
+    {
+      "standardName": "King of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 14,
+      "alias": "Horned King of Cauldrons",
+      "uprightMeaning": "The horned king sits on his throne at the lake's edge and the water neither rises nor recedes. He has mastered the flood — not by damming it but by becoming the shore. His antlers are draped with waterweed and his calm is the calm of someone who has felt everything and let it pass through.",
+      "reversedMeaning": "The horned king has built a dam of composure so thick that nothing flows at all. The lake behind him is rising and his face betrays nothing, but the pressure is building in the earth beneath his throne. When this breaks, it will not be a river. It will be a flood.",
+      "keywords": "antlered king, lake throne, still water, waterweed, mastered depths"
+    },
+    {
+      "standardName": "Ace of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 1,
+      "alias": "Ace of Sickles",
+      "uprightMeaning": "A single sickle rises from the standing stone, its edge so sharp it parts the morning fog. This is clarity — the first true thought, the cut that separates what is from what you wished it was. Take it. The truth is always sharp and it always costs something to hold.",
+      "reversedMeaning": "The sickle is lodged in the stone and will not come free. The truth is there but you cannot grasp it — your hands are too slick with old lies, or the angle is wrong, or you are simply not ready to hold something this sharp.",
+      "keywords": "sickle in stone, morning fog, sharp edge, clarity, single blade"
+    },
+    {
+      "standardName": "Two of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 2,
+      "alias": "Two of Sickles",
+      "uprightMeaning": "You sit blindfolded at the field's edge with a sickle in each hand, crossed over your chest. The harvest waits but you cannot choose which row to cut first. The blindfold is yours — you tied it. Remove it or cut blind, but the wheat will not wait for your comfort.",
+      "reversedMeaning": "The blindfold slips and you see both fields clearly and the seeing is worse than the not-knowing. The decision has not become easier — it has become unavoidable. At least in the dark you could pretend there was no choice.",
+      "keywords": "blindfold, crossed sickles, field edge, stalemate, forced choice"
+    },
+    {
+      "standardName": "Three of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 3,
+      "alias": "Three of Sickles",
+      "uprightMeaning": "Three sickles pierce the scarecrow's chest and the rain comes through the holes. The heart of the matter has been opened and what you find inside is grief and rainwater and straw. Let the pain in. A heart that will not be pierced cannot be cleansed.",
+      "reversedMeaning": "You have pulled the three sickles out and stitched the scarecrow shut, but the rain still gets in through the seams. The wound you refuse to grieve does not heal — it festers beneath the mending. Let it weep or it will rot.",
+      "keywords": "three blades, pierced scarecrow, rain, heartbreak, open wound"
+    },
+    {
+      "standardName": "Four of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 4,
+      "alias": "Four of Sickles",
+      "uprightMeaning": "Four sickles hang on the barn wall and the reaper lies down on the threshing floor. The work will be there when you wake. For now the body needs the dark and the quiet and the slow breathing of rest that asks nothing of you. Sleep. The harvest can wait one more morning.",
+      "reversedMeaning": "You rise from the threshing floor before your body is ready because the sound of unharvested wheat is louder than your exhaustion. The rest was not long enough and the sickles on the wall rattle with your unfinished business. You will cut badly today.",
+      "keywords": "four hung sickles, threshing floor, sleeping figure, barn, respite"
+    },
+    {
+      "standardName": "Five of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 5,
+      "alias": "Five of Sickles",
+      "uprightMeaning": "You hold three sickles and two lie on the ground at the feet of those who dropped them. The field is yours but the reapers have walked away and the harvest must be brought in alone. Count the cost of winning before you celebrate. A victory that empties the field of helpers is a slow defeat.",
+      "reversedMeaning": "You drop the stolen sickles and let the others pick them up. The shame of the taking is worse than the loss of the winning. Something in you is ready to reap only your own row and let the rest go.",
+      "keywords": "three taken sickles, retreating figures, empty field, hollow victory, cost"
+    },
+    {
+      "standardName": "Six of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 6,
+      "alias": "Six of Sickles",
+      "uprightMeaning": "Six sickles stand upright in the punt that carries you across the dark water. The blades face forward and the shore behind you is a place you cannot return to. The crossing is quiet and sad and necessary. What waits on the other bank is not joy — it is the chance to begin without the weight of what was harvested badly.",
+      "reversedMeaning": "The punt has stalled in the middle of the water. You cannot go forward and you will not go back and the six sickles stand like a fence around your indecision. The crossing demands commitment, and you are giving it only your hesitation.",
+      "keywords": "punt, dark water, six blades, crossing, quiet departure"
+    },
+    {
+      "standardName": "Seven of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 7,
+      "alias": "Seven of Sickles",
+      "uprightMeaning": "You carry five sickles from the harvest shed while two remain hanging on the wall. The taking is quiet and the night covers your tracks, but the dawn will show the empty hooks. Be honest about what you are doing. Cunning is a tool, not a virtue, and it cuts the hand that uses it carelessly.",
+      "reversedMeaning": "The five sickles clatter to the ground as you trip in the dark. The theft is exposed before it bore fruit and now you stand in the moonlight with your intentions visible to everyone. The plan was clever. The execution was not.",
+      "keywords": "five carried blades, night, harvest shed, empty hooks, stealth"
+    },
+    {
+      "standardName": "Eight of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 8,
+      "alias": "Eight of Sickles",
+      "uprightMeaning": "Eight sickles are planted in a ring around you and you stand blindfolded in the center of the field. The blades are close but they are not touching you. The trap is made of thoughts, not iron, and the blindfold is tied with a knot you could undo if you stopped believing you were bound.",
+      "reversedMeaning": "The blindfold loosens and you see the ring of sickles for what it is — a fence with gaps wide enough to walk through. The prison was always mental. The relief of seeing clearly is mixed with the shame of how long you stood still.",
+      "keywords": "sickle ring, blindfolded figure, open field, mental trap, bound thoughts"
+    },
+    {
+      "standardName": "Nine of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 9,
+      "alias": "Nine of Sickles",
+      "uprightMeaning": "Nine sickles hang above your bed in the dark hours and you cannot sleep for the sound of them swaying. The blades are not falling — they never fall — but the fear of them is heavier than any wound they could make. The thoughts that wake you at three in the morning are harvesting nothing. They are just spinning in the dark.",
+      "reversedMeaning": "You rise from the bed and take the sickles down one by one. The fear does not vanish but the ritual of facing it — hands shaking, heart loud — is the beginning of the end of it. Dawn is closer than you think.",
+      "keywords": "nine hanging blades, sleepless figure, dark bedroom, anxiety, night terrors"
+    },
+    {
+      "standardName": "Ten of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 10,
+      "alias": "Ten of Sickles",
+      "uprightMeaning": "Ten sickles in the earth around a figure facedown in the stubble field. It is finished. The worst has happened and it is exactly as bad as you feared and you are still breathing. The dawn line at the horizon is thin but it is there. You cannot be cut any deeper than this.",
+      "reversedMeaning": "You peel yourself from the stubble field and pull the sickles out one by one. The wounds are real but the dying is over. What comes now is the slow, unglamorous work of standing up in a field that tried to finish you.",
+      "keywords": "ten blades in earth, fallen figure, stubble field, dawn line, ending"
+    },
+    {
+      "standardName": "Page of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 11,
+      "alias": "Maiden of Sickles",
+      "uprightMeaning": "The maiden holds the sickle up to the light and turns it, watching the edge catch the sun. She has not yet used it to cut anything real. Her mind is sharp and restless and full of questions that the field has not yet answered. Let her ask. The blade will find its purpose when the wheat is ready.",
+      "reversedMeaning": "The maiden swings the sickle at everything — arguments, ideas, people who stand too close. The sharpness that was meant for the harvest is being wasted on the air. A keen mind without patience is just a blade looking for something to nick.",
+      "keywords": "young woman, raised sickle, sunlight on blade, questions, sharp curiosity"
+    },
+    {
+      "standardName": "Knight of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 12,
+      "alias": "Hunter of Sickles",
+      "uprightMeaning": "The hunter rides hard through the standing grain with the sickle raised and the wind tearing at his cloak. He has found the thing that needs cutting and nothing will slow him. When the moment comes to act on what you know, act like him — without hesitation, without apology, with the blade already in motion.",
+      "reversedMeaning": "The hunter has cut through the field so fast he has overshot the quarry and is riding into empty pasture. Speed and certainty without accuracy is just destruction with good posture. The grain is ruined and the thing that needed cutting still stands.",
+      "keywords": "mounted hunter, raised sickle, standing grain, charge, wind-torn cloak"
+    },
+    {
+      "standardName": "Queen of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 13,
+      "alias": "Crone of Sickles",
+      "uprightMeaning": "The crone sits at the edge of the reaped field and her sickle rests across her knees. She has cut enough harvests to know what is wheat and what is weed without looking. Her judgments are clean because they come from experience, not anger. Ask her what needs cutting and she will tell you without flinching.",
+      "reversedMeaning": "The crone's sickle has grown so sharp from use that she cuts without meaning to. Her honesty has become cruelty, her clarity a weapon she wields out of habit. The one who sees too clearly sometimes forgets that others are still squinting.",
+      "keywords": "old woman, reaped field, sickle on knees, clear judgment, sharp truth"
+    },
+    {
+      "standardName": "King of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 14,
+      "alias": "Horned King of Sickles",
+      "uprightMeaning": "The horned king stands at the head of the harvest and his sickle has not wavered once. His mind is the blade and the blade is fair — it cuts exactly what it means to cut and no more. When you must judge, judge like him: with the antlers of authority and the precision of someone who knows that every cut has a consequence.",
+      "reversedMeaning": "The horned king has mistaken his intellect for the whole of him and the sickle has become the only tool he reaches for. He cuts the tender things along with the ready ones because his mind cannot tell the difference anymore. Authority without heart is just a very organized cruelty.",
+      "keywords": "antlered king, harvest head, precise sickle, fair judgment, authority"
+    },
+    {
+      "standardName": "Ace of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 1,
+      "alias": "Ace of Bones",
+      "uprightMeaning": "A single bone surfaces in the freshly turned earth — white and clean and older than the field itself. This is the gift of the ancestors: something solid, something real, something you can build on. Take it from the soil with both hands. The foundation has always been here, waiting for you to dig.",
+      "reversedMeaning": "The bone crumbles when you pull it from the earth. What you thought was solid foundation is powder and dust, and the ground you built on is not as firm as you believed. Start again. Not every inheritance can bear the weight of what you plan to build.",
+      "keywords": "single bone, turned earth, ancestor gift, foundation, solid ground"
+    },
+    {
+      "standardName": "Two of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 2,
+      "alias": "Two of Bones",
+      "uprightMeaning": "You juggle two bones in the air while the tide comes in behind you. The rhythm is not difficult if you stop thinking about it — one up, one down, hand to hand, the ancient pattern of keeping two things moving at once. The sea does not care about your schedule. Stay light on your feet.",
+      "reversedMeaning": "The bones clatter to the ground and the tide reaches your ankles. You lost the rhythm because you tried to hold both at once instead of letting them pass through your hands. The juggling was never about grip — it was about release.",
+      "keywords": "two bones, juggling, incoming tide, balance, rhythm"
+    },
+    {
+      "standardName": "Three of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 3,
+      "alias": "Three of Bones",
+      "uprightMeaning": "Three pairs of hands work the barrow wall, fitting stones that will still be standing when the names of the builders are dust. The craft is in the joining — your skill alone is not enough. Bring it to the others and let the work be shaped by hands that know different things than yours.",
+      "reversedMeaning": "The barrow wall is crooked because each builder worked their own section without speaking to the others. Three kinds of skill and not one shared measurement. Craft without collaboration is just three walls that do not meet.",
+      "keywords": "three builders, barrow wall, fitted stones, collaboration, craft"
+    },
+    {
+      "standardName": "Four of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 4,
+      "alias": "Four of Bones",
+      "uprightMeaning": "You sit on the barrow with a bone under each foot, one pressed to your chest, and one balanced on your head. Nothing moves. Nothing can be taken. But nothing can be given either, and the dead beneath you are not impressed by how tightly you hold what they left behind.",
+      "reversedMeaning": "You lift your feet from the bones and the wind takes one and then another. The loosening is terrifying but the blood returns to your hands and feet and suddenly you can move again. Generosity starts where hoarding ends.",
+      "keywords": "seated figure, barrow, four bones clutched, hoarding, rigidity"
+    },
+    {
+      "standardName": "Five of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 5,
+      "alias": "Five of Bones",
+      "uprightMeaning": "Two figures walk barefoot through the frost past a lit window they will not knock on. The bones they carry are the last of what they own and the cold is real and the pride is real and the warmth on the other side of the glass is real too. Knock. The shame of asking is smaller than the cost of freezing.",
+      "reversedMeaning": "You knock on the lit window and the door opens. The warmth is not charity — it is the village doing what the village does. The frost on your feet begins to thaw and the bones in your hand are enough to barter for a place by the fire.",
+      "keywords": "two figures, frost, lit window, bare feet, last possessions"
+    },
+    {
+      "standardName": "Six of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 6,
+      "alias": "Six of Bones",
+      "uprightMeaning": "The figure with the scales distributes bones to those who kneel — not equally, but fairly. What you receive is measured against what you need, and the hand that gives is the same hand that once received. The cycle of having and lacking turns like the wheel of the year. Today you give. Tomorrow you may kneel.",
+      "reversedMeaning": "The scales are tipped and the one who gives does so with strings that glint in the firelight. This is not generosity — it is purchase. The bones come with conditions, and those who kneel will find the debt is heavier than the gift.",
+      "keywords": "scales, kneeling figures, distributed bones, fairness, giving and receiving"
+    },
+    {
+      "standardName": "Seven of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 7,
+      "alias": "Seven of Bones",
+      "uprightMeaning": "Seven bones are planted in the furrow like seeds and you lean on the hoe and wait. The harvest is not yet visible but the planting was sound and the soil is good and the waiting is the hardest part of every honest thing. Be patient. What grows from bone grows slowly and it grows forever.",
+      "reversedMeaning": "You dig up the bones to see if they have sprouted and of course they have not — not because the planting was wrong but because you will not let the dark earth do its work. Impatience is the enemy of every deep investment. Put them back and walk away.",
+      "keywords": "planted bones, furrow, leaning figure, patience, slow growth"
+    },
+    {
+      "standardName": "Eight of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 8,
+      "alias": "Eight of Bones",
+      "uprightMeaning": "Eight bones are carved and laid in a row, each one more finely worked than the last. The craft is in the repetition — not the first bone or the fifth, but the eighth, where the hand finally knows what the mind intended. Keep working. Mastery is not a moment. It is a row of attempts that gets quietly better.",
+      "reversedMeaning": "The eight bones are carved but you have been repeating the same mistake on every one. Diligence without reflection is just efficient failure. Step back from the workbench and look at what you have actually made before you carve the ninth.",
+      "keywords": "eight carved bones, workbench, repetition, craftsmanship, improving row"
+    },
+    {
+      "standardName": "Nine of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 9,
+      "alias": "Nine of Bones",
+      "uprightMeaning": "The garden is walled and the orchard is heavy and the nine bones that built this place are buried so deep they have become the foundation itself. You earned this solitude through seasons of careful work. The hawk on your wrist is not a pet — it is a partnership between patience and wildness, and both are yours.",
+      "reversedMeaning": "The walled garden has become a prison of your own making. Nine bones deep and you cannot remember the last time someone else stood in this orchard. Self-sufficiency has curdled into isolation, and the hawk on your wrist has forgotten how to fly.",
+      "keywords": "walled garden, orchard, hawk, nine buried bones, earned solitude"
+    },
+    {
+      "standardName": "Ten of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 10,
+      "alias": "Ten of Bones",
+      "uprightMeaning": "Ten bones are set into the arch of the family gate — one for each generation that built this place. The old ones sit by the fire and the young ones run through the yard and the house stands because every hand that touched it meant for it to last. This is legacy. This is what remains when you build for the ones who come after.",
+      "reversedMeaning": "The family gate is crumbling and the bones in the arch are loose. The legacy was meant to endure but no one has tended it, and the generations squabble over which stone belongs to whom while the whole structure leans. Inheritance without care is just a ruin with a famous name.",
+      "keywords": "family gate, bone arch, generations, hearthfire, lasting legacy"
+    },
+    {
+      "standardName": "Page of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 11,
+      "alias": "Maiden of Bones",
+      "uprightMeaning": "The maiden holds a bone up to the light and turns it slowly, studying the grain. She does not yet know what it will become — a tool, a talisman, a foundation stone — but she is willing to learn. The beginner's attention is a kind of reverence. Let her study. The craft chooses its own apprentices.",
+      "reversedMeaning": "The maiden stares at the bone but will not pick up the carving knife. The study has become procrastination, the reverence an excuse not to begin. At some point you must stop admiring the raw material and start shaping it, even badly.",
+      "keywords": "young woman, held bone, studying, light, apprentice reverence"
+    },
+    {
+      "standardName": "Knight of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 12,
+      "alias": "Hunter of Bones",
+      "uprightMeaning": "The hunter walks the field at the pace of the plow, bone-bag at his hip, eyes on the furrow. He does not ride — he walks, because the work he tracks cannot be hurried. Patience in pursuit is its own kind of ferocity. The thing he hunts is buried and it will surface only for the one who does not rush.",
+      "reversedMeaning": "The hunter has walked the same furrow so many times that a trench is forming. Steadiness has become a rut, and the patience that was once a virtue is now a refusal to change direction. The bone he seeks may be in another field entirely.",
+      "keywords": "walking hunter, plowed field, bone-bag, steady pace, furrow"
+    },
+    {
+      "standardName": "Queen of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 13,
+      "alias": "Crone of Bones",
+      "uprightMeaning": "The crone sits in the doorway of the barrow with a bone needle in her hand, mending what the living have torn. She knows the name of every ancestor buried in the hill behind her and she speaks to them when the wind is right. Trust the one who tends both the living and the dead — she understands that a house needs roots as deep as its walls are high.",
+      "reversedMeaning": "The crone has retreated so far into the barrow that the living cannot reach her. She tends the bones of the dead with more care than the needs of the breathing, and the hearth has gone cold while she whispers to ancestors who cannot answer. Care for the dead must not come at the cost of the living.",
+      "keywords": "old woman, barrow doorway, bone needle, mending, ancestor keeper"
+    },
+    {
+      "standardName": "King of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 14,
+      "alias": "Horned King of Bones",
+      "uprightMeaning": "The horned king sits on the barrow mound and the land stretches out in every direction as though it grew from him. His antlers are twined with ivy and his hands rest on a bone staff worn smooth by generations of grip. He is not wealthy — he is the wealth itself, the patient accumulation of seasons spent building what endures. His kingdom is dirt and root and the slow certainty of stone.",
+      "reversedMeaning": "The horned king grips the bone staff so tightly that his knuckles have gone white and the ivy on his antlers has died. He has become the miser on the mound, hoarding what should circulate, and the land beneath him is going sour from neglect. A king who will not let the wealth move is just a gravestone with a crown.",
+      "keywords": "antlered king, barrow mound, bone staff, ivy crown, enduring land"
+    }
+  ]
+}
