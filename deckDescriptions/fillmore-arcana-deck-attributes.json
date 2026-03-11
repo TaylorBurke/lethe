@@ -1,0 +1,806 @@
+{
+  "suitAliases": [
+    { "standardName": "Wands", "alias": "" },
+    { "standardName": "Cups", "alias": "" },
+    { "standardName": "Swords", "alias": "" },
+    { "standardName": "Pentacles", "alias": "" }
+  ],
+  "rankAliases": [
+    { "standardName": "Ace", "alias": "" },
+    { "standardName": "Two", "alias": "" },
+    { "standardName": "Three", "alias": "" },
+    { "standardName": "Four", "alias": "" },
+    { "standardName": "Five", "alias": "" },
+    { "standardName": "Six", "alias": "" },
+    { "standardName": "Seven", "alias": "" },
+    { "standardName": "Eight", "alias": "" },
+    { "standardName": "Nine", "alias": "" },
+    { "standardName": "Ten", "alias": "" },
+    { "standardName": "Page", "alias": "" },
+    { "standardName": "Knight", "alias": "" },
+    { "standardName": "Queen", "alias": "" },
+    { "standardName": "King", "alias": "" }
+  ],
+  "cards": [
+    {
+      "standardName": "The Fool",
+      "arcana": "major",
+      "suit": null,
+      "number": 0,
+      "alias": "",
+      "uprightMeaning": "You're standing at the edge with nothing but trust in your pocket. The road doesn't need a map — it needs your feet on it. Jump.",
+      "reversedMeaning": "You're calling it spontaneity, but it's just avoidance wearing a flower crown. Freedom without direction is just drifting.",
+      "keywords": "leap, trust, beginnings, innocence, open road"
+    },
+    {
+      "standardName": "The Magician",
+      "arcana": "major",
+      "suit": null,
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "Everything you need is already on the table in front of you. You've got the skills, the voice, and the moment — now use them before the moment passes.",
+      "reversedMeaning": "You're running a con and the mark is yourself. All that talent means nothing if you're just performing instead of creating.",
+      "keywords": "skill, manifestation, resourcefulness, willpower, action"
+    },
+    {
+      "standardName": "The High Priestess",
+      "arcana": "major",
+      "suit": null,
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "The answers aren't in the noise — they're in the silence between songs. Sit with what you already know but haven't admitted yet.",
+      "reversedMeaning": "You've disconnected from your own knowing and started trusting everyone else's opinion instead. The quiet voice inside got drowned out by the crowd.",
+      "keywords": "intuition, mystery, inner knowing, stillness, secrets"
+    },
+    {
+      "standardName": "The Empress",
+      "arcana": "major",
+      "suit": null,
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "You're in full bloom and the garden is yours. Create without permission, nurture without apology, and let abundance flow like it's supposed to — freely.",
+      "reversedMeaning": "You've been giving so much there's nothing left for the soil. Generosity that empties you isn't love, it's martyrdom with better aesthetics.",
+      "keywords": "abundance, nurture, creativity, growth, sensuality"
+    },
+    {
+      "standardName": "The Emperor",
+      "arcana": "major",
+      "suit": null,
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "Someone's got to build the stage before the band can play. Structure isn't the enemy of freedom — it's the framework that makes freedom possible.",
+      "reversedMeaning": "You've become the authority you swore you'd never be. Control dressed up as responsibility is still just control.",
+      "keywords": "structure, authority, discipline, foundation, order"
+    },
+    {
+      "standardName": "The Hierophant",
+      "arcana": "major",
+      "suit": null,
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "There's wisdom in the old ways if you know which parts to keep and which to burn. Find the teacher who earned it through living, not through title.",
+      "reversedMeaning": "You're following rules written by people who never questioned anything. Tradition without examination is just obedience with a longer history.",
+      "keywords": "tradition, mentorship, questioning doctrine, shared wisdom, convention"
+    },
+    {
+      "standardName": "The Lovers",
+      "arcana": "major",
+      "suit": null,
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "This isn't about romance — it's about choosing what you stand with, eyes open, no illusions. Real union means showing up as your whole unedited self.",
+      "reversedMeaning": "You're staying in something because leaving feels harder than being honest. A bond built on avoidance is just two people being lonely together.",
+      "keywords": "choice, union, authenticity, alignment, values"
+    },
+    {
+      "standardName": "The Chariot",
+      "arcana": "major",
+      "suit": null,
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "You've got opposing forces pulling at you and that's exactly the fuel you need. Grab the reins and ride the contradiction — that tension is your engine.",
+      "reversedMeaning": "You're mistaking aggression for progress. Pushing harder doesn't help when you're pointed at the wrong horizon.",
+      "keywords": "determination, willpower, momentum, drive, conquest"
+    },
+    {
+      "standardName": "Strength",
+      "arcana": "major",
+      "suit": null,
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "Real power isn't loud — it's the quiet hand that calms the lion instead of caging it. You don't have to fight what's wild in you; just learn its language.",
+      "reversedMeaning": "You're either white-knuckling your composure or letting the beast run the show. Neither is strength — one is suppression, the other is surrender.",
+      "keywords": "courage, patience, compassion, inner strength, gentle power"
+    },
+    {
+      "standardName": "The Hermit",
+      "arcana": "major",
+      "suit": null,
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "Walk away from the noise for a while. Not because you're running, but because the truth you need lives somewhere the crowd can't follow.",
+      "reversedMeaning": "You've turned solitude into isolation and called it enlightenment. A lantern only works if you eventually bring it back to light someone else's way.",
+      "keywords": "solitude, introspection, wisdom, withdrawal, inner light"
+    },
+    {
+      "standardName": "Wheel of Fortune",
+      "arcana": "major",
+      "suit": null,
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "The wheel turns whether you like it or not. This is your moment — ride the upswing and don't waste time pretending you earned what luck just handed you.",
+      "reversedMeaning": "You're blaming bad luck for choices you made with your eyes closed. The wheel didn't put you here — your refusal to move did.",
+      "keywords": "cycles, change, fate, turning point, fortune"
+    },
+    {
+      "standardName": "Justice",
+      "arcana": "major",
+      "suit": null,
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "The scales don't care about your intentions — they weigh what you actually did. Own your choices and their consequences. That's the only real fairness.",
+      "reversedMeaning": "You're bending the truth to fit your story. Justice delayed by self-deception isn't justice at all — it's just a longer fall when it catches up.",
+      "keywords": "truth, accountability, fairness, consequence, balance"
+    },
+    {
+      "standardName": "The Hanged Man",
+      "arcana": "major",
+      "suit": null,
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "Stop struggling. The view from upside down shows you everything you missed while you were busy trying to stay upright. Surrender isn't giving up — it's giving in to a bigger picture.",
+      "reversedMeaning": "You're calling it patience but you're really just stuck. There's a difference between waiting for clarity and being too scared to move.",
+      "keywords": "surrender, new perspective, pause, sacrifice, letting go"
+    },
+    {
+      "standardName": "Death",
+      "arcana": "major",
+      "suit": null,
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "Something's ending and it needs to. You can't plant new seeds in a garden that's still full of last year's dead roots. Let it compost.",
+      "reversedMeaning": "You're keeping something alive that died a long time ago, and the effort is hollowing you out. Let go before it takes more than it already has.",
+      "keywords": "ending, transformation, release, rebirth, letting die"
+    },
+    {
+      "standardName": "Temperance",
+      "arcana": "major",
+      "suit": null,
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "Mix it slow. The best things — music, bread, relationships — need time and the right proportions. You're not compromising; you're alchemizing.",
+      "reversedMeaning": "You've gone all-in on one thing and starved everything else. Excess disguised as passion is still just excess.",
+      "keywords": "balance, patience, moderation, alchemy, flow"
+    },
+    {
+      "standardName": "The Devil",
+      "arcana": "major",
+      "suit": null,
+      "number": 15,
+      "alias": "",
+      "uprightMeaning": "Look at the chains around your neck — they're not locked. You chose this, and you can unchoose it. But first you have to stop pretending it feels good.",
+      "reversedMeaning": "You broke one chain and called yourself free while wrapping another around your wrist. Liberation is a practice, not a single dramatic exit.",
+      "keywords": "bondage, shadow, addiction, illusion, materialism"
+    },
+    {
+      "standardName": "The Tower",
+      "arcana": "major",
+      "suit": null,
+      "number": 16,
+      "alias": "",
+      "uprightMeaning": "The thing you built on a bad foundation is coming down, and it should. You can't renovate a lie — sometimes the only honest thing is rubble.",
+      "reversedMeaning": "You survived the collapse but you're trying to rebuild the same broken structure. The tower fell for a reason — build something different this time.",
+      "keywords": "upheaval, revelation, breakdown, liberation, sudden change"
+    },
+    {
+      "standardName": "The Star",
+      "arcana": "major",
+      "suit": null,
+      "number": 17,
+      "alias": "",
+      "uprightMeaning": "After the wreckage, there's this — a sky full of something worth believing in again. Pour yourself back into the world. You've earned this tenderness.",
+      "reversedMeaning": "You lost faith and now you're faking hope because it's what people expect. Cynicism dressed as realism is still just a wound you haven't tended.",
+      "keywords": "hope, healing, renewal, inspiration, vulnerability"
+    },
+    {
+      "standardName": "The Moon",
+      "arcana": "major",
+      "suit": null,
+      "number": 18,
+      "alias": "",
+      "uprightMeaning": "Nothing is what it looks like right now and that's okay. Walk through the fog anyway — your instincts know the path even when your eyes don't.",
+      "reversedMeaning": "You're so afraid of being deceived that you've stopped trusting anything, including yourself. Fear of illusion has become its own kind of blindness.",
+      "keywords": "illusion, fear, intuition, the unconscious, confusion"
+    },
+    {
+      "standardName": "The Sun",
+      "arcana": "major",
+      "suit": null,
+      "number": 19,
+      "alias": "",
+      "uprightMeaning": "This is the real thing — joy without a price tag, warmth without conditions. Dance in it. You don't have to earn the sunlight; you just have to step outside.",
+      "reversedMeaning": "You're performing happiness instead of feeling it. That forced smile is costing you more energy than just being honest about what's dimmed.",
+      "keywords": "joy, vitality, clarity, celebration, authenticity"
+    },
+    {
+      "standardName": "Judgement",
+      "arcana": "major",
+      "suit": null,
+      "number": 20,
+      "alias": "",
+      "uprightMeaning": "The call is coming from inside you. Everything you've lived through has been leading to this reckoning — not punishment, but the moment you finally answer for who you really are.",
+      "reversedMeaning": "You heard the call and hit snooze. Self-judgment without action is just guilt on repeat, and guilt never changed anything by itself.",
+      "keywords": "reckoning, calling, rebirth, absolution, awakening"
+    },
+    {
+      "standardName": "The World",
+      "arcana": "major",
+      "suit": null,
+      "number": 21,
+      "alias": "",
+      "uprightMeaning": "You made it all the way around and the circle is closing. This isn't the end — it's the exhale before the next breath. Take it in. You did the work.",
+      "reversedMeaning": "You're so close to completion but you keep finding reasons not to finish. The last mile is the hardest because it means you'll have to start something new.",
+      "keywords": "completion, wholeness, integration, fulfillment, journey's end"
+    },
+    {
+      "standardName": "Ace of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "A spark just landed in your hands — raw creative fire with no instructions. Don't plan it to death. Light something with it before it goes out.",
+      "reversedMeaning": "You had the spark but you smothered it with overthinking. Inspiration doesn't wait for you to feel ready.",
+      "keywords": "spark, inspiration, new passion, creative fire, potential"
+    },
+    {
+      "standardName": "Two of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "You're holding the world in your hands and deciding which direction to walk. The comfort zone has walls — step past them and see what's actually out there.",
+      "reversedMeaning": "You've been standing at the crossroads so long you've put down roots. Planning without moving is just a sophisticated way of staying stuck.",
+      "keywords": "planning, vision, decision, restlessness, future"
+    },
+    {
+      "standardName": "Three of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "Your ships are out there and the horizon is answering back. You did the work of launching — now trust the current to carry what you sent.",
+      "reversedMeaning": "You sent something into the world and now you're micromanaging the ocean. Let it travel or call it back, but stop standing on the shore wringing your hands.",
+      "keywords": "expansion, foresight, momentum, exploration, progress"
+    },
+    {
+      "standardName": "Four of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "The stage is set, the people showed up, and the music is good. Celebrate what you've built with the people who helped build it. This gathering is earned.",
+      "reversedMeaning": "You're throwing a party nobody feels welcome at, or you're too restless to enjoy the one that's happening. Celebration without presence is just noise.",
+      "keywords": "celebration, community, homecoming, milestone, gathering"
+    },
+    {
+      "standardName": "Five of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "Everybody's swinging but nobody's landing a real hit. This conflict is creative friction if you use it right — let the clash of ideas sharpen something instead of breaking it.",
+      "reversedMeaning": "You've turned disagreement into a lifestyle. Fighting for the sake of fighting stopped being punk a long time ago — now it's just exhausting.",
+      "keywords": "conflict, competition, creative tension, struggle, debate"
+    },
+    {
+      "standardName": "Six of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "The crowd is cheering and this time it's real — you earned this recognition by doing the thing nobody thought you could. Ride the wave, but remember who held the door open.",
+      "reversedMeaning": "You're chasing applause instead of meaning. When the validation dries up, will you still believe in what you made?",
+      "keywords": "victory, recognition, pride, triumph, public praise"
+    },
+    {
+      "standardName": "Seven of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "They're coming at you from all sides but you've got the high ground and you know it. Stand your ground — what you built is worth defending.",
+      "reversedMeaning": "You're so busy fighting off every critic that you've forgotten what you're defending. Not every hill is worth dying on.",
+      "keywords": "defiance, standing ground, perseverance, challenge, courage"
+    },
+    {
+      "standardName": "Eight of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "Everything is moving fast and for once, that's exactly right. Don't slow down to think — the arrows are already in the air. Ride the momentum.",
+      "reversedMeaning": "You launched everything at once and now it's all crashing into each other mid-flight. Speed without aim is just beautiful chaos with consequences.",
+      "keywords": "speed, momentum, swift action, messages, acceleration"
+    },
+    {
+      "standardName": "Nine of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "You're battered and leaning on your last stick but you're still standing. That's not stubbornness — that's the kind of grit that rewrites the story. One more round.",
+      "reversedMeaning": "You've been fighting so long you forgot you're allowed to rest. Resilience without recovery isn't brave — it's just self-destruction with better PR.",
+      "keywords": "resilience, persistence, grit, weariness, last stand"
+    },
+    {
+      "standardName": "Ten of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "You picked up every stick on the road and now you can barely see where you're going. Some of those burdens aren't yours — put them down before they break your back.",
+      "reversedMeaning": "You finally dropped the load but now you feel guilty about it. Letting go of what's crushing you isn't laziness, it's survival.",
+      "keywords": "burden, overwhelm, responsibility, exhaustion, overcommitment"
+    },
+    {
+      "standardName": "Page of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "You're the kid with the demo tape and nothing to lose. That fearless curiosity is your superpower — chase the idea before the world teaches you to be cautious.",
+      "reversedMeaning": "All talk, no tape. You keep announcing projects that never materialize because the daydream is more comfortable than the work.",
+      "keywords": "enthusiasm, exploration, curiosity, messenger, bold beginnings"
+    },
+    {
+      "standardName": "Knight of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "You're riding hard toward the next adventure with your hair on fire and zero regrets. That fearless energy is magnetic — just make sure you're charging toward something, not away from something.",
+      "reversedMeaning": "You're burning bridges and calling it liberation. Recklessness isn't the same as courage, and eventually you'll need a bridge you already torched.",
+      "keywords": "adventure, passion, impulsiveness, boldness, restless energy"
+    },
+    {
+      "standardName": "Queen of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "You walk into the room and the temperature changes. That's not ego — that's the warmth of someone who knows exactly who she is and doesn't dim it for anyone's comfort.",
+      "reversedMeaning": "You're demanding attention instead of commanding it. When confidence curdles into jealousy or control, the fire stops warming and starts burning.",
+      "keywords": "confidence, warmth, magnetism, independence, fierce joy"
+    },
+    {
+      "standardName": "King of Wands",
+      "arcana": "minor",
+      "suit": "wands",
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "You lead by lighting fires in other people, not by sitting on a throne. Vision without ego, ambition without greed — that's the kind of power that actually changes things.",
+      "reversedMeaning": "You've become the dictator of your own revolution. When the visionary stops listening to the people, the vision becomes just another empire.",
+      "keywords": "leadership, vision, charisma, bold action, inspired authority"
+    },
+    {
+      "standardName": "Ace of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "Your heart just cracked open and something real is pouring in. Don't analyze it — just let yourself feel the full weight of being alive and connected.",
+      "reversedMeaning": "You're blocking the flow because the last time you opened up, it hurt. But a sealed cup doesn't protect you — it just makes you thirsty.",
+      "keywords": "emotional opening, love, compassion, new feeling, overflow"
+    },
+    {
+      "standardName": "Two of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "Two people seeing each other clearly and choosing to stay anyway. This connection is the real deal — built on mutual respect, not need.",
+      "reversedMeaning": "You're confusing intensity with intimacy. When the connection becomes about completing each other instead of complementing, it starts to corrode.",
+      "keywords": "connection, partnership, mutual respect, harmony, bond"
+    },
+    {
+      "standardName": "Three of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "Raise a glass with the ones who showed up when it mattered. This isn't small talk at a party — it's the kind of joy that only happens when your people are your people.",
+      "reversedMeaning": "The group has turned into a clique and somebody's getting left out. When celebration becomes exclusive, the joy has curdled into something possessive.",
+      "keywords": "friendship, celebration, community, joy, belonging"
+    },
+    {
+      "standardName": "Four of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "You're sitting under a tree ignoring the cup being offered because you're too busy being disappointed by the three you already have. Look up.",
+      "reversedMeaning": "You finally noticed what was being offered but you're still not sure you want it. At least you're looking — that's the first step out of the sulk.",
+      "keywords": "apathy, discontent, contemplation, withdrawal, missed opportunity"
+    },
+    {
+      "standardName": "Five of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "Yeah, three cups spilled. It hurts and you should feel it. But there are two still standing behind you — grief is real, but so is what's left.",
+      "reversedMeaning": "You're weaponizing your sadness, wearing it like an identity instead of walking through it. Loss is a passage, not an address.",
+      "keywords": "grief, loss, regret, perspective, what remains"
+    },
+    {
+      "standardName": "Six of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "Something from your past is reaching out — a memory, a person, a version of yourself you left behind. There's sweetness here if you don't try to live in it permanently.",
+      "reversedMeaning": "You're living in a nostalgia that never actually existed the way you remember it. The past is a nice place to visit, but you can't set up camp there.",
+      "keywords": "nostalgia, innocence, memory, reunion, the past"
+    },
+    {
+      "standardName": "Seven of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "Seven beautiful possibilities floating in front of you and at least four of them are mirages. Dream big, but learn to tell the difference between vision and fantasy.",
+      "reversedMeaning": "You picked one and now you're wondering if you chose wrong. You didn't — you just have to stop looking back at the options that dissolved.",
+      "keywords": "fantasy, choices, illusion, wishful thinking, imagination"
+    },
+    {
+      "standardName": "Eight of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "You're walking away from something that looks perfectly fine from the outside. But you know it's empty, and staying would cost you more than leaving ever could.",
+      "reversedMeaning": "You keep almost leaving but turning back at the last second. The fear of the unknown is keeping you in a known misery — and that's no way to live.",
+      "keywords": "departure, disillusionment, seeking, walking away, deeper meaning"
+    },
+    {
+      "standardName": "Nine of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "You got what you wished for and it actually feels as good as you imagined. Sit with that satisfaction — you don't have to immediately want the next thing.",
+      "reversedMeaning": "You got everything you wanted and it still feels hollow. Maybe the wish was never really yours — maybe you were chasing someone else's version of enough.",
+      "keywords": "satisfaction, wish fulfilled, contentment, pleasure, gratitude"
+    },
+    {
+      "standardName": "Ten of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "This is the real commune — not the idea of it, but the messy, beautiful reality of people who chose each other. Emotional abundance shared freely. This is what it was all for.",
+      "reversedMeaning": "The picture looks perfect but someone in it is pretending. A family or community built on performance instead of truth is just a prettier cage.",
+      "keywords": "emotional fulfillment, family, harmony, shared joy, togetherness"
+    },
+    {
+      "standardName": "Page of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "A fish just popped out of your cup and you're not even surprised — that's the magic of staying open. Follow the strange feeling; it's trying to show you something beautiful.",
+      "reversedMeaning": "You're so guarded that wonder can't get through anymore. Somewhere along the way you decided that being open was the same as being naive, and you lost something precious.",
+      "keywords": "wonder, intuitive message, sensitivity, creative stirring, openness"
+    },
+    {
+      "standardName": "Knight of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "You're riding toward something your heart won't let you ignore. Follow that emotional truth — it knows things your rational mind hasn't caught up with yet.",
+      "reversedMeaning": "You've turned romance into performance and feelings into a script. When the grand gesture replaces genuine emotion, you're just acting in your own movie.",
+      "keywords": "romance, idealism, following the heart, charm, emotional quest"
+    },
+    {
+      "standardName": "Queen of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "You hold space for everyone's pain without drowning in it. That's a rare gift — emotional depth with boundaries, compassion without self-erasure.",
+      "reversedMeaning": "You've absorbed so much of everyone else's feelings that you can't find your own anymore. Empathy without boundaries isn't kindness — it's codependence.",
+      "keywords": "emotional depth, empathy, intuition, nurturing, boundaries"
+    },
+    {
+      "standardName": "King of Cups",
+      "arcana": "minor",
+      "suit": "cups",
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "You've been through the emotional deep end and came back fluent in feelings. Now you lead with your heart without being ruled by it — that's emotional mastery.",
+      "reversedMeaning": "You're using emotional intelligence as a tool for manipulation instead of connection. A calm exterior hiding a controlling interior is just a more sophisticated kind of dishonesty.",
+      "keywords": "emotional maturity, calm authority, diplomacy, wisdom, composure"
+    },
+    {
+      "standardName": "Ace of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "A single clear thought cutting through all the noise. This is your moment of mental breakthrough — speak the truth while it's sharp enough to matter.",
+      "reversedMeaning": "You've got the truth but you're wielding it like a weapon instead of a tool. Clarity without compassion is just cruelty with good aim.",
+      "keywords": "clarity, truth, breakthrough, mental force, new idea"
+    },
+    {
+      "standardName": "Two of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "You've blindfolded yourself to avoid making the choice, but the swords are still in your hands. Indecision is a decision — and it's the worst one available.",
+      "reversedMeaning": "The blindfold came off and now you wish it hadn't. The truth was always there; you were just protecting yourself from having to act on it.",
+      "keywords": "indecision, avoidance, stalemate, denial, difficult choice"
+    },
+    {
+      "standardName": "Three of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "The heart got pierced and there's no way around the pain — only through it. This hurt is honest, and honest pain is the beginning of real healing.",
+      "reversedMeaning": "You're picking at the wound instead of letting it close. Replaying the betrayal on loop doesn't protect you — it just keeps the blade twisting.",
+      "keywords": "heartbreak, painful truth, sorrow, betrayal, necessary pain"
+    },
+    {
+      "standardName": "Four of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "Lay down your weapons and rest. This isn't defeat — it's the strategic retreat that lets you come back whole. Even revolutionaries need to sleep.",
+      "reversedMeaning": "You jumped back into the fight before your wounds healed and now you're bleeding through the bandages. Rest isn't optional — it's the work.",
+      "keywords": "rest, recovery, retreat, contemplation, stillness"
+    },
+    {
+      "standardName": "Five of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "You won the argument but lost the people. Collecting other people's swords doesn't make you right — it just makes you alone on a battlefield.",
+      "reversedMeaning": "You're finally seeing that the victory wasn't worth the cost. Walking back to apologize is harder than winning ever was, and infinitely more brave.",
+      "keywords": "hollow victory, conflict, defeat, pride, walking away"
+    },
+    {
+      "standardName": "Six of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "You're leaving troubled waters behind and the crossing is quiet but necessary. You're not running — you're choosing a shore where you can finally breathe.",
+      "reversedMeaning": "You keep circling back to the same rough water because familiar pain feels safer than unknown peace. The boat is ready — stop rowing in circles.",
+      "keywords": "transition, moving on, passage, healing journey, calmer waters"
+    },
+    {
+      "standardName": "Seven of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "Sometimes you have to be clever instead of confrontational. This isn't about dishonesty — it's about knowing when to take what you need and slip out before the system notices.",
+      "reversedMeaning": "Your shortcuts are catching up with you. The clever workaround was actually just avoiding the hard conversation, and now the bill is due.",
+      "keywords": "strategy, stealth, shortcuts, resourcefulness, cunning"
+    },
+    {
+      "standardName": "Eight of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "You're blindfolded and surrounded by swords, but your hands are barely tied. Most of these walls are thoughts you built yourself — question them and they dissolve.",
+      "reversedMeaning": "You see the trap now but you're still standing in it. Awareness without action is just a more informed kind of imprisonment.",
+      "keywords": "mental trap, self-imposed limits, restriction, victimhood, paralysis"
+    },
+    {
+      "standardName": "Nine of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "Three a.m. and the thoughts won't stop circling. The anxiety feels like truth but it's just fear wearing logic's clothes. Talk to someone when the sun comes up.",
+      "reversedMeaning": "You've been carrying this dread so long it started to feel normal. It's not normal — it's a wound that needs daylight, not another sleepless night.",
+      "keywords": "anxiety, nightmares, worry, dread, mental anguish"
+    },
+    {
+      "standardName": "Ten of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "Ten swords in the back and you're face down. This is rock bottom, and that's actually useful information — the only direction from here is up. The worst is over.",
+      "reversedMeaning": "You survived the worst but you keep telling the story like it's still happening. At some point the pain becomes a narrative you're choosing to repeat.",
+      "keywords": "rock bottom, betrayal, endings, defeat, painful conclusion"
+    },
+    {
+      "standardName": "Page of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "You're sharp, curious, and asking the questions nobody wants to hear. Keep that edge — the world needs people who refuse to accept answers that don't add up.",
+      "reversedMeaning": "You're using your intelligence to cut people down instead of cutting through problems. A sharp tongue without wisdom is just cruelty with a vocabulary.",
+      "keywords": "curiosity, mental agility, questioning, vigilance, truth-seeking"
+    },
+    {
+      "standardName": "Knight of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "You're charging at the truth with everything you've got and nothing will slow you down. That intellectual ferocity changes things — just make sure you're not cutting down allies on the way.",
+      "reversedMeaning": "You've turned your mind into a battering ram and now everything looks like a wall. Not every situation needs your full force — sometimes it needs your full attention.",
+      "keywords": "intellectual charge, ambition, direct action, haste, sharp mind"
+    },
+    {
+      "standardName": "Queen of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "You see through every lie and you're not afraid to say so. That clarity earned through hard experience is a gift — wield it with the precision it deserves.",
+      "reversedMeaning": "Your standards have become walls and your discernment has become judgment. There's a thin line between seeing clearly and seeing only flaws.",
+      "keywords": "perceptiveness, independence, clear boundaries, hard-won wisdom, direct speech"
+    },
+    {
+      "standardName": "King of Swords",
+      "arcana": "minor",
+      "suit": "swords",
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "You make the hard calls with a clear head and a clean conscience. Intellectual authority earned through fairness, not force — that's the kind of mind people actually trust.",
+      "reversedMeaning": "You've become so rational you've cut yourself off from everything that makes decisions human. A mind without heart isn't wise — it's just cold.",
+      "keywords": "intellectual authority, fairness, clear judgment, analytical power, ethical mind"
+    },
+    {
+      "standardName": "Ace of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 1,
+      "alias": "",
+      "uprightMeaning": "A seed of real, tangible opportunity just landed in your hand. This isn't a dream — it's something you can build, grow, and live on. Plant it where the soil is good.",
+      "reversedMeaning": "You let a solid opportunity slip because it didn't look glamorous enough. Not everything worth building announces itself with fireworks.",
+      "keywords": "opportunity, prosperity, new venture, seed, material beginning"
+    },
+    {
+      "standardName": "Two of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 2,
+      "alias": "",
+      "uprightMeaning": "You're juggling two things and somehow making it look easy. That's not luck — it's adaptability. Keep the rhythm, stay loose, and don't let anyone add a third ball.",
+      "reversedMeaning": "The juggling act just became a dropping act. You can't balance what you refuse to prioritize — something's got to give before you do.",
+      "keywords": "balance, juggling, adaptability, flux, prioritizing"
+    },
+    {
+      "standardName": "Three of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 3,
+      "alias": "",
+      "uprightMeaning": "The best work happens when the architect, the builder, and the dreamer are all in the same room. Collaborate with people whose skills fill your gaps — ego builds nothing lasting.",
+      "reversedMeaning": "Nobody's listening to each other and the project is suffering for it. When collaboration turns into competition, the craft dies first.",
+      "keywords": "collaboration, craftsmanship, teamwork, skill, shared purpose"
+    },
+    {
+      "standardName": "Four of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 4,
+      "alias": "",
+      "uprightMeaning": "You're holding on so tight your knuckles are white. Security is important, but when it becomes hoarding, you've traded freedom for a fortress nobody can enter — including you.",
+      "reversedMeaning": "You finally loosened your grip and it's terrifying. But money and resources were meant to flow, not to be clenched in a fist.",
+      "keywords": "control, hoarding, security, possessiveness, scarcity mindset"
+    },
+    {
+      "standardName": "Five of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 5,
+      "alias": "",
+      "uprightMeaning": "You're out in the cold and the warmth is right there behind the door you're too proud to knock on. Hardship is real, but isolation in hardship is a choice. Ask for help.",
+      "reversedMeaning": "The worst is passing and you're starting to see the door again. Recovery from rock bottom starts with one knock — one honest admission that you can't do this alone.",
+      "keywords": "hardship, exclusion, poverty, isolation, asking for help"
+    },
+    {
+      "standardName": "Six of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 6,
+      "alias": "",
+      "uprightMeaning": "Give because you can, not because it makes you feel powerful. Real generosity doesn't keep score — it flows downhill to where it's needed most.",
+      "reversedMeaning": "Your giving has strings attached and everyone can feel them. Generosity with conditions is just leverage wearing a kind face.",
+      "keywords": "generosity, sharing, charity, reciprocity, giving and receiving"
+    },
+    {
+      "standardName": "Seven of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 7,
+      "alias": "",
+      "uprightMeaning": "You've been tending this garden for a long time and you're tired. The harvest isn't here yet but the growth is real — patience now is an act of faith in your own labor.",
+      "reversedMeaning": "You're ready to rip out the whole garden because it's not growing fast enough. Impatience will destroy in a day what took months to cultivate.",
+      "keywords": "patience, assessment, long-term effort, waiting, investment"
+    },
+    {
+      "standardName": "Eight of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 8,
+      "alias": "",
+      "uprightMeaning": "Head down, hands busy, making the same thing over and over until it's perfect. This isn't drudgery — it's devotion. The craft rewards the ones who keep showing up.",
+      "reversedMeaning": "You're going through the motions but the love left the work a while ago. Perfectionism without passion is just a well-polished cage.",
+      "keywords": "craftsmanship, dedication, mastery, practice, diligence"
+    },
+    {
+      "standardName": "Nine of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 9,
+      "alias": "",
+      "uprightMeaning": "You built this garden with your own hands and now you get to enjoy it. Self-sufficiency that came from real work — not inherited privilege, but earned independence.",
+      "reversedMeaning": "You've got the beautiful garden but you're lonely in it. Independence taken too far becomes its own kind of prison — let someone in.",
+      "keywords": "self-sufficiency, abundance, independence, luxury, earned comfort"
+    },
+    {
+      "standardName": "Ten of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 10,
+      "alias": "",
+      "uprightMeaning": "This is the legacy — not just money, but the values, the stories, the community you leave behind. Build something that outlasts you and nourishes the ones who come next.",
+      "reversedMeaning": "You're so focused on the inheritance that you forgot to live. Legacy means nothing if the people you're leaving it to don't actually know who you were.",
+      "keywords": "legacy, inheritance, family wealth, permanence, tradition"
+    },
+    {
+      "standardName": "Page of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 11,
+      "alias": "",
+      "uprightMeaning": "You're holding a coin and studying it like it holds the secrets of the universe. That beginner's devotion to learning the practical stuff is worth more than any diploma — stay hungry.",
+      "reversedMeaning": "You're so busy studying the plan that you never start building. At some point you have to put down the book and pick up the hammer.",
+      "keywords": "study, apprenticeship, diligence, practical learning, ambition"
+    },
+    {
+      "standardName": "Knight of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 12,
+      "alias": "",
+      "uprightMeaning": "You're the slowest rider on the field and that's exactly why you'll get there. Steady, reliable, and methodical — you finish what everyone else abandoned when it got boring.",
+      "reversedMeaning": "You've turned reliability into rigidity and patience into paralysis. Being thorough is a virtue; being immovable is just stubbornness with a work ethic.",
+      "keywords": "reliability, methodical work, persistence, routine, steady progress"
+    },
+    {
+      "standardName": "Queen of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 13,
+      "alias": "",
+      "uprightMeaning": "You make the practical beautiful and the mundane sacred. A home-cooked meal, a hand-built shelf, a community fed and sheltered — that's your kind of magic.",
+      "reversedMeaning": "You're so focused on providing for everyone else that you've neglected your own foundation. Caretaking that drains you isn't sustainable — it's just slow erosion.",
+      "keywords": "practical nurturing, resourcefulness, comfort, grounded care, abundance"
+    },
+    {
+      "standardName": "King of Pentacles",
+      "arcana": "minor",
+      "suit": "pentacles",
+      "number": 14,
+      "alias": "",
+      "uprightMeaning": "You built something real and lasting without selling your soul to do it. Wealth that serves the community, success that stays rooted — that's the kind of prosperity worth having.",
+      "reversedMeaning": "The empire you built is starting to own you instead of the other way around. When material success becomes your identity, you've traded your freedom for a fancier cage.",
+      "keywords": "prosperity, stewardship, material mastery, generosity, grounded success"
+    }
+  ]
+}
