@@ -1,0 +1,271 @@
+# The Duat Oracle
+# 42 cards — the soul's journey through the Duat,
+# one card for each of the 42 Negative Confessions.
+# Maximum 100 cards per deck.
+
+deck_name: "The Duat Oracle"
+
+cards:
+  # ── The Western Gate (1-7) ──
+
+  - name: "Innocence"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul figure in white linen stepping through a massive western gate carved with ankhs into deep indigo darkness, jackal-headed Anubis twice the soul's height waiting beyond with was-scepter raised, golden stars dotting the ceiling above. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [western gate, Anubis, jackal, ankh, was-scepter]
+    meaning: "You stand at the threshold between the known and the unknown. Step forward — the guide who waits in darkness is not your enemy but your witness."
+    composition: "western gate at center frame, soul stepping through from left, towering Anubis on right, starry ceiling above, hieroglyphic border"
+
+  - name: "Truth"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing before the great golden scales of judgment, the feather of Ma'at resting on one pan glowing white, jackal-headed judge Hept-khet seated behind the scales holding an ankh, ba-bird hovering above. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [scales, feather of Ma'at, ba-bird, judgment, ankh]
+    meaning: "Truth is not a weapon — it is the feather on the scale. Let yourself be weighed. What is honest in you will rise."
+    composition: "golden scales at center, soul standing left in profile, feather on right pan, seated judge behind, ba-bird above"
+
+  - name: "Peace"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing on a reed boat crossing a still dark river, papyrus reeds rising from black water, a single lotus flower glowing blue at the prow, distant western hills in red ochre, scarab beetle carved on the hull. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [reed boat, dark river, lotus, papyrus, scarab]
+    meaning: "The crossing is quiet. Do not disturb the waters with your fear — the boat already knows the way. Be still and you will arrive."
+    composition: "reed boat at center on dark water, soul standing in profile, lotus at prow, papyrus reeds flanking, western hills in distance"
+
+  - name: "Mercy"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen kneeling with open hands before a towering lioness-headed judge Am-khaibit seated on a stone throne, djed pillar behind the throne, ankhs carved into the floor, soft golden light falling from above. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [lioness judge, kneeling, open hands, djed pillar, ankh]
+    meaning: "To kneel before mercy is not weakness. Open your hands — what you release cannot condemn you. What you cling to will."
+    composition: "kneeling soul at left, towering lioness-headed judge enthroned at right, djed pillar behind throne, golden light from above"
+
+  - name: "Generosity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen offering golden sheaves of wheat at a stone altar, golden fields of grain stretching behind in horizontal bands, the judge Neha-her seated above with was-scepter, scarab beetles dotting the field, eye of Horus carved into the altar face. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [wheat sheaves, altar, golden fields, scarab, eye of Horus]
+    meaning: "What you give freely returns tenfold from the black soil. Offer without counting — the fields remember every opened hand."
+    composition: "soul at left offering wheat at center altar, golden grain fields behind in registers, seated judge above right, scarabs scattered"
+
+  - name: "Honor"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen walking in profile between two towering obelisks inscribed with hieroglyphs, ritual offerings of bread and beer untouched on stone pedestals at the base of each obelisk, the judge Ruruti standing beyond with ankh extended, djed pillars flanking. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [twin obelisks, offerings, bread and beer, djed pillar, hieroglyphs]
+    meaning: "Walk between what is sacred and do not take. The offerings are not yours — but the path between them is. Honor opens every gate."
+    composition: "twin obelisks flanking center, soul walking between them, offerings on pedestals at bases, judge standing beyond, djed pillars at edges"
+
+  - name: "Reverence"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen bowing deeply before a golden shrine with doors ajar, sacred objects gleaming inside — an ankh, a was-scepter, a golden uraeus — the judge Maati-f-em-tes standing guard with cobra headdress, incense smoke curling upward in thin blue lines. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [golden shrine, sacred objects, uraeus, incense, cobra]
+    meaning: "Bow before what is holy — not because it demands it, but because you recognize what dwells there. Reverence is the eye that sees the divine."
+    composition: "bowing soul at left, golden shrine with open doors at center, sacred objects within, standing judge at right, incense smoke rising"
+
+  # ── The Hall of Testimony (8-14) ──
+
+  - name: "Honesty"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen speaking before a towering ibis-headed Thoth who inscribes words on an unfurling papyrus scroll, a single glowing hieroglyph floating between them, feather of Ma'at tucked behind Thoth's ear, ink palette at his feet. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Thoth, ibis, papyrus scroll, hieroglyph, feather of Ma'at]
+    meaning: "Every word you speak is written. Let your tongue carry only what your heart can bear to see inscribed forever. Speak and the record is made."
+    composition: "soul at left speaking, towering ibis-headed Thoth at right writing on scroll, glowing hieroglyph between them, ink palette below"
+
+  - name: "Contentment"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen seated cross-legged before a laden offering table piled with bread, fruit, and lotus flowers, hands resting peacefully in lap not reaching, the judge Set-qesu observing from a raised platform, ankh symbol above the soul's head. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [offering table, bread and fruit, lotus, seated figure, ankh]
+    meaning: "Abundance surrounds you and asks nothing. Sit before the feast with quiet hands — what is truly yours will never need to be seized."
+    composition: "seated soul at center before laden table, hands in lap, judge on raised platform at right, ankh floating above, lotus flowers on table"
+
+  - name: "Kindness"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing with sealed lips before a towering cobra-headed judge Utu-nesert on a turquoise throne, dark cursing words dissolving into small blue lotus flowers as they leave the air, eye of Horus glowing on the wall behind. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [cobra judge, sealed lips, lotus flowers, eye of Horus, dissolution]
+    meaning: "The curse dies on kind lips. What you refuse to speak aloud dissolves into beauty — silence is the first flower of compassion."
+    composition: "soul standing at left with sealed mouth, cobra-headed judge enthroned at right, dark words transforming into lotus flowers in the air between, eye of Horus on wall"
+
+  - name: "Fidelity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — two figures in white linen facing each other across a sacred lotus pool painted in turquoise, a single golden thread connecting their hearts, the judge Qerrti observing from above, ankhs flanking the pool, water lilies floating on the surface. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [lotus pool, golden thread, two hearts, water lilies, ankh]
+    meaning: "The thread that binds two hearts is spun from loyalty, not desire. Guard the golden connection — what is joined in truth cannot be severed by the world."
+    composition: "two facing figures at left and right with lotus pool between, golden thread connecting hearts, judge observing above, ankhs flanking, lilies on water"
+
+  - name: "Compassion"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen catching falling tears in a golden vessel before a weeping seated figure, the judge Heri-seru standing behind with was-scepter, a ba-bird perched on the vessel's rim, djed pillar in the background. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [golden vessel, tears, ba-bird, was-scepter, djed pillar]
+    meaning: "Another's grief is not yours to fix — it is yours to hold. Catch the tears. The vessel you offer becomes sacred the moment it receives."
+    composition: "weeping figure at left, soul catching tears in vessel at center, ba-bird on rim, judge standing at right with was-scepter, djed pillar behind"
+
+  - name: "Harmony"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — the great golden scales of judgment perfectly balanced at center, a red heart on one pan and the white feather of Ma'at on the other, the soul in white linen standing beneath with arms raised, jackal-headed Anubis steadying the scales, Ammit the devourer crouching watchful but still below. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [balanced scales, heart, feather of Ma'at, Anubis, Ammit]
+    meaning: "The heart and the feather meet as equals. You have lived so that neither side falls — this is the rarest equilibrium. Stand in your balance."
+    composition: "golden scales perfectly balanced at top center, heart and feather on pans, soul below with raised arms, Anubis steadying scales, Ammit crouching beneath"
+
+  - name: "Discipline"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing with hands clasped behind its back before a towering warrior judge Maa-antuf in red ochre, bronze weapons — a khopesh sword, a spear, a mace — laid deliberately on the stone ground, scarab carved into the floor between them. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [warrior judge, weapons laid down, khopesh, scarab, restraint]
+    meaning: "True strength lays its weapons on the ground. The hands clasped behind you hold more power than any blade — discipline is force made wise."
+    composition: "soul at left with hands behind back, towering warrior judge at right, weapons arranged on ground between them, scarab carved in floor"
+
+  # ── The Corridor of Mirrors (15-21) ──
+
+  - name: "Integrity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen walking through a long corridor of polished bronze mirrors, each reflection showing the identical figure unchanged, the judge Her-uru at the far end holding an ankh, eye of Horus symbols etched into each mirror frame, golden light streaming from the corridor's end. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [mirror corridor, reflections, eye of Horus, ankh, bronze mirrors]
+    meaning: "Walk through every mirror and remain the same. Integrity is the self that does not shift — what you are in private, you are before the gods."
+    composition: "soul walking left to right through corridor, identical reflections in mirrors above and below, judge at far right holding ankh, eye of Horus on frames"
+
+  - name: "Stewardship"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen tending a garden at the edge of the Nile painted in turquoise and lapis bands, red boundary stones intact at the garden's edge, papyrus and date palms growing in ordered rows, the judge Neb-Maat seated above holding the feather of Ma'at, a scarab beetle at the soul's feet. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Nile garden, boundary stones, papyrus, date palms, feather of Ma'at]
+    meaning: "Tend what is given to you and honor its borders. The land remembers every hand that kept faith — stewardship is love made visible in the soil."
+    composition: "soul tending garden at center, Nile bands behind, boundary stones at edges, palms and papyrus in rows, judge seated above right"
+
+  - name: "Discretion"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen turning away from a doorway where hieroglyphic voices float outward as small bird-symbols, eyes facing forward toward an open corridor, the judge Tenemiu standing beyond the doorway with finger to lips, was-scepter in other hand, djed pillar at corridor's end. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [doorway, bird-symbols, was-scepter, djed pillar, turned away]
+    meaning: "Not every truth spoken nearby is meant for your ears. Turn away from the door — the words you refuse to hear cannot burden you."
+    composition: "soul at center turning away from doorway at left, bird-symbols floating from door, judge beyond doorway, open corridor ahead at right, djed pillar distant"
+
+  - name: "Justice"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen holding its tongue still before a towering crocodile-headed judge Sertiu seated on a lapis throne, blank papyrus scrolls unfurling clean and white on the ground between them, feather of Ma'at hovering above the scrolls, ankh carved into the throne. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [crocodile judge, papyrus scrolls, feather of Ma'at, lapis throne, ankh]
+    meaning: "The scroll is clean because your tongue was just. Slander writes in ink that never fades — let your record unfurl spotless before the judge."
+    composition: "soul standing at left, crocodile-headed judge enthroned at right, clean scrolls unfurling between on ground, feather hovering above scrolls"
+
+  - name: "Temperance"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing calmly within stylized red and gold flames that do not burn, expression serene in profile, the judge Tutu observing from beyond the fire, an ankh glowing cool blue at the soul's heart, scarab beetle above untouched by flame. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [sacred flame, serenity, ankh, scarab, unburned]
+    meaning: "The fire tests but does not consume. Stand in the anger, the passion, the heat — and let it pass through you. What remains unburned is truly yours."
+    composition: "soul standing calmly at center within stylized flames, blue ankh at heart, judge observing from right beyond fire, scarab above"
+
+  - name: "Purity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen washing in a sacred turquoise pool, blue lotus flowers opening around the figure, water pouring from a ritual vessel above, the judge Uamemti standing at the pool's edge with was-scepter, eye of Horus reflected in the water's surface. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [sacred pool, blue lotus, ritual vessel, eye of Horus, purification]
+    meaning: "Descend into the water and leave what clings to you. The lotus opens only in purity — let the sacred pool take everything that is not your true self."
+    composition: "soul in turquoise pool at center, lotus flowers opening around, ritual vessel pouring from above, judge at right edge, eye of Horus reflected in water"
+
+  - name: "Devotion"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen kneeling before a stone altar where a steady blue flame burns unwavering, the judge Maa-antuf standing behind the altar with ankh raised, incense smoke rising in thin lapis lines, djed pillar at each side of the altar, scarab carved into the altar's face. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [altar flame, blue fire, incense, djed pillar, scarab]
+    meaning: "The flame that burns steady needs no wind. Kneel before what you have tended faithfully — devotion is the fire that feeds itself."
+    composition: "kneeling soul at left, stone altar with blue flame at center, judge behind altar with ankh, incense rising, djed pillars flanking"
+
+  # ── The Chamber of Purification (22-28) ──
+
+  - name: "Restraint"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing purified before a tall gateway of brilliant gold light, the judge Her-uru at the threshold with was-scepter crossed over the passage, the soul's garments glowing pure white, ankhs carved into the gateway columns, feather of Ma'at above the lintel. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [gateway of light, white linen, was-scepter, ankh columns, feather of Ma'at]
+    meaning: "You have kept yourself whole. The gateway opens for those who did not stain what was given to them — pass through in your earned whiteness."
+    composition: "soul standing at left in brilliant white, golden gateway at center, judge at threshold with crossed scepter, ankhs on columns, feather above lintel"
+
+  - name: "Calm"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen sitting cross-legged in a dark underground chamber, a single oil lamp with a small golden flame before it, shadows retreating into the corners as stylized dark shapes, the judge Khem visible as a seated silhouette beyond the lamplight, scarab beetle resting on the soul's knee. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [oil lamp, dark chamber, shadows, scarab, seated meditation]
+    meaning: "Sit with the darkness and light one flame. The shadows flee not from force but from stillness — calm is the lamp that no wind can extinguish."
+    composition: "seated soul at center with oil lamp before, dark chamber around, retreating shadow shapes, judge silhouette beyond light, scarab on knee"
+
+  - name: "Patience"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a line of small souls in white linen waiting in orderly procession before the great gate of the Duat, the gate painted gold with lapis columns, the judge Shet-kheru standing at the gate with ankh, the waiting soul at the front standing patient with hands at sides, ba-birds hovering above the queue. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [great gate, procession, ba-birds, waiting souls, ankh]
+    meaning: "The gate opens in its own time. Stand among the waiting and do not push ahead — patience is the proof that you trust the order of things."
+    composition: "line of souls stretching from left, great gate at right with judge, ba-birds above queue, lapis columns, gold gate"
+
+  - name: "Acceptance"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen releasing a red bird from cupped hands upward into a turquoise sky band, the bird trailing red ochre streaks as it flies, the judge Nekhen watching from a raised platform, ankh glowing at the soul's chest where the bird was held, papyrus reeds framing the scene. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [red bird, release, turquoise sky, ankh, papyrus reeds]
+    meaning: "Open your hands and let the anger fly. It was never yours to keep — what rises from your palms was always meant for the sky."
+    composition: "soul at center releasing red bird upward, turquoise sky band above, red streaks trailing from bird, judge on platform at right, papyrus reeds framing"
+
+  - name: "Openness"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen seated with hands lowered from its ears, listening intently to a standing figure of Ma'at with outstretched wings and feather crown speaking, golden hieroglyphs flowing from Ma'at's mouth toward the soul, the judge Kenemti behind with was-scepter, eye of Horus above. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Ma'at speaking, golden hieroglyphs, outstretched wings, eye of Horus, listening]
+    meaning: "Remove your hands from your ears. Truth speaks quietly and will not shout — you must choose to hear what has always been said."
+    composition: "seated soul at right listening, winged Ma'at standing at left speaking, golden hieroglyphs flowing between, judge behind, eye of Horus above"
+
+  - name: "Silence"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing mute before a towering falcon-headed Horus on a gold throne, the soul's mouth sealed with a band of gold, was-scepter and ankh in Horus's hands, the judge An-hetep-f observing from the side, djed pillar behind the throne, no hieroglyphs in the air — pure silence. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Horus, falcon, golden seal, was-scepter, djed pillar]
+    meaning: "There are words the mouth must never form. Stand sealed before the sacred — silence is not emptiness but the deepest form of prayer."
+    composition: "soul at left with gold-sealed mouth, towering falcon-headed Horus enthroned at right, judge observing from far left, djed pillar behind throne, empty air between"
+
+  - name: "Humility"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen prostrate on stone floor before the great golden scales, forehead touching the ground, the judge Sera-kheru standing above with feather of Ma'at extended downward, ankhs carved into the stone floor in a row, a ba-bird waiting above the prostrate figure. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [prostration, golden scales, feather of Ma'at, ba-bird, stone floor]
+    meaning: "Press your forehead to the stone and know your place in the order. Humility is not shame — it is the ground from which all rising begins."
+    composition: "prostrate soul at center on stone floor, scales above, judge standing over with extended feather, ankhs carved in floor, ba-bird hovering"
+
+  # ── The Still Waters (29-35) ──
+
+  - name: "Stillness"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing at the center of a perfectly still turquoise pool, no ripples emanating outward, the water mirror-smooth reflecting the figure identically, the judge Neb-heru seated at the pool's edge, lotus flowers closed and floating, djed pillar reflected in the water. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [still pool, reflection, lotus, djed pillar, mirror water]
+    meaning: "Be the center that makes no ripple. When you are truly still, the water shows you as you are — undistorted, complete, at rest."
+    composition: "soul standing at center of still pool, perfect reflection below, judge seated at right edge, closed lotus floating, djed pillar reflected"
+
+  - name: "Deliberation"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen walking slowly through a long stone corridor marked with measured lines on the floor, each footstep placed precisely on a golden marker, the judge Sekhriu standing at the corridor's end with ankh extended, hieroglyphic inscriptions running along both walls, scarab beetles at each measured interval. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [measured corridor, golden markers, hieroglyphic walls, scarab, ankh]
+    meaning: "Place each step where it belongs. The corridor is long and there is no need to rush — deliberation is the walk of one who knows the destination is certain."
+    composition: "soul walking left to right through corridor, golden floor markers, hieroglyphic walls above and below, judge at far right with ankh, scarabs at intervals"
+
+  - name: "Clarity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing at a crossroads of three corridors, choosing the one filled with golden light, the other two in shadow, the judge Neb-abui pointing toward the lit path with was-scepter, eye of Horus glowing above the chosen corridor, ankh carved into the lit threshold. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [crossroads, golden light, eye of Horus, was-scepter, ankh threshold]
+    meaning: "The path lit before you is not the easiest — it is the truest. See clearly and choose what shines. Clarity is the eye that needs no torch."
+    composition: "soul at center crossroads, three corridors branching, lit path at right with golden light, shadowed paths at left, judge pointing, eye of Horus above lit path"
+
+  - name: "Simplicity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen speaking a single glowing golden hieroglyph before a lotus-crowned judge Nefer-Tem seated on a turquoise throne, the single word floating luminous between them, all other hieroglyphs on the walls faded and dim, ankh resting simply on the soul's open palm. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [single hieroglyph, lotus crown, Nefer-Tem, ankh, luminous word]
+    meaning: "One word spoken true outweighs a thousand scattered. Strip your speech to its single shining glyph — simplicity is eloquence that the gods can hear."
+    composition: "soul at left with open palm, single glowing hieroglyph floating at center, lotus-crowned judge enthroned at right, faded wall glyphs, ankh on palm"
+
+  - name: "Forgiveness"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen embracing its own dark shadow-self, the two figures merging into one at the center, the judge Tem-Sepu watching from behind with ankh raised, the merged figure glowing with inner gold, scarab beetle above representing transformation, djed pillar at each side. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [shadow-self, embrace, merging, scarab, djed pillar]
+    meaning: "Turn and face your shadow. It has walked behind you since the western gate — embrace it now and become whole. Forgiveness is the self returning to itself."
+    composition: "soul and shadow-self merging at center, judge behind with raised ankh, glowing merged figure, scarab above, djed pillars flanking"
+
+  - name: "Gratitude"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen raising both hands in offering gesture before a seated pharaoh figure in gold and lapis headdress, golden sunlight streaming diagonally from upper right, the judge Ari-em-ab-f standing beside the throne with was-scepter, ankhs and lotus flowers arranged at the pharaoh's feet. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [offering gesture, pharaoh, sunlight, was-scepter, lotus]
+    meaning: "Raise your hands not in supplication but in thanks. The light that falls upon you was always a gift — gratitude is the offering that costs nothing and fills everything."
+    composition: "soul at left with raised hands, seated pharaoh at right in gold, diagonal sunlight from upper right, judge beside throne, ankhs and lotus at feet"
+
+  - name: "Abundance"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing beside a great irrigation channel, turquoise water flowing freely through stone sluices into green fields beyond, the judge Ahi seated on raised ground overseeing the flow, papyrus and grain growing tall in the irrigated fields, scarab beetle riding the water's surface, ankh carved into the sluice gate. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [irrigation channel, flowing water, green fields, scarab, ankh sluice]
+    meaning: "Do not dam what was meant to flow. The water knows its course — let abundance pass through you and reach the fields that thirst. You are the channel, not the reservoir."
+    composition: "soul standing at left beside channel, water flowing right through sluices into green fields, judge seated above on raised ground, papyrus and grain growing, scarab on water"
+
+  # ── The Field of Reeds (36-42) ──
+
+  - name: "Voice"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen singing a hymn before an assembly of seated gods in a great hall, sound visible as golden waves radiating from the soul's mouth, the judge Uatch-rekhit among the assembly, falcon-headed and ibis-headed gods visible, ba-birds perched on columns above, ankhs glowing at each god's hand. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [hymn, golden sound waves, assembly of gods, ba-birds, great hall]
+    meaning: "Your voice carries to every throne. Sing what is true and the gods lean forward to listen — the voice that has been tested in silence rings purest of all."
+    composition: "soul at left singing, golden sound waves radiating right, assembly of seated gods in hall, ba-birds on columns above, ankhs glowing"
+
+  - name: "Reverence of the Stars"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen kneeling beneath a vast sky painted as the arched body of Nut in lapis blue studded with golden stars, the judge Neheb-ka standing behind as a great serpent figure, ankhs hanging from Nut's fingertips, the earth god Geb painted as the green ground beneath the kneeling soul, scarab beetle rolling a star across the sky. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Nut, starry sky, Geb, serpent judge, scarab rolling star]
+    meaning: "Kneel beneath the body of the sky and know yourself as small and held. The stars above are older than your grief — reverence is remembering your place among them."
+    composition: "kneeling soul at center on green ground, arched body of Nut spanning above studded with stars, serpent judge behind, ankhs hanging from sky, scarab rolling star"
+
+  - name: "Worthiness"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen standing before the colossal seated green-skinned Osiris on his golden throne, Osiris holding crook and flail crossed over his chest, the atef crown towering above, the judge Neheb-nefert at the throne's base, the soul tiny in hierarchical scale, djed pillar behind the throne, feather of Ma'at at the soul's heart. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Osiris, green skin, crook and flail, atef crown, djed pillar]
+    meaning: "Stand small before the great throne and do not shrink further. You have walked the full corridor — worthiness is not the absence of fault but the presence of the journey."
+    composition: "tiny soul at left, colossal green-skinned Osiris enthroned at right with crook and flail, atef crown above, judge at throne base, djed pillar behind, feather at soul's heart"
+
+  - name: "Balance"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen placing bread and beer on a stone altar, giving rather than taking, the judge Tcheser-tep receiving from behind the altar with open hands, golden scales visible in the background perfectly level, ankh and was-scepter crossed on the altar's face, scarab above the offerings. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [bread and beer offering, stone altar, golden scales, scarab, was-scepter]
+    meaning: "Place upon the altar what you could have taken. Balance is the hand that gives when it could seize — the scales remember every act of willing surrender."
+    composition: "soul at left placing offerings, stone altar at center, judge receiving at right, golden scales in background, scarab above offerings"
+
+  - name: "Fulfillment"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen receiving the crook and flail crossed over its chest in the posture of Osiris, the judge An-af bestowing them, the soul's form beginning to glow with inner gold, ba-bird descending from above to rejoin the body, ankh blazing at the throat, djed pillar rising behind the transformed figure. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [crook and flail, transformation, ba-bird, ankh, djed pillar]
+    meaning: "Receive what you have earned. The crook to guide, the flail to nourish — you are no longer the one who walks. You are the one who has arrived."
+    composition: "soul at center receiving crook and flail, judge bestowing at left, ba-bird descending from above, ankh blazing at throat, djed pillar rising behind"
+
+  - name: "Eternity"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul in white linen walking into the vast Field of Reeds stretching to the horizon in golden wheat, a great sun disk with cobra uraeus overhead, the judge Hetch-abhu fading behind at the field's entrance, ba-bird flying alongside the soul, ankh in one hand and feather of Ma'at in the other, irrigation channels gleaming blue between the golden rows. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [Field of Reeds, golden wheat, sun disk, ba-bird, feather of Ma'at]
+    meaning: "The field stretches without end and the wheat is golden. Walk into eternity with the feather in your hand — you have spoken every truth and the horizon belongs to you."
+    composition: "soul walking right into golden field, wheat stretching to horizon, great sun disk above, judge fading at left behind, ba-bird flying alongside, blue channels between rows"
+
+  - name: "Ma'at"
+    description: "Ancient Egyptian tomb painting on warm papyrus ground, flat profile figures with black outlines, hieroglyphic border framing — a small soul crowned with the white feather of Ma'at standing at the center of a great hall before all forty-two judges assembled in tiered rows, each judge distinct with animal and human heads, the soul glowing gold with arms at its sides, the scales behind perfectly balanced, ankhs raised by every judge, eye of Horus blazing above the hall like a sun. Gold, lapis blue, turquoise, and red ochre palette, horizontal register composition."
+    keywords: [forty-two judges, feather crown, great hall, eye of Horus, balanced scales]
+    meaning: "You have answered every question the darkness asked. Stand crowned in truth before the assembled court — the journey is complete, and you are Ma'at made flesh."
+    composition: "crowned soul standing at center, forty-two judges in tiered rows flanking left and right, balanced scales behind, ankhs raised, eye of Horus blazing above hall"
