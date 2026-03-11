@@ -1,0 +1,256 @@
+{
+  "cards": [
+    {
+      "name": "Innocence",
+      "meaning": "You step through the western gate with nothing hidden. The darkness ahead is not punishment — it is the passage every soul must walk. Your hands are empty and that is enough.",
+      "reversedMeaning": "You stand at the gate but will not enter. The sin you deny is the weight that holds you here. Until you name what you carry, the door remains stone.",
+      "keywords": "western gate, Anubis, threshold, purity, beginning"
+    },
+    {
+      "name": "Truth",
+      "meaning": "You have placed your heart on the scale and it does not waver. The feather recognizes you because you have stopped performing honesty and started living it. Speak now — the judges are listening.",
+      "reversedMeaning": "The scale tips and you know why. You have rehearsed your confession so many times it has become another lie. The feather weighs nothing, yet your heart cannot match it.",
+      "keywords": "scales, feather of Ma'at, confession, weighing, judgment"
+    },
+    {
+      "name": "Peace",
+      "meaning": "The dark river parts for you because you carry no stolen thing. What you have was given or earned, and the ferryman knows the difference. Cross now — the far bank is yours.",
+      "reversedMeaning": "The current drags at your ankles and you know what you took. Every stolen thing becomes a stone in your pockets on this crossing. Return what is not yours or the river will keep you.",
+      "keywords": "dark river, crossing, ferryman, restitution, passage"
+    },
+    {
+      "name": "Mercy",
+      "meaning": "The lioness judge lowers her gaze. Your hands have not taken what cannot be returned. You understand that power over life is not yours to wield — and in that knowledge, you are granted passage.",
+      "reversedMeaning": "Sekhmet smells blood on you. Not on your hands — in your intent. The violence you harbor poisons your ka whether or not your fists ever close. The lioness does not forget.",
+      "keywords": "Sekhmet, lioness, blood, sanctity, life"
+    },
+    {
+      "name": "Generosity",
+      "meaning": "You lay wheat upon the altar and mean it. What you give is not surplus — it is sustenance willingly released. The fields of the afterlife open to those who fed the living.",
+      "reversedMeaning": "You hoard what the land gave freely. The grain rots in your storehouse while others go without, and you call it prudence. The altar rejects offerings made from what remains after greed.",
+      "keywords": "wheat, altar, offering, harvest, nourishment"
+    },
+    {
+      "name": "Honor",
+      "meaning": "You pass between the obelisks with your name intact. What was sacred to others you left sacred. The gods mark those who respect what was set apart — you are marked well.",
+      "reversedMeaning": "The obelisks lean inward and will not let you through. You took what was consecrated and made it common. To purify offerings means nothing if your hands defiled them first.",
+      "keywords": "obelisks, sacred offerings, respect, consecration, passage"
+    },
+    {
+      "name": "Reverence",
+      "meaning": "You bow before the shrine and the shrine acknowledges you. What belonged to the gods you left in the temple. Your reverence is not performance — it lives in what you chose not to take.",
+      "reversedMeaning": "The shrine is dark and will not open. You treated the sacred as inventory, the divine as a resource to be extracted. The gods do not punish thieves — they simply stop answering.",
+      "keywords": "shrine, temple, divine property, devotion, sanctity"
+    },
+    {
+      "name": "Honesty",
+      "meaning": "Thoth writes your name in the Book of the Living because your tongue is clean. Every word you have spoken can bear the weight of the scale. The scribe does not need to correct your record.",
+      "reversedMeaning": "The ibis-headed god pauses his reed pen. Your record is a tangle of revisions, each lie requiring three more to stand. Thoth has ink enough for truth — he will not waste it on fabrication.",
+      "keywords": "Thoth, scribe, ibis, spoken word, record"
+    },
+    {
+      "name": "Contentment",
+      "meaning": "The table is laden and you sit without grasping. You have learned that enough is a place, not a number. What is before you sustains because you do not take more than your portion.",
+      "reversedMeaning": "You have taken from every table and are still starving. The hunger is not in your belly — it is in your refusal to believe you have enough. The laden table empties itself before the greedy.",
+      "keywords": "laden table, portion, sustenance, moderation, feast"
+    },
+    {
+      "name": "Kindness",
+      "meaning": "Your words dissolve into flowers because they were planted with care. The curses you could have spoken died in your throat, and from that silence, blossoms grew. Speech is a garden — yours is tended.",
+      "reversedMeaning": "Every word you speak lands like a thrown stone. You have cursed so freely that the flowers around you have withered to thorns. The mouth that poisons the air poisons the speaker first.",
+      "keywords": "flowers, gentle speech, curses dissolved, garden, tongue"
+    },
+    {
+      "name": "Fidelity",
+      "meaning": "Two figures stand across the lotus pool and the water between them is still. You have honored the sacred boundaries of union. The lotuses bloom because the pool was not muddied by betrayal.",
+      "reversedMeaning": "The lotus pool is black with stirred silt. You crossed a boundary that was not yours to cross and the water remembers. Fidelity is not a cage — it is the ground trust is built on, and you have broken it.",
+      "keywords": "lotus pool, two figures, bond, trust, sacred union"
+    },
+    {
+      "name": "Compassion",
+      "meaning": "You have caught the tears of others in a vessel and carried them without complaint. The weight of witnessed grief has made you stronger, not harder. The vessel you hold is full and holy.",
+      "reversedMeaning": "The vessel is dry because you turned away. You made others weep and did not stay to see it. Compassion is not selective — every tear you caused and ignored now fills the vessel you must carry alone.",
+      "keywords": "tears, vessel, grief witnessed, empathy, tenderness"
+    },
+    {
+      "name": "Harmony",
+      "meaning": "Your heart rests on the scale and the feather does not rise. You have not consumed yourself with bitterness or eaten the hearts of others through envy. The balance holds. You are in accord with Ma'at.",
+      "reversedMeaning": "Your heart is heavier than stone. You have fed on resentment until it became your only sustenance. Ammit waits below the scale for hearts like yours — swollen, bitter, and unbalanced.",
+      "keywords": "heart, feather, scale, Ammit, balance"
+    },
+    {
+      "name": "Discipline",
+      "meaning": "Your hands rest behind your back and the weapons lie on the ground. You chose restraint when violence was easy, and that choice carved your name among the just. Strength is proved by what it refuses to do.",
+      "reversedMeaning": "Your fists are still clenched and the weapons are within reach. You mistake aggression for power and attack for courage. The judge sees hands that strike first and asks — what are you defending?",
+      "keywords": "hands, weapons, restraint, strength, self-control"
+    },
+    {
+      "name": "Integrity",
+      "meaning": "The corridor of mirrors shows you the same face from every angle. You are what you appear to be — no mask, no performance, no second self kept hidden for advantage. Walk through. The mirrors confirm you.",
+      "reversedMeaning": "Every mirror shows a different face and none of them are yours. You have deceived so long that the original is lost. The corridor will not end until you find the reflection that does not flinch.",
+      "keywords": "mirrors, corridor, true face, authenticity, wholeness"
+    },
+    {
+      "name": "Stewardship",
+      "meaning": "You tend the garden by the Nile and the soil answers your care. What was entrusted to you has flourished because you understood — the land does not belong to you. You belong to the land.",
+      "reversedMeaning": "The garden is dust. You took the fertile ground and stripped it for profit, calling yourself owner of what was only lent. The Nile does not water the fields of those who forget they are tenants.",
+      "keywords": "Nile garden, cultivated land, tending, responsibility, earth"
+    },
+    {
+      "name": "Discretion",
+      "meaning": "You turn from the doorway and the secrets within remain undisturbed. Not every truth is yours to know, and wisdom lives in the spaces you chose not to enter. The door closes gently behind you.",
+      "reversedMeaning": "You pressed your ear to every wall and peered through every crack. The knowledge you stole gives you no peace — only the paranoia of one who knows they cannot be trusted with silence.",
+      "keywords": "doorway, secrets, listening, boundaries, privacy"
+    },
+    {
+      "name": "Justice",
+      "meaning": "The crocodile judge opens its jaws and you pass between them unharmed. You have spoken no false word against another. Your tongue has been a bridge, not a blade. Sobek lets you walk.",
+      "reversedMeaning": "The crocodile's jaws close. Every slander you spoke now lines its teeth. You tore reputations like papyrus and thought the river would carry the evidence away. The crocodile forgets nothing.",
+      "keywords": "Sobek, crocodile, slander, false witness, spoken justice"
+    },
+    {
+      "name": "Temperance",
+      "meaning": "You stand in flame and are not burned. Your anger has been a forge, not a wildfire — controlled, purposeful, extinguished when its work was done. The fire knows those who have mastered it.",
+      "reversedMeaning": "The flame consumes you because you fed it everything. Rage without cause is a fire set in your own house. You stand in the blaze and call it righteousness, but the judges see only ash.",
+      "keywords": "flame, controlled anger, forge, composure, just cause"
+    },
+    {
+      "name": "Purity",
+      "meaning": "You descend into the sacred pool and the water remains clear. What you have kept holy in others you have kept holy in yourself. The pool recognizes those who did not muddy what was clean.",
+      "reversedMeaning": "The sacred pool recoils from you. You defiled what was consecrated by another's trust and called it desire. Purity is not innocence — it is the discipline of honoring what is not yours to corrupt.",
+      "keywords": "sacred pool, washing, clarity, sanctity, respect"
+    },
+    {
+      "name": "Devotion",
+      "meaning": "The blue altar flame burns steady in your presence. You have kept the sacred waters clean — not from obligation, but from love. Devotion without performance is the truest offering.",
+      "reversedMeaning": "The altar flame gutters and dims. You polluted what was holy with carelessness and called it unimportant. The sacred waters remember every contamination, and devotion cannot be performed retroactively.",
+      "keywords": "blue flame, altar, sacred waters, dedication, reverence"
+    },
+    {
+      "name": "Restraint",
+      "meaning": "You stand in white linen, purified by your own discipline. The body is a temple you have kept in order — not through denial, but through the understanding that excess devours from within.",
+      "reversedMeaning": "The white linen is stained and you pretend not to see it. You have indulged every appetite and called it freedom. The body you were given to steward has become a monument to unchecked want.",
+      "keywords": "white linen, purification, self-mastery, body, discipline"
+    },
+    {
+      "name": "Calm",
+      "meaning": "You sit with a single oil lamp and the shadows do not move. No one fears your approach. The peace you carry was forged from the terror you chose never to inflict. The flame is steady because you are.",
+      "reversedMeaning": "The lamp flickers because your presence disturbs the air. You ruled by fear and called it authority. The room empties when you enter — not from respect, but from the memory of what you became when challenged.",
+      "keywords": "oil lamp, shadow, peace, presence, safety"
+    },
+    {
+      "name": "Patience",
+      "meaning": "You wait at the great gate and do not force it. The law is older than your urgency, and you have learned to stand within its rhythm. The gate opens for those who do not push.",
+      "reversedMeaning": "You beat against the gate with both fists. Every law you broke was a shortcut that led you further from the entrance. The great gate does not respond to force — it responds to alignment.",
+      "keywords": "great gate, law, waiting, alignment, obedience"
+    },
+    {
+      "name": "Acceptance",
+      "meaning": "You release the red bird and it spirals upward. The wrath you held has left your hands willingly. You are lighter now — not because the anger was wrong, but because you chose to set it down.",
+      "reversedMeaning": "The red bird beats against the cage of your ribs. You grip your wrath like a weapon you might need again. The judges see that what you will not release has already become your prison.",
+      "keywords": "red bird, release, wrath, letting go, unburdening"
+    },
+    {
+      "name": "Openness",
+      "meaning": "You listen to Ma'at and her voice enters you without resistance. Your ears are open because you learned that truth does not always sound the way you want it to. The goddess speaks — and you receive.",
+      "reversedMeaning": "You have sealed your ears with wax of your own making. Ma'at speaks and you hear only what confirms what you already believe. The truth you refuse to hear becomes the wall you cannot pass.",
+      "keywords": "Ma'at, listening, open ears, receptivity, truth received"
+    },
+    {
+      "name": "Silence",
+      "meaning": "Your mouth is sealed with gold before Horus and the seal is a crown, not a punishment. You understood that some words are stones thrown at heaven. Your silence before the sacred is its own prayer.",
+      "reversedMeaning": "The gold seal burns because your mouth was never still. You blasphemed not from conviction but from carelessness, treating the divine as something beneath your commentary. Silence before Horus is not optional.",
+      "keywords": "gold seal, Horus, mouth, prayer, sacred silence"
+    },
+    {
+      "name": "Humility",
+      "meaning": "You lie prostrate before the scales and the posture is genuine. You came to power and did not let it convince you that you were above the weighing. The scales honor those who approach them low.",
+      "reversedMeaning": "You stand tall before the scales as though you are their equal. Violence lives in the belief that you are exempt from judgment. The scales do not weigh your strength — they weigh your surrender.",
+      "keywords": "prostration, scales, lowliness, surrender, meekness"
+    },
+    {
+      "name": "Stillness",
+      "meaning": "You are the center of a still pool and no ripple moves from you. The strife that surrounded you was not fed by your hand. In a world of turbulence, you chose to be the unmoving point.",
+      "reversedMeaning": "Every ripple in the pool began with you. You stirred conflict and stood back to watch, calling yourself uninvolved. The still pool reveals every disturbance to its source — and the source is where you stand.",
+      "keywords": "still pool, center, non-agitation, peace, undisturbed water"
+    },
+    {
+      "name": "Deliberation",
+      "meaning": "You walk the long corridor and each step is measured. Haste would have cost you the path itself. The corridor rewards those who understand that arrival is not the purpose — the walking is.",
+      "reversedMeaning": "You ran the corridor and missed every door. Your haste was not urgency — it was the fear of being still long enough to see yourself clearly. The corridor has no end for those who sprint.",
+      "keywords": "long corridor, measured step, patience, slow progress, mindfulness"
+    },
+    {
+      "name": "Clarity",
+      "meaning": "You choose the lit path and leave the shadows to those who need them. You did not pry into hidden things — you let the light reveal what was meant for you. Clarity is not curiosity. It is discernment.",
+      "reversedMeaning": "You wandered into every shadow and called it seeking. The lit path was always there but you preferred the dark, where secrets live and boundaries dissolve. What you found in the dark now follows you.",
+      "keywords": "lit path, discernment, focus, illumination, chosen way"
+    },
+    {
+      "name": "Simplicity",
+      "meaning": "One glowing hieroglyph stands where a wall of words once lived. You have learned that truth does not need volume or repetition. The single sign says everything. You speak only what the silence requires.",
+      "reversedMeaning": "The wall is covered in words and none of them say anything. You multiplied speech until meaning drowned in noise. The gods read one hieroglyph at a time — your wall is illegible.",
+      "keywords": "single hieroglyph, brevity, essential speech, economy, truth"
+    },
+    {
+      "name": "Forgiveness",
+      "meaning": "You embrace your shadow-self and it does not devour you. Every wrong has been named, weighed, and released. You are not innocent — you are forgiven, which requires more courage than innocence ever did.",
+      "reversedMeaning": "Your shadow-self stands apart and you will not look at it. The wrongs you deny cast longer shadows than the wrongs you confess. Until you embrace what you have done, you remain divided against yourself.",
+      "keywords": "shadow-self, embrace, confession, reconciliation, wholeness"
+    },
+    {
+      "name": "Gratitude",
+      "meaning": "You bring your offering to the pharaoh with open hands. What was given to you — authority, protection, order — you received without plotting against its source. Gratitude is the foundation of Ma'at.",
+      "reversedMeaning": "Your offering is poison wrapped in gold leaf. You received the gifts of order and repaid them with conspiracy. The pharaoh's throne is not yours to undermine — and the judges saw every scheme.",
+      "keywords": "pharaoh, offering, loyalty, thankfulness, order"
+    },
+    {
+      "name": "Abundance",
+      "meaning": "The water flows to the fields because you did not dam it. You understood that abundance is a current, not a reservoir. What passes through your hands reaches the land — and the land feeds everyone.",
+      "reversedMeaning": "The fields are dry and the dam is yours. You stopped the flow to hoard what was meant to move. Abundance withheld becomes stagnation, and stagnation becomes drought. The water was never yours to keep.",
+      "keywords": "flowing water, fields, irrigation, generosity, circulation"
+    },
+    {
+      "name": "Voice",
+      "meaning": "You sing before the gods and your voice carries because it was never raised in violence. The power of speech is proved not by volume but by what it has never destroyed. Your song fills the hall.",
+      "reversedMeaning": "Your voice cracks the pillars of the hall. You raised it so often in anger that even your song sounds like a threat. The gods cover their ears — not from the volume, but from the damage it carries.",
+      "keywords": "song, gods, voice, controlled power, sacred sound"
+    },
+    {
+      "name": "Reverence",
+      "meaning": "You kneel beneath Nut's stars and the sky bends toward you. Your mouth never cursed what created you. The stars are witnesses — they saw your reverence when no temple was watching.",
+      "reversedMeaning": "The stars withdraw and Nut turns her face. You cursed the divine in daylight and expected the night to forget. The sky has no doors to close, but it has a memory older than your defiance.",
+      "keywords": "Nut, stars, night sky, awe, divine respect"
+    },
+    {
+      "name": "Worthiness",
+      "meaning": "You stand small before Osiris and your smallness is your credential. Arrogance never touched your throne because you understood that every seat of power is borrowed. The god of the dead sees your worth precisely because you do not insist on it.",
+      "reversedMeaning": "You stand before Osiris as though you are his equal. The arrogance that inflated you in life has followed you into death. The god of the dead does not measure stature — he measures the willingness to kneel.",
+      "keywords": "Osiris, smallness, arrogance refused, worth, throne"
+    },
+    {
+      "name": "Balance",
+      "meaning": "You give at the altar what was given to you. The bread of the gods returns to the gods because you understand the circle. Balance is not a calculation — it is the recognition that nothing was ever yours alone.",
+      "reversedMeaning": "You took the gods' bread and ate it in the dark. The altar stands empty because you believed your hunger mattered more than the cycle. Balance broken at the altar breaks the world that fed you.",
+      "keywords": "altar, bread, giving, cycle, reciprocity"
+    },
+    {
+      "name": "Fulfillment",
+      "meaning": "You receive the crook and flail because you left the khenfu cakes for those who needed them. The symbols of sovereignty are given to those who proved they could relinquish. You are complete because you did not grasp.",
+      "reversedMeaning": "The crook and flail are withheld. You took the sacred cakes meant for the rites and consumed them for yourself. Fulfillment cannot be stolen — it is the final offering, and you spent yours early.",
+      "keywords": "crook, flail, khenfu cakes, sovereignty, completion"
+    },
+    {
+      "name": "Eternity",
+      "meaning": "You enter the Field of Reeds and the grain is golden and endless. The bread of the child was never taken from your hand because your hand never reached for it. Eternity opens for those who protected the vulnerable.",
+      "reversedMeaning": "The Field of Reeds is barren before you. You snatched bread from those who could not defend themselves and called it survival. Eternity does not open for those who fed on the helpless.",
+      "keywords": "Field of Reeds, grain, child, protection, afterlife"
+    },
+    {
+      "name": "Ma'at",
+      "meaning": "You stand crowned before all forty-two judges and each one nods. The feather rests upon your brow because you lived its weight in every choice. You are not perfect — you are true. The Duat opens into light.",
+      "reversedMeaning": "The forty-two judges are silent and the crown will not descend. You spoke every confession but lived none of them. Ma'at is not a word — it is the shape of a life. Yours has not yet taken that shape.",
+      "keywords": "crown, forty-two judges, cosmic order, truth, final passage"
+    }
+  ]
+}
