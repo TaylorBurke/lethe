@@ -1,373 +1,373 @@
 major_arcana:
   - name: "The Fool"
     numeral: "0"
-    description: "A young figure in rough wool steps from a mountain village onto a descending path, hazel staff in hand, sea spreading below in pale ink wash. A hawk circles in empty sky above. Sumi-e brushstrokes dissolve the village into mist behind; the figure is a single dark stroke against vast white space."
-    key_symbols: [young traveler, hazel staff, mountain village, sea below, circling hawk]
-    composition: "Figure at upper left descending rightward; the mountain village fades into white behind; the sea fills the lower half as grey wash; hawk a small dark mark in open sky"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a barefoot figure in bell-bottoms and a fringed vest stepping off a rainbow-striped cliff edge, a flower tucked behind one ear, a small dog with a bandana bounding alongside. A massive sunburst radiates behind in concentric rings of acid orange and hot pink. Hair and fringe flow as decorative tendrils. Acid orange, electric purple, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [barefoot figure, bell-bottoms, fringed vest, rainbow cliff, flower behind ear, bandana dog, sunburst]
+    composition: "Figure steps from left toward the rainbow cliff edge at center-right; the dog follows at lower left; the sunburst fills the upper half behind the figure"
 
   - name: "The Magician"
     numeral: "I"
-    description: "A still figure stands at a rough stone table bearing four elements — a guttering candle, a bronze water bowl, a grey feather, a river stone — runes carved into the table's edge. Ink pools in the rune grooves. The figure's hands hover above the objects, not touching."
-    key_symbols: [stone table, candle flame, water bowl, grey feather, river stone, carved runes]
-    composition: "Central figure behind the table; four objects in a row before them; runes visible along the table edge; white space above and below"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure at a low table draped in paisley cloth with wand, cup, sword, and pentacle arranged before them, one hand raised holding a crystal that catches light, a mandala halo radiating behind the head in concentric geometric rings. The paisley cloth patterns echo the mandala above. Electric purple and gold dominate, hot pink accents, graphic flatness like a Fillmore concert poster."
+    key_symbols: [paisley table, crystal, wand, cup, sword, pentacle, mandala halo]
+    composition: "Central figure behind the low table, one arm raised vertically; the four tools arrayed in a row on the table; the mandala halo fills the space behind and above the head"
 
   - name: "The High Priestess"
     numeral: "II"
-    description: "A robed figure sits deep in an underground labyrinth, a single candle flame the only light. Carved walls press close, their patterns half-visible in shadow. The flame is the brightest mark on the page — everything else recedes into layered grey wash and darkness."
-    key_symbols: [robed figure, underground labyrinth, single candle, carved walls, darkness]
-    composition: "The candle flame at center draws the eye; the figure sits below it; carved walls close in from both sides; deep black ink at the edges fading to nothing"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a woman seated between two pillars wrapped in flowering vines, a crescent moon crown on her head, a scroll resting open in her lap. Owl eyes peer from the dark background behind her. An ornate Art Nouveau border of interlocking curves frames the entire scene. Deep indigo and silver dominate, with cyan vine accents, graphic flatness like a Fillmore concert poster."
+    key_symbols: [seated woman, vine-wrapped pillars, crescent moon crown, scroll, owl eyes, Art Nouveau border]
+    composition: "Perfect symmetry — the two vine-wrapped pillars frame left and right edges; the seated figure is centered between them; the crescent moon sits directly above her head"
 
   - name: "The Empress"
     numeral: "III"
-    description: "A woman sits in a grove of ancient trees, branches heavy with dark fruit, an otak curled sleeping in her lap. Wet-on-wet ink bleeds through the canopy above. Her hands rest open. The trees are bold vertical strokes; the fruit small dark circles; the otak a quick warm brushstroke of burnt amber."
-    key_symbols: [seated woman, ancient grove, dark fruit, sleeping otak, open hands]
-    composition: "Woman centered beneath the canopy; tree trunks frame her as vertical columns; the otak in her lap is the warm focal point against cool greys"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a woman reclining in a field of giant sunflowers and poppies, her flowing hair merging with the flower stems in sinuous Art Nouveau tendrils. A Venus symbol adorns her headband. Fruit and bread are arranged at her side. Chartreuse, hot pink, and gold dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [reclining woman, giant sunflowers, poppies, Venus headband, flowing hair as stems, fruit and bread]
+    composition: "The reclining figure fills the lower two-thirds; sunflowers and poppies tower above and around her; her hair flows outward becoming flower stems at the edges"
 
   - name: "The Emperor"
     numeral: "IV"
-    description: "A figure sits on a stone throne at the edge of a sea cliff, carved staff upright beside them, islands scattered on the horizon in pale wash. Wind pulls at a cloak rendered in a single sweeping brushstroke. The throne is angular, heavy — the sea beyond is all empty space and mist."
-    key_symbols: [stone throne, sea cliff, carved staff, distant islands, wind-blown cloak]
-    composition: "Figure and throne anchored at left; the cliff drops away at center; islands are faint grey marks on the right horizon; vast sky above"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure seated on a throne made of stacked amplifiers, legs crossed, a ram's head medallion gleaming on the chest. A desert mesa landscape stretches behind in flat color bands. Bold geometric patterns cover the robes in angular Op Art stripes. Acid orange and electric purple dominate, gold accents, graphic flatness like a Fillmore concert poster."
+    key_symbols: [amplifier throne, ram's head medallion, geometric robes, desert mesa, crossed legs]
+    composition: "The figure sits centered on the amplifier stack; the mesa landscape extends horizontally behind; geometric robe patterns draw the eye inward to the ram medallion at center"
 
   - name: "The Hierophant"
     numeral: "V"
-    description: "An old master stands in the courtyard of a tower school, two students kneeling before him on worn stone. The tower rises behind in strong vertical strokes. The master's hands are raised mid-gesture, teaching. Ink wash suggests courtyard walls fading into white; the students are small dark forms."
-    key_symbols: [old master, tower school, kneeling students, courtyard stones, teaching gesture]
-    composition: "Master standing at center with tower rising behind; two students symmetrically placed below; courtyard recedes into white space at edges"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a guru figure seated cross-legged on a raised platform, two students kneeling before them. Incense smoke rises and curls into sacred geometry patterns — mandalas and yantras forming in the air. A peacock feather fan spreads behind the guru. A temple archway frames the entire scene. Deep purple and gold dominate, cyan smoke accents, graphic flatness like a Fillmore concert poster."
+    key_symbols: [guru figure, raised platform, kneeling students, incense sacred geometry, peacock feather fan, temple arch]
+    composition: "The temple archway frames the scene; the guru sits elevated at center; the two students kneel symmetrically below; incense smoke rises and fills the arch above with geometric forms"
 
   - name: "The Lovers"
     numeral: "VI"
-    description: "Two figures stand on opposite shores of a narrow strait, arms reaching across the water. A small boat floats between them, unmanned. The water is a single broad stroke of grey wash; each figure a dark ink mark on pale rock. The space between them is the composition's heart."
-    key_symbols: [two reaching figures, narrow strait, small boat, opposite shores, open water]
-    composition: "Left figure and right figure mirror each other at the edges; the boat sits at center in the grey water; the strait runs vertically through the middle"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — two figures embracing beneath a giant blooming tree, a winged figure visible in the branches above, the sun directly overhead blazing in concentric rings. Their clothes are patterned with complementary paisley designs that interlock where they touch. Hot pink and electric purple dominate, gold sunlight accents, graphic flatness like a Fillmore concert poster."
+    key_symbols: [embracing couple, blooming tree, winged figure, overhead sun, complementary paisley patterns]
+    composition: "The great tree fills the frame from top to bottom; the embracing couple stands at its base center; the winged figure sits in the branches above; the sun crowns the tree at top"
 
   - name: "The Chariot"
     numeral: "VII"
-    description: "A single figure grips the tiller of a small sailing boat in rough open sea, waves rendered as bold curved strokes. Stars burn through rags of storm cloud above. The boat tilts at a steep angle — the figure leans against the wind. Spray dissolves into white at the edges."
-    key_symbols: [sailing boat, lone figure at tiller, rough sea, storm clouds, stars through gaps]
-    composition: "Boat angled from lower left to upper right, cutting through waves; stars visible in upper left through torn clouds; spray and white space at margins"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure standing upright in a VW van converted to a chariot, the van painted with stars and moons in swirling patterns. Two sphinxes — one black, one white — pull it forward. A highway stretches to the horizon behind in forced perspective. Cyan, gold, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [VW van chariot, star-and-moon paint, black sphinx, white sphinx, highway horizon]
+    composition: "The van-chariot drives toward the viewer at center; the two sphinxes flank the front; the highway recedes to a vanishing point directly behind"
 
   - name: "Strength"
     numeral: "VIII"
-    description: "A figure stands with open empty hands before a dragon, eye to eye. No weapon. The dragon is rendered in flowing ink — sinuous neck, ancient face, wings folded. The human is a small still form. Between them: white space, charged with silence."
-    key_symbols: [open hands, dragon face, eye contact, no weapon, stillness between]
-    composition: "Dragon fills the upper right in sweeping ink; human figure stands small at lower left; the diagonal space between their eyes is the focal axis"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a woman with flowers woven in her hair gently holds open the jaws of a great lion, both utterly calm. A peace sign pendant hangs at her throat. Wildflowers grow lush around the lion's paws in Art Nouveau tendrils. Gold, chartreuse, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [flower-haired woman, lion, open jaws, peace sign pendant, wildflowers]
+    composition: "Woman and lion form a single horizontal group at center; her hands frame the lion's open jaws as the focal point; wildflowers spread outward from the base"
 
   - name: "The Hermit"
     numeral: "IX"
-    description: "A solitary figure on a fog-wrapped mountain, one hand resting on the bark of a weathered tree, herbs tied at the belt. Fog is wet-on-wet wash bleeding across the page. The tree and figure are the only defined forms — everything else dissolves into grey and white."
-    key_symbols: [solitary figure, fog-wrapped mountain, weathered tree, hand on bark, herbs at belt]
-    composition: "Figure and tree at center, emerging from fog; the mountain is suggested by grey gradients; white space dominates — emptiness as presence"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a solitary figure on a mountain trail at twilight, holding up a lantern with a glowing star inside. A long walking stick in the other hand. A patchwork cloak of many colors wraps the figure. Distant festival lights twinkle in the valley far below. Deep indigo and violet dominate, gold lantern glow, graphic flatness like a Fillmore concert poster."
+    key_symbols: [solitary figure, star lantern, walking stick, patchwork cloak, mountain trail, distant festival lights]
+    composition: "The figure stands at upper right on the trail, holding the lantern high; the mountain path winds downward to the left; festival lights dot the valley floor at lower left"
 
   - name: "Wheel of Fortune"
     numeral: "X"
-    description: "A great stone circle stands on a windswept hilltop, shadows turning across the ground as if the sun moves while you watch. Sea visible in every direction as pale wash. The stones are heavy black strokes; the shadows long grey angles; the sky enormous and empty."
-    key_symbols: [stone circle, hilltop, turning shadows, sea in all directions, wind]
-    composition: "Stone circle at center; shadows radiate outward from it; sea encircles the hilltop at all edges; sky fills the upper two-thirds"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a giant mandala wheel floats in a cosmic sky, four figures at the cardinal points: angel, eagle, bull, and lion. A tie-dye spiral spins at the center of the wheel. Zodiac symbols ring the outer rim in bold graphic forms. Electric purple, acid orange, and cyan dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [mandala wheel, tie-dye spiral center, angel, eagle, bull, lion, zodiac rim]
+    composition: "The great wheel fills the frame centered; the four creatures anchor the corners; the tie-dye spiral draws the eye to the center; zodiac symbols ring the outer edge"
 
   - name: "Justice"
     numeral: "XI"
-    description: "A figure holds balanced scales on a rocky shore — a feather in one pan, a stone in the other. The sea behind is utterly calm, a single flat wash of grey. The figure's feet are bare on wet rock. Everything is still. The scales hang perfectly level."
-    key_symbols: [balanced scales, feather and stone, rocky shore, calm sea, bare feet]
-    composition: "Central standing figure with scales extended; the calm sea a horizontal band behind; rocky shore rendered in minimal dark strokes below"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure seated on a geometric throne holding balanced scales in one hand and a raised sword in the other, a blindfold pushed up onto the forehead revealing open eyes. Protest banners flank the throne on both sides. Gold, hot pink, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [geometric throne, balanced scales, raised sword, pushed-up blindfold, protest banners]
+    composition: "Central seated figure on the geometric throne; scales extend to the left, sword raised to the right; protest banners hang vertically at both edges framing the scene"
 
   - name: "The Hanged Man"
     numeral: "XII"
-    description: "A figure hangs suspended by one ankle from the mast of a beached boat, the tide coming in around the hull. The face is serene, eyes open. The boat lists on wet sand; water creeps closer in thin ink lines. The rope and mast form a stark vertical against horizontal sea."
-    key_symbols: [suspended figure, beached boat mast, incoming tide, serene face, rope]
-    composition: "Mast and hanging figure form a strong vertical at center; the boat's hull curves below; tide lines advance from the right; horizon low and distant"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure suspended by one foot from a tree branch hung with colorful prayer flags, arms relaxed and open, a halo of golden light radiating around the head. The figure's expression is serene. The world is inverted but peaceful. Cyan, gold, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [suspended figure, prayer flag branch, one-foot hang, golden halo, serene expression]
+    composition: "The tree branch extends horizontally across the top; the figure hangs inverted at center; prayer flags drape and flutter from the branch; the halo glows at the bottom-center around the head"
 
   - name: "Death"
     numeral: "XIII"
-    description: "A lone figure walks across the dry land under a starless sky, dust rising with each step. A low stone wall is visible far behind, barely a mark on the page. The ground is cracked and pale; the sky is black ink pressed flat. The figure walks away from the viewer into nothing."
-    key_symbols: [walking figure, dry land, starless sky, rising dust, distant stone wall]
-    composition: "Figure small at center walking into the distance; the stone wall a faint line behind; black sky presses down from above; dust rises as light grey marks around the feet"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a skeleton rides a pale horse through a field of dying sunflowers, carrying a black flag emblazoned with a white rose. Figures kneel as it passes — a child offers a flower up to the rider. A sunrise blazes on the horizon in bands of gold and hot pink. Bone-white, black, and sunrise gold dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [skeleton rider, pale horse, dying sunflowers, black flag with white rose, child offering flower, sunrise]
+    composition: "The skeleton on horseback rides from left to right across center; dying sunflowers fill the foreground; the child kneels at lower right; the sunrise fills the horizon behind"
 
   - name: "Temperance"
     numeral: "XIV"
-    description: "A figure kneels where a freshwater stream meets the sea, pouring water between two bronze vessels. Mist rises at the meeting of waters. The stream enters from the left in quick brushstrokes; the sea spreads right as flat wash. The pouring arc between vessels is a single clean line."
-    key_symbols: [kneeling figure, two bronze vessels, freshwater meeting sea, mist, pouring arc]
-    composition: "Figure kneels at the convergence point at center; stream flows in from left; sea opens to the right; mist rises vertically above the meeting of waters"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a winged figure pours liquid between two vessels at the edge of a stream, one foot on land, one in water. Irises and lilies grow lush along the banks. A rainbow arcs through the pour of liquid between the vessels. Cyan, gold, and violet dominate, chartreuse accents, graphic flatness like a Fillmore concert poster."
+    key_symbols: [winged figure, two vessels, pouring liquid, rainbow arc, irises, lilies, stream edge]
+    composition: "The winged figure stands at center straddling the stream edge; the two vessels and the rainbow pour connect upper left to lower right; irises and lilies frame the base"
 
   - name: "The Devil"
     numeral: "XV"
-    description: "A figure stares into a dark mirror — polished obsidian on a stone stand — and their shadow-double stares back with a different expression. Loose chains hang at the figure's wrists, not locked. The mirror is the darkest point on the page, pure black ink. Everything else fades to grey."
-    key_symbols: [dark mirror, shadow double, loose chains, obsidian surface, different expression]
-    composition: "Figure at left facing the mirror at center; the reflection visible within the black surface; chains hang slack below the wrists; white space surrounds the scene"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a horned figure perches atop a black cube pedestal, bat wings spread wide. Two figures stand loosely chained below — the chains made of linked dollar bills and TV antennas, loose enough to slip off. The chained figures could free themselves but do not. Black, acid orange, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [horned figure, black cube, bat wings, chained figures, dollar bill chains, TV antenna chains]
+    composition: "The horned figure sits elevated at top center on the cube; the two chained figures stand symmetrically below at left and right; the chains drape loosely between them and the cube"
 
   - name: "The Tower"
     numeral: "XVI"
-    description: "A wizard's tower on a rocky island splits under dragonfire from above, stones falling into the sea. The dragon is a sweeping ink stroke across the top of the page; the fire a burst of burnt amber. Stones tumble as scattered dark marks. The sea receives them in grey silence."
-    key_symbols: [wizard tower, rocky island, dragonfire, falling stones, sea below]
-    composition: "Tower at center, cracking; dragon sweeps across the top; stones scatter downward and outward; the sea surrounds the island at the bottom third"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a tall narrow tower struck by a bolt of lightning, two figures falling through the air, a crown blown off the top. Flames shaped like flowers pour from the windows in Art Nouveau curves. The night sky cracks open behind the bolt. Electric purple, acid orange, and gold dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [narrow tower, lightning bolt, falling figures, blown crown, flower-shaped flames, cracking sky]
+    composition: "The tower stands at center, lightning strikes from upper right; the two figures fall symmetrically on either side; flower-flames burst from windows; the crown tumbles at top"
 
   - name: "The Star"
     numeral: "XVII"
-    description: "A figure kneels at a tide pool at night, pouring water from a vessel into the sea. Constellations are reflected in the pool's surface — the sky below as clear as the sky above. The water poured is a thin line of deep blue. Everything else is black ink and bone white."
-    key_symbols: [kneeling figure, tide pool, poured water, reflected constellations, night sky]
-    composition: "Figure kneels at lower left; the tide pool spreads at center reflecting stars; the sky above mirrors the pool below; the pouring water connects them"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a nude figure kneels at the edge of a still pool, pouring water from two jugs — one into the pool, one onto the earth. Seven great eight-pointed stars blaze above in the night sky. An ibis stands in the background among night-blooming flowers. Cyan, gold, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [kneeling nude figure, two water jugs, still pool, seven eight-pointed stars, ibis, night garden]
+    composition: "The kneeling figure is at lower center; water pours in two directions from the jugs; the seven stars arc across the sky above; the ibis stands at right in the garden"
 
   - name: "The Moon"
     numeral: "XVIII"
-    description: "A small boat drifts on perfectly still sea under a full moon, its reflection creating a second moon below the waterline. A different sky shows beneath the water — wrong stars, wrong depths. Two sentinel islands rise dark at the edges. Silence made visible."
-    key_symbols: [drifting boat, full moon, reflection, different sky beneath, two sentinel islands]
-    composition: "Moon at top center, boat at the midline, reflected moon below; the water divides the page into two mirror worlds; sentinel islands frame left and right edges"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a winding path between two towers leads to distant mountains. A full moon with a face in profile dominates the sky. A wolf and a dog howl on either side of the path. A crayfish emerges from a pool in the foreground. Psychedelic ripples radiate from the moon. Deep indigo, silver, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [winding path, two towers, full moon with face, wolf, dog, crayfish, psychedelic ripples]
+    composition: "The path winds from the foreground pool upward between the two towers to the mountains; the moon fills the sky above; wolf and dog flank the path; the crayfish emerges at bottom center"
 
   - name: "The Sun"
     numeral: "XIX"
-    description: "Children play on a sunlit beach beside a beached boat, a dolphin leaping in the shallows. Morning light washes everything in warmth — the only card where light fills the page. Quick joyful brushstrokes. The dolphin is a single curved ink mark. Sand and sea are warm grey wash."
-    key_symbols: [playing children, sunlit beach, beached boat, leaping dolphin, morning light]
-    composition: "Children scattered across the lower half on the beach; the dolphin arcs at center right; the boat rests at left; light radiates from upper right, filling the page"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — two children dance joyfully in a walled garden, a huge radiant sun with a smiling face blazing above. Sunflowers line the garden wall. A white horse stands nearby. Butterflies drift through the air. Pure golden light floods every surface. Gold, acid orange, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [dancing children, smiling sun face, walled garden, sunflowers, white horse, butterflies]
+    composition: "The great sun fills the upper third; the two children dance at center in the garden; sunflowers line the wall behind; the white horse stands at right; butterflies scatter across the scene"
 
   - name: "Judgement"
     numeral: "XX"
-    description: "Figures emerge from underground tombs into daylight, hands raised to shield their eyes. The tomb mouths are dark rectangles of pure black ink; the daylight above is raw white paper. The figures stand at the threshold between dark and light, half in shadow, half revealed."
-    key_symbols: [emerging figures, underground tombs, daylight, shielding hands, threshold]
-    composition: "Dark tomb openings at bottom; figures climbing upward into white space above; the contrast between black below and white above is the composition's force"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — figures rise from flower-covered graves with arms raised in exaltation. A great angel above blows a trumpet trailing a banner. Clouds part to reveal brilliant golden light pouring down. Mountains frame the background. Gold, electric purple, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [rising figures, flower-covered graves, great angel, trumpet with banner, parting clouds, golden light]
+    composition: "The angel fills the upper center, trumpet pointed downward; figures rise from graves across the lower half; clouds part in a V-shape revealing light; mountains anchor the horizon"
 
   - name: "The World"
     numeral: "XXI"
-    description: "A dragon and a human face each other in perfect stillness on a cliff above the sea, wind moving through the grass between them. Neither speaks. The dragon is rendered in full flowing ink — the most complete brushwork in the deck. The sea stretches to the edge of the world below."
-    key_symbols: [dragon, human figure, cliff edge, wind in grass, sea to horizon, stillness]
-    composition: "Dragon at right, human at left, both in profile facing center; the cliff edge below; sea and sky merge at the horizon in pale wash; grass bends between them"
+    description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a dancing figure floats inside a great laurel wreath, the four suit symbols anchoring the corners. Flowing scarves create an infinity pattern around the dancer. A globe is visible behind the figure. A cosmic starfield fills the background beyond the wreath. Electric purple, gold, cyan, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+    key_symbols: [dancing figure, laurel wreath, four suit symbols, infinity scarves, globe, cosmic starfield]
+    composition: "The laurel wreath forms a perfect oval at center; the dancer fills it with flowing movement; the four suit symbols anchor the corners; the starfield extends beyond the wreath to all edges"
 
 minor_arcana:
-  flames:
+  wands:
     pips:
       "1":
-        description: "A single flame burns on a stone altar at a cliff's edge, wind streaking across the page but unable to touch it. The flame is burnt amber against black ink altar and pale sky. Below, the sea. The flame is still while everything around it moves."
-        key_symbols: [single flame, stone altar, cliff edge, wind streaks, untouched fire]
-        composition: "Altar and flame at center on the cliff; wind rendered as horizontal brush strokes passing around the flame; sea below as grey wash"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a single wand thrust upright from a mountaintop, a hand emerging from a cloud gripping it firmly. Leaves sprout from the living wood. A sunburst radiates behind in concentric rings of gold and acid orange. Chartreuse leaves against electric purple sky, graphic flatness like a Fillmore concert poster."
+        key_symbols: [single wand, cloud hand, sprouting leaves, mountaintop, sunburst]
+        composition: "The wand stands vertical at center; the cloud hand grips it from upper left; the sunburst radiates from behind the wand; the mountaintop anchors the base"
       "2":
-        description: "A figure holds two torches at a coastal crossroads where paths split toward two islands visible on the horizon. The torches cast pools of burnt amber light on the ground. The figure pauses mid-step, choosing. Ink wash fades the islands into mist."
-        key_symbols: [two torches, coastal crossroads, two islands, choosing figure, torch light]
-        composition: "Figure at center where paths diverge; one torch in each hand casting light downward; the two islands faint marks on the horizon at left and right"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure stands on a castle battlement holding two wands, gazing out over a vast sea. A globe rests in one hand as the figure contemplates two diverging paths below. Gold and cyan dominate, electric purple accents, graphic flatness like a Fillmore concert poster."
+        key_symbols: [two wands, castle battlement, sea view, globe, two paths]
+        composition: "The figure stands at center on the battlement; one wand in each hand flanking the figure; the sea stretches behind; the two paths diverge below"
       "3":
-        description: "Three signal fires burn on hilltops across an island chain, each answered by the next. Ships move between the islands as small dark marks. The fires are dots of burnt amber connected by implied lines across grey water. Smoke rises and merges with cloud."
-        key_symbols: [three signal fires, island chain, ships between, smoke rising, answered flames]
-        composition: "Three hilltops arranged diagonally across the page, each crowned with fire; ships in the channels between; smoke trails upward into open sky"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure stands on a cliff watching three ships sail on the horizon, three wands planted firmly beside them. A golden sky blazes behind the ships. The scene radiates anticipation of a journey beginning. Gold, acid orange, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [cliff figure, three ships, three wands, golden horizon, journey]
+        composition: "The figure stands at left with the three wands; ships sail across the horizon at center-right; the golden sky fills the upper half"
       "4":
-        description: "Four torches mark the corners of a village celebration, dancers moving within the ring of light. The figures are loose quick strokes — all motion, no detail. The torches burn steady as amber points. Beyond the light, dark ink and the suggestion of low houses."
-        key_symbols: [four torches, village celebration, dancers, ring of light, dark houses beyond]
-        composition: "Four torch points form a square; dancers fill the space between as fluid brushstrokes; darkness at the edges; celebration contained within the light"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — four wands form a canopy decorated with elaborate flower garlands in hot pink and chartreuse. Two figures celebrate beneath the canopy, dancing. A castle rises in the background. A harvest festival scene of abundance. Gold, hot pink, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [four wand canopy, flower garlands, celebrating figures, castle, harvest festival]
+        composition: "The four wands stand at the corners forming the canopy frame; garlands drape between them; the two figures dance beneath at center; the castle rises behind"
       "5":
-        description: "Five figures with staffs clash in a dusty courtyard, a tower school rising behind. Dust is dry-brush texture; the staffs cross at sharp angles. The tower watches over the scene, indifferent and vertical. Quick aggressive strokes — this card has no stillness in it."
-        key_symbols: [five clashing staffs, dusty courtyard, tower school, sparring figures, rising dust]
-        composition: "Figures crowded at center in dynamic angles; the tower rises behind at upper center; dust clouds spread outward from the conflict; confined frame"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — five figures each wield a wand in a chaotic scuffle across a muddy field, no clear winner emerging. Competitive energy spills in every direction with crossed wands and clashing angles. Acid orange, electric purple, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [five figures, five wands, chaotic scuffle, muddy field, crossed angles]
+        composition: "The five figures fill the frame in a tangled knot at center; wands cross at sharp angles; the muddy field stretches to the edges; energy radiates outward"
       "6":
-        description: "A figure stands in a boat holding a torch aloft, leading a procession of boats through a narrow channel between islands. The lead torch is bright amber; the following lights recede into grey. Water reflects the flames as broken vertical lines."
-        key_symbols: [torchbearer in boat, procession of boats, narrow channel, reflected firelight, following lights]
-        composition: "Lead boat at center with torch raised; trailing boats diminish into the background; channel walls dark at the edges; reflections streak downward in the water"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure on horseback wearing a flower-crown wreath of victory, holding a wand aloft triumphantly. Five more wands are carried by an adoring crowd following behind in a parade procession. Gold, chartreuse, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [mounted victor, flower crown, raised wand, crowd with five wands, parade]
+        composition: "The mounted figure rides at center-left, elevated above the crowd; the five wand-bearers follow behind to the right; the flower crown is the highest point"
       "7":
-        description: "A lone figure stands on a rocky outcrop, flaming staff held high, six shadow-forms climbing the slope below. The figure is silhouetted against pale sky; the shadows below are rendered in layers of grey wash, each darker than the last. The staff's flame is the highest point."
-        key_symbols: [lone figure, flaming staff, rocky outcrop, six climbing shadows, high ground]
-        composition: "Figure at the peak, upper center; shadows approach from below in a spread pattern; the outcrop juts upward as a strong diagonal; fire at the apex"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure stands on a hilltop defending with a single wand against six wands rising from below. The stance is determined and defiant, holding the advantage of high ground. Electric purple and acid orange dominate, gold accents, graphic flatness like a Fillmore concert poster."
+        key_symbols: [hilltop defender, single wand, six rising wands, high ground, determined stance]
+        composition: "The defender stands at top center on the hilltop; six wands angle upward from the lower half; the hilltop divides the composition horizontally"
       "8":
-        description: "Eight streaks of fire arc across a night sky over open sea, like falling stars or dragon-traces. The sea below is flat black ink; the sky deep grey wash. Each streak is a swift downward brushstroke of burnt amber. A small island sits dark on the water, watching."
-        key_symbols: [eight fire streaks, night sky, open sea, falling light, lone island]
-        composition: "Fire streaks fill the upper two-thirds, angled downward from left to right; the sea is a dark band below; the island a small solid mark at lower center"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — eight wands fly diagonally through a clear sky over an open landscape, speed lines trailing behind each one. A river winds through the landscape below. Everything is in rapid motion. Cyan, gold, and acid orange dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [eight flying wands, diagonal motion, speed lines, open landscape, river]
+        composition: "The eight wands arc diagonally from upper left to lower right in parallel; the landscape stretches below; the river winds through the lower third"
       "9":
-        description: "A weary figure crouches behind a wall of eight planted torches, the ninth held ready in hand, watching a dark sea. The torches form a defensive line of amber points. The figure's posture is tense, guarded. Beyond the firelight: only black water and black sky."
-        key_symbols: [weary figure, eight planted torches, ninth torch held, defensive wall, dark sea beyond]
-        composition: "Torch line runs horizontally across the center; the figure crouches behind at center right; dark sea fills the background; the torches separate light from dark"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a bandaged figure leans wearily on a wand behind a fence of eight more wands, watchful and guarded. The figure is bruised but standing firm under a night sky. Deep indigo and electric purple dominate, gold and hot pink accents, graphic flatness like a Fillmore concert poster."
+        key_symbols: [bandaged figure, leaning wand, eight wand fence, weariness, night sky]
+        composition: "The eight wands form a vertical fence across the foreground; the bandaged figure stands just behind at center, leaning on the ninth wand; the night sky fills the background"
       "10":
-        description: "A figure carries a heavy bundle of unlit brands up a steep mountain path, village far below as small grey marks. The figure bends under the weight, each step a labor. The path switchbacks upward. Ink darkens toward the summit; the burden is rendered as dense crossed lines."
-        key_symbols: [burdened figure, bundle of brands, steep mountain, distant village, climbing path]
-        composition: "Figure at center on the ascending diagonal path; village below at lower right; mountain continues upward beyond the frame; the bundle dominates the figure's silhouette"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure bent under the weight of ten bundled wands, walking with effort toward a distant town on the horizon. The burden is enormous but the destination is close. Acid orange and deep indigo dominate, gold accents, graphic flatness like a Fillmore concert poster."
+        key_symbols: [bent figure, ten bundled wands, heavy burden, distant town, trudging]
+        composition: "The bent figure moves from right toward the town at left; the bundle of ten wands creates a massive diagonal shape on the figure's back; the town glows on the horizon"
     court:
-      Child:
-        description: "A young apprentice holds a lit brand for the first time, face illuminated from below, wonder and fear mixed. Sparks drift upward around them. The fire's amber glow lights only the face and hands — everything else is shadow and suggestion."
-        key_symbols: [young apprentice, first flame, lit face from below, drifting sparks, shadow]
-        composition: "Figure at center, lit from below; sparks float upward into darkness; the face is the focal point — a small island of warm light in dark ink"
-      Seeker:
-        description: "A figure stands at the prow of a boat, torch held forward over dark water, sailing toward a volcanic island that glows faint red at the summit. The torch throws light on the bow wave. Everything ahead is uncertain — smoke and sea-mist."
-        key_symbols: [figure at prow, forward-held torch, dark water, volcanic island, smoke ahead]
-        composition: "Boat cutting from left toward the island at upper right; torch light fans forward; volcanic glow answers from the distance; water dark below"
-      Keeper:
-        description: "A woman tends a great hearth fire in a stone-walled hall, shadows of carved beams above. The fire is the room's heart — amber and steady. She feeds it with deliberate hands. The hall extends into darkness behind her, but the fire holds the dark at bay."
-        key_symbols: [hearth fire, stone hall, tending figure, carved beams, steady flame]
-        composition: "Hearth at center with figure beside it; hall recedes into shadow above and behind; the fire's warmth radiates outward as the only color in a grey room"
-      Namer:
-        description: "A master wizard speaks a word and fire answers — a controlled flame rises from bare rock at his command, casting his shadow enormous on the wall behind. His mouth is open, mid-syllable. The fire obeys the shape of the word. One hand extended, palm down."
-        key_symbols: [speaking wizard, commanded fire, enormous shadow, extended hand, fire from rock]
-        composition: "Wizard at left, hand extended toward the flame at center; his shadow looms on the wall behind at right, much larger than the figure; fire rises vertically"
+      Page:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a young figure holds a wand before them like a proclamation, gazing at the sprouting leaves with wonder and curiosity. The figure stands in a sunlit desert landscape with distant mesas. Acid orange, chartreuse, and gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [young figure, sprouting wand, wonder, desert landscape, mesas]
+        composition: "The figure stands at center holding the wand vertically before them; sprouting leaves are the focal point; mesa landscape stretches behind"
+      Knight:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure on a rearing horse charges forward brandishing a wand, cloak streaming behind in Art Nouveau curves. The horse's mane flows like flames. A desert landscape blurs with speed. Acid orange, hot pink, and gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [rearing horse, charging knight, brandished wand, streaming cloak, flame mane]
+        composition: "Horse and rider fill the frame from left to right in mid-charge; the streaming cloak and mane create flowing curves behind; the desert landscape is a blur of color below"
+      Queen:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a confident woman sits on a throne decorated with sunflowers and lions, holding a wand in one hand and a single sunflower in the other. A black cat sits at her feet. Sunflower fields stretch behind. Gold, acid orange, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned queen, sunflower throne, wand, sunflower, black cat, sunflower fields]
+        composition: "The queen sits centered on her throne; the wand rises vertically at left, the sunflower at right; the black cat anchors the base; sunflower fields fill the background"
+      King:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a commanding figure sits on a throne carved with salamanders and flames, holding a flowering wand. A small salamander perches on the throne arm. The robes are patterned with bold geometric fire motifs. Acid orange, electric purple, and gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned king, salamander throne, flowering wand, fire-patterned robes, salamander]
+        composition: "The king fills the frame seated at center; the flowering wand is held upright at right; salamanders carved into the throne curve along both sides"
 
-  waves:
+  cups:
     pips:
       "1":
-        description: "A single bronze bowl overflows with spring water on a mossy stone, ferns curling around its base. The water spills in thin ink lines down the stone's face. Moss is wet-on-wet green-grey bleed. The bowl is a simple dark circle, full to overflowing. Quiet abundance."
-        key_symbols: [bronze bowl, spring water, mossy stone, ferns, overflowing]
-        composition: "Bowl at center on the stone; water spills downward; ferns frame from below and sides; white space above suggests a forest clearing"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a great chalice overflowing with water, held aloft by a hand emerging from a cloud. A dove descends into the cup. Lotus flowers float on the overflow. Five streams pour downward in Art Nouveau curves. Cyan, gold, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [great chalice, cloud hand, descending dove, lotus flowers, five streams]
+        composition: "The chalice is centered in the upper half; the cloud hand grips it from above; the dove descends into it; five streams cascade downward filling the lower half; lotus flowers float at the base"
       "2":
-        description: "Two figures share a drink on the deck of a small boat, calm sea stretching behind them, islands low on the horizon. One pours, one receives. The sea is a single pale wash; the figures are dark strokes leaning toward each other. Ease and trust."
-        key_symbols: [two figures sharing drink, boat deck, calm sea, low islands, pouring and receiving]
-        composition: "The two figures at center on the boat; sea opens behind as flat grey; islands are faint horizontal marks; the pouring gesture connects them"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — two figures exchange cups beneath a winged lion's head that floats between them. A caduceus rises between the cups. A cottage garden blooms behind in lush Art Nouveau tendrils. Hot pink, gold, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [two figures, exchanged cups, winged lion head, caduceus, cottage garden]
+        composition: "The two figures face each other symmetrically at left and right; the winged lion head floats above center; the caduceus rises between the cups; the garden fills the background"
       "3":
-        description: "Three women pour water from clay vessels into a shared basin at a village well, celebration around them suggested by loose quick strokes. The well is a dark circle at center. Water arcs from three directions into it. Joy expressed through flowing lines."
-        key_symbols: [three women, clay vessels, shared basin, village well, celebration]
-        composition: "Well at center; three figures arranged around it pouring inward; celebration suggested at the edges in light brushwork; water arcs converge"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — three women raise cups in a joyful toast in a garden, flower garlands hanging overhead in sweeping curves. Grapes and harvest abundance cover the table before them. Celebration and camaraderie. Gold, hot pink, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [three women, raised cups, toast, flower garlands, grapes, harvest table]
+        composition: "The three women stand in a row at center, cups raised high; garlands drape in curves above; the laden table fills the foreground"
       "4":
-        description: "A figure sits under a tree on a shore, back turned to three bronze vessels, a fourth being offered by a hand rising from the tide. The figure does not see it. The tree is a single bold stroke; the three vessels sit ignored; the offered cup catches a hint of light."
-        key_symbols: [seated figure, tree shade, three ignored vessels, fourth offered from tide, turned back]
-        composition: "Figure under tree at left, facing away; three vessels at center on the ground; the fourth vessel emerges from the tide at right edge — the missed gift"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure sits under a tree with arms crossed, ignoring three cups set before them on the ground. A fourth cup is offered by a mysterious hand extending from a cloud above. Dissatisfaction despite abundance. Electric purple, indigo, and muted gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [seated figure, crossed arms, three ignored cups, cloud hand, offered fourth cup, tree]
+        composition: "The figure sits at center beneath the tree; three cups are arranged on the ground before them; the cloud hand extends the fourth cup from upper right"
       "5":
-        description: "Three vessels lie overturned on wet rocks, their contents spilled into the sea. Two vessels stand upright behind, untouched. The spilled water merges with rain and tide in grey wash. The two remaining vessels are stable, dark, whole — but the eye goes to the loss."
-        key_symbols: [three overturned vessels, wet rocks, two upright vessels behind, spilled water, rain]
-        composition: "Overturned vessels in the foreground at center; two upright vessels behind at upper center; wet rocks rendered in dark wash; rain suggested by vertical fine lines"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a cloaked figure stands staring down at three spilled cups, liquid pooling around them. Two cups still stand upright behind the figure. A bridge leads to a distant house across a flowing river. Deep indigo, electric purple, and cyan dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [cloaked figure, three spilled cups, two standing cups, bridge, distant house, river]
+        composition: "The cloaked figure stands at center looking down; the three spilled cups are in the foreground; the two standing cups are behind at left; the bridge and house recede to the right"
       "6":
-        description: "A child offers a clay cup filled with wildflowers to an elder at a cottage door. The elder reaches down; the child reaches up. The doorway frames the elder in shadow. The flowers are small touches of color — the only brightness. A gesture across generations."
-        key_symbols: [child offering, cup of flowers, elder at door, cottage doorway, reaching hands]
-        composition: "The two figures at the doorway at center; the child below, the elder above in the frame; flowers are the bright focal point between their hands"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a boy offers a cup filled with flowers to a girl in a cottage garden, six cups arranged in a neat row between them. The scene radiates nostalgia and innocence, a memory rendered in soft psychedelic pastels. Hot pink, chartreuse, and gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [boy offering cup, girl receiving, flower-filled cup, cottage garden, six cups in a row, nostalgia]
+        composition: "The two children face each other at center; the six cups line up between them in a row; the cottage garden blooms behind and around them"
       "7":
-        description: "Seven bronze bowls sit on a rock shelf above the sea, each reflecting a different vision in its surface — moon, flame, face, ship, tower, star, eye. The bowls are dark circles in a row; the reflections are tiny detailed marks within. The sea stretches vast and empty behind."
-        key_symbols: [seven bronze bowls, rock shelf, different visions reflected, sea behind, mystery]
-        composition: "Bowls in a horizontal line across the center; the rock shelf beneath; each bowl contains a different small image; sea and sky fill the background as grey wash"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — seven cups float in psychedelic clouds, each containing a different vision: a castle, jewels, a victory wreath, a dragon, a serpent, a glowing figure, and a veiled mystery. Each cup is a window to fantasy. Electric purple, cyan, acid orange, and gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [seven floating cups, castle vision, jewels, wreath, dragon, serpent, glowing figure, veiled mystery]
+        composition: "The seven cups are arranged in a cloud formation filling the frame; a silhouetted figure gazes up at them from below center; each cup glows with its own vision"
       "8":
-        description: "A cloaked figure walks away from eight vessels left on a beach, heading toward a distant island barely visible in mist. The vessels are arranged in careful rows — abandoned deliberately. The figure's path leads into fog. Footprints in wet sand. Chosen departure."
-        key_symbols: [departing figure, eight abandoned vessels, beach, distant island, mist, footprints]
-        composition: "Vessels at lower right in neat rows; figure walks away toward upper left; the island is a ghost in the mist; footprints connect vessels to figure"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure walks away from eight stacked cups toward a mountain pass under a crescent moon, leaving behind what is known. A gap in the row of cups marks the departure. Deep indigo, electric purple, and silver dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [departing figure, eight stacked cups, mountain pass, crescent moon, gap in cups]
+        composition: "The eight cups are stacked at right; the figure walks away toward the left where the mountain pass opens; the crescent moon hangs above the pass"
       "9":
-        description: "A satisfied figure sits before nine full vessels in a lamplit room, sea visible through a window. The vessels gleam in warm light. The figure leans back, content. Through the window: moonlit water, the outside world continuing without them. Amber lamplight, grey sea."
-        key_symbols: [satisfied figure, nine full vessels, lamplight, sea through window, contentment]
-        composition: "Figure seated at left; nine vessels arrayed before them at center; the window at upper right opens onto the grey sea; warm light fills the room"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a satisfied figure sits on a wooden bench, arms crossed contentedly. Nine cups are arranged in a proud arc on a shelf behind the figure. The wish is fulfilled. Gold, acid orange, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [satisfied figure, wooden bench, crossed arms, nine cups on shelf, contentment]
+        composition: "The figure sits at center on the bench facing the viewer; the nine cups curve in an arc on the shelf behind; warm light fills the scene"
       "10":
-        description: "A family gathers at a long table near the shore, ten vessels between them, a rainbow arcing over the water behind. The figures are quick warm strokes — no faces, only postures of ease. The rainbow is the only spectrum color in the deck, faint and fleeting over grey sea."
-        key_symbols: [family at table, ten vessels, shore, rainbow over water, gathering]
-        composition: "Table runs horizontally across the lower half; figures seated along it; ten vessels on the surface; the rainbow arcs across the upper half over the sea"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a family stands beneath a great rainbow, ten cups arcing overhead mirroring the rainbow's curve. Two children dance in the foreground. A cottage with a blooming garden completes the scene. Complete emotional fulfillment. Gold, hot pink, cyan, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [family, rainbow, ten arcing cups, dancing children, cottage garden]
+        composition: "The rainbow arcs across the top; the ten cups mirror its curve below; the family stands at center; the children dance in the foreground; the cottage sits at right"
     court:
-      Child:
-        description: "A young figure stands at the tide line holding an empty cup, watching the sea fill it wave by wave. Each wave leaves a little more. The child is patient, curious, bare feet in the foam. The cup is small in small hands. The sea is enormous."
-        key_symbols: [young figure, empty cup, tide line, filling waves, bare feet]
-        composition: "Child at center at the waterline; the sea stretches to the horizon behind; each incoming wave drawn as a thin curving line; the cup held at the focal point"
-      Seeker:
-        description: "A figure in a boat rows through open sea carrying a single precious vessel wrapped in cloth, destination unknown. The sea is grey wash in every direction. The figure rows steadily, the vessel secure between their feet. No land in sight — only purpose."
-        key_symbols: [rowing figure, open sea, wrapped vessel, no land visible, steady purpose]
-        composition: "Boat at center in vast grey sea; the figure rows; the wrapped vessel is a dark form at the boat's center; horizon divides grey water from grey sky"
-      Keeper:
-        description: "A woman sits at the edge of a spring-fed pool in a cave, her reflection clear in the still water below. She guards the source. Stalactites drip above in fine ink lines. The pool is the darkest point — deep water holding deep knowledge."
-        key_symbols: [woman at pool edge, spring-fed cave, clear reflection, stalactites, guarded source]
-        composition: "Figure at the pool's edge at center; reflection visible below in the dark water; cave walls close around; stalactites hang from above; the pool is the heart"
-      Namer:
-        description: "A master speaks a word over troubled water and it stills — the surface smoothing outward from where the word lands like a stone. Concentric circles spread across the bay. The figure stands on a jetty, mouth open, hand raised. Stillness radiating from sound."
-        key_symbols: [speaking master, troubled water stilling, concentric circles, jetty, word as stone]
-        composition: "Figure on jetty at left; concentric circles spreading rightward across the bay; the water smooths from agitated strokes near the edges to flat wash at center"
+      Page:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a dreamy young figure stands at the edge of a calm sea, holding a cup from which a fish leaps. The figure gazes at the fish with gentle wonder. Waves curl in Art Nouveau patterns at the shore. Cyan, hot pink, and gold dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [young figure, cup with leaping fish, calm sea, Art Nouveau waves, wonder]
+        composition: "The figure stands at center near the water's edge; the cup is held at chest height with the fish leaping upward; the sea stretches behind; waves curl decoratively at the base"
+      Knight:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a mounted figure rides gracefully along a riverbank, holding a cup forward as if offering it. The horse moves at an easy pace. Flowing water and winged motifs decorate the knight's armor. Cyan, silver, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [mounted knight, offered cup, riverbank, flowing water motifs, winged armor]
+        composition: "Horse and rider move from right to left along the river; the cup is extended forward; the river flows in Art Nouveau curves below; the sky fills with flowing forms above"
+      Queen:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a contemplative woman sits on a throne at the water's edge, holding an elaborate covered cup. The throne is decorated with sea nymphs and shells. She gazes into the cup with deep intuition. Cyan, gold, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned queen, covered cup, water's edge, sea nymph throne, shells, contemplation]
+        composition: "The queen sits at center on her ornate throne; the covered cup is the focal point held before her; water laps at the throne's base; sea nymphs curve along the throne sides"
+      King:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a calm, mature figure sits on a throne floating on the open sea, holding a cup in one hand and a scepter in the other. A great fish leaps from the waves behind. The throne is carved with dolphins. Cyan, gold, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned king, cup, scepter, floating throne, leaping fish, dolphin carvings, open sea]
+        composition: "The king sits centered on the floating throne; the cup is held at left, scepter at right; the great fish arcs behind the throne; waves spread outward in all directions"
 
-  winds:
+  swords:
     pips:
       "1":
-        description: "A single feather stands upright in a crack in a standing stone, a storm gathering behind in dark ink wash. The feather is pale and precise — every barb drawn. The stone is ancient, weathered. The storm approaches but has not arrived. Tension before the word."
-        key_symbols: [upright feather, standing stone, gathering storm, crack in stone, tension]
-        composition: "Stone at center with the feather at its top; storm builds as dark wash from the right; the feather is the brightest mark on the page; empty ground below"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a hand from a cloud grips an upright sword, a crown balanced at the tip adorned with an olive branch and a palm frond. Mountain peaks rise below through dissipating fog. Clarity cuts through obscurity. Silver, cyan, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [cloud hand, upright sword, crowned tip, olive branch, palm frond, mountain peaks, fog]
+        composition: "The sword stands vertical at center; the cloud hand grips it from above; the crown balances at the blade tip; mountains anchor the lower third; fog dissipates around the blade"
       "2":
-        description: "A blindfolded figure stands at a cliff edge holding two crossed feathers, sea wind pulling at loose hair. The cliff drops away below in sheer dark ink. The feathers form an X against the chest. Balance maintained without sight — only the wind's information."
-        key_symbols: [blindfolded figure, two crossed feathers, cliff edge, sea wind, unseen depth]
-        composition: "Figure at center on the cliff edge; the drop rendered as black ink below; the two crossed feathers at the chest are the focal point; wind suggested by hair and cloth"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a blindfolded figure sits on a stone bench holding two crossed swords, balanced in perfect tension. A crescent moon hangs over calm water behind. A decision suspended in stillness. Silver, deep indigo, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [blindfolded figure, stone bench, two crossed swords, crescent moon, calm water]
+        composition: "The figure sits centered on the bench; the two swords cross before the chest forming an X; the crescent moon hangs at upper center; calm water stretches behind"
       "3":
-        description: "Three rune-carved arrows pin a torn sail to its mast, rain slanting across the page in diagonal ink lines. The sail tears but holds. The arrows are dark precise marks against the pale sail. Rain and wind are the same stroke — diagonal, relentless. A ship enduring."
-        key_symbols: [three rune-carved arrows, torn sail, mast, slanting rain, endurance]
-        composition: "Mast and sail fill the center vertically; three arrows pin the sail at different points; rain crosses the page diagonally; the ship implied below"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — three swords pierce a red heart against a storm sky, rain falling in bold diagonal lines. A graphic symbol of heartbreak rendered as a bold poster image. The heart is hot pink, the swords silver, the storm electric purple. Graphic flatness like a Fillmore concert poster."
+        key_symbols: [three swords, pierced heart, storm sky, falling rain]
+        composition: "The pierced heart fills the center of the frame; three swords enter from different angles; rain falls diagonally across the background; storm clouds mass behind"
       "4":
-        description: "A figure lies on a stone slab in a quiet cave, four feathers arranged at head, feet, and each hand — a ritual of rest or healing. A single candle burns at the figure's side. The cave is rendered in soft grey wash. Silence and deliberate stillness."
-        key_symbols: [resting figure, stone slab, four arranged feathers, quiet cave, single candle]
-        composition: "Figure horizontal at center on the slab; four feathers at the cardinal points; candle glow as warm point at center; cave walls suggested in grey wash around"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure lies on a stone slab in a chapel, hands folded in rest. Three swords hang on the wall above, one lies beneath the slab. A stained glass window casts colored light across the scene. Enforced rest and contemplation. Deep indigo, gold, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [resting figure, stone slab, three wall swords, one hidden sword, stained glass window, chapel]
+        composition: "The figure lies horizontal at center on the slab; three swords hang vertically on the wall above; the stained glass window glows at left; the hidden sword is visible below"
       "5":
-        description: "A figure gathers scattered feathers from a windswept beach, others walking away along the shore without looking back. The feathers tumble in the wind as light quick strokes. The departing figures are small and already far. Loss scattered on the sand."
-        key_symbols: [gathering figure, scattered feathers, windswept beach, departing figures, wind]
-        composition: "Kneeling figure at center gathering feathers; feathers blow across the sand; departing figures recede along the shore at right; wind dominates the composition"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a smirking figure holds three swords while two defeated figures walk away in the background, two swords left on the ground. Storm clouds gather overhead. A hollow victory. Electric purple, acid orange, and silver dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [smirking victor, three held swords, two departing figures, two ground swords, storm clouds]
+        composition: "The smirking figure stands at center foreground holding three swords; the two departing figures recede into the background; two swords lie on the ground between them"
       "6":
-        description: "A ferryman poles a flat-bottomed boat through fog, six feathered pennants on the bow marking safe passage. The fog is wet-on-wet white and grey, dissolving everything. The boat and ferryman are the only solid forms. The pennants flutter forward into blankness."
-        key_symbols: [ferryman, flat boat, fog, six feathered pennants, poling through mist]
-        composition: "Boat crossing from right to left; fog fills the entire background as soft wash; the six pennants at the bow are the leading edge; the ferryman stands tall at center"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a ferryman poles a boat with six swords standing upright in the hull. A woman and child sit as passengers. The water is calm, reflecting the sky. Moving to safer ground. Cyan, silver, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [ferryman, poled boat, six upright swords, woman passenger, child, calm water]
+        composition: "The boat moves horizontally across the center; six swords stand in a row in the hull; the ferryman poles at the stern; the woman and child sit in the bow; calm water reflects below"
       "7":
-        description: "A figure slips from a sleeping camp at night carrying bundled scrolls, five feathered markers still standing in the ground behind. Moonlight catches the figure's movement. The camp sleeps in dark ink. The figure is half-shadow, half-gone. Necessary theft or necessary departure."
-        key_symbols: [slipping figure, bundled scrolls, sleeping camp, five feathered markers, moonlight]
-        composition: "Figure at center moving leftward away from the camp at right; five markers stand in the ground at right; moonlight from upper left catches the figure's edge"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure sneaks away from a camp carrying five swords bundled in arms, looking back over one shoulder. Two swords remain planted in the ground behind at the camp. A risky scheme under a dim sky. Electric purple, deep indigo, and acid orange dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [sneaking figure, five carried swords, backward glance, two planted swords, camp]
+        composition: "The sneaking figure moves from right to left carrying the swords; the camp with two remaining swords is at right; the figure looks back over the right shoulder"
       "8":
-        description: "A bound figure sits amid eight feathered stakes driven into sand, cloth over the eyes. Tide marks on the sand say the water has been close. The stakes lean at angles around the figure like a cage of quills. The figure is still — waiting, not struggling."
-        key_symbols: [bound figure, eight feathered stakes, sand, blindfold, tide marks]
-        composition: "Figure at center surrounded by stakes; the stakes form an irregular circle; tide marks curve across the sand below; the blindfold is the whitest mark"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a bound and blindfolded figure stands surrounded by eight swords driven into the ground in a tight circle. Water pools at the figure's feet. A castle sits on a distant hill. Feeling trapped but the bonds are not absolute. Deep indigo, silver, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [bound blindfolded figure, eight surrounding swords, pooling water, distant castle]
+        composition: "The bound figure stands at center; eight swords form a cage-like circle around them; water pools at the base; the castle is small on the hill in the background"
       "9":
-        description: "A figure sits upright in bed, sleepless, nine feathered runes on the wall behind, moonlight through a narrow window. The runes cast faint shadows. The figure's hands grip the blanket. The room is small — walls close. Thoughts that will not quiet."
-        key_symbols: [sleepless figure, bed, nine feathered runes, moonlit window, small room]
-        composition: "Figure in bed at center; runes arrayed on the wall behind; moonlight enters from the window at right as a bright stripe; the room is cramped, dark"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure sits upright in bed, head in hands in anguish. Nine swords hang in a row on the dark wall behind. Moonlight cuts through a window casting a sharp beam across the scene. Anxiety and sleepless worry. Deep indigo, silver, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [anguished figure, bed, head in hands, nine wall swords, moonlight beam]
+        composition: "The figure sits at center in the bed; nine swords hang horizontally on the wall behind in three rows of three; the moonlight beam cuts diagonally from upper left"
       "10":
-        description: "A figure lies fallen on a shore with ten feathered shafts around them, dawn light breaking over the water. The figure is face down. The shafts lie scattered — not embedded, just fallen with the figure. Dawn light washes the horizon in pale grey-amber. An ending that is also first light."
-        key_symbols: [fallen figure, ten feathered shafts, shore, dawn light, ending and beginning]
-        composition: "Figure horizontal at lower center; shafts scattered around; dawn breaks at the horizon across the upper third; the light is the gentlest wash in the deck"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure lies face-down on the ground with ten swords in the back. A dawn sky glows over water on the horizon — the worst has happened but the sun is rising. The ten swords create a graphic pattern. Deep indigo, gold dawn light, and silver dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [fallen figure, ten swords in back, dawn sky, water horizon, sunrise]
+        composition: "The fallen figure lies horizontal across the lower third; ten swords stand from the back in a row; the dawn sky fills the upper half; water gleams on the horizon"
     court:
-      Child:
-        description: "A young figure holds a single feather up to the wind, testing its direction, standing on a hilltop above the sea. Hair and clothes blow sideways. The feather points. The figure listens to what the wind carries — words not yet understood."
-        key_symbols: [young figure, single feather, wind testing, hilltop, listening]
-        composition: "Figure at center on hilltop; the feather extended upward into the wind; hair and garments blown to the right; sea visible below at the edges"
-      Seeker:
-        description: "A figure rides the wind in an open boat, scrolls and feathered quills scattered on the bench beside them, chasing a word across the sea. The sail is full and straining. Scrolls flutter. The figure leans forward with the intensity of pursuit."
-        key_symbols: [wind-driven boat, scattered scrolls, feathered quills, full sail, pursuit]
-        composition: "Boat surging from right to left; sail full at upper center; scrolls and quills on the bench; the figure leans into the wind at the bow"
-      Keeper:
-        description: "A woman stands in a high tower room surrounded by hanging scrolls and feathered wind-chimes, a window open to the sea wind. She reads the wind's messages. The scrolls sway. The chimes turn. She is the still center around which the air moves."
-        key_symbols: [tower room, hanging scrolls, feathered wind-chimes, open window, reading wind]
-        composition: "Figure at center in the room; scrolls hang from above around her; the open window at right admits light and wind; chimes catch the movement"
-      Namer:
-        description: "A master stands on a headland and speaks a true name into the wind — the word visible as a single brushstroke leaving the mouth, carried out over the sea. The wind itself bends around the word. The figure is rooted, the word is flying. Power in naming."
-        key_symbols: [speaking master, true name, headland, word as brushstroke, wind bending]
-        composition: "Figure at left on the headland; the spoken word extends rightward as a calligraphic stroke over the sea; the wind curves around it; vast sky above"
+      Page:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a vigilant young figure stands on windswept ground holding a sword upright, testing the air with alert eyes. Clouds swirl dynamically behind. The figure's stance is ready and watchful. Silver, cyan, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [vigilant youth, upright sword, windswept ground, swirling clouds, alert stance]
+        composition: "The figure stands at center holding the sword vertically; wind blows hair and clothing to the right; swirling clouds fill the background in dynamic Art Nouveau curves"
+      Knight:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a mounted figure charges at full gallop, sword raised high, into a fierce wind. The horse lunges forward with mane streaming. Storm clouds and wind lines fill the background. Silver, electric purple, and acid orange dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [charging knight, raised sword, galloping horse, fierce wind, streaming mane, storm]
+        composition: "Horse and rider surge from right to left; the sword is the highest point raised above; wind lines stream from left to right; storm clouds mass behind"
+      Queen:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a stern woman sits on a throne carved with butterflies and cloud motifs, holding a sword upright in one hand. Her other hand is raised in a gesture of clear judgment. A single storm cloud drifts behind an otherwise clear sky. Silver, cyan, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned queen, upright sword, butterfly throne, judgment gesture, single storm cloud]
+        composition: "The queen sits at center on the ornate throne; the sword rises vertically at right; her raised hand is at left; the single cloud drifts behind her head"
+      King:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — an authoritative figure sits on a high-backed throne carved with wind spirits and sylphs, holding a sword angled to the right. Trees bend in the background wind. The expression is stern but fair. Silver, electric purple, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned king, angled sword, wind spirit throne, bending trees, stern expression]
+        composition: "The king sits centered on the high-backed throne; the sword angles from lower left to upper right; wind-bent trees frame both sides of the background"
 
-  stones:
+  pentacles:
     pips:
       "1":
-        description: "A single smooth rune stone rests on a moss-covered altar in dappled forest light. The stone is dark and perfectly round. Moss softens every edge of the altar. Light falls through leaves as pale circles on dark ground. One thing, complete."
-        key_symbols: [rune stone, mossy altar, forest light, dappled ground, completeness]
-        composition: "Altar at center with the stone on top; light falls from above through unseen canopy; moss renders the altar in soft grey-green; the stone is the darkest point"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a hand from a cloud holds a golden pentacle over a garden archway. A path leads through lush hedges to a distant mountain. Lilies bloom along the path. Abundance is offered. Gold, chartreuse, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [cloud hand, golden pentacle, garden archway, hedge path, mountain, lilies]
+        composition: "The cloud hand holds the pentacle at upper center; the garden archway frames the middle; the path leads through hedges to the mountain in the background; lilies line the path"
       "2":
-        description: "A juggler tosses two carved stones at a harbor market, the stones tracing an infinity pattern in the air. The market is suggested by a few quick strokes — awnings, figures. The two stones are caught mid-arc, suspended. Balance in motion."
-        key_symbols: [juggler, two carved stones, infinity pattern, harbor market, balance in motion]
-        composition: "Juggler at center; the two stones at the top of their arcs forming the infinity shape; market activity suggested at the edges in loose strokes"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a juggler dances while balancing two pentacles connected by an infinity loop. Ships ride rough seas in the background. The figure deftly manages two priorities at once. Gold, cyan, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [dancing juggler, two pentacles, infinity loop, rough sea ships, balancing act]
+        composition: "The juggler dances at center; the two pentacles are held at left and right connected by the flowing infinity loop; ships and rough seas fill the background"
       "3":
-        description: "Three figures build a stone wall on a hillside, carved keystones visible in the rising structure. Each figure works at a different section. The wall curves across the slope in strong horizontal lines. The keystones are the most detailed marks — craft within labor."
-        key_symbols: [three builders, stone wall, hillside, carved keystones, collaborative work]
-        composition: "The wall runs horizontally across the center; three figures placed along it; hillside slopes upward behind; keystones drawn with more detail than anything else"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a craftsperson works on a cathedral archway with chisel and mallet, three pentacles carved into the stonework as decorative elements. The artisan is focused in deep concentration. Gold, deep indigo, and acid orange dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [craftsperson, cathedral archway, chisel and mallet, three carved pentacles, stonework]
+        composition: "The archway fills the upper two-thirds; the three pentacles are spaced across its curve; the craftsperson works at right on a scaffold; tools and stone chips detail the scene"
       "4":
-        description: "A figure sits on a boulder clutching four rune stones to their chest, a village visible in the valley below. The grip is tight — protection or hoarding. The boulder is a dark mass; the village is small and far. The figure sits above and apart."
-        key_symbols: [seated figure, four clutched rune stones, boulder, valley village, distance]
-        composition: "Figure on boulder at upper center; village in the valley below at lower center; the four stones pressed to the chest are the focal point; height separates figure from village"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure sits hunched on a bench, clutching one pentacle to the chest, one balanced on the head, one under each foot. A city skyline rises behind. Hoarding and fearful control. Gold, deep indigo, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [hunched figure, four pentacles, clutching, bench, city skyline, hoarding]
+        composition: "The figure sits at center clutching the pentacles in a defensive posture; the city skyline stretches behind; the four pentacles are positioned at head, chest, and both feet"
       "5":
-        description: "Two ragged figures pass in the rain before a lit window where five rune stones are visible on the sill. Warmth inside, cold outside. The rain is diagonal ink lines; the window is a warm rectangle of amber. The figures are dark, bent, passing. They do not stop."
-        key_symbols: [two ragged figures, rain, lit window, five rune stones on sill, exclusion]
-        composition: "Window at center glowing with warm light; five stones on the sill; the two figures pass before it at ground level; rain slants across the page"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — two ragged figures trudge through snow past a lit stained-glass church window. Five pentacles are arranged in the window's pattern, glowing with warm light. Hardship and cold outside, help glowing near but unnoticed. Deep indigo, cyan, and gold window light dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [two ragged figures, snow, stained glass window, five pentacles in glass, church, hardship]
+        composition: "The two figures trudge from left to right through the snow at lower center; the stained glass window glows large at upper right; the five pentacles shine within its pattern"
       "6":
-        description: "A figure stands in a doorway distributing rune stones to villagers, hands open and offering. The queue extends outward. Each recipient holds their stone carefully. The doorway frames the giver in shadow; the villagers stand in light. Generosity as balance."
-        key_symbols: [giving figure, doorway, rune stones, queue of villagers, open hands]
-        composition: "Doorway at center with the figure within; villagers extend outward to the right; each hand-off of a stone creates a small bright point; light outside, shadow within"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a wealthy figure holds balanced scales, distributing pentacles to two kneeling figures below. A balanced and generous exchange from a position of stability. Gold, electric purple, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [wealthy figure, balanced scales, distributed pentacles, two kneeling figures, generosity]
+        composition: "The wealthy figure stands elevated at center holding the scales; two kneeling figures receive pentacles symmetrically at left and right below; the six pentacles are distributed between all three"
       "7":
-        description: "A farmer leans on a stone wall regarding seven boundary markers in the fields behind, waiting for harvest. The fields stretch in horizontal bands of grey wash. The markers are dark verticals in the earth. The farmer is still, patient. The land does what the land does."
-        key_symbols: [farmer, stone wall, seven boundary markers, fields, patience]
-        composition: "Farmer at left leaning on the wall; fields open to the right with seven markers placed among them; horizontal composition — land stretching flat and wide"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a farmer leans on a hoe, regarding seven pentacles growing on a leafy bush like heavy fruit. The harvest is not yet ready. Patient waiting in cultivated fields that stretch behind. Gold, chartreuse, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [farmer, hoe, seven pentacle bush, growing fruit, patience, cultivated fields]
+        composition: "The farmer stands at right leaning on the hoe; the pentacle bush fills the center-left with seven golden discs among the leaves; fields stretch behind to the horizon"
       "8":
-        description: "A craftsman carves a rune stone by candlelight, eight finished stones in a row beside them. The candle throws sharp shadows. The carving hand is steady; the chisel precise. Each finished stone is identical in size but unique in its rune. Mastery through repetition."
-        key_symbols: [craftsman carving, candlelight, eight finished stones, chisel, steady hand]
-        composition: "Craftsman at center working; eight completed stones in a line at right; candle at upper left casting light down; the work-in-progress stone is the focal point"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a craftsperson sits at a workbench carefully carving pentacles, eight finished pieces lined up in a precise row on the bench. Focused skill and steady progress. Gold, acid orange, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [craftsperson, workbench, carving tools, eight finished pentacles, focused skill, steady row]
+        composition: "The craftsperson sits at center working at the bench; the eight pentacles line up in a neat row across the bench surface; tools and materials surround the workspace"
       "9":
-        description: "A solitary figure stands in a walled garden, nine carved stones placed in the branches of a fruit tree. The garden is enclosed, private, complete. The wall curves around in brushstroke grey. The stones among branches are dark circles among dark leaves. Abundance earned in solitude."
-        key_symbols: [solitary figure, walled garden, nine carved stones, fruit tree, enclosure]
-        composition: "Garden enclosed by wall curving across the page; tree at center with stones in its branches; figure standing below; the wall creates intimacy — the world shut out"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a figure stands in a lush walled garden, a falcon perched on one gloved hand. Nine pentacles hang from vines and trellises around the garden like golden ornaments. Earned abundance and solitary enjoyment. Gold, chartreuse, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [garden figure, falcon, gloved hand, walled garden, nine hanging pentacles, vines, trellises]
+        composition: "The figure stands at center with the falcon; nine pentacles hang from surrounding vines and trellises filling the frame; the garden wall curves behind"
       "10":
-        description: "A multi-generational family sits at a great stone table, ten carved heirlooms arranged between them — rune stones passed down through hands and years. The table is massive, the figures small around it. A great house rises behind in simple vertical strokes. What endures endures through people."
-        key_symbols: [family gathering, stone table, ten heirloom stones, great house, generations]
-        composition: "Table horizontal at center; figures of varying size seated around it; ten stones on the surface; the great house rises behind as a strong vertical form; warmth within structure"
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a multi-generational family gathers beneath a stone archway, ten pentacles arranged in the Tree of Life pattern above and around them. Dogs rest at their feet. A great estate stretches behind the archway. Legacy and lasting wealth. Gold, chartreuse, and deep indigo dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [multi-generational family, stone archway, ten pentacles in Tree of Life, dogs, great estate]
+        composition: "The family group stands beneath the archway at center; the ten pentacles are arranged in the Tree of Life pattern above and around them; dogs sit at the base; the estate stretches behind"
     court:
-      Child:
-        description: "A young figure crouches on a beach, examining a rune stone found in the sand, turning it in both hands. The stone is large in small hands. The beach stretches empty in both directions. Everything starts with picking something up and looking at it closely."
-        key_symbols: [crouching child, found rune stone, beach, examination, discovery]
-        composition: "Child at center crouching low; the stone held up in both hands; empty beach extending to both sides; sky above as white space; the stone is the entire world"
-      Seeker:
-        description: "A figure climbs a steep mountain path carrying stone tools — chisel, hammer, measuring cord — destination above the clouds. The path switchbacks upward in strong diagonal strokes. Cloud line cuts the mountain at mid-height. The figure climbs from known ground into the unknown."
-        key_symbols: [climbing figure, stone tools, steep mountain, clouds, ascending path]
-        composition: "Path diagonal from lower right to upper left; figure at the midpoint climbing; cloud line horizontal across center; the summit hidden above"
-      Keeper:
-        description: "A woman sits at the threshold of a stone house, hands working clay on a wheel, finished vessels drying in the sun behind her. The wheel turns — a circle within the square doorframe. Her hands are the most detailed element. The house is solid, old, lived in."
-        key_symbols: [woman at threshold, clay wheel, stone house, drying vessels, working hands]
-        composition: "Doorway framing the figure at center; the wheel before her; vessels lined up behind in the interior; sunlight on the threshold — the border between making and made"
-      Namer:
-        description: "A master builder places the final keystone in a great arch, the arch framing a view of the sea beyond. The stone fits exactly. The builder's hands release it and the arch holds. Behind the arch: sky, sea, horizon. The work complete, the view revealed."
-        key_symbols: [master builder, keystone, great arch, sea through arch, completion]
-        composition: "The arch dominates the frame; the builder at the top placing the keystone; through the arch the sea is visible as pale wash; the keystone is the highest and final mark"
+      Page:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a studious young figure stands in a meadow, holding up a single pentacle and examining it closely with fascination. The ground is fertile and green. Mountains rise in the distance. The stance is grounded and practical. Gold, chartreuse, and electric purple dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [studious youth, held pentacle, examination, meadow, distant mountains, grounded stance]
+        composition: "The figure stands at center holding the pentacle up at eye level; the meadow spreads around the base; mountains frame the background"
+      Knight:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a mounted figure rides a heavy draft horse at a steady walk through a plowed field, holding a pentacle before them with care. The pace is methodical and deliberate. The field stretches wide. Gold, deep brown, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [mounted knight, draft horse, held pentacle, plowed field, steady pace, deliberate movement]
+        composition: "Horse and rider move from right to left at a walk; the pentacle is held carefully before the rider; the plowed field extends to all edges; furrows create horizontal lines"
+      Queen:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a nurturing woman sits on a throne carved with fruit and flowers, cradling a pentacle in her lap like something precious. A rabbit sits at her feet. A lush garden surrounds the throne. Gold, chartreuse, and hot pink dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned queen, cradled pentacle, fruit-and-flower throne, rabbit, lush garden]
+        composition: "The queen sits at center on the ornate throne; the pentacle rests in her lap as the focal point; the rabbit sits at the base; the garden fills the background in lush Art Nouveau curves"
+      King:
+        description: "Bold psychedelic poster art, flat saturated color fields with heavy black outlines, Art Nouveau flowing curves — a prosperous figure sits on a throne decorated with bull heads and grapevines, a pentacle resting on one knee, a scepter in the other hand. A castle and vineyards are visible behind. The robes are richly patterned with botanical motifs. Gold, deep indigo, and chartreuse dominate, graphic flatness like a Fillmore concert poster."
+        key_symbols: [enthroned king, pentacle on knee, scepter, bull-head throne, grapevines, castle, vineyards]
+        composition: "The king sits centered on the ornate throne; the pentacle rests on the left knee; the scepter is held upright at right; the castle and vineyards stretch behind through an opening"
