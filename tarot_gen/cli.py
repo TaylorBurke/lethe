@@ -284,6 +284,15 @@ def prompt_for_options() -> dict:
         if diversity is None:
             sys.exit(0)
 
+        ps_str = questionary.text(
+            "Prompt strength:",
+            instruction="(0.0-1.0, lower = closer to reference image)",
+            default="0.47",
+        ).ask()
+        if ps_str is None:
+            sys.exit(0)
+        prompt_strength = float(ps_str) if ps_str.strip() else 0.47
+
     elif model == "sdxl":
         key_card_str = questionary.text(
             "Key card image path:",
