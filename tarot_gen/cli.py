@@ -405,7 +405,7 @@ def save_prompt_file(output: Path, options: dict) -> Path:
     ]
     if options.get('key_card'):
         lines.append(f"Key Card: {options['key_card']}")
-    if options.get('model') == 'sdxl':
+    if options.get('model') in ('sdxl', 'style-transfer'):
         lines.append(f"Prompt Strength: {options['prompt_strength']}")
     if options.get('model') == 'style-transfer':
         lines.append(f"Style Transfer Mode: {options['style_transfer_mode']}")
@@ -425,6 +425,26 @@ def save_prompt_file(output: Path, options: dict) -> Path:
 
     prompt_path.write_text("\n".join(lines))
     return prompt_path
+
+
+def _save_reference_images(output: Path, key_card: Path | None, reference_map: dict | None) -> None:
+    """Copy reference image(s) into output/references/ for archival."""
+    sources: list[Path] = []
+    if key_card:
+        p = Path(key_card) if not isinstance(key_card, Path) else key_card
+        if p.exists():
+            sources.append(p)
+    if reference_map:
+        for ref_path in reference_map.values():
+            p = Path(ref_path) if not isinstance(ref_path, Path) else ref_path
+            if p.exists():
+                sources.append(p)
+    if not sources:
+        return
+    ref_dir = output / "references"
+    ref_dir.mkdir(parents=True, exist_ok=True)
+    for src in sources:
+        shutil.copy2(str(src), str(ref_dir / src.name))
 
 
 def _generate_single_deck(
@@ -535,6 +555,9 @@ def run_generation(
 
     # Save prompt.txt before generation
     save_prompt_file(output, options)
+
+    # Save reference images into output/references/
+    _save_reference_images(output, key_card, reference_map)
 
     # --- Single card mode ---
     if card_subset == "single" and single_card_index is not None:
