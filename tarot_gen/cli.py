@@ -79,6 +79,7 @@ def prompt_for_options() -> dict:
     single_card_desc = None
     single_card_symbols = None
     single_card_composition = None
+    _will_generate_cardback = cards != "single"  # deck modes always include a card back
 
     if cards == "single":
         if deck_type == "oracle":
@@ -104,6 +105,7 @@ def prompt_for_options() -> dict:
                 console.print(f"[bold cyan]Selected: {oracle_cards_preview[single_card_index].name}[/bold cyan]")
             else:
                 console.print("[bold cyan]Selected: Card Back[/bold cyan]")
+                _will_generate_cardback = True
         else:
             idx_str = questionary.text(
                 "Card index (0-78):",
@@ -154,6 +156,7 @@ def prompt_for_options() -> dict:
                         sys.exit(0)
             else:
                 console.print("[bold cyan]Selected: Card Back[/bold cyan]")
+                _will_generate_cardback = True
 
         count_str = questionary.text(
             "Number of copies (1-20):",
@@ -169,6 +172,45 @@ def prompt_for_options() -> dict:
         if single_card_count < 1 or single_card_count > 20:
             console.print("[red]Count must be between 1 and 20.[/red]")
             sys.exit(1)
+
+    tile_density = 3
+    if _will_generate_cardback:
+        cardback_style = questionary.select(
+            "Card back design style:",
+            choices=[
+                questionary.Choice("4-way symmetrical (mirrored mandala)", value="4-way-symmetry"),
+                questionary.Choice("Tile pattern (seamless repeating)", value="tile"),
+                questionary.Choice("Neither (use raw generation)", value="none"),
+            ],
+            default="4-way-symmetry",
+        ).ask()
+        if cardback_style is None:
+            sys.exit(0)
+
+        if cardback_style == "tile":
+            if model == "style-transfer":
+                console.print(
+                    "[yellow]Warning: tile mode works best with flux-schnell or sdxl. "
+                    "style-transfer is heavily driven by the reference image, which is unlikely "
+                    "to have seamlessly-connecting edges — results may not tile cleanly.[/yellow]"
+                )
+            density_str = questionary.text(
+                "Tile density (1-10):",
+                instruction="(1 = 1 tile per card width, 10 = 10 tiles per card width)",
+                default="3",
+            ).ask()
+            if density_str is None:
+                sys.exit(0)
+            try:
+                tile_density = int(density_str.strip())
+            except ValueError:
+                console.print("[red]Invalid density. Must be an integer 1-10.[/red]")
+                sys.exit(1)
+            if tile_density < 1 or tile_density > 10:
+                console.print("[red]Density must be between 1 and 10.[/red]")
+                sys.exit(1)
+    else:
+        cardback_style = "4-way-symmetry"
 
     aspect_ratio = questionary.select(
         "Aspect ratio:",
@@ -360,6 +402,8 @@ def prompt_for_options() -> dict:
         "single_card_desc": single_card_desc,
         "single_card_symbols": single_card_symbols,
         "single_card_composition": single_card_composition,
+        "cardback_style": cardback_style,
+        "tile_density": tile_density,
     }
 
 
@@ -421,6 +465,10 @@ def save_prompt_file(output: Path, options: dict) -> Path:
             lines.append(f"Custom Symbols: {', '.join(options['single_card_symbols'])}")
         if options.get('single_card_composition'):
             lines.append(f"Custom Composition: {options['single_card_composition']}")
+    if options.get('cardback_style'):
+        lines.append(f"Card Back Style: {options['cardback_style']}")
+        if options.get('cardback_style') == 'tile':
+            lines.append(f"Tile Density: {options.get('tile_density', 3)}")
     lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
     prompt_path.write_text("\n".join(lines))
@@ -462,6 +510,8 @@ def _generate_single_deck(
     reference_map: dict[str, str] | None,
     diversity: str = "medium",
     card_count: int | None = None,
+    cardback_style: str = "4-way-symmetry",
+    tile_density: int = 3,
 ) -> list[Path]:
     """Generate one complete deck (cards + card back).
 
@@ -498,6 +548,8 @@ def _generate_single_deck(
         deck_num=deck_num,
         diversity=diversity,
         card_count=card_count if card_count is not None else len(cards),
+        cardback_style=cardback_style,
+        tile_density=tile_density,
     )
     paths.append(card_back_path)
     return paths
@@ -524,6 +576,8 @@ def run_generation(
     single_card_symbols: list[str] | None = None,
     single_card_composition: str | None = None,
     deck_type: str = "tarot",
+    cardback_style: str = "4-way-symmetry",
+    tile_density: int = 3,
 ) -> None:
     """Execute the deck generation with the given options."""
     # Archive existing output if present
@@ -551,6 +605,8 @@ def run_generation(
         "single_card_desc": single_card_desc,
         "single_card_symbols": single_card_symbols,
         "single_card_composition": single_card_composition,
+        "cardback_style": cardback_style,
+        "tile_density": tile_density,
     }
 
     # Save prompt.txt before generation
@@ -627,6 +683,8 @@ def run_generation(
                     deck_num=copy_num,
                     diversity=diversity,
                     card_count=cb_card_count,
+                    cardback_style=cardback_style,
+                    tile_density=tile_density,
                 )
                 all_paths.append(path)
         else:
@@ -691,6 +749,8 @@ def run_generation(
             reference_map=reference_map,
             diversity=diversity,
             card_count=len(cards),
+            cardback_style=cardback_style,
+            tile_density=tile_density,
         )
     else:
         # Multiple decks — run concurrently, suffix filenames with deck number
@@ -714,6 +774,8 @@ def run_generation(
                     reference_map=reference_map,
                     diversity=diversity,
                     card_count=len(cards),
+                    cardback_style=cardback_style,
+                    tile_density=tile_density,
                 )
                 futures[fut] = d
 

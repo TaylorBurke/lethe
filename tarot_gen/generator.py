@@ -494,6 +494,38 @@ def _mirror_4way(image_path: Path) -> None:
     full.save(image_path, format="PNG")
 
 
+def _card_target_dimensions(aspect_ratio: str) -> tuple[int, int]:
+    """Return (width, height) in pixels for a given aspect ratio string."""
+    if aspect_ratio in SDXL_DIMENSIONS:
+        return SDXL_DIMENSIONS[aspect_ratio]
+    # "WxH" literal (e.g. "300x575")
+    if "x" in aspect_ratio and ":" not in aspect_ratio:
+        w_str, h_str = aspect_ratio.split("x", 1)
+        return int(w_str), int(h_str)
+    # "W:H" ratio — scale to ~768px wide
+    if ":" in aspect_ratio:
+        w_r, h_r = (int(x) for x in aspect_ratio.split(":"))
+        base = 768
+        return base, int(base * h_r / w_r)
+    return 768, 1152
+
+
+def _assemble_tile_grid(tile_path: Path, density: int, target_width: int, target_height: int, dest: Path) -> None:
+    """Assemble a seamless tile into a card-sized image.
+
+    Resizes *tile_path* to (target_width // density) square, then repeats it
+    to fill *target_width* × *target_height*, saving the result to *dest*.
+    """
+    tile_img = Image.open(tile_path).convert("RGB")
+    tile_size = max(1, target_width // density)
+    tile_resized = tile_img.resize((tile_size, tile_size), Image.LANCZOS)
+    result = Image.new("RGB", (target_width, target_height))
+    for y in range(0, target_height, tile_size):
+        for x in range(0, target_width, tile_size):
+            result.paste(tile_resized, (x, y))
+    result.save(dest, format="PNG")
+
+
 def generate_card_back(
     style: str,
     model: str,
@@ -506,12 +538,17 @@ def generate_card_back(
     diversity: str = "medium",
     deck_num: int | None = None,
     card_count: int = 78,
+    cardback_style: str = "4-way-symmetry",
+    tile_density: int = 3,
 ) -> Path:
-    """Generate a 4-way symmetrical card back image.
+    """Generate a card back image.
 
-    Uses the same model and style as the deck, with a prompt focused on
-    ornamental symmetry. The raw output is post-processed with PIL to
-    guarantee true 4-way symmetry by mirroring the top-left quadrant.
+    Uses the same model and style as the deck, with a prompt focused on the
+    chosen design style. Post-processing options:
+    - "4-way-symmetry": mirrors the top-left quadrant for a mandala effect
+    - "tile": generates a seamless square tile then assembles it at the
+      given density across the final card dimensions
+    - "none": uses the raw model output
     """
     model_id = MODELS.get(model, model)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -522,11 +559,28 @@ def generate_card_back(
         dest = output_dir / f"{card_count:02d}_card_back.png"
     seed = get_seed(base_seed, 999)
 
-    prompt = (
-        f"{style_prefix}, ornamental symmetrical pattern, decorative card back design, "
-        "intricate mandala, geometric tilework, no text, no figures, no faces, no characters, "
-        "full bleed illustration extending to all edges, no border, no frame, seamless edge-to-edge artwork"
-    )
+    # For tile mode we generate a square tile then assemble; track separately.
+    is_tile = cardback_style == "tile"
+    tile_path = dest.with_stem(dest.stem + "_tile") if is_tile else None
+
+    if cardback_style == "4-way-symmetry":
+        prompt = (
+            f"{style_prefix}, ornamental symmetrical pattern, decorative card back design, "
+            "intricate mandala, geometric tilework, no text, no figures, no faces, no characters, "
+            "full bleed illustration extending to all edges, no border, no frame, seamless edge-to-edge artwork"
+        )
+    elif is_tile:
+        prompt = (
+            f"{style_prefix}, seamless tileable texture, decorative pattern, "
+            "top edge connects to bottom edge, left edge connects to right edge, "
+            "perfectly seamless repeat, no text, no figures, no faces, no characters, no border, no frame"
+        )
+    else:
+        prompt = (
+            f"{style_prefix}, decorative card back design, ornamental pattern, "
+            "no text, no figures, no faces, no characters, "
+            "full bleed illustration extending to all edges, no border, no frame"
+        )
     negative = build_negative_prompt()
 
     console.print("[bold cyan]Generating card back...[/bold cyan]")
@@ -535,9 +589,12 @@ def generate_card_back(
     is_flux = "flux" in model_id
     is_style_transfer = "style-transfer" in model_id
 
+    # Tile mode: generate at 1:1 so we get a clean square tile to assemble.
+    gen_aspect = "1:1" if is_tile else aspect_ratio
+
     ref_url: str | None = None
     if is_style_transfer:
-        target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        ref_dims = (1024, 1024) if is_tile else SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         ref_path = None
         if reference_map:
             ref_path = Path(reference_map.get("major") or next(iter(reference_map.values())))
@@ -546,21 +603,21 @@ def generate_card_back(
         if ref_path:
             card_back_seed = get_seed(base_seed, 999)
             resized_bytes = resize_image_to_aspect(
-                ref_path, target_width, target_height,
+                ref_path, ref_dims[0], ref_dims[1],
                 card_seed=card_back_seed, diversity=diversity,
             )
             encoded = base64.b64encode(resized_bytes).decode()
             ref_url = f"data:image/png;base64,{encoded}"
 
     if is_style_transfer and ref_url:
-        width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        gen_w, gen_h = (1024, 1024) if is_tile else SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         input_data = {
             "prompt": prompt,
             "negative_prompt": negative,
             "style_image": ref_url,
             "model": style_transfer_mode,
-            "width": width,
-            "height": height,
+            "width": gen_w,
+            "height": gen_h,
             "seed": seed,
             "number_of_images": 1,
             "output_format": "png",
@@ -570,24 +627,31 @@ def generate_card_back(
             "prompt": prompt,
             "seed": seed,
             "num_outputs": 1,
-            "aspect_ratio": aspect_ratio,
+            "aspect_ratio": gen_aspect,
         }
     else:
-        width, height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
+        gen_w, gen_h = (1024, 1024) if is_tile else SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         input_data = {
             "prompt": prompt,
             "negative_prompt": negative,
             "seed": seed,
-            "width": width,
-            "height": height,
+            "width": gen_w,
+            "height": gen_h,
             "num_outputs": 1,
         }
 
     urls = _run_model(model_id, input_data)
-    _download_image(urls[0], dest)
 
-    console.print("[bold cyan]Applying 4-way symmetry mirror...[/bold cyan]")
-    _mirror_4way(dest)
+    if is_tile:
+        _download_image(urls[0], tile_path)
+        card_w, card_h = _card_target_dimensions(aspect_ratio)
+        console.print(f"[bold cyan]Assembling tile grid (density {tile_density}, {card_w}×{card_h})...[/bold cyan]")
+        _assemble_tile_grid(tile_path, tile_density, card_w, card_h, dest)
+    else:
+        _download_image(urls[0], dest)
+        if cardback_style == "4-way-symmetry":
+            console.print("[bold cyan]Applying 4-way symmetry mirror...[/bold cyan]")
+            _mirror_4way(dest)
 
     console.print(f"[bold green]Card back ready:[/bold green] {dest}")
     return dest
