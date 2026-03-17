@@ -189,14 +189,16 @@ def _generate_one(
         prompt = build_img2img_prompt(style)
     else:
         prompt = build_prompt(card, style)
-    negative = build_negative_prompt()
+    # Flux Canny doesn't use a negative prompt — skip building it to avoid confusion.
+    negative = None if is_flux_canny else build_negative_prompt()
     if deck_num is not None:
         dest = output_dir / f"{card.numeral}_{card.slug}_{deck_num}.png"
     else:
         dest = output_dir / card.filename
 
     console.print(f"[dim]Prompt: {prompt}[/dim]")
-    console.print(f"[dim]Negative: {negative}[/dim]")
+    if negative:
+        console.print(f"[dim]Negative: {negative}[/dim]")
     is_style_transfer = "style-transfer" in model_id
     is_sdxl = not is_flux and not is_style_transfer
 
