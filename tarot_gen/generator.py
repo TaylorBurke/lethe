@@ -232,14 +232,15 @@ def _generate_one(
                 )
                 console.print(f"[dim]img2img input has 'image' key: {'image' in input_data}[/dim]")
             elif is_flux_canny and key_card_url:
-                console.print("[bold magenta]Flux Canny ControlNet[/bold magenta]")
+                guidance = max(1, int(prompt_strength))
+                console.print(f"[bold magenta]Flux Canny ControlNet guidance={guidance}[/bold magenta]")
                 input_data = {
                     "prompt": prompt,
                     "control_image": key_card_url,
                     "seed": seed,
                     "num_outputs": 1,
                     "output_format": "png",
-                    "guidance": 30,
+                    "guidance": guidance,
                     "num_inference_steps": 28,
                 }
             elif is_flux_dev and key_card_url:

@@ -380,6 +380,20 @@ def prompt_for_options() -> dict:
                 sys.exit(0)
             prompt_strength = float(ps_str) if ps_str.strip() else 0.60
 
+        if model == "flux-canny":
+            g_str = questionary.text(
+                "Canny guidance (1-50):",
+                instruction="(lower = more faithful to reference lines, higher = more creative)",
+                default="10",
+            ).ask()
+            if g_str is None:
+                sys.exit(0)
+            try:
+                prompt_strength = float(g_str.strip())
+            except ValueError:
+                console.print("[red]Invalid guidance value.[/red]")
+                sys.exit(1)
+
         if model == "rw-style-transfer":
             style_transfer_mode = questionary.select(
                 "Style transfer mode:",
@@ -768,6 +782,8 @@ def run_generation(
         console.print(f"  Key card: {key_card}")
     if model in ("sdxl", "flux-img2img"):
         console.print(f"  Prompt strength: {prompt_strength}")
+    if model == "flux-canny":
+        console.print(f"  Guidance: {int(prompt_strength)}")
     if model in ("style-transfer", "rw-style-transfer"):
         console.print(f"  Style transfer mode: {style_transfer_mode}")
     if model == "style-transfer":
