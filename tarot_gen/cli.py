@@ -372,12 +372,12 @@ def prompt_for_options() -> dict:
 
         ps_str = questionary.text(
             "Prompt strength:",
-            instruction="(0.0-1.0, lower = closer to Rider-Waite composition)",
-            default="0.35",
+            instruction="(0.0-1.0 — 0.55 keeps composition, 0.75 applies style strongly, 1.0 ignores reference)",
+            default="0.60",
         ).ask()
         if ps_str is None:
             sys.exit(0)
-        prompt_strength = float(ps_str) if ps_str.strip() else 0.35
+        prompt_strength = float(ps_str) if ps_str.strip() else 0.60
 
     if model not in ("style-transfer",):
         diversity = "medium"
