@@ -8,7 +8,15 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "WebSearch",
-      "WebFetch(domain:replicate.com)"
+      "WebFetch(domain:replicate.com)",
+      "Bash(python3:*)",
+      "Bash(.venv/bin/python -c \"from tarot_gen.cli import prompt_for_options, run_generation; from tarot_gen.generator import generate_card_back, _tile_pattern; print\\('imports OK'\\)\")",
+      "Bash(git remote:*)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(curl:*)",
+      "Bash(bash download.sh 2>&1)",
+      "Bash(ls:*)",
+      "Bash(.venv/bin/python -c \"\nfrom tarot_gen.generator import generate_deck, generate_single_card, _load_rw_ref, MODELS\nfrom tarot_gen.cli import run_generation, _generate_single_deck\nimport inspect\n\nprint\\('Models:', list\\(MODELS.keys\\(\\)\\)\\)\n\nsig = inspect.signature\\(generate_deck\\)\nprint\\('generate_deck rw_dir:', 'rw_dir' in sig.parameters\\)\n\nsig = inspect.signature\\(generate_single_card\\)\nprint\\('generate_single_card rw_dir:', 'rw_dir' in sig.parameters\\)\n\nsig = inspect.signature\\(run_generation\\)\nprint\\('run_generation rw_dir:', 'rw_dir' in sig.parameters\\)\n\nsig = inspect.signature\\(_generate_single_deck\\)\nprint\\('_generate_single_deck rw_dir:', 'rw_dir' in sig.parameters\\)\n\")"
     ]
   }
 }
