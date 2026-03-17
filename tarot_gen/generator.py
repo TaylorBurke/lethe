@@ -50,7 +50,7 @@ def _load_rw_ref(rw_dir: Path, card: Card) -> str | None:
     return None
 
 
-from tarot_gen.prompts import build_prompt, build_negative_prompt
+from tarot_gen.prompts import build_prompt, build_img2img_prompt, build_negative_prompt
 from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2img_input, resize_image_to_aspect
 
 MODELS = {
@@ -178,7 +178,14 @@ def _generate_one(
     Returns a (local_path, output_url) tuple.
     When ``deck_num`` is set, the filename is suffixed (e.g. ``00_the_fool_2.png``).
     """
-    prompt = build_prompt(card, style)
+    is_flux_dev = "flux-dev" in model_id
+    is_flux = "flux" in model_id
+
+    # For flux img2img the reference image carries the composition — use style only.
+    if is_flux_dev and key_card_url:
+        prompt = build_img2img_prompt(style)
+    else:
+        prompt = build_prompt(card, style)
     negative = build_negative_prompt()
     if deck_num is not None:
         dest = output_dir / f"{card.numeral}_{card.slug}_{deck_num}.png"
@@ -187,9 +194,6 @@ def _generate_one(
 
     console.print(f"[dim]Prompt: {prompt}[/dim]")
     console.print(f"[dim]Negative: {negative}[/dim]")
-
-    is_flux_dev = "flux-dev" in model_id
-    is_flux = "flux" in model_id
     is_style_transfer = "style-transfer" in model_id
     is_sdxl = not is_flux and not is_style_transfer
 

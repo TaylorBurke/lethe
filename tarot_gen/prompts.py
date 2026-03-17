@@ -15,6 +15,15 @@ DEFAULT_NEGATIVE = (
 )
 
 
+def build_img2img_prompt(style: str) -> str:
+    """Build a minimal prompt for img2img generation.
+
+    When a reference image provides the composition and content, only the
+    style description is needed — card-specific text fights the reference.
+    """
+    return style
+
+
 def build_prompt(card: Card, style: str) -> str:
     """Build a positive prompt for a tarot card image."""
     symbols = ", ".join(card.key_symbols)
