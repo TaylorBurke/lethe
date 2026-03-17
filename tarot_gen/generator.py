@@ -32,14 +32,35 @@ def _reference_key(card: Card) -> str:
     if card.arcana_type == "major":
         return "major"
     return card.suit
+
+
+def _load_rw_ref(rw_dir: Path, card: Card) -> str | None:
+    """Encode the Rider-Waite reference image for *card* as a base64 data URI.
+
+    Looks for ``{rw_dir}/{card.numeral}{ext}`` for each supported extension.
+    Returns None if no matching file is found.
+    """
+    for ext in _IMAGE_EXTENSIONS:
+        p = rw_dir / f"{card.numeral}{ext}"
+        if p.exists():
+            data = p.read_bytes()
+            encoded = base64.b64encode(data).decode()
+            mime = "jpeg" if ext in (".jpg", ".jpeg") else "png"
+            return f"data:image/{mime};base64,{encoded}"
+    return None
+
+
 from tarot_gen.prompts import build_prompt, build_negative_prompt
 from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2img_input, resize_image_to_aspect
 
 MODELS = {
     "flux-schnell": "black-forest-labs/flux-schnell",
+    "flux-img2img": "black-forest-labs/flux-dev",
     "sdxl": "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
     "style-transfer": "fofr/style-transfer:f1023890703bc0a5a3a2c21b5e498833be5f6ef6e70e9daf6b9b3a4fd8309cf0",
 }
+
+_IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
 
 STYLE_TRANSFER_MODES = ["fast", "high-quality", "realistic", "cinematic", "animated"]
 
@@ -167,6 +188,7 @@ def _generate_one(
     console.print(f"[dim]Prompt: {prompt}[/dim]")
     console.print(f"[dim]Negative: {negative}[/dim]")
 
+    is_flux_dev = "flux-dev" in model_id
     is_flux = "flux" in model_id
     is_style_transfer = "style-transfer" in model_id
     is_sdxl = not is_flux and not is_style_transfer
@@ -200,6 +222,16 @@ def _generate_one(
                     prompt_strength=prompt_strength,
                 )
                 console.print(f"[dim]img2img input has 'image' key: {'image' in input_data}[/dim]")
+            elif is_flux_dev and key_card_url:
+                console.print(f"[bold magenta]Flux img2img prompt_strength={prompt_strength}[/bold magenta]")
+                input_data = {
+                    "prompt": prompt,
+                    "image": key_card_url,
+                    "prompt_strength": prompt_strength,
+                    "seed": seed,
+                    "num_outputs": 1,
+                    "output_format": "png",
+                }
             elif is_flux:
                 input_data = {
                     "prompt": prompt,
@@ -250,6 +282,7 @@ def generate_deck(
     reference_map: dict[str, str] | None = None,
     diversity: str = "medium",
     deck_num: int | None = None,
+    rw_dir: Path | None = None,
 ) -> list[Path]:
     """Generate images for all cards in the list.
 
@@ -334,6 +367,11 @@ def generate_deck(
 
         def _resolve_ref(card: Card, card_seed: int) -> str | None:
             """Encode the right reference for this card with seed-based crop."""
+            if rw_dir is not None:
+                ref = _load_rw_ref(rw_dir, card)
+                if ref is None:
+                    console.print(f"[yellow]No RW reference found for {card.name} ({card.numeral}) — generating without reference[/yellow]")
+                return ref
             if reference_paths:
                 ref_key = _reference_key(card) if len(reference_paths) > 1 else "_single"
                 ref_path = reference_paths.get(ref_key)
@@ -396,6 +434,7 @@ def generate_single_card(
     style_transfer_mode: str = "high-quality",
     reference_map: dict[str, str] | None = None,
     diversity: str = "medium",
+    rw_dir: Path | None = None,
 ) -> list[Path]:
     """Generate N copies of a single card with varied seeds.
 
@@ -411,14 +450,19 @@ def generate_single_card(
     style_prefix = build_style_prefix(style)
     results: list[Path] = []
 
+    is_flux_dev = "flux-dev" in model_id
     is_flux = "flux" in model_id
     is_style_transfer = "style-transfer" in model_id
     is_sdxl = not is_flux and not is_style_transfer
     key_card_url: str | None = None
 
-    # Reference setup (same logic as generate_deck)
+    # Reference setup
     reference_paths: dict[str, Path] = {}
-    if is_style_transfer:
+    if is_flux_dev and rw_dir is not None:
+        key_card_url = _load_rw_ref(rw_dir, card)
+        if key_card_url is None:
+            console.print(f"[yellow]No RW reference found for {card.name} ({card.numeral}) — generating without reference[/yellow]")
+    elif is_style_transfer:
         target_width, target_height = SDXL_DIMENSIONS.get(aspect_ratio, (768, 1152))
         if reference_map:
             for group_key, img_path in reference_map.items():

@@ -264,6 +264,7 @@ def prompt_for_options() -> dict:
     key_card = None
     prompt_strength = 0.47
     style_transfer_mode = "high-quality"
+    rw_dir = None
 
     reference_map = None
     if model == "style-transfer":
@@ -354,6 +355,30 @@ def prompt_for_options() -> dict:
             sys.exit(0)
         prompt_strength = float(ps_str) if ps_str.strip() else 0.47
 
+    elif model == "flux-img2img":
+        rw_dir_str = questionary.text(
+            "Rider-Waite reference images folder:",
+            instruction="(folder containing 00.png, 01.png … named by card numeral)",
+            default="references/rider-waite",
+        ).ask()
+        if rw_dir_str is None:
+            sys.exit(0)
+        rw_dir = Path(rw_dir_str.strip())
+        if not rw_dir.is_dir():
+            console.print(f"[red]Folder not found: {rw_dir}[/red]")
+            sys.exit(1)
+        found = [f for f in rw_dir.iterdir() if f.suffix.lower() in (".png", ".jpg", ".jpeg")]
+        console.print(f"[bold cyan]Found {len(found)} reference images in {rw_dir}[/bold cyan]")
+
+        ps_str = questionary.text(
+            "Prompt strength:",
+            instruction="(0.0-1.0, lower = closer to Rider-Waite composition)",
+            default="0.35",
+        ).ask()
+        if ps_str is None:
+            sys.exit(0)
+        prompt_strength = float(ps_str) if ps_str.strip() else 0.35
+
     if model not in ("style-transfer",):
         diversity = "medium"
 
@@ -404,6 +429,7 @@ def prompt_for_options() -> dict:
         "single_card_composition": single_card_composition,
         "cardback_style": cardback_style,
         "tile_density": tile_density,
+        "rw_dir": rw_dir,
     }
 
 
@@ -465,6 +491,8 @@ def save_prompt_file(output: Path, options: dict) -> Path:
             lines.append(f"Custom Symbols: {', '.join(options['single_card_symbols'])}")
         if options.get('single_card_composition'):
             lines.append(f"Custom Composition: {options['single_card_composition']}")
+    if options.get('rw_dir'):
+        lines.append(f"RW References: {options['rw_dir']}")
     if options.get('cardback_style'):
         lines.append(f"Card Back Style: {options['cardback_style']}")
         if options.get('cardback_style') == 'tile':
@@ -512,6 +540,7 @@ def _generate_single_deck(
     card_count: int | None = None,
     cardback_style: str = "4-way-symmetry",
     tile_density: int = 3,
+    rw_dir: Path | None = None,
 ) -> list[Path]:
     """Generate one complete deck (cards + card back).
 
@@ -534,6 +563,7 @@ def _generate_single_deck(
         reference_map=reference_map,
         deck_num=deck_num,
         diversity=diversity,
+        rw_dir=rw_dir,
     )
 
     card_back_path = generate_card_back(
@@ -578,6 +608,7 @@ def run_generation(
     deck_type: str = "tarot",
     cardback_style: str = "4-way-symmetry",
     tile_density: int = 3,
+    rw_dir: Path | None = None,
 ) -> None:
     """Execute the deck generation with the given options."""
     # Archive existing output if present
@@ -607,6 +638,7 @@ def run_generation(
         "single_card_composition": single_card_composition,
         "cardback_style": cardback_style,
         "tile_density": tile_density,
+        "rw_dir": rw_dir,
     }
 
     # Save prompt.txt before generation
@@ -701,6 +733,7 @@ def run_generation(
                 style_transfer_mode=style_transfer_mode,
                 reference_map=reference_map,
                 diversity=diversity,
+                rw_dir=rw_dir,
             )
 
         console.print(f"\n[bold green]Done![/bold green] Generated {len(all_paths)} images in {output.resolve()}")
@@ -721,11 +754,13 @@ def run_generation(
     console.print(f"  Decks:  {num_decks}")
     if key_card:
         console.print(f"  Key card: {key_card}")
-    if model == "sdxl":
+    if model in ("sdxl", "flux-img2img"):
         console.print(f"  Prompt strength: {prompt_strength}")
     if model == "style-transfer":
         console.print(f"  Style transfer mode: {style_transfer_mode}")
         console.print(f"  Diversity: {diversity}")
+    if model == "flux-img2img" and rw_dir:
+        console.print(f"  RW references: {rw_dir}")
     if cards_file:
         console.print(f"  Cards file: {cards_file.resolve()}")
     console.print()
@@ -751,6 +786,7 @@ def run_generation(
             card_count=len(cards),
             cardback_style=cardback_style,
             tile_density=tile_density,
+            rw_dir=rw_dir,
         )
     else:
         # Multiple decks — run concurrently, suffix filenames with deck number
@@ -776,6 +812,7 @@ def run_generation(
                     card_count=len(cards),
                     cardback_style=cardback_style,
                     tile_density=tile_density,
+                    rw_dir=rw_dir,
                 )
                 futures[fut] = d
 
