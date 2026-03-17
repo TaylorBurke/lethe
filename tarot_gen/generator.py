@@ -56,8 +56,10 @@ from tarot_gen.consistency import get_seed, build_style_prefix, build_sdxl_img2i
 MODELS = {
     "flux-schnell": "black-forest-labs/flux-schnell",
     "flux-img2img": "black-forest-labs/flux-dev",
+    "flux-canny": "black-forest-labs/flux-canny-dev",
     "sdxl": "stability-ai/sdxl:39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b",
     "style-transfer": "fofr/style-transfer:f1023890703bc0a5a3a2c21b5e498833be5f6ef6e70e9daf6b9b3a4fd8309cf0",
+    "rw-style-transfer": "fofr/style-transfer:f1023890703bc0a5a3a2c21b5e498833be5f6ef6e70e9daf6b9b3a4fd8309cf0",
 }
 
 _IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
@@ -179,10 +181,11 @@ def _generate_one(
     When ``deck_num`` is set, the filename is suffixed (e.g. ``00_the_fool_2.png``).
     """
     is_flux_dev = "flux-dev" in model_id
+    is_flux_canny = "flux-canny-dev" in model_id
     is_flux = "flux" in model_id
 
-    # For flux img2img the reference image carries the composition — use style only.
-    if is_flux_dev and key_card_url:
+    # When a reference image carries composition or structure, style text alone is enough.
+    if (is_flux_dev or is_flux_canny) and key_card_url:
         prompt = build_img2img_prompt(style)
     else:
         prompt = build_prompt(card, style)
@@ -226,6 +229,17 @@ def _generate_one(
                     prompt_strength=prompt_strength,
                 )
                 console.print(f"[dim]img2img input has 'image' key: {'image' in input_data}[/dim]")
+            elif is_flux_canny and key_card_url:
+                console.print("[bold magenta]Flux Canny ControlNet[/bold magenta]")
+                input_data = {
+                    "prompt": prompt,
+                    "control_image": key_card_url,
+                    "seed": seed,
+                    "num_outputs": 1,
+                    "output_format": "png",
+                    "guidance": 30,
+                    "num_inference_steps": 28,
+                }
             elif is_flux_dev and key_card_url:
                 console.print(f"[bold magenta]Flux img2img prompt_strength={prompt_strength}[/bold magenta]")
                 input_data = {
@@ -330,6 +344,9 @@ def generate_deck(
             console.print(f"[bold cyan]Using style reference:[/bold cyan] {key_card_path}")
             console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
             console.print(f"[bold cyan]Reference diversity:[/bold cyan] {diversity}")
+        elif rw_dir is not None:
+            console.print(f"[bold cyan]Using per-card RW images from:[/bold cyan] {rw_dir}")
+            console.print(f"[bold cyan]Style transfer mode:[/bold cyan] {style_transfer_mode}")
         else:
             raise RuntimeError("style-transfer model requires reference images (--key-card or references/ directory)")
 
@@ -460,9 +477,11 @@ def generate_single_card(
     is_sdxl = not is_flux and not is_style_transfer
     key_card_url: str | None = None
 
+    is_flux_canny = "flux-canny-dev" in model_id
+
     # Reference setup
     reference_paths: dict[str, Path] = {}
-    if is_flux_dev and rw_dir is not None:
+    if rw_dir is not None and (is_flux_dev or is_flux_canny or is_style_transfer):
         key_card_url = _load_rw_ref(rw_dir, card)
         if key_card_url is None:
             console.print(f"[yellow]No RW reference found for {card.name} ({card.numeral}) — generating without reference[/yellow]")
@@ -588,6 +607,7 @@ def generate_card_back(
     card_count: int = 78,
     cardback_style: str = "4-way-symmetry",
     tile_density: int = 3,
+    rw_dir: Path | None = None,
 ) -> Path:
     """Generate a card back image.
 
@@ -648,6 +668,13 @@ def generate_card_back(
             ref_path = Path(reference_map.get("major") or next(iter(reference_map.values())))
         elif key_card_path:
             ref_path = Path(key_card_path)
+        elif rw_dir is not None:
+            # Use The Fool (00.*) as the style reference for the card back
+            for ext in _IMAGE_EXTENSIONS:
+                p = rw_dir / f"00{ext}"
+                if p.exists():
+                    ref_path = p
+                    break
         if ref_path:
             card_back_seed = get_seed(base_seed, 999)
             resized_bytes = resize_image_to_aspect(

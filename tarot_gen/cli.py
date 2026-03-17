@@ -355,7 +355,7 @@ def prompt_for_options() -> dict:
             sys.exit(0)
         prompt_strength = float(ps_str) if ps_str.strip() else 0.47
 
-    elif model == "flux-img2img":
+    elif model in ("flux-img2img", "flux-canny", "rw-style-transfer"):
         rw_dir_str = questionary.text(
             "Rider-Waite reference images folder:",
             instruction="(folder containing 00.png, 01.png … named by card numeral)",
@@ -370,16 +370,26 @@ def prompt_for_options() -> dict:
         found = [f for f in rw_dir.iterdir() if f.suffix.lower() in (".png", ".jpg", ".jpeg")]
         console.print(f"[bold cyan]Found {len(found)} reference images in {rw_dir}[/bold cyan]")
 
-        ps_str = questionary.text(
-            "Prompt strength:",
-            instruction="(0.0-1.0 — 0.55 keeps composition, 0.75 applies style strongly, 1.0 ignores reference)",
-            default="0.60",
-        ).ask()
-        if ps_str is None:
-            sys.exit(0)
-        prompt_strength = float(ps_str) if ps_str.strip() else 0.60
+        if model == "flux-img2img":
+            ps_str = questionary.text(
+                "Prompt strength:",
+                instruction="(0.0-1.0 — 0.55 keeps composition, 0.75 applies style strongly, 1.0 ignores reference)",
+                default="0.60",
+            ).ask()
+            if ps_str is None:
+                sys.exit(0)
+            prompt_strength = float(ps_str) if ps_str.strip() else 0.60
 
-    if model not in ("style-transfer",):
+        if model == "rw-style-transfer":
+            style_transfer_mode = questionary.select(
+                "Style transfer mode:",
+                choices=STYLE_TRANSFER_MODES,
+                default="high-quality",
+            ).ask()
+            if style_transfer_mode is None:
+                sys.exit(0)
+
+    if model not in ("style-transfer", "rw-style-transfer"):
         diversity = "medium"
 
     if deck_type == "oracle":
@@ -580,6 +590,7 @@ def _generate_single_deck(
         card_count=card_count if card_count is not None else len(cards),
         cardback_style=cardback_style,
         tile_density=tile_density,
+        rw_dir=rw_dir,
     )
     paths.append(card_back_path)
     return paths
@@ -717,6 +728,7 @@ def run_generation(
                     card_count=cb_card_count,
                     cardback_style=cardback_style,
                     tile_density=tile_density,
+                    rw_dir=rw_dir,
                 )
                 all_paths.append(path)
         else:
@@ -756,10 +768,11 @@ def run_generation(
         console.print(f"  Key card: {key_card}")
     if model in ("sdxl", "flux-img2img"):
         console.print(f"  Prompt strength: {prompt_strength}")
-    if model == "style-transfer":
+    if model in ("style-transfer", "rw-style-transfer"):
         console.print(f"  Style transfer mode: {style_transfer_mode}")
+    if model == "style-transfer":
         console.print(f"  Diversity: {diversity}")
-    if model == "flux-img2img" and rw_dir:
+    if model in ("flux-img2img", "flux-canny", "rw-style-transfer") and rw_dir:
         console.print(f"  RW references: {rw_dir}")
     if cards_file:
         console.print(f"  Cards file: {cards_file.resolve()}")
